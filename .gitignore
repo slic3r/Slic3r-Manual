@@ -1,0 +1,17 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+*.gst
+*.ist
+SHA1SUM
