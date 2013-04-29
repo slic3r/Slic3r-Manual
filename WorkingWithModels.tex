@@ -1,10 +1,15 @@
 %!TEX root = Slic3r-Manual.tex
 \section{Working with Models}
+\label{sub:working_with_models}
+\index{models}
 
 Yet another step lies between now and the first print - a model has to found and then sliced.
 
 \subsection{Model Formats} % (fold)
 \label{sub:model_formats}
+\index{STL}
+\index{AMF}
+\index{OBJ}
 
 Slic3r accepts the following file types.
 
@@ -16,10 +21,12 @@ Slic3r accepts the following file types.
 % subsection model_formats (end)
 
 \subsection{Finding Models} % (fold)
-\label{sub:working_with_models}
-The 3D model files may come from an online repository, such as Thingiverse\footnote{http://www.thingiverse.com} or GrabCAD\footnote{http://grabcad.com} or be created from a CAD program, such as FreeCAD\footnote{http://sourceforge.net/projects/free-cad}, Sketchup\footnote{http://www.sketchup.com}, or OpenSCAD\footnote{http://www.openscad.org}, or an online CAD tool such as Shapesmith\footnote{http://shapesmith.net}.  
+\label{sub:finding_models}
+\index{models!finding}
 
-You may wish to view the files before slicing and there are many free applications available, one of which is Meshlab\footnote{http://www.meshlab.org} - a comprehensive tool for viewing and working with 3D files.
+The 3D model files may come from an online repository, such as Thingiverse\footnote{\url{http://www.thingiverse.com}} or GrabCAD\footnote{\url{http://grabcad.com}}, or be created from a CAD program, such as FreeCAD\footnote{\url{http://sourceforge.net/projects/free-cad}}, Sketchup\footnote{\url{http://www.sketchup.com}}, or OpenSCAD\footnote{\url{http://www.openscad.org}}, or an online CAD tool such as Shapesmith\footnote{\url{http://shapesmith.net}}.  
+
+You may wish to view the files before slicing and there are many free applications available, one of which is Meshlab\footnote{\url{http://www.meshlab.org}} - a comprehensive tool for viewing and working with 3D files.
 
 \begin{figure}[H]
 \centering
@@ -33,6 +40,7 @@ You may wish to view the files before slicing and there are many free applicatio
 
 \subsection{Working with Plater} % (fold)
 \label{sub:working_with_plater}
+\index{Plater}
 Slic3r has a tool, called Plater, which allows one or more models to be loaded and arranged before being sliced.
 
 \begin{figure}[H]
@@ -42,7 +50,7 @@ Slic3r has a tool, called Plater, which allows one or more models to be loaded a
 \label{fig:plater}
 \end{figure}
 
-Once you have acquired a model, drag it onto the Plater window (or use the Add button below the file list) to load it into Slic3r.  In the figure below, the traditional RepRap Minimug\footnote{http://www.thingiverse.com/thing:18357} is loaded, and is viewed from above. The ring around the model is a skirt - a single perimeter, several millimeters away from the model, which is extruded first.  This is useful in making sure the plastic is flowing smoothly from the nozzle when the model is starting to be printed.
+Once you have acquired a model, drag it onto the Plater window (or use the Add button below the file list) to load it into Slic3r.  In the figure below, the traditional RepRap Minimug\footnote{\url{http://www.thingiverse.com/thing:18357}} is loaded, and is viewed from above. The ring around the model is a skirt - a single perimeter, several millimeters away from the model, which is extruded first.  This is useful in making sure the plastic is flowing smoothly from the nozzle when the model is starting to be printed.
 
 \begin{figure}[H]
 \centering
@@ -82,6 +90,7 @@ The buttons along the bottom of the file list allow you to add, remove, auto-arr
 
 \subsection{Cleaning STLs} % (fold)
 \label{sub:cleaning_stls}
+\index{STL!cleaning}
 If the 3D mesh described in the model contains holes, or edges are misaligned (known as being non-manifold), then Slic3r may have problems working on it.  Slic3r will attempt to fix any problems it can, but some problems are out of it's reach.  If the application complains that a model cannot be sliced correctly then there are several options available, and the ones described here are all free at the time of writing. 
 
 %%% CONFIGURATION TUNING %%%
@@ -90,7 +99,9 @@ If the 3D mesh described in the model contains holes, or edges are misaligned (k
 
 \paragraph{FreeCAD} % (fold)
 \label{par:freecad}
-Freecad is a comprehensive, and free, CAD program which comes with a mesh module, in which repairs to degenerate models can be made.  the following steps outline how a problem model file can be analysed and repaired.
+\index{FreeCAD}
+
+Freecad\footnote{\url{http://sourceforge.net/projects/free-cad}} is a comprehensive, and free, CAD program which comes with a mesh module, in which repairs to degenerate models can be made.  the following steps outline how a problem model file can be analysed and repaired.
 
 \begin{figure}[H]
 \centering

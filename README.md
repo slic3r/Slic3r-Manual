@@ -1,4 +1,4 @@
-This is the LaTeX source code for Slic3r.
+This is the LaTeX source code for the Slic3r Manual.
 
 Copyright 2013, Aleph Objects, Inc.
 

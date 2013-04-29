@@ -1,14 +1,18 @@
 %!TEX root = Slic3r-Manual.tex
+\section{Simple Mode} % (fold)
+\label{sec:simple_mode}
+\index{simple mode}
 
-\section{Simple Mode}
 Slic3r has two modes of operation, Simple and Expert. These may be chosen from the \texttt{Preferences} window (found under the \texttt{File} menu).  
 
-\setlength\fboxsep{10pt}
-\setlength\fboxrule{0pt}
-\noindent
-\centerline{\fbox{\includegraphics[width=0.3\textwidth]{simple_mode/preferences_general.png}}}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.3\textwidth]{simple_mode/preferences_general.png}
+\caption{Preferences.}
+\label{fig:preferences_general}
+\end{figure}
 
-As is expected, the simple mode offers a reduced set of options, enough for the beginner to get started with.  The expert options give more control over how Slic3r produces the gcode and will be looked at later.
+Simple mode offers a reduced set of options, enough for the beginner to get started with.  Expert mode give more control over how Slic3r produces the G-code and will be looked at later.
 
 \subsection{Print Settings}
 
@@ -107,7 +111,16 @@ In simple mode there are only three speed settings to consider:
 
 \paragraph{Sequential printing.} % (fold)
 \label{par:simple_sequential_printing}
-When printing several objects at once it can be useful to print each one separately as this will minimise oozing and strings running between the prints.  Care has to be taken that the nozzle and extruder does not interfere with already printed parts.  This is the reason for the \texttt{Extruder clearance} parameters: 
+When printing several objects at once it can be useful to print each one separately as this will minimise oozing and strings running between the prints.  It will also decrease the risk of a problem ruining the entire print - if one part detaches or fails in some way, it will not be dragged into other parts of the print during each layer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio=true,width=1\textwidth]{simple_mode/sequential_printing_options.png}
+\caption{Sequential printing options.}
+\label{fig:sequential_printing_options}
+\end{figure}
+
+Care has to be taken that the nozzle and extruder does not interfere with already printed parts.  Slic3r should warn if it detects the nozzle or extruder will collide with a part, but double check that the layout of the parts will not cause problems.  The \texttt{Extruder clearance} parameters help Slic3r detect potential collisions: 
 \begin{itemize}
 	\item \texttt{Radius}  - The clearance that should be given around the extruder.  Take care if the extruder is not mounted centrally - take the largest safe value.
 	\item \texttt{Height}  - The vertical distance between the nozzle tip and the X axis rods, or lowest part which may interfere with a finished print.
@@ -115,7 +128,7 @@ When printing several objects at once it can be useful to print each one separat
 
 \begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio=true,width=0.75\textwidth]{simple_mode/extruder_clearance.jpg}
+\includegraphics[keepaspectratio=true,width=0.5\textwidth]{simple_mode/extruder_clearance.jpg}
 \caption{The clearance cylinder around an extruder.}
 \label{fig:a_diagram_depicting_extruder_clearance}
 \end{figure}
@@ -212,3 +225,5 @@ Some common G-codes to use after the print ends are:
 	\item \textbf{M84}  - Disables the motors.
 \end{itemize}
 % paragraph start_end_g_code (end)
+
+% section simple_mode (end)\section{Simple Mode}

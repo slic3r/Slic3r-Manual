@@ -2,6 +2,8 @@
 
 \section{Fighting Ooze} % (fold)
 \label{sec:fighting_ooze}
+\index{ooze}
+\index{retraction}
 
 Unless the material being extruded has a very high viscosity it will ooze from the nozzle in between extrusions.  There are several settings in Slic3r to which can help to remedy this.
 
@@ -32,4 +34,7 @@ Additionally there are several settings in the \texttt{Print} tab which can help
     \item \texttt{Avoid crossing perimeters} (Layers and perimeters - Advanced) - Will force the nozzle to follow perimeters as much as possible to minimise the number of times it must cross them when moving around, and between, islands.  This has a negative impact on both G-code generation and print times.
     \item \texttt{Randomize starting points} (Layers and perimeters - Vertical shells) - As the extruder moves up to the start of the next layer any ooze can result in blobs.  If the same start point is used for every layer then a seam can form the length of the object.  This setting will move the start point to a difference location for each layer.    
 \end{itemize}
+
+
+See also section \ref{par:simple_sequential_printing}: Sequential Printing for another technique which can minimise strings forming between objects.
 % section fighting_ooze (end)
