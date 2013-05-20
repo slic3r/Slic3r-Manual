@@ -24,7 +24,7 @@ Slic3r accepts the following file types.
 \label{sub:finding_models}
 \index{models!finding}
 
-The 3D model files may come from an online repository, such as Thingiverse\footnote{\url{http://www.thingiverse.com}} or GrabCAD\footnote{\url{http://grabcad.com}}, or be created from a CAD program, such as FreeCAD\footnote{\url{http://sourceforge.net/projects/free-cad}}, Sketchup\footnote{\url{http://www.sketchup.com}}, or OpenSCAD\footnote{\url{http://www.openscad.org}}, or an online CAD tool such as Shapesmith\footnote{\url{http://shapesmith.net}}.  
+The 3D model files may come from an online repository, such as Thingiverse\footnote{\url{http://www.thingiverse.com}} or GrabCAD\footnote{\url{http://grabcad.com}}, or be created from a CAD program, such as FreeCAD\footnote{\url{http://sourceforge.net/projects/free-cad}}, Sketchup\footnote{\url{http://www.sketchup.com}}, or OpenSCAD\footnote{\url{http://www.openscad.org}}, or an online CAD tool such as Shapesmith\footnote{\url{http://shapesmith.net}}.
 
 You may wish to view the files before slicing and there are many free applications available, one of which is Meshlab\footnote{\url{http://www.meshlab.org}} - a comprehensive tool for viewing and working with 3D files.
 
@@ -45,7 +45,7 @@ Slic3r has a tool, called Plater, which allows one or more models to be loaded a
 
 \begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio=true,width=0.75\textwidth]{working_with_models/plater.png}
+\includegraphics[keepaspectratio=true,width=1\textwidth]{working_with_models/plater.png}
 \caption{Plater}
 \label{fig:plater}
 \end{figure}
@@ -61,7 +61,7 @@ Once you have acquired a model, drag it onto the Plater window (or use the Add b
 
 \begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio=true,width=0.75\textwidth]{working_with_models/plater_model_loaded.png}
+\includegraphics[keepaspectratio=true,width=1\textwidth]{working_with_models/plater_model_loaded.png}
 \caption{STL file loaded.}
 \label{fig:plater_model_loaded}
 \end{figure}
@@ -91,7 +91,7 @@ The buttons along the bottom of the file list allow you to add, remove, auto-arr
 \subsection{Cleaning STLs} % (fold)
 \label{sub:cleaning_stls}
 \index{STL!cleaning}
-If the 3D mesh described in the model contains holes, or edges are misaligned (known as being non-manifold), then Slic3r may have problems working on it.  Slic3r will attempt to fix any problems it can, but some problems are out of it's reach.  If the application complains that a model cannot be sliced correctly then there are several options available, and the ones described here are all free at the time of writing. 
+If the 3D mesh described in the model contains holes, or edges are misaligned (known as being non-manifold), then Slic3r may have problems working on it.  Slic3r will attempt to fix any problems it can, but some problems are out of it's reach.  If the application complains that a model cannot be sliced correctly then there are several options available, and the ones described here are all free at the time of writing.
 
 %%% CONFIGURATION TUNING %%%
 {\input{WorkingWithModelsNetfabb}}
@@ -111,11 +111,11 @@ Freecad\footnote{\url{http://sourceforge.net/projects/free-cad}} is a comprehens
 \end{figure}
 
 \begin{itemize}
-	\item Start FreeCAD and from the start splash page choose \texttt{Working with Meshes}.  
+	\item Start FreeCAD and from the start splash page choose \texttt{Working with Meshes}.
 	\item Load the model by dragging and dropping it onto the workspace or via the \texttt{File} menu.  A small message in the bottom left corner will indicate if the model appears to have problems.
 	\item From the menu choose \texttt{Meshes->Analyze->Evaluate \& Repair mesh} to bring up the repair options dialog.
 	\item From the options dialog choose the loaded mesh, then perform each analysis be clicking the \texttt{Analyze} button by each problem type, or select \texttt{Repetitive Repair} at the bottom to perform all checks.  If a corresponding problem is detected the \texttt{Repair} button becomes enabled.
-	\item For each desired repair hit the \texttt{Repair} button.  
+	\item For each desired repair hit the \texttt{Repair} button.
 	\item It is important to review the effect the repair script has made to the model.  It may be the case that the script damages the file, rather than repair, for example by removing important triangles.
 	\item Export the repaired model via the \texttt{Export} menu option or context menu.
 \end{itemize}

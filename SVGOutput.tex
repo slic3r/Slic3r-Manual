@@ -4,7 +4,7 @@
 \label{sec:svg_output}
 \index{SVG}
 \index{DLP resin printer}
-\index{Powder-bed printer}
+\index{powder-bed printer}
 
 Slic3r can produce output for other types of 3D printers which require each layer to be represented as image, for example DLP resin or powder-bed printers.  These expect an image usually consisting of a white silhouette on a black background (See fig \ref{fig:example_svg_slice}).  Almost all image formats can be used (bmp, png, etc.), however, because the image may have to be scaled, it is usually desirable to use a vector format, rather than a bitmap format.  For this reason it is common to use Scalable Vector Graphics (SVG) format.
 
@@ -17,7 +17,7 @@ Slic3r can produce output for other types of 3D printers which require each laye
 
 Slic3r provides the ability to produce SVG output suitable for such printers.  Instead of using the \texttt{Plater}, the process begins by selecting the \texttt{Slice to SVG...} option from the \texttt{File} menu.  This prompts for the source file (STL, OBJ or AMF), and when selected will prompt for where the output SVG file should be saved.  Slic3r will then go and produce the SVG file.
 
-Attempting to view the SVG file in a browser will result in only the first layer being shown, and only the negative islands within the model (as the browser background is usually white).  
+Attempting to view the SVG file in a browser will result in only the first layer being shown, and only the negative islands within the model (as the browser background is usually white).
 
 \begin{figure}[H]
 \centering

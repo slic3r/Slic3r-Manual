@@ -5,6 +5,12 @@
 \index{Z Wobble}
 
 
-Z wobble due to motor steps not matching Z rods thread pitch, see \url{http://evernote.com/shard/s211/sh/701c36c4-ddd5-4669-a482-953d8924c71d/1ef992988295487c98c268dcdd2d687e}
+Undulations in the walls of a print may be due to wobble in the Z axis.  A thorough analysis of the potential causes is given by whosawhatsis\footnote{\url{http://goo.gl/iOYoK}} in his article "Taxonomy of Z axis artifacts in extrusion-based 3d printing"\footnote{\url{http://goo.gl/ci9Gz}}, however one point of particular interest for users of Slic3r is the wobble caused by motor steps not matching the pitch of the Z rods thread.  This can be addressed by ensuring the \texttt{Layer Height} setting is a multiple of the full step length.
+
+
+The relevant part of the above paper is quoted here:
+
+\quote{To avoid Z ribbing, you should always choose a layer height that is a multiple of your full-step length. To calculate the full-step length for the screws you're using, take the pitch of your screws (I recommend M6, with a pitch of 1mm) and divide by the number of full-steps per rotation on your motors (usually 200). Microsteps are not reliably accurate enough, so ignore them for this calculation (though using microstepping will still make them smoother and quieter). For my recommended M6 screws, this comes out to 5 microns. It's 4 microns for the M5 screws used by the i3, and 6.25 microns for the M8 screws used by most other repraps. A layer height of 200 microns (.2mm), for example, will work with any of these because 200 = 6.25 * 32 = 5 * 40 = 4 * 50.}
+
 
 % section z_wobble (end)
