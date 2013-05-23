@@ -50,15 +50,22 @@ In simple mode Slic3r will attempt to choose the optimal settings for both fans 
 \end{figure}
 
 \begin{itemize}
+    \index{Filament Settings!Cooling!Fan speed}
 	\item \texttt{Fan speed}  - Determines the minimum and maximum speeds - useful for fans that run too fast by default.
+    \index{Filament Settings!Cooling!Bridges fan speed}
 	\item \texttt{Bridges fan speed}  - As the material stretches over wide gaps, it makes sense to try and cool it as much as possible, therefore a full fan speed is recommended.
-	\item \texttt{Disable fan for first \textit{x} layers}  - Section \ref{sec:the_important_first_layer} detailed how important the first layer is, and so it makes sense not to apply the fan until sure the print is securely attached to the bed.  Keeping the fan turned off for the first two or three layers is a good idea.
+    \index{Filament Settings!Cooling!Disable fan for first n layers}
+	\item \texttt{Disable fan for first \textit{n} layers}  - Section \ref{sec:the_important_first_layer} detailed how important the first layer is, and so it makes sense not to apply the fan until sure the print is securely attached to the bed.  Keeping the fan turned off for the first two or three layers is a good idea.
+    \index{Filament Settings!Cooling!Keep fan always on}
 	\item \texttt{Keep fan always on}  - Overrides any other choices and has the fan run continuously, at least at the minimum speed setting.  This can be useful when printing with PLA, but is not recommended for ABS.
 \end{itemize}
 
 \begin{itemize}
+    \index{Filament Settings!Cooling!Enable fan if print time is below t seconds}
 	\item \texttt{Enable fan if print time is below \textit{t} seconds}  - Triggers the fan if the layer will be completed within the given number of seconds.
+    \index{Filament Settings!Cooling!Slow down if layer print time is below t seconds}
 	\item \texttt{Slow down if layer print time is below \textit{t} seconds}  - Slows down the print if the layer will be completed within the given number of seconds.
+    \index{Filament Settings!Cooling!Min print speed}
 	\item \texttt{Min print speed}  - A lower limit on how slowly a layer can be printed.
 \end{itemize}
 

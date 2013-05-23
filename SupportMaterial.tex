@@ -11,12 +11,16 @@ Generally, most 3D models will print with overhanging parts by up to a certain d
 \caption{Support structure options.}
 \label{fig:advanced_support}
 \end{figure}
+\index{Print Settings!Support material!Generate support material}
+\index{Print Settings!Support material!Overhang threshold}
+\index{Print Settings!Support material!Enforce support}
 
 The first thing to do is activate the support material option by checking the \texttt{Generate support material} box.  Providing a value of zero to the \texttt{Overhang threshold} parameter tells Slic3r to detect places to provide support automatically, otherwise the degrees given will be used.  Support generation is a relatively complex topic, and there are several aspects which determine the optimal support, it is strongly recommended to set the threshold to zero and allow Slic3r to determine the support required.
 
 Small models, and those with small footprints, can sometimes break or detach from the bed.  Therefore the \texttt{Enforce support} option will cause support structures to be printed for the given number of layers, regardless of the angle threshold value.
 
 To demonstrate the infill patterns the minimug model was tilted by 45° along the x axis, as shown in figure \ref{fig:support_minimug_45deg}.
+\index{Print Settings!Support material!Pattern}
 
 \begin{figure}[H]
 \centering
@@ -47,6 +51,8 @@ As with infill, there are several patterns available for the support structure.
 \caption{Support infill pattern: Honeycomb}
 \label{fig:support_pattern_honeycomb}
 \end{figure}
+\index{Print Settings!Support material!Pattern Spacing}
+\index{Print Settings!Support material!Pattern Angle}
 
 \texttt{Pattern Spacing} determines the distance between support lines, and is akin to infill density apart from being defined only in mm.  If changing this attribute take into account the width of the support extrusion and the amount of support material that will adhere to the object.
 

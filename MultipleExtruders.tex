@@ -11,6 +11,7 @@ Multi-material printing requires a suitably designed object usually written in A
 
 \subsection{Configuring Extruders} % (fold)
 \label{sub:configuring_extruders}
+\index{Printer Settings!General!Capabilities!Extruders}
 
 In the \texttt{Printer Settings} tab there is an \texttt{Extruders} option, under \texttt{Capabilities}, which allows the number of extruders to be defined.  Incrementing this value will dynamically add another extruder definition to the left-hand pane.
 
@@ -30,15 +31,18 @@ Each extruder can be configured as usual, however there are additional settings 
 \label{fig:printer_settings_extruder_multiple_extruder_options}
 \end{figure}
 
+\index{Printer Settings!Extruder!Extruder offset}
+
 The \texttt{Extruder offset} is to be used should the firmware not handle the displacement of each additional nozzle.  Your firmware documentation should tell you if this is the case.  Each additional extruder is given an offset in relation to the first one.  If the firmware does handle this then all offsets can remain at 0,0.
 
+\index{Printer Settings!Extruder!Retraction!Length}
 Because the secondary extruder will be dormant whilst the first is working, and vice-versa, it is important that the material is sufficiently retracted to stop oozing.  As with the regular retraction settings (see p. \pageref{fig:retraction_settings}) the \texttt{Length} options is measured from the raw filament entering the extruder.
 
 % subsection configuring_extruders (end)
 
 \subsection{Assigning Filaments} % (fold)
 \label{sub:assigning_filaments}
-
+\index{Plater}
 When a printer profile with multiple extruders has been selected the \texttt{Plater} tab allows the selection of a different filament for each extruder.
 
 \begin{figure}[H]
@@ -52,6 +56,7 @@ When a printer profile with multiple extruders has been selected the \texttt{Pla
 
 \subsection{Assigning Extruders for Single-material Objects} % (fold)
 \label{sub:assigning_extruders}
+\index{Print Settings!Multiple Extruders}
 
 For single material prints, where the secondary extruder is to be tasked with a particular extrusion, the \texttt{Multiple Extruders} section of the \texttt{Print Settings} tab gives the ability to assign an extruder to each extrusion type.
 
@@ -66,6 +71,8 @@ For single material prints, where the secondary extruder is to be tasked with a 
 
 \subsection{Configuring Tool Changes} % (fold)
 \label{sub:configuring_tool_changes}
+
+\index{Printer Settings!Custom G-code!Tool change G-code}
 
 The \texttt{Custom G-code} section of the \texttt{Printer Settings} tab has an option for inserting G-code between tool changes.  As with all custom G-code sections, placeholder variables can be used to reference Slic3r settings.  This includes the [previous\_extruder] and [next\_extruder] variables.
 
@@ -91,6 +98,8 @@ If a multi-material AMF file already exists, because the CAD program can export 
 \label{sub:generating_multi_material_amf_files}
 
 Slic3r has the feature to combine multiple STL files into a multi-material AMF file.
+
+\index{Menu!Combine multi-material STL files...}
 
 \begin{itemize}
     \item Split the original design into the separate parts within the CAD program, and export each part as STL.
