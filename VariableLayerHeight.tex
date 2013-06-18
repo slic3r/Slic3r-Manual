@@ -45,7 +45,6 @@ The second tab (fig. \ref{fig:variable_layer_height_options_tab_2}) presents a t
 
 The resulting G-Code (fig. \ref{fig:example_gcode_variable_layer_heights}) shows a higher definition which should result in a higher quality print.
 
-
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio=true,width=0.75\textwidth]{expertmode/variable_layer_height/example_gcode_variable_layer_heights.png}
@@ -53,6 +52,14 @@ The resulting G-Code (fig. \ref{fig:example_gcode_variable_layer_heights}) shows
 \label{fig:example_gcode_variable_layer_heights}
 \end{figure}
 
+Fig. \ref{fig:example_print} shows the example model printed.  The print on the left has 0.4mm layer height throughout, whereas the print on the right has the variable layer height.
+
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio=true,width=1\textwidth]{expertmode/variable_layer_height/example_print.jpg}
+\caption{Example print with variable layer height.}
+\label{fig:example_print}
+\end{figure}
 
 An additional feature of the variable layers height option is that by entering a zero for a range that part of the model will not be printed.  Fig. \ref{fig:example_gcode_skipped_layers} shows the G-Code where layers between 0 and 4mm are skipped.  This is a useful way of dividing a tall model into multiple, shorter sections which can be printed individually and assembled afterwards.
 \begin{figure}[H]
