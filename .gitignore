@@ -15,3 +15,5 @@
 *.gst
 *.ist
 SHA1SUM
+html/*
+
