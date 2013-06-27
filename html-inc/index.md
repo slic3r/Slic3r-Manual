@@ -1,5 +1,3 @@
-% Home
-
 Welcome to the Slic3r Manual
 ============================
 

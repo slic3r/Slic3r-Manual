@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+use List::Util qw(first);
+
 if (!-d "html") {
     die "This script must be run from the Slic3r-Manual directory\n";
 }
@@ -109,14 +111,13 @@ system qw(perl -pi -e s/\[(?:sec|sub|fig|par):.+?\]//), glob "html/*.md";
 system qw(perl -pi -e s/\[H\]//), glob "html/*.md";
 
 # add page titles
-{
-    foreach my $line (split /\n/, $toc) {
-        if ($line =~ /\[(.+?)\]\(([^#]+?)\)/) {
-            my ($title, $file) = ($1, $2);
-            $file =~ s/#.*//;
-            $file =~ s/\.html$//;
-            system qw(perl -pi -e), "print \"% $title\n\" if \$. == 1", "html/$file.md";
-        }
+my %page_titles = ();
+foreach my $line (split /\n/, $toc) {
+    if ($line =~ /\[(.+?)\]\(([^#]+?)\)/) {
+        my ($title, $file) = ($1, $2);
+        $file =~ s/#.*//;
+        $file =~ s/\.html$//;
+        $page_titles{$file} = $title;
     }
 }
 
@@ -126,8 +127,12 @@ foreach my $md (glob "html/*.md") {
     next if $md eq 'html/toc.md';
     my $html = $md;
     $html =~ s/\.md/.html/;
+    my $title = 'Slic3r Manual';
+    if (my $page_title = first { "html/$_.md" eq $md } keys %page_titles) {
+        $title .= ": $page_titles{$page_title}";
+    }
     system 'pandoc', $md, qw(-f markdown -t html -o), $html,
-        qw(--css style.css --title-prefix), 'Slic3r Manual',
+        qw(--css style.css --title-prefix), $title,
         qw( --include-before-body=html-inc/header.html
             --include-before-body=html/toc.html
             --include-before-body=html-inc/before-body.html
