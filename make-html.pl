@@ -28,6 +28,7 @@ my @chapters = ();
 foreach my $chapter (@chapters) {
     my $include;
     $include = sub {
+        push @{ $chapter->{include} }, $_[0];
         open my $fh, "<", "$_[0].tex";
         while (<$fh>) {
             if (m[\\section{(.+?)}]) {
@@ -43,30 +44,57 @@ foreach my $chapter (@chapters) {
     $include->($_) for map $_, @{ $chapter->{include} };
 }
 
-# write ToC
-my %page_titles = ();
+my $toc = <<"EOF";
+<div id="manual-toc">
+
+* [Introduction](Intro.html)
+    * [Overview](Intro.html)
+    * [Getting Support](Slic3rSupport.html)
+* [Getting Slic3r](GettingSlic3r.html)
+    * [Downloading](GettingSlic3r.html#downloading)
+    * [Installing](GettingSlic3r.html#installing)
+    * [Building from source](GettingSlic3r.html#building-from-source)
+* [First Print](FirstPrint.html)
+    * [Calibration](FirstPrint.html#calibration)
+    * [Configuration Wizard](FirstPrint.html#configuration-wizard)
+    * [The Important First Layer](FirstPrint.html#the-important-first-layer)
+    * [Working with Models](FirstPrint.html#working-with-models)
+    * [Printing](FirstPrint.html#printing)
+* [Simple Mode](SimpleMode.html)
+    * [Print Settings](SimpleMode.html#print-settings)
+    * [Filament Settings](SimpleMode.html#filament-settings)
+    * [Printer Settings](SimpleMode.html#printer-settings)
+* Expert Mode
+    * [Speed](Speed.html)
+    * [Infill Patterns and Density](InfillPatternsAndDensity.html)
+    * [Infill Optimization](InfillOptimization.html)
+    * [Fighting Ooze](FightingOoze.html)
+    * [Skirt](Skirt.html)
+    * [Cooling](Cooling.html)
+    * [Support Material](SupportMaterial.html)
+    * [Multiple Extruders](MultipleExtruders.html)
+    * [Extrusion Width](ExtrusionWidth.html)
+    * [Variable Layer Height](VariableLayerHeight.html)
+* [Configuration Organization](ConfigurationOrganization.html)
+    * [Exporting and Importing Configuration](ConfigurationOrganization.html#exporting-and-importing-configuration)
+    * [Managing Profiles](ConfigurationOrganization.html#profiles)
+* [Repairing Models](RepairingModels.html)
+* Advanced Topics
+    * [Sequential Printing](SequentialPrinting.html)
+    * [SVG Output](SVGOutput.html)
+    * [Command Line Usage](CommandLineUsage.html)
+    * [Post-Processing Scripts](PostProcessingScripts.html)
+* [Troubleshooting](Troubleshooting.html)
+    * [Z Wobble](Troubleshooting.html#z-wobble)
+    
+</div>
+EOF
+
 {
-    open my $fh, ">", "html/toc.html";
-    print $fh qq{<div id="manual-toc">\n};
-    print $fh qq{<ul>\n};
-    foreach my $chapter (@chapters) {
-        $page_titles{$chapter->{include}[0]} = $chapter->{title};
-        print $fh qq{<li>\n};
-        printf $fh qq{<a href="%s.html">%s</a>\n}, $chapter->{include}[0], $chapter->{title};
-        print $fh qq{<ul>\n};
-        foreach my $section (@{ $chapter->{sections} }) {
-            my $anchor = lc $section;
-            $anchor =~ s/ /-/g;
-            $anchor =~ s/[^a-z0-9-]//g;
-            $anchor =~ s/--+/-/g;
-            printf $fh qq{<li><a href="%s.html#%s">%s</a></li>\n}, $chapter->{include}[0], $anchor, $section;
-        }
-        print $fh qq{</ul>\n};
-        print $fh qq{</li>\n};
-    }
-    print $fh qq{</ul>\n};
-    print $fh qq{</div>\n};
+    open my $fh, ">", "html/toc.md";
+    print $fh $toc;
     close $fh;
+    system qw(pandoc html/toc.md -f markdown -t html -o html/toc.html);
 }
 
 # convert LaTeX to Markdown
@@ -81,14 +109,21 @@ system qw(perl -pi -e s/\[(?:sec|sub|fig|par):.+?\]//), glob "html/*.md";
 system qw(perl -pi -e s/\[H\]//), glob "html/*.md";
 
 # add page titles
-foreach my $page (sort keys %page_titles) {
-    my $title = $page_titles{$page};
-    system qw(perl -pi -e), "print \"% $title\n\" if \$. == 1", "html/$page.md";
+{
+    foreach my $line (split /\n/, $toc) {
+        if ($line =~ /\[(.+?)\]\(([^#]+?)\)/) {
+            my ($title, $file) = ($1, $2);
+            $file =~ s/#.*//;
+            $file =~ s/\.html$//;
+            system qw(perl -pi -e), "print \"% $title\n\" if \$. == 1", "html/$file.md";
+        }
+    }
 }
 
 # convert Markdown to HTML
 system qw(cp html-inc/index.md html/);
 foreach my $md (glob "html/*.md") {
+    next if $md eq 'html/toc.md';
     my $html = $md;
     $html =~ s/\.md/.html/;
     system 'pandoc', $md, qw(-f markdown -t html -o), $html,
