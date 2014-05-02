@@ -1,10 +1,8 @@
-This is the LaTeX source code for the Slic3r Manual.
+# Slic3r Manual
 
-###Work in Progress!
+The first release of this manual was sponsored by Lulzbot - Aleph Objects, Inc. and written by Gary Hodgson.
 
-A working copy of the PDF can be found [here](https://dl.dropboxusercontent.com/u/22464622/Slic3r-Manual/Slic3r-Manual.pdf).
+You can read the manual at http://manual.slic3r.org/
 
-
-Copyright 2013, Aleph Objects, Inc.
-
+Copyright 2013-2014, Aleph Objects, Inc.
 License: CC-BY-SA 3.0

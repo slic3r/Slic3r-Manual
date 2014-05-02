@@ -15,5 +15,8 @@
 *.gst
 *.ist
 SHA1SUM
+html
 html/*
+tex
+tex/*
 
