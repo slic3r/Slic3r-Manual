@@ -1,7 +1,4 @@
-Sequential Printing
-===================
-
-
+% Sequential Printing
 
 When printing several objects at once it can be useful to print each one
 separately as this will minimise oozing and strings running between the
@@ -10,7 +7,7 @@ print - if one part detaches or fails in some way, it will not be
 dragged into other parts of the print during each layer.
 
  ![Sequential printing
-options.](simple_mode/sequential_printing_options.png "fig:")
+options.](images/sequential_printing_options.png "fig:")
 
 
 Care has to be taken that the nozzle and extruder does not interfere
@@ -27,5 +24,5 @@ parameters help Slic3r detect potential collisions:
     axis rods, or lowest part which may interfere with a finished print.
 
  ![The clearance cylinder around an
-extruder.](simple_mode/extruder_clearance.jpg "fig:")
+extruder.](images/extruder_clearance.jpg "fig:")
 

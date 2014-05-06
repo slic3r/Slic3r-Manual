@@ -1,3 +1,5 @@
+% Repairing Models
+
 If the 3D mesh described in the model contains holes, or edges are
 misaligned (known as being non-manifold), then Slic3r may have problems
 working on it. Slic3r will attempt to fix any problems it can, but some
@@ -14,7 +16,7 @@ faced. Up-to-date instructions can be found on the Netfabb wiki[^2], the
 following is a quick overview of the steps involved.
 
  ![Netfabb Studio: Part
-repair.](working_with_models/netfabb_studio_part_repair.png "fig:")
+repair.](images/repair/netfabb_studio_part_repair.png "fig:")
 
 
 -   Start Netfabb Studio, and load the problem STL file, either via the
@@ -48,7 +50,7 @@ repair.](working_with_models/netfabb_studio_part_repair.png "fig:")
     before exporting.
 
      ![Netfabb Studio: Part
-    export.](working_with_models/netfabb_studio_export_part.png "fig:")
+    export.](images/repair/netfabb_studio_export_part.png "fig:")
     
 
 #### Netfabb Cloud Service
@@ -57,7 +59,7 @@ repair.](working_with_models/netfabb_studio_part_repair.png "fig:")
 STL file may be uploaded for it to be checked and repaired[^3].
 
  ![Netfabb Cloud
-Services.](working_with_models/netfabb_cloud_services.png "fig:")
+Services.](images/repair/netfabb_cloud_services.png "fig:")
 
 
 -   Navigate to http://cloud.netfabb.com
@@ -85,7 +87,7 @@ following steps outline how a problem model file can be analysed and
 repaired.
 
  ![FreeCAD part
-repair.](working_with_models/freecad_part_repair.png "fig:")
+repair.](images/repair/freecad_part_repair.png "fig:")
 
 
 -   Start FreeCAD and from the start splash page choose

@@ -1,7 +1,4 @@
-Working with Models
-===================
-
-
+% Working with Models
 
 Yet another step lies between now and the first print - a model has to
 found and then sliced.
@@ -47,7 +44,7 @@ applications available, one of which is Meshlab[^7] - a comprehensive
 tool for viewing and working with 3D files.
 
  ![Shapesmith online CAD
-tool.](working_with_models/shapesmith.png "fig:") 
+tool.](images/working-with-models/shapesmith.png "fig:") 
 
 Working with Plater
 -------------------
@@ -55,7 +52,7 @@ Working with Plater
  Slic3r has a tool, called Plater, which
 allows one or more models to be loaded and arranged before being sliced.
 
- ![Plater](working_with_models/plater.png "fig:") 
+ ![Plater](images/working-with-models/plater.png "fig:") 
 
 Once you have acquired a model, drag it onto the Plater window (or use
 the Add button below the file list) to load it into Slic3r. In the
@@ -65,11 +62,11 @@ perimeter, several millimeters away from the model, which is extruded
 first. This is useful in making sure the plastic is flowing smoothly
 from the nozzle when the model is starting to be printed.
 
- ![Minimug model.](working_with_models/minimug_model.png "fig:")
+ ![Minimug model.](images/working-with-models/minimug_model.png "fig:")
 
 
  ![STL file
-loaded.](working_with_models/plater_model_loaded.png "fig:")
+loaded.](images/working-with-models/plater_model_loaded.png "fig:")
 
 
 The model can be repositioned by dragging the representation of it on

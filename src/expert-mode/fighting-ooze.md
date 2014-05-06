@@ -1,7 +1,4 @@
-Fighting Ooze
-=============
-
-
+% Fighting Ooze
 
 Unless the material being extruded has a very high viscosity it will
 ooze from the nozzle in between extrusions. There are several settings
@@ -13,7 +10,7 @@ pressure in the nozzle, thus reducing ooze. After the subsequent travel
 move the retraction is reversed to prepare the extruder for the next
 extrusion.
 
- ![Retraction settings.](expertmode/retraction_settings.png "fig:")
+ ![Retraction settings.](images/retraction_settings.png "fig:")
 
 
 -   `Length` - The number of millimeters to retract. Note that the

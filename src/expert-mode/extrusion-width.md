@@ -1,10 +1,7 @@
-Extrusion Width
-===============
-
-
+% Extrusion Width
 
  ![Extrusion widths
-options.](expertmode/advanced_extrusion_widths_options.png "fig:")
+options.](images/advanced_extrusion_widths_options.png "fig:")
 
 
 One reason for modifying the extrusion width has already been discussed:

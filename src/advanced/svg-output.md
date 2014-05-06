@@ -1,7 +1,4 @@
-SVG Output
-==========
-
-
+% SVG Output
 
 Slic3r can produce output for other types of 3D printers which require
 each layer to be represented as image, for example DLP resin or
@@ -13,7 +10,7 @@ format, rather than a bitmap format. For this reason it is common to use
 Scalable Vector Graphics (SVG) format.
 
  ![Example SVG
-slice.](advanced/svg_output/example_svg_slice.png "fig:")
+slice.](images/svg_output/example_svg_slice.png "fig:")
 
 
 Slic3r provides the ability to produce SVG output suitable for such
@@ -28,7 +25,7 @@ first layer being shown, and only the negative islands within the model
 (as the browser background is usually white).
 
  ![SVG in the
-browser.](advanced/svg_output/svg_direct_browser.png "fig:")
+browser.](images/svg_output/svg_direct_browser.png "fig:")
 
 
 For this reason a small web application was written to allow each slice
@@ -37,7 +34,7 @@ Navigate to the application and drag and drop the SVG file onto the
 screen to have it load and display.
 
  ![Slic3r SVG
-Viewer.](advanced/svg_output/svg_slic3rsvg_viewer.png "fig:")
+Viewer.](images/svg_output/svg_slic3rsvg_viewer.png "fig:")
 
 
 SVG Settings
@@ -64,7 +61,7 @@ G-Code commands sent through the printcore component, which means that
 standard RepRap electronics, such as RAMPS, can be used.
 
  ![Printing SVG with
-Projectlayer.](advanced/svg_output/projectlayer.png "fig:")
+Projectlayer.](images/svg_output/projectlayer.png "fig:")
 
 
 [^1]: <http://garyhodgson.github.io/slic3rsvgviewer>

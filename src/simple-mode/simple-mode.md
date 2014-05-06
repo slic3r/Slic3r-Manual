@@ -1,12 +1,9 @@
-Simple Mode
-===========
-
-
+% Simple Mode
 
 Slic3r has two modes of operation, Simple and Expert. These may be
 chosen from the `Preferences` window (found under the `File` menu).
 
-[ht] ![Preferences.](simple_mode/preferences_general.png "fig:")
+[ht] ![Preferences.](images/preferences_general.png "fig:")
 
 
 Simple mode offers a reduced set of options, enough for the beginner to
@@ -22,7 +19,7 @@ the settings on this tab will be modified regularly, possibly for each
 model printed.
 
 [ht] ![Simple Mode: Print
-Settings.](simple_mode/simple_mode_print_settings.png "fig:")
+Settings.](images/simple_mode_print_settings.png "fig:")
 
 
 #### General.
@@ -64,7 +61,7 @@ intermediate layers are likely to be filled with a pattern set less than
 can require more than one pass to cover completely.
 
  ![An example of insufficient top
-layers.](simple_mode/bad_top_infill.jpg "fig:") 
+layers.](images/bad_top_infill.jpg "fig:") 
 
 Another tip to consider: Setting the top solid layer to zero, and
 setting the infill also to zero, will result in a hollow receptacle,
@@ -73,7 +70,7 @@ the settings within Slic3r can be used to generate different kinds of
 prints, and not only be used to control surface accuracy.
 
  ![Creating a vase from a solid
-model.](simple_mode/solid_layers_vases.png "fig:")
+model.](images/solid_layers_vases.png "fig:")
 
 
 #### Infill.
@@ -109,7 +106,7 @@ part. The `Pattern spacing` option determines how dense the support
 material is printed.
 
  ![An example of an object printed with support
-material.](simple_mode/support_example.jpg "fig:")
+material.](images/support_example.jpg "fig:")
 
 
 Tip: It is sometimes worth considering altering the orientation of the
@@ -147,7 +144,7 @@ the print to stick to the bed with in order to reduce warping (see
 §). The brim is then cut away once the
 print is finished and removed from the bed.
 
- ![An example of brim.](simple_mode/brim.jpg "fig:")
+ ![An example of brim.](images/brim.jpg "fig:")
 
 
 #### Sequential Printing.
@@ -164,7 +161,7 @@ The `Filament Settings` will normally be used infrequently, for example
 on receipt of a new roll of filament.
 
  ![Simple Mode: Filament
-Settings.](simple_mode/simple_mode_filament_settings.png "fig:")
+Settings.](images/simple_mode_filament_settings.png "fig:")
 
 
 #### Filament.
@@ -193,7 +190,7 @@ The `Printer Settings` will be updated the least, unless Slic3r is going
 to be used for many printers, for example, in a 3D printer farm.
 
  ![Simple Mode: Printer
-Settings.](simple_mode/simple_mode_printer_settings.png "fig:")
+Settings.](images/simple_mode_printer_settings.png "fig:")
 
 
 #### Size and coordinates.

@@ -1,13 +1,10 @@
-Skirt
-=====
-
-
+% Skirt
 
 The `Skirt` setting adds an extrusion a short distance away from the
 perimiter of the object. This can ensure that the material is flowing
 smoothly from the extruder before it starts on the model proper.
 
- ![Skirt settings.](expertmode/skirt_settings.png "fig:")
+ ![Skirt settings.](images/skirt_settings.png "fig:")
 
 
 -   `Loops` - How many circuits should be completed before starting on

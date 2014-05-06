@@ -1,7 +1,4 @@
-Slic3r Support
-==============
-
-
+% Slic3r Support
 
 A variety of resources are available to provide support for Slic3r.
 

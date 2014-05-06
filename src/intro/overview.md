@@ -1,7 +1,6 @@
-Overview
-========
+% Overview
 
-*This manual was sponsored by* ![image](lulzbot_logo.png)
+*This manual was sponsored by* ![image](images/lulzbot_logo.png)
 *and written by Gary Hodgson*
 
 Slic3r is a tool which translates digital 3D models into instructions

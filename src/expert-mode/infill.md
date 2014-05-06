@@ -1,7 +1,4 @@
-Infill Patterns and Density
-===========================
-
-
+% Infill Patterns and Density
 
 There are several considerations when choosing an infill pattern: object
 strength, time and material, personal preference. It can be inferred
@@ -9,7 +6,7 @@ that a more complex pattern will require more moves, and hence take more
 time and material.
 
  ![Infill pattern
-settings.](expertmode/infill_pattern_settings.png "fig:")
+settings.](images/infill_pattern_settings.png "fig:")
 
 
 Slic3r offers several infill patterns, four regular, and three more
@@ -19,29 +16,29 @@ model[^1]. Note that this is only indicative, as model complexity and
 other factors will affect time and material.
 
  ![Infill pattern: Line (344.51mm /
-5m:20s)](expertmode/infill_line.png "fig:") 
+5m:20s)](images/infill_line.png "fig:") 
 
  ![Infill pattern: Rectilinear (350.57mm /
-5m:23s)](expertmode/infill_rectilinear.png "fig:")
+5m:23s)](images/infill_rectilinear.png "fig:")
 
 
  ![Infill pattern: Concentric (351.80mm /
-5m:30s)](expertmode/infill_concentric.png "fig:")
+5m:30s)](images/infill_concentric.png "fig:")
 
 
  ![Infill pattern: Honeycomb (362.73mm /
-5m:39s)](expertmode/infill_honeycomb.png "fig:") 
+5m:39s)](images/infill_honeycomb.png "fig:") 
 
  ![Infill pattern: Hilbert Curve (332.82mm /
-5m:28s)](expertmode/infill_hilbertcurve.png "fig:")
+5m:28s)](images/infill_hilbertcurve.png "fig:")
 
 
  ![Infill pattern: Archimedean Chords (333.66mm /
-5m:27s)](expertmode/infill_archimedeanchords.png "fig:")
+5m:27s)](images/infill_archimedeanchords.png "fig:")
 
 
  ![Infill pattern: Octagram Spiral (318.63mm /
-5m:15s)](expertmode/infill_octagramspiral.png "fig:")
+5m:15s)](images/infill_octagramspiral.png "fig:")
 
 
 Certain model types are more suited for a particular pattern, for
@@ -51,7 +48,7 @@ suit this mechanical part better because each hexagon bonds with the
 same underlying pattern each layer, forming a strong vertical structure.
 
  ![Infill pattern comparison in a complex object. Left to Right:
-honeycomb, line](expertmode/complex_object_infill_comparison.png "fig:")
+honeycomb, line](images/complex_object_infill_comparison.png "fig:")
 
 
 Most models require only a low density infill, as providing more than,
@@ -64,6 +61,6 @@ shows how the patterns change as the density increases.
  ![Infill patterns at varying densities. Left to Right:
 20%,40%,60%,80%. Top to Bottom: Honeycomb, Concentric, Line,
 Rectilinear, Hilbert Curve, Archimedean Chords, Octagram
-Spiral](expertmode/infills.png "fig:") 
+Spiral](images/infills.png "fig:") 
 
 [^1]: Taken from http://gcode.ws

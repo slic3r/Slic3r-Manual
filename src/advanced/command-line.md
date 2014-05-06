@@ -1,7 +1,4 @@
-Command Line Usage
-==================
-
-
+% Command Line Usage
 
 Slic3r can also be used from the command line instead of via the GUI, as
 part of a script, or as part of another tool, such as Printrun[^1].

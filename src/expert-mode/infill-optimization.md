@@ -1,13 +1,10 @@
-Infill Optimization
-===================
-
-
+% Infill Optimization
 
 Slic3r contains several advanced infill settings which can help produce
 better extrusions.
 
  ![Infill advanced
-settings.](expertmode/infill_advanced_settings.png "fig:")
+settings.](images/infill_advanced_settings.png "fig:")
 
 
 -   `Infill every n layers` - Will produce sparse vertical infill by

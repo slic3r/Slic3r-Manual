@@ -1,3 +1,5 @@
+% Configuration Organization
+
 There are two ways in which to organise the configuration settings:
 exporting and importing the configuration settings, and profiles. The
 former is available in both simple and expert mode, whereas profiles is
@@ -47,11 +49,11 @@ Open the desired tab and change the settings as necessary. Once
 satisfied, click the save icon to the left above the setting titles, and
 give a suitable name when prompted.
 
- ![Saving a profile.](organising/creating_a_profile.png "fig:")
+ ![Saving a profile.](images/creating_a_profile.png "fig:")
 
 
 Profiles can be deleted by choosing the profile to delete and clicking
 the red delete button next to the save button.
 
- ![Deleting a profile.](organising/deleting_a_profile.png "fig:")
+ ![Deleting a profile.](images/deleting_a_profile.png "fig:")
 

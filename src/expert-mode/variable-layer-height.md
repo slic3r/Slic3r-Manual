@@ -1,7 +1,4 @@
-Variable Layer Height
-=====================
-
-
+% Variable Layer Height
 
 Slic3r gives the ability to adjust the layer height between arbitrary
 positions along the Z axis. That is, parts of the model could be printed
@@ -18,11 +15,11 @@ which is flattened. This is shown in the G-Code rendering in fig
 .
 
  ![Example model highlighting use case for variable layer
-heights.](expertmode/variable_layer_height/example_model.png "fig:")
+heights.](images/variable_layer_height/example_model.png "fig:")
 
 
  ![Example with normal layer
-height.](expertmode/variable_layer_height/example_gcode_normal_layer_heights.png "fig:")
+height.](images/variable_layer_height/example_gcode_normal_layer_heights.png "fig:")
 
 
 The variable layer height options are available by double clicking on a
@@ -32,7 +29,7 @@ about the model, as shown in fig.
 .
 
  ![Variable layer height options -
-Info.](expertmode/variable_layer_height/variable_layer_height_options_tab_1.png "fig:")
+Info.](images/variable_layer_height/variable_layer_height_options_tab_1.png "fig:")
 
 
 It is worth noting the height of the model, as this will be useful when
@@ -47,7 +44,7 @@ divides exactly by the given layer height so there are no "gaps" between
 sections.
 
  ![Variable layer height options -
-Layers.](expertmode/variable_layer_height/variable_layer_height_options_tab_2.png "fig:")
+Layers.](images/variable_layer_height/variable_layer_height_options_tab_2.png "fig:")
 
 
 The resulting G-Code (fig.
@@ -55,7 +52,7 @@ The resulting G-Code (fig.
 definition which should result in a higher quality print.
 
  ![Example with variable layer
-height.](expertmode/variable_layer_height/example_gcode_variable_layer_heights.png "fig:")
+height.](images/variable_layer_height/example_gcode_variable_layer_heights.png "fig:")
 
 
 Fig.  shows the example model printed. The print on
@@ -63,7 +60,7 @@ the left has 0.4mm layer height throughout, whereas the print on the
 right has the variable layer height.
 
  ![Example print with variable layer
-height.](expertmode/variable_layer_height/example_print.jpg "fig:")
+height.](images/variable_layer_height/example_print.jpg "fig:")
 
 
 An additional feature of the variable layers height option is that by
@@ -74,5 +71,5 @@ model into multiple, shorter sections which can be printed individually
 and assembled afterwards.
 
  ![Example with skipped
-layers.](expertmode/variable_layer_height/example_gcode_skipped_layers.png "fig:")
+layers.](images/variable_layer_height/example_gcode_skipped_layers.png "fig:")
 

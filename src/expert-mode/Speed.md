@@ -1,7 +1,4 @@
-Speed
-=====
-
-
+% Speed
 
 Once the printer is reliably producing good quality prints it may be
 desirable to increase the speed. Doing this provides several benefits,
@@ -26,7 +23,7 @@ locations, and bridges and gaps are available, as well as the ability to
 slow down for the first layer.
 
  ![Expert mode speed
-options.](expertmode/speed_advanced_settings.png "fig:")
+options.](images/speed_advanced_settings.png "fig:")
 
 
 Where indicated a value can be given in percentage. This is in relation

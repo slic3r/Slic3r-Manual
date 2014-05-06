@@ -1,7 +1,4 @@
-Printing
-========
-
-
+% Printing
 
 At this stage Slic3r has been configured and a model has been acquired,
 sliced and made ready for print. Now would be the time to fire up the

@@ -1,10 +1,6 @@
-Downloading
-===========
+% Downloading
 
-Slic3r
-------
-
- Slic3r can be downloaded directly from:
+Slic3r can be downloaded directly from:
 <http://slic3r.org/download>.
 
 Pre-compiled packages are available for Windows, Mac OS X and Linux.

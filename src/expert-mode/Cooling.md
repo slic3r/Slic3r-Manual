@@ -1,7 +1,4 @@
-Cooling
-=======
-
-
+% Cooling
 
 Temperature plays a key part in determining print quality. Too hot and
 the material deforms, too cool and layer adhesion may be problematic.
@@ -13,7 +10,7 @@ There are two main techniques for cooling: adding a fan and slowing down
 the print speed. Slic3r may choose to use both techniques, using a fan
 first, and then slowing down the print if the layer time is too fast.
 
- ![Cooling strategy.](expertmode/cooling_chart.png "fig:")
+ ![Cooling strategy.](images/cooling_chart.png "fig:")
 
 
 Figure  shows the strategy adopted by Slic3r.
@@ -60,7 +57,7 @@ In simple mode Slic3r will attempt to choose the optimal settings for
 both fans and speed. Expert mode gives more granular options.
 
  ![Cooling advanced
-settings.](expertmode/cooling_advanced_settings.png "fig:")
+settings.](images/cooling_advanced_settings.png "fig:")
 
 
 -   `Fan speed` - Determines the minimum and maximum speeds - useful for

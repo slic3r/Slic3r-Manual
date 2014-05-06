@@ -1,7 +1,4 @@
-Multiple Extruders
-==================
-
-
+% Multiple Extruders
 
 A printer with more than one extruder can be used in different ways: The
 additional extruder could print a different colour or material; or it
@@ -25,7 +22,7 @@ to the left-hand pane.
 
  ![Multiple extruder options - Printer Settings Tab (General). Note
 the two extruders defined in the left-hand
-pane.](expertmode/multipleextruders/printer_settings_general_multiple_extruder_options.png "fig:")
+pane.](images/multipleextruders/printer_settings_general_multiple_extruder_options.png "fig:")
 
 
 Each extruder can be configured as usual, however there are additional
@@ -33,7 +30,7 @@ settings which must be set which are particular to multi-extruder
 setups.
 
  ![Multiple extruder options - Printer Settings Tab
-(Extruder).](expertmode/multipleextruders/printer_settings_extruder_multiple_extruder_options.png "fig:")
+(Extruder).](images/multipleextruders/printer_settings_extruder_multiple_extruder_options.png "fig:")
 
 
 The `Extruder offset` is to be used should the firmware not handle the
@@ -56,7 +53,7 @@ extruders has been selected the `Plater` tab allows the selection of a
 different filament for each extruder.
 
  ![Plater with multiple filament
-options.](expertmode/multipleextruders/plater_multi_filament.png "fig:")
+options.](images/multipleextruders/plater_multi_filament.png "fig:")
 
 
 Assigning Extruders for Single-material Objects
@@ -70,7 +67,7 @@ with a particular extrusion, the `Multiple Extruders` section of the
 extrusion type.
 
  ![Multiple extruder options - Print Settings
-Tab.](expertmode/multipleextruders/print_settings_multiple_extruder_options.png "fig:")
+Tab.](images/multipleextruders/print_settings_multiple_extruder_options.png "fig:")
 
 
 Configuring Tool Changes
@@ -85,7 +82,7 @@ settings. This includes the [previous\_extruder] and [next\_extruder]
 variables.
 
  ![Multiple extruder options - Tool change
-G-code.](expertmode/multipleextruders/printer_settings_custom_gcode.png "fig:")
+G-code.](images/multipleextruders/printer_settings_custom_gcode.png "fig:")
 
 
 Printing Multi-material Objects

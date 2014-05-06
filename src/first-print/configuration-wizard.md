@@ -1,7 +1,4 @@
-Configuration Wizard
-====================
-
-
+% Configuration Wizard
 
 Slic3r has two features to aid newcomers: the configuration wizard, and
 simple mode.
@@ -11,7 +8,7 @@ software. The configuration wizard asks a series of questions and
 creates a configuration for Slic3r to start with.
 
  ![Configuration Wizard: Welcome
-Screen](configuration_wizard/configuration_wizard_welcome.png "fig:")
+Screen](images/configuration-wizard/configuration_wizard_welcome.png "fig:")
 
 
 1. Firmware Type
@@ -23,7 +20,7 @@ that the printer uses. This should have been specified when the printer
 was built or configured. If unsure then contact the supplier.
 
  ![Configuration Wizard: Firmware
-Type](configuration_wizard/configuration_wizard_firmware_type.png "fig:")
+Type](images/configuration-wizard/configuration_wizard_firmware_type.png "fig:")
 
 
 2. Bed Size
@@ -43,7 +40,7 @@ Also remember to check any firmware end-stop settings which may limit
 X/Y movement.
 
  ![Configuration Wizard: Bed
-Size](configuration_wizard/configuration_wizard_bed_size.png "fig:")
+Size](images/configuration-wizard/configuration_wizard_bed_size.png "fig:")
 
 
 3. Nozzle Diameter
@@ -63,7 +60,7 @@ and consequently may be a useful thing to do even if the diameter is
 known.
 
  ![Configuration Wizard: Nozzle
-Diameter](configuration_wizard/configuration_wizard_nozzle_diameter.png "fig:")
+Diameter](images/configuration-wizard/configuration_wizard_nozzle_diameter.png "fig:")
 
 
 4. Filament Diameter
@@ -83,7 +80,7 @@ filament and use the average. For example, measurements of 2.89, 2.88,
 used.
 
  ![Configuration Wizard: Filament
-Diamter](configuration_wizard/configuration_wizard_filament_diameter.png "fig:")
+Diamter](images/configuration-wizard/configuration_wizard_filament_diameter.png "fig:")
 
 
 5. Extrusion Temperature
@@ -106,7 +103,7 @@ Note: One may choose to control the extruder temperature manually from
 the printer controller. In this case the temperature can be set to zero.
 
  ![Configuration Wizard: Extrusion
-Temperature](configuration_wizard/configuration_wizard_extrusion_temperature.png "fig:")
+Temperature](images/configuration-wizard/configuration_wizard_extrusion_temperature.png "fig:")
 
 
 6. Bed Temperature
@@ -121,14 +118,14 @@ Note: One may choose to control the bed temperature manually from the
 printer controller. In this case the temperature can be set to zero.
 
  ![Configuration Wizard: Bed
-Temperature](configuration_wizard/configuration_wizard_bed_temperature.png "fig:")
+Temperature](images/configuration-wizard/configuration_wizard_bed_temperature.png "fig:")
 
 
 At this stage the wizard is complete and the basic configuration is
 defined.
 
  ![Configuration Wizard:
-End](configuration_wizard/configuration_wizard_end.png "fig:")
+End](images/configuration-wizard/configuration_wizard_end.png "fig:")
 
 
 [^1]: <http://forums.reprap.org/read.php?1,113374,113953>

@@ -1,7 +1,4 @@
-Calibration
-===========
-
-[calibration]
+% Calibration
 
 Before even attempting the first print it is vital that the printer is
 correctly calibrated. Skipping or rushing this step will result in
