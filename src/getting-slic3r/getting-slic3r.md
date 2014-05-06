@@ -7,18 +7,8 @@ Pre-compiled packages are available for Windows, Mac OS X and Linux.
 Windows and Linux users can choose between 32 and 64 bit versions to
 match their system.
 
-Manual
-------
-
-
-
-The latest version of this document, with LaTeX source code, can be
-found at: <https://github.com/alexrj/Slic3r-Manual>
-
 Source
 ------
-
-
 
 The source code is available via GitHub:
 <https://github.com/alexrj/Slic3r>. For more details on building from

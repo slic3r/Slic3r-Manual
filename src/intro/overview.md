@@ -18,21 +18,16 @@ Goals & Philosophy
 ==================
 
 Slic3r is an original project started in 2011 by Alessandro Ranellucci
-(aka. Sound), who used his considerable knowledge of the Perl language
-to create a fast and easy to use application. Readability and
-maintainability of the code are among the design goals.
+(aka. Sound). Readability and maintainability of the code are among the 
+design goals, as well as power and flexibility. Slic3r aims to be a 
+professional CAM tool.
 
 The program is under constant refinement, from Alessandro and the other
 contributors to the project, with new features and bug fixes being
 released on a regular basis.
 
-Donating
-========
-
-Slic3r started as a one-man job, developed solely by Alessandro in his
-spare time, and as a freelance developer this has a direct cost for him.
-By generously releasing Slic3r to the public as open source software,
-under the GPL license, he has enabled many to benefit from his work.
+Donations and Sponsorship
+=========================
 
 The opportunity to say thank you via a donation exists. More details can
 be found at: <http://slic3r.org/donations>.
