@@ -64,12 +64,24 @@ help control oozing.
     and between, islands. This has a negative impact on both G-code
     generation and print times.
 
--   `Randomize starting points` (Layers and perimeters - Vertical
-    shells) - As the extruder moves up to the start of the next layer
-    any ooze can result in blobs. If the same start point is used for
-    every layer then a seam can form the length of the object. This
-    setting will move the start point to a difference location for each
-    layer.
+-   `Seam position` (Layers and perimeters - Vertical shells) - This 
+    setting determines the start point of perimeter loops, and thus the
+    position of the potentially visible vertical seam on the side of the
+    object. The available options are:
+    * `Random` - This will choose a different point for each layer, thus
+        making the seam less noticeable.
+    * `Nearest` - This will try to choose a concave non-overhang vertex
+        so that the seam is hidden in the inside of the concave angle. 
+        If no concave non-overhang vertices are available, it will choose
+        a convex non-overhang vertex. If none are available, it will 
+        choose a non-overhang vertex. The choice among the candidates is
+        operated so that the start point is the nearest to the previous
+        extruder position. So this option will optimize for short travels.
+    * `Aligned` - This will use the same logic as `Nearest` for finding the
+        candidates, but it will choose the one that is nearest to the 
+        start point of the previous layer. This will ensure the seam is
+        mostly aligned throughout the whole object.
+        
 
 See also section : Sequential Printing
 for another technique which can minimise strings forming between
