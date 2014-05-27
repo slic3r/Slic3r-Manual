@@ -6,24 +6,23 @@ Applying cooling will allow the freshly deposited material to solidify
 enough to provide a good base for the next layer, helping with
 overhangs, small details and bridges.
 
-There are two main techniques for cooling: adding a fan and slowing down
-the print speed. Slic3r may choose to use both techniques, using a fan
+There are two main techniques for cooling: **adding a fan** and **slowing down
+the print speed**. Slic3r may choose to use both techniques, using a fan
 first, and then slowing down the print if the layer time is too fast.
 
  ![Cooling strategy.](images/cooling_chart.png "fig:")
 
-
-Figure  shows the strategy adopted by Slic3r.
-Reading from right to left, when the minimum fan threshold (\#2) is
+Figure shows the strategy adopted by Slic3r.
+Reading from right to left, when the minimum fan threshold (#2) is
 reached the fan is turned on. This increases in intensity as the layer
 time decreases. The print speed remains constant until the estimated
-print time drops below a certain threshold (\#1), this is when the print
+print time drops below a certain threshold (#1), this is when the print
 speed is reduced until it reaches it’s minimum value.
 
 Fans
 ----
 
- Most electronics and firmware allow the addition of a fan via
+Most electronics and firmware allow the addition of a fan via
 a spare connector. These can then be instructed with G-code, from
 Slic3r, to turn on or off as the model requires, and to rotate at
 different speeds.
@@ -40,7 +39,7 @@ designs available online, for a wide variety of printers.
 Slowing Down
 ------------
 
- Slic3r can tell the printer to slow down if the
+Slic3r can tell the printer to slow down if the
 estimated layer time is above a certain threshold.
 
 Care must be taken as the intended effect could be mitigated by the
@@ -51,14 +50,16 @@ to use a fan where possible.
 Configuring
 -----------
 
+![Cooling settings.](images/cooling_advanced_settings.png)
 
 
-In simple mode Slic3r will attempt to choose the optimal settings for
-both fans and speed. Expert mode gives more granular options.
+-   `Keep fan always on` - If this is enabled, fan will never be disabled 
+     and will be kept running at least at its minimum speed. Useful for PLA,
+     harmful for ABS.
 
- ![Cooling advanced
-settings.](images/cooling_advanced_settings.png "fig:")
-
+-   `Enable auto cooling` - This enables/disables the cooling logic. A 
+    descriptive text below this option describes the effects of the 
+    current configuration.
 
 -   `Fan speed` - Determines the minimum and maximum speeds - useful for
     fans that run too fast by default.
@@ -72,10 +73,6 @@ settings.](images/cooling_advanced_settings.png "fig:")
     layer is, and so it makes sense not to apply the fan until sure the
     print is securely attached to the bed. Keeping the fan turned off
     for the first two or three layers is a good idea.
-
--   `Keep fan always on` - Overrides any other choices and has the fan
-    run continuously, at least at the minimum speed setting. This can be
-    useful when printing with PLA, but is not recommended for ABS.
 
 -   `Enable fan if print time is below t seconds` - Triggers the fan if
     the layer will be completed within the given number of seconds.
