@@ -25,14 +25,14 @@
     * [Skirt and brim](/expert-mode/skirt.html)
     * [Cooling](/expert-mode/cooling.html)
     * [Support Material](/expert-mode/support-material.html)
-    * [Multiple Extruders](/expert-mode/multiple-extruders.html)
     * [Extrusion Width](/expert-mode/extrusion-width.html)
+    * [Sequential Printing](/advanced/sequential-printing.html)
     * [Variable Layer Height](/expert-mode/variable-layer-height.html)
 * Input/output files
     * [Repairing Models](/advanced/repairing-models.html)
     * [SVG Output](/advanced/svg-output.html)
 * Topics
-    * [Sequential Printing](/advanced/sequential-printing.html)
+    * [Multiple Extruders](/expert-mode/multiple-extruders.html)
     * [Command Line Usage](/advanced/command-line.html)
     * [Post-Processing Scripts](/advanced/post-processing.html)
     * [Profiles and configuration](/configuration-organization/configuration-organization.html)
