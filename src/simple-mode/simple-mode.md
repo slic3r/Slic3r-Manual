@@ -3,8 +3,7 @@
 Slic3r has two modes of operation, Simple and Expert. These may be
 chosen from the `Preferences` window (found under the `File` menu).
 
-[ht] ![Preferences.](images/preferences_general.png "fig:")
-
+![Preferences.](images/preferences_general.png "fig:")
 
 Simple mode offers a reduced set of options, enough for the beginner to
 get started with. Expert mode give more control over how Slic3r produces
@@ -18,13 +17,10 @@ related to the actual print. Whereas the other tabs are changed rarely,
 the settings on this tab will be modified regularly, possibly for each
 model printed.
 
-[ht] ![Simple Mode: Print
-Settings.](images/simple_mode_print_settings.png "fig:")
+![Simple Mode: Print Settings.](images/simple_mode_print_settings.png "fig:")
 
 
 #### General.
-
-
 
 `Layer height` is the thickness of each layer, and it is the step along
 the vertical axis taken before extruding a new layer atop the previous

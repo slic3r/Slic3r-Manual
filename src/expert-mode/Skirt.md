@@ -1,11 +1,12 @@
-% Skirt
+% Skirt and brim
+
+#### Brim
 
 The `Skirt` setting adds an extrusion a short distance away from the
 perimiter of the object. This can ensure that the material is flowing
 smoothly from the extruder before it starts on the model proper.
 
- ![Skirt settings.](images/skirt_settings.png "fig:")
-
+ ![Skirt settings.](images/skirt_settings.png)
 
 -   `Loops` - How many circuits should be completed before starting on
     the model. One loop is usually sufficient.
@@ -23,3 +24,11 @@ smoothly from the extruder before it starts on the model proper.
     object not be enough.
 
 
+#### Brim
+
+`Brim width` is used to add more perimeters to the
+first layer, as a base flange, in order to provide more surface area for
+the print to stick to the bed with in order to reduce warping (see
+§). The brim is then cut away once the print is finished and removed from the bed.
+
+![An example of brim.](images/brim.jpg)

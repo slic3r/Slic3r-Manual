@@ -22,7 +22,7 @@
     * [Infill Patterns and Density](/expert-mode/infill.html)
     * [Infill Optimization](/expert-mode/infill-optimization.html)
     * [Fighting Ooze](/expert-mode/fighting-ooze.html)
-    * [Skirt](/expert-mode/skirt.html)
+    * [Skirt and brim](/expert-mode/skirt.html)
     * [Cooling](/expert-mode/cooling.html)
     * [Support Material](/expert-mode/support-material.html)
     * [Multiple Extruders](/expert-mode/multiple-extruders.html)
