@@ -28,15 +28,14 @@
     * [Multiple Extruders](/expert-mode/multiple-extruders.html)
     * [Extrusion Width](/expert-mode/extrusion-width.html)
     * [Variable Layer Height](/expert-mode/variable-layer-height.html)
-* [Configuration Organization](/configuration-organization/configuration-organization.html)
-    * [Exporting and Importing Configuration](/configuration-organization/configuration-organization.html#exporting-and-importing-configuration)
-    * [Managing Profiles](/configuration-organization/configuration-organization.html#profiles)
-* Advanced Topics
+* Input/output files
     * [Repairing Models](/advanced/repairing-models.html)
-    * [Sequential Printing](/advanced/sequential-printing.html)
     * [SVG Output](/advanced/svg-output.html)
+* Topics
+    * [Sequential Printing](/advanced/sequential-printing.html)
     * [Command Line Usage](/advanced/command-line.html)
     * [Post-Processing Scripts](/advanced/post-processing.html)
+    * [Profiles and configuration](/configuration-organization/configuration-organization.html)
 * [Troubleshooting](/troubleshooting/troubleshooting.html)
     * [Z Wobble](/troubleshooting/troubleshooting.html#z-wobble)
     
