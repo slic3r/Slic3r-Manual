@@ -36,7 +36,8 @@
     * [Command Line Usage](/advanced/command-line.html)
     * [Post-Processing Scripts](/advanced/post-processing.html)
     * [Profiles and configuration](/configuration-organization/configuration-organization.html)
-* [Troubleshooting](/troubleshooting/troubleshooting.html)
+* Troubleshooting
+    * [Dimension Errors](/troubleshooting/dimension-errors.html)
     * [Z Wobble](/troubleshooting/troubleshooting.html#z-wobble)
     
 </div>
