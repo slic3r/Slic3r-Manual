@@ -36,6 +36,7 @@
     * [Command Line Usage](/advanced/command-line.html)
     * [Post-Processing Scripts](/advanced/post-processing.html)
     * [Profiles and configuration](/configuration-organization/configuration-organization.html)
+    * [Flow Math](/advanced/flow-math.html)
 * Troubleshooting
     * [Dimension Errors](/troubleshooting/dimension-errors.html)
     * [Z Wobble](/troubleshooting/troubleshooting.html#z-wobble)
