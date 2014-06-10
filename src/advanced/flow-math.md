@@ -41,19 +41,19 @@ In this case the problem is: **what shape** will our extrusion get? We know it w
 
 Slic3r assumes that the cross-sectional shape of an extrusion is a rectangle with semicircular ends. So the relationship between desired extrusion width and volume to extrude is the following:
 
-*TODO: add image*
+![image](images/flow-math/area1.png)
 
 If we reduce flow, at some point the shape will change. This is the last shape that has semicircular ends:
 
-*TODO: add image*
+![image](images/flow-math/area2.png)
 
 If extrusion gets more narrow, we assume it will have the following shape:
 
-*TODO: add image*
+![image](images/flow-math/area3.png)
 
 When target extrusion width coincides with nozzle diameter we assume a rectangular shape:
 
-*TODO: add image*
+![image](images/flow-math/area4.png)
 
 When target extrusion width is thinner than nozzle diameter the shape is unpredictable so we just use the same rectangular formula but discourage usage of such thin extrusion values.
 
@@ -87,7 +87,7 @@ Path spacing is thus:
 
 Slic3r allows users to define extrusion width manually for each kind of extrusion (perimeters, infill, support material etc.) but will calculate sane defaults if no custom values are entered.
 
-For the **outermost loop** of perimeters (aka *external perimeters*) Slic3r will default to a **thin extrusion width**, equal to `nozzle diameter * 1.05`. This is considered the thinnest safe extrusion width. A thin extrusion width provides better accuracy to the object shape and minimizes the flow errors caused by irregular filament.
+For the **outermost loop** of perimeters (aka *external perimeters*) Slic3r will default to a **thin extrusion width**, equal to `nozzle diameter * 1.05`. This is considered the thinnest safe extrusion width. A thin extrusion width provides **better accuracy** to the object shape and minimizes the flow errors caused by irregular filament.
 
-Extrusion width for other things is calculated by getting the cross-sectional area of the configured nozzle diameter and then calculating the extrusion width produced by extruding that amount of material. In other words, by matching flow speed and head speed. The purpose of this logic is to find the "native" flow that minimizes side forces during extrusion. Such calculated extrusion with is capped to max value equal to `nozzle_diameter * 1.7`, except for internal sparse infill where the full native flow is used.
+Extrusion width for other things is calculated by getting the cross-sectional area of the configured nozzle diameter and then calculating the extrusion width produced by extruding that amount of material. In other words, by **matching flow speed and head speed**. The purpose of this logic is to find the "native" flow that minimizes side forces during extrusion. Such calculated extrusion with is capped to max value equal to `nozzle_diameter * 1.7`, except for internal sparse infill where the full native flow is used.
 
