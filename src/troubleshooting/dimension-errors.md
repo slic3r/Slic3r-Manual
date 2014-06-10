@@ -47,4 +47,8 @@ Low-quality and medium-quality filaments are not very regular in diameter. If yo
 
 Okay, all of the above causes do not depend on Slic3r and, when possible, they need to be fixed **before** attempting any software solution.
 
-That said, the flow math used in Slic3r plays a good role in making correct dimensions, since it tries to guess what the shape of the extruded material will be and how thick the extrusion will result on the horizontal plane given an amount of material. Being an approximation, it carries an error. The usual way to deal with these issues involves tuning the *Extrusion Multiplier* setting in order to increase/reduce the amount of plastic, thus making extrusions more or less thick.
+That said, the flow math used in Slic3r plays a good role in making correct dimensions, since it tries to guess what the shape of the extruded material will be and how thick the extrusion will result on the horizontal plane given an amount of material. Being an approximation, it carries an error. The usual way to deal with these issues involves tuning the *Extrusion Multiplier* setting in order to increase/reduce the amount of plastic, thus making extrusions more or less thick. But this will also affect solid surfaces, so it's not the ideal solution.
+
+For more exact dimensions you need to check the **External Perimeters First** option. Printing external perimeters first will prevent the shift caused by extrudate overlap. On the other hand, printing internal perimeters first hides seams better, so it's your take.
+
+A new **XY Size Compensation** option was also introduced that allows to grow/shrink object shape in order to compensate for the measured error. Supposing your holes are smaller by 0.1mm, you can just enter -0.05 in this option to get them compensated (negative sign means shrink inwards).
