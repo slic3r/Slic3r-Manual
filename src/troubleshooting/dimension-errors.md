@@ -33,7 +33,7 @@ Since curves are approximated by polygons, there are sharp vertices at their ver
 
 #### Z wobble
 
-Even if the dimensional accuracy of a single layer was correct, several stacked layers might make the hole smaller if they're not exactly aligned. [Z wobble](troubleshooting.html#z-wobble) caused by mechanical issues will reduce hole size to the internal envelope of the stacked layers:
+Even if the dimensional accuracy of a single layer was correct, several stacked layers might make the hole smaller if they're not exactly aligned. [Z wobble](troubleshooting#z-wobble) caused by mechanical issues will reduce hole size to the internal envelope of the stacked layers:
 
 ![image](images/dimension-errors/z-wobble.png)
 
