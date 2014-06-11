@@ -71,17 +71,17 @@ Supposing no overlap, thus tangent paths, there would be empty space (yellow):
 
 The cross-section area of such voids is generally:
 
-`void_area = extrusion_width - (layer_height/2)^2 * PI`
+`void_area = layer_height^2 - (layer_height/2)^2 * PI`
 
 Ideally, we would want to fill all of that yellow area by placing the extrusions closed to each other. However, it's very unlikely that the second extrusion will fill the space below the previous one, so there would still be a little void. The ideal overlap would be something like:
 
 `0 < overlap_factor*void_area < void_area`
 
-with `overlap_factor` ranging from 0 to 1. In the past, several values were tried for `overlap_factor`, but some users were still seeing too sparse paths. A value of 1 is currently being used.
+with `overlap_factor` ranging from 0 to 1. `overlap_factor` represents how much void remains between the extrusions. It's difficult to estimate this amount, since it probably depends also on viscosity of plastic, extrusion speed and temperature. In the past, several values were tried for `overlap_factor`, but some users were still reporting too sparse paths. A value of 1 is currently being used to guarantee that the error (which is always present) is fully on the side of abundant extrusion rather than lacking material.
 
 Path spacing is thus:
 
-`spacing = extrusion_width + height*(1 - PI/4)`
+`spacing = extrusion_width - layer_height * (1 - PI/4)`
 
 #### Sane defaults
 
