@@ -43,21 +43,9 @@ Slic3r assumes that the cross-sectional shape of an extrusion is a rectangle wit
 
 ![image](images/flow-math/area1.png)
 
-If we reduce flow, at some point the shape will change. This is the last shape that has semicircular ends:
+When target extrusion width is thinner than layer height the shape is unpredictable so we just use the same rectangular formula but discourage usage of such thin extrusion values.
 
-![image](images/flow-math/area2.png)
-
-If extrusion gets more narrow, we assume it will have the following shape:
-
-![image](images/flow-math/area3.png)
-
-When target extrusion width coincides with nozzle diameter we assume a rectangular shape:
-
-![image](images/flow-math/area4.png)
-
-When target extrusion width is thinner than nozzle diameter the shape is unpredictable so we just use the same rectangular formula but discourage usage of such thin extrusion values.
-
-The combination of the above formulas is a single continuous function that correlates the target extrusion width with the amount of material to extrude per distance unit:
+The above formula provides a function that correlates the target extrusion width with the amount of material to extrude per distance unit:
 
 `E = f(extrusion_width, layer_height)`
 
