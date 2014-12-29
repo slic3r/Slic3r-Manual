@@ -28,14 +28,16 @@
     * [Extrusion Width](/expert-mode/extrusion-width)
     * [Sequential Printing](/advanced/sequential-printing)
     * [Variable Layer Height](/expert-mode/variable-layer-height)
+    * [Profiles and configuration](/configuration-organization/configuration-organization)
 * Input/output files
     * [Repairing Models](/advanced/repairing-models)
     * [SVG Output](/advanced/svg-output)
 * Topics
     * [Multiple Extruders](/expert-mode/multiple-extruders)
+    * [Draft Quality](/topics/draft-quality)
+* Advanced Topics
     * [Command Line Usage](/advanced/command-line)
     * [Post-Processing Scripts](/advanced/post-processing)
-    * [Profiles and configuration](/configuration-organization/configuration-organization)
     * [Flow Math](/advanced/flow-math)
 * Troubleshooting
     * [Dimension Errors](/troubleshooting/dimension-errors)
