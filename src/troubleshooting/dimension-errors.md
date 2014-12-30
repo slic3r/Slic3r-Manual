@@ -43,6 +43,10 @@ Low-quality and medium-quality filaments are not very regular in diameter. If yo
 
 ![image](images/dimension-errors/irregular-filament.png)
 
+#### Backlash
+
+Backlash is a mechanical defect of one or more axes that basically reduces the amount of actual motion whenever a motor inverts its spinning direction. It's generally caused by loose belts. On printers with a moving bed, its axis (usually Y) is more subject to backlash because of inertia. So, **if you get different dimension errors in X and Y, that's caused by backlash**. You'll need to tighten your belt. No software hack can reasonably compensate for a badly assembled printer.
+
 #### Flow math
 
 Okay, all of the above causes do not depend on Slic3r and, when possible, they need to be fixed **before** attempting any software solution.
