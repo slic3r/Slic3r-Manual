@@ -130,7 +130,7 @@ Slic3r can be used to repair models from command line:
 This will generate two files named *my_model_lower.stl* and *my_model_upper.stl*
 in the same directory as the original model.
 
-**Note:** the object will be automatically placed on the *z = 0* plane, so 
+**Note:** the object will be automatically placed on the *z = 0* plane before cutting, so 
 the argument for the `--cut` option is relative to the object's bottom, and
 not to the original coordinate system.
 
@@ -144,5 +144,8 @@ The following options can be useful for embedding Slic3r into host applications:
 * `--autosave` will automatically export the last selected config to a specified
    file (see the above paragraph about [Configuration] for its usage);
 * `--gui-mode` can take the `simple` or `expert` arguments, and will force Slic3r
-  to launch in the specified mode.
+  to launch in the specified mode regardless of the Preferences setting.
+* `--datadir` followed by the path to a directory will tell Slic3r to use that directory 
+  for storing and reading its configuration instead of the default system preferences
+  directory. (See the page about [configuration organization](/configuration-organization/configuration-organization) for more details.)
 
