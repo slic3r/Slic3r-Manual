@@ -34,6 +34,24 @@ The argument for `--output` can also be a directory; in that case the file
 will follow the automatic naming scheme (which you can override using the
 `--output-filename-format` option; see manual chapter about placeholders).
 
+### Options
+
+To get the full listing, reference and defaults of available command line 
+switches, just run:
+
+    slic3r --help
+
+Most of the options accept an argument, like `--layer-height 0.2` or 
+`--perimeters 3`. Howevere there are some boolean options that work as 
+simple flags, like `--wipe` or `--avoid-crossing-perimeters`. To negate
+those options you just need to prepend `--no-` to them (as in `--no-wipe`
+or `--no-avoid-crossing-perimeters`).
+
+Some options, including the ones related to multiple extruders, accept 
+multiple values. You can just append them multiple times:
+
+    slic3r --infill-extruder 2 --nozzle-diameter 0.35 --nozzle-diameter 0.5
+
 ### Configuration
 
 **Note:** the print/filament/printer presets defined in the graphical interface
