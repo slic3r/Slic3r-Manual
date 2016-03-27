@@ -25,6 +25,15 @@ detach from the bed. Therefore the `Enforce support` option will cause
 support structures to be printed for the given number of layers,
 regardless of the angle threshold value.
 
+
+The contact Z distance is the amount of space between the lowest level 
+of support and the underside of the model/layer being supported. This
+box is a dropdown box that is also editable. Default values of 0.2
+and 0 are pre-filled for convenience, although the appropriate support 
+contact Z will differ with layer height and your printer's capabilities.
+Experiment and enter in what tends to work for you (50-75% of the layer
+height seems to work well).
+
 To demonstrate the infill patterns the minimug model was tilted by 45°
 along the x axis, as shown in figure .
 
