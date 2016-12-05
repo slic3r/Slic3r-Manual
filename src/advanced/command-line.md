@@ -106,14 +106,25 @@ This will only generate a file named *model1.gcode* (but you can use the
 objects. Note that auto-arranging currently works best when all objects have
 similar sizes.
 
-### Positioning files in the G-code coordinates
+### Positioning objects in the G-code coordinates
 
-Input file(s) will be centered around the G-code point defined by the
-`--print-center` option:
+While in the graphical interface you can freely position your objects in the
+bed, command line provides two ways for telling position(s) to Slic3r:
 
-    slic3r my_model.stl --print-center 40,40
+1. Use the `--print-center X,Y` option for defining a point in G-code coordinates and Slic3r will center the print around that point:
 
-By default, the center point is set to 100,100.
+       slic3r my_model.stl --print-center 40,40
+
+   (By default, the center point is set to 100,100.)
+
+2. If you trust the coordinates of your STL file(s) and they coincide with your
+   machine's print bed, you can use `--dont-arrange`: Slic3r will leave the input
+   locations untouched.
+   
+       slic3r my_model.stl --dont-arrange
+
+Note that the bed shape configured in the graphical interface is ignored when performing command line slicing, as it only serves as a visual guidance.
+
 
 Repairing models
 ----------------
