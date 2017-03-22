@@ -85,3 +85,14 @@ point.
 
 Take into account any restrictions enforced by the firmware as many have
 settings for the maximum safe speed of each axis.
+
+## Speed Limits
+
+In the Speed settings, there are two additional options for maximum print speed, Volumetric maximum and maximum. 
+
+If you found what the maximum reasonable extrusion rate your printer can do at a given temperature, you can use either one of these to limit the speeds used by Slic3r.
+
+There are 2 experimental methods to derive the max extrusion rate:
+
+1. Print fast and use live tuning via M221 until you see or feel the filament slipping in the extruder (easy on a standard UM, maybe more difficult on others, and it heavily depends on the extruder mechanism how much pressure it can deliver without slipping).
+2. Perform the following extruder calibration routine (either manually in pronterface, or with some to-be-done tool): Heat the printe's hotend up a middle of the road temp (i.e. 210C for PLA), and push i.e. 20mm filament through the nozzle at a given speed (steps/sec or mm/sec), starting with i.e. 1mm/s, and observe whether or not the filament was slipping. If not, continue increasing the speed by 20%, and test again. If so, this value indicates a maximum extrusion rate for this temperature has been reached. 
