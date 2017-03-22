@@ -1,4 +1,5 @@
-% Z Wobble
+Z Wobble
+---------
 
 Undulations in the walls of a print may be due to wobble in the Z axis.
 A thorough analysis of the potential causes is given by whosawhatsis[^1]
