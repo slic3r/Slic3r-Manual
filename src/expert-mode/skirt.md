@@ -1,6 +1,6 @@
 % Skirt and brim
 
-#### Brim
+#### Skirt
 
 The `Skirt` setting adds an extrusion a short distance away from the
 perimiter of the object. This can ensure that the material is flowing
