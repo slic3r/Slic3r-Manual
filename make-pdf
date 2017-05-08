@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Requirements
+#
+# apt-get install pandoc
+# apt-get install texlive-xetex
+
 echo create tmp directory with sources: src.pdf
 rm -rf    src.pdf
 cp -R src src.pdf
