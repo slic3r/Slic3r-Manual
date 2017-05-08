@@ -4,6 +4,7 @@
 #
 # apt-get install pandoc
 # apt-get install texlive-xetex
+# apt-get install imagemagick
 
 echo create tmp directory with sources: src.pdf
 rm -rf    src.pdf
