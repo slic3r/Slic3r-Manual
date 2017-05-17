@@ -79,7 +79,7 @@ Inheritance diagram for Slic3r::StaticConfig:</div>
  <div class="center">
   <img src="class_slic3r_1_1_static_config.png" usemap="#Slic3r::StaticConfig_map" alt=""/>
   <map id="Slic3r::StaticConfig_map" name="Slic3r::StaticConfig_map">
-<area href="class_slic3r_1_1_config_base.html" alt="Slic3r::ConfigBase" shape="rect" coords="163,0,316,24"/>
+<area href="class_slic3r_1_1_config_base.html" title="An abstract configuration store. " alt="Slic3r::ConfigBase" shape="rect" coords="163,0,316,24"/>
 <area href="class_slic3r_1_1_c_l_i_config.html" alt="Slic3r::CLIConfig" shape="rect" coords="0,112,153,136"/>
 <area href="class_slic3r_1_1_static_print_config.html" alt="Slic3r::StaticPrintConfig" shape="rect" coords="326,112,479,136"/>
 <area href="class_slic3r_1_1_g_code_config.html" alt="Slic3r::GCodeConfig" shape="rect" coords="0,168,153,192"/>
@@ -102,6 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a27ef9f6e96149e9627768297b6b1d6be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#ad4503660b414418a65c1d0ed75a8ff06">t_config_option_keys</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_static_config.html#a27ef9f6e96149e9627768297b6b1d6be">keys</a> () const</td></tr>
 <tr class="separator:a27ef9f6e96149e9627768297b6b1d6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6b12b1d188a07eecb55a733eb671da2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_static_config.html#af6b12b1d188a07eecb55a733eb671da2">set_defaults</a> ()</td></tr>
+<tr class="memdesc:af6b12b1d188a07eecb55a733eb671da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all statically defined config options to their defaults defined by this-&gt;def.  <a href="#af6b12b1d188a07eecb55a733eb671da2">More...</a><br /></td></tr>
 <tr class="separator:af6b12b1d188a07eecb55a733eb671da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_slic3r_1_1_config_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_slic3r_1_1_config_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_slic3r_1_1_config_base.html">Slic3r::ConfigBase</a></td></tr>
 <tr class="memitem:abf3654613ca336c457dfa07a69e32bf7 inherit pub_methods_class_slic3r_1_1_config_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_base.html#abf3654613ca336c457dfa07a69e32bf7">ConfigBase</a> ()</td></tr>
@@ -153,7 +154,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a1d07bfb37b6cb1dc9c28f4a0d21be04b inherit pub_attribs_class_slic3r_1_1_config_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_slic3r_1_1_config_def.html">ConfigDef</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_base.html#a1d07bfb37b6cb1dc9c28f4a0d21be04b">def</a></td></tr>
 <tr class="separator:a1d07bfb37b6cb1dc9c28f4a0d21be04b inherit pub_attribs_class_slic3r_1_1_config_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Configuration store with a static definition of configuration values. In <a class="el" href="namespace_slic3r.html">Slic3r</a>, the static configuration stores are during the slicing / g-code generation for efficiency reasons, because the configuration values could be accessed directly. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a94929cd2cc3c17f00e069751f1ee29cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94929cd2cc3c17f00e069751f1ee29cd">&#9670;&nbsp;</a></span>StaticConfig()</h2>
 
@@ -202,6 +205,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Gets list of config option names for each config option of this-&gt;def, which has a static counter-part defined by the derived object and which could be resolved by this-&gt;optptr(key) call. </p>
 
 <p>Implements <a class="el" href="class_slic3r_1_1_config_base.html#aa4b79ae20e460d24b8a77114931225a0">Slic3r::ConfigBase</a>.</p>
 
@@ -221,6 +225,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set all statically defined config options to their defaults defined by this-&gt;def. </p>
 
 </div>
 </div>
