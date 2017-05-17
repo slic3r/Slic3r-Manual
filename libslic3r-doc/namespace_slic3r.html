@@ -124,6 +124,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html">ConfigOptionFloatOrPercent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_floats.html">ConfigOptionFloats</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector form of template specialization for floating point numbers.  <a href="class_slic3r_1_1_config_option_floats.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_int.html">ConfigOptionInt</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,14 +139,17 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_points.html">ConfigOptionPoints</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_single.html">ConfigOptionSingle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of a single valued option (bool, int, float, string, point, enum)  <a href="class_slic3r_1_1_config_option_single.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_string.html">ConfigOptionString</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_strings.html">ConfigOptionStrings</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">semicolon-separated strings  <a href="class_slic3r_1_1_config_option_strings.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_vector.html">ConfigOptionVector</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_vector_base.html">ConfigOptionVectorBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual base class, represents value of a vector valued option (bools, ints, floats, strings, points)  <a href="class_slic3r_1_1_config_option_vector_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_dynamic_config.html">DynamicConfig</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -409,7 +413,8 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da28c9c9e6fd96bf9cbd651c2ed7f41078">coBools</a>, 
 <a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da297634c409a151f6ea730ac380ea1897">coEnum</a>
 <br />
- }</td></tr>
+ }<tr class="memdesc:ad050dac2473d8202fb36cf563717a05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of a configuration value.  <a href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05d">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:ad050dac2473d8202fb36cf563717a05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0fe88d48b85b2859e710c114c5b76cc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#aa0fe88d48b85b2859e710c114c5b76cc">ExtrusionRole</a> { <br />
 &#160;&#160;<a class="el" href="namespace_slic3r.html#aa0fe88d48b85b2859e710c114c5b76ccad57ae907335d1f0f6b915b0b00fdc49c">erNone</a>, 
@@ -1516,22 +1521,36 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Type of a configuration value. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da63ce37b455fe0f8ca9ce4807ba34a0db"></a>coNone&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da6fc8e2b47c21774d7b1b2177c9330a68"></a>coFloat&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05dade03a632a71a60d75e7fa4ae91850611"></a>coFloats&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da6208ed2b3dd884c139f42c396058c26c"></a>coInt&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da3fda88472dbd7030ce02672dd6ae44b8"></a>coInts&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da1cf926fa9e3c16e3cd6f6e001370eff5"></a>coString&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05dac242c19dded7e7375fcaa72ecc7e6ec5"></a>coStrings&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05daeb9429c75ace7416a3b90d0f7237e34a"></a>coPercent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da79487730eddc1a2e9588d1e8e9d0aea6"></a>coFloatOrPercent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da23cf8f3171a6801ea05db7ad10c7d6a6"></a>coPoint&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da52ce3d8c4bb3bab4d9c50af38c93c46f"></a>coPoints&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da6fc8e2b47c21774d7b1b2177c9330a68"></a>coFloat&#160;</td><td class="fielddoc"><p>single float </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05dade03a632a71a60d75e7fa4ae91850611"></a>coFloats&#160;</td><td class="fielddoc"><p>vector of floats </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da6208ed2b3dd884c139f42c396058c26c"></a>coInt&#160;</td><td class="fielddoc"><p>single int </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da3fda88472dbd7030ce02672dd6ae44b8"></a>coInts&#160;</td><td class="fielddoc"><p>vector of ints </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da1cf926fa9e3c16e3cd6f6e001370eff5"></a>coString&#160;</td><td class="fielddoc"><p>single string </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05dac242c19dded7e7375fcaa72ecc7e6ec5"></a>coStrings&#160;</td><td class="fielddoc"><p>vector of strings </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05daeb9429c75ace7416a3b90d0f7237e34a"></a>coPercent&#160;</td><td class="fielddoc"><p>percent value. Currently only used for infill. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da79487730eddc1a2e9588d1e8e9d0aea6"></a>coFloatOrPercent&#160;</td><td class="fielddoc"><p>a fraction or an absolute value </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da23cf8f3171a6801ea05db7ad10c7d6a6"></a>coPoint&#160;</td><td class="fielddoc"><p>single 2d point. Currently not used. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da52ce3d8c4bb3bab4d9c50af38c93c46f"></a>coPoints&#160;</td><td class="fielddoc"><p>vector of 2d points. Currently used for the definition of the print bed and for the extruder offsets. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da2a441920d525d34fa862fdf28922a75f"></a>coPoint3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da66fc7a8b8079de988563c15f7b62105f"></a>coBool&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da66fc7a8b8079de988563c15f7b62105f"></a>coBool&#160;</td><td class="fielddoc"><p>single boolean value </p>
+</td></tr>
 <tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da28c9c9e6fd96bf9cbd651c2ed7f41078"></a>coBools&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da297634c409a151f6ea730ac380ea1897"></a>coEnum&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad050dac2473d8202fb36cf563717a05da297634c409a151f6ea730ac380ea1897"></a>coEnum&#160;</td><td class="fielddoc"><p>a generic enum </p>
+</td></tr>
 </table>
 
 </div>
