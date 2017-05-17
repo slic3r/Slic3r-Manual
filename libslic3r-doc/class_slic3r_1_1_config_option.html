@@ -73,6 +73,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Public interface for configuration options.  
+ <a href="class_slic3r_1_1_config_option.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_config_8hpp_source.html">Config.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Slic3r::ConfigOption:</div>
@@ -126,7 +129,8 @@ Friends</h2></td></tr>
 <tr class="separator:a5e946c33967f9f066b9c9f7cbe2b3bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_slic3r_1_1_config_option.html">ConfigOption</a> A generic value of a configuration option. </p>
+<div class="textblock"><p>Public interface for configuration options. </p>
+<p>Defines get/set for all supported data types. Default value for output values is 0 for numeric/boolean types and "" for string types. Subclasses override the appropriate functions in the interface and return real data. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a115b29c0449d421d63c1b5d905431f6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a115b29c0449d421d63c1b5d905431f6e">&#9670;&nbsp;</a></span>~ConfigOption()</h2>

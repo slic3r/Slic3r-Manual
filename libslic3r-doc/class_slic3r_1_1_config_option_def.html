@@ -90,10 +90,13 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a509c55eb2468f75264d81e62c6b1df98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05d">ConfigOptionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_def.html#a509c55eb2468f75264d81e62c6b1df98">type</a></td></tr>
+<tr class="memdesc:a509c55eb2468f75264d81e62c6b1df98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of option referenced.  <a href="#a509c55eb2468f75264d81e62c6b1df98">More...</a><br /></td></tr>
 <tr class="separator:a509c55eb2468f75264d81e62c6b1df98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3840f0a99853f2da3d6fdf8a8a97f50e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_config_option.html">ConfigOption</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_def.html#a3840f0a99853f2da3d6fdf8a8a97f50e">default_value</a></td></tr>
+<tr class="memdesc:a3840f0a99853f2da3d6fdf8a8a97f50e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default value of this option.  <a href="#a3840f0a99853f2da3d6fdf8a8a97f50e">More...</a><br /></td></tr>
 <tr class="separator:a3840f0a99853f2da3d6fdf8a8a97f50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1264df3b80f9d7d78472c52ffc8c3baa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_def.html#a1264df3b80f9d7d78472c52ffc8c3baa">gui_type</a></td></tr>
+<tr class="memdesc:a1264df3b80f9d7d78472c52ffc8c3baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization to indicate to the GUI what kind of control is more appropriate.  <a href="#a1264df3b80f9d7d78472c52ffc8c3baa">More...</a><br /></td></tr>
 <tr class="separator:a1264df3b80f9d7d78472c52ffc8c3baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae61d9878a48d57e6b0bd498c34067562"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_def.html#ae61d9878a48d57e6b0bd498c34067562">gui_flags</a></td></tr>
 <tr class="separator:ae61d9878a48d57e6b0bd498c34067562"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,7 +124,6 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:acd8f2010c8db145e5f4a6f9d2a8d74f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">For text input: If true, the GUI text box spans the complete page width.  <a href="#acd8f2010c8db145e5f4a6f9d2a8d74f8">More...</a><br /></td></tr>
 <tr class="separator:acd8f2010c8db145e5f4a6f9d2a8d74f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5177a4fe4faeada70507b49a7c1532c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_def.html#a5177a4fe4faeada70507b49a7c1532c1">readonly</a></td></tr>
-<tr class="memdesc:a5177a4fe4faeada70507b49a7c1532c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not editable. Currently only used for the display of the number of threads.  <a href="#a5177a4fe4faeada70507b49a7c1532c1">More...</a><br /></td></tr>
 <tr class="separator:a5177a4fe4faeada70507b49a7c1532c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af18fa0801fd50b2d3495c3c70286133d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_def.html#af18fa0801fd50b2d3495c3c70286133d">height</a></td></tr>
 <tr class="memdesc:af18fa0801fd50b2d3495c3c70286133d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of a multiline GUI text box.  <a href="#af18fa0801fd50b2d3495c3c70286133d">More...</a><br /></td></tr>
@@ -266,6 +268,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Default value of this option. </p>
+<p>The default value object is owned by <a class="el" href="class_slic3r_1_1_config_def.html">ConfigDef</a>, it is released in its destructor. </p>
+
 </div>
 </div>
 <a id="ad76bb52adc2b719456d8643939f84aa5"></a>
@@ -368,6 +373,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Specialization to indicate to the GUI what kind of control is more appropriate. </p>
 <p>Usually empty. Special values - "i_enum_open", "f_enum_open" to provide combo box for int or float selection, "select_open" - to open a selection dialog (currently only a serial port selection). </p>
 
 </div>
@@ -474,8 +481,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Not editable. Currently only used for the display of the number of threads. </p>
+<p>This configuration item is not editable. Currently only used for the display of the number of threads. </p>
 
 </div>
 </div>
@@ -537,6 +543,25 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Type of option referenced. </p>
+<p>The following (and any vector version) are supported: </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_slic3r_1_1_config_option_float.html">ConfigOptionFloat</a> </dd>
+<dd>
+<a class="el" href="class_slic3r_1_1_config_option_int.html">ConfigOptionInt</a> </dd>
+<dd>
+<a class="el" href="class_slic3r_1_1_config_option_string.html">ConfigOptionString</a> </dd>
+<dd>
+<a class="el" href="class_slic3r_1_1_config_option_percent.html" title="Specialized floating point class to represent some percentage value of another numeric configuration ...">ConfigOptionPercent</a> </dd>
+<dd>
+<a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html">ConfigOptionFloatOrPercent</a> </dd>
+<dd>
+<a class="el" href="class_slic3r_1_1_config_option_point.html" title="Configuration option to store a 2D (x,y) tuple. ">ConfigOptionPoint</a> </dd>
+<dd>
+<a class="el" href="class_slic3r_1_1_config_option_bool.html" title="Represents a boolean flag. ">ConfigOptionBool</a> </dd>
+<dd>
+<a class="el" href="class_slic3r_1_1_config_option_point3.html" title="Configuration option to store a 3D (x,y,z) tuple. ">ConfigOptionPoint3</a> </dd>
+<dd>
+<a class="el" href="class_slic3r_1_1_config_option_bool.html" title="Represents a boolean flag. ">ConfigOptionBool</a> </dd></dl>
 
 </div>
 </div>
