@@ -6,3 +6,5 @@ You can read the manual at http://manual.slic3r.org/
 
 Copyright 2013-2014, Aleph Objects, Inc.
 License: CC-BY-SA 3.0
+
+Documentation for libslic3r is generated via Doxygen from commits made to http://github.com/alexrj/Slic3r
