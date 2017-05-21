@@ -9,6 +9,8 @@ var searchData=
   ['make_5fperimeters',['make_perimeters',['../class_slic3r_1_1_layer_region.html#aca1379f69115c7ee08f6c72285490557',1,'Slic3r::LayerRegion::make_perimeters()'],['../class_slic3r_1_1_layer.html#ade692e794d3a272a9b6985022eea64e9',1,'Slic3r::Layer::make_perimeters()']]],
   ['make_5fslices',['make_slices',['../class_slic3r_1_1_layer.html#a3bd36eb1605e0d10d4912ec65564838c',1,'Slic3r::Layer']]],
   ['make_5fsphere',['make_sphere',['../class_slic3r_1_1_triangle_mesh.html#a315f81a31082820426883ef4b5fc0ffd',1,'Slic3r::TriangleMesh']]],
+  ['makegrid',['makeGrid',['../namespace_slic3r.html#a6d88e0c911217c552b33a5ab38bdd6b7',1,'Slic3r']]],
+  ['makenormalisedgrid',['makeNormalisedGrid',['../namespace_slic3r.html#aa25c9870441d8d2d8967afe8a1eae8b1',1,'Slic3r']]],
   ['material',['material',['../class_slic3r_1_1_model_volume.html#a39e0ed735dcd7060e69e92f007eafde9',1,'Slic3r::ModelVolume']]],
   ['material_5fid',['material_id',['../class_slic3r_1_1_model_volume.html#a2fcbf8328dc1511abef0f654f274566e',1,'Slic3r::ModelVolume::material_id() const'],['../class_slic3r_1_1_model_volume.html#a478b130c80f0171728fef5c59d10bf83',1,'Slic3r::ModelVolume::material_id(t_model_material_id material_id)']]],
   ['materials_5fcount',['materials_count',['../class_slic3r_1_1_model_object.html#a7b990a09f8af9351738afdc39a3e09e0',1,'Slic3r::ModelObject']]],

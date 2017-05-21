@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['cachedata',['CacheData',['../struct_slic3r_1_1_fill_honeycomb_1_1_cache_data.html',1,'Slic3r::FillHoneycomb']]],
   ['chaining',['Chaining',['../struct_slic3r_1_1_chaining.html',1,'Slic3r']]],
   ['cliconfig',['CLIConfig',['../class_slic3r_1_1_c_l_i_config.html',1,'Slic3r']]],
   ['cliconfigdef',['CLIConfigDef',['../class_slic3r_1_1_c_l_i_config_def.html',1,'Slic3r']]],
@@ -44,5 +45,6 @@ var searchData=
   ['configoptionvector_3c_20pointf_20_3e',['ConfigOptionVector&lt; Pointf &gt;',['../class_slic3r_1_1_config_option_vector.html',1,'Slic3r']]],
   ['configoptionvector_3c_20std_3a_3astring_20_3e',['ConfigOptionVector&lt; std::string &gt;',['../class_slic3r_1_1_config_option_vector.html',1,'Slic3r']]],
   ['configoptionvectorbase',['ConfigOptionVectorBase',['../class_slic3r_1_1_config_option_vector_base.html',1,'Slic3r']]],
+  ['coolingbuffer',['CoolingBuffer',['../class_slic3r_1_1_cooling_buffer.html',1,'Slic3r']]],
   ['coordinate_5ftraits_3c_20coord_5ft_20_3e',['coordinate_traits&lt; coord_t &gt;',['../structboost_1_1polygon_1_1coordinate__traits_3_01coord__t_01_4.html',1,'boost::polygon']]]
 ];

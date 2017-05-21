@@ -4,6 +4,7 @@ var searchData=
   ['infill_5farea_5fthreshold',['infill_area_threshold',['../class_slic3r_1_1_layer_region.html#a99348968f8cf36b31c4f761a3951d165',1,'Slic3r::LayerRegion']]],
   ['init_5fexternal_5fmp',['init_external_mp',['../class_slic3r_1_1_avoid_crossing_perimeters.html#a3ab0d13fe0db59cebfd8c472c9a11849',1,'Slic3r::AvoidCrossingPerimeters']]],
   ['init_5flayer_5fmp',['init_layer_mp',['../class_slic3r_1_1_avoid_crossing_perimeters.html#a636ab22e5653d616788c911801d2ad02',1,'Slic3r::AvoidCrossingPerimeters']]],
+  ['instance',['Instance',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#abce5d21f84ead3f658c13678c06608f6',1,'Slic3r::IO::AMFParserContext::Instance']]],
   ['instance_5fbounding_5fbox',['instance_bounding_box',['../class_slic3r_1_1_model_object.html#a95732e1ec19066584667229fbdcedc2a',1,'Slic3r::ModelObject']]],
   ['intersect_5fexpolygons',['intersect_expolygons',['../class_slic3r_1_1_extrusion_path.html#a034fa64a23ea9410406b8d5365a8f5b1',1,'Slic3r::ExtrusionPath']]],
   ['intersect_5fplane',['intersect_plane',['../class_slic3r_1_1_linef3.html#a02610701a5c74efffe3bcad21d2dd2b3',1,'Slic3r::Linef3']]],

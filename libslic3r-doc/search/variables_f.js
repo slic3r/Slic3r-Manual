@@ -3,6 +3,7 @@ var searchData=
   ['path',['path',['../class_slic3r_1_1_wipe.html#ad658cc53ba64891fe7bf86379fe39ad0',1,'Slic3r::Wipe']]],
   ['paths',['paths',['../class_slic3r_1_1_extrusion_loop.html#a6318ec6fe30e391ad56fcb18ca904360',1,'Slic3r::ExtrusionLoop']]],
   ['pattern',['pattern',['../struct_slic3r_1_1_surface_group_attrib.html#a12d8e9af5161b4605309772c5706538e',1,'Slic3r::SurfaceGroupAttrib']]],
+  ['pattern_5fheight',['pattern_height',['../struct_slic3r_1_1_fill_honeycomb_1_1_cache_data.html#ab71e55961afa2c7981eaf399f44d83c7',1,'Slic3r::FillHoneycomb::CacheData']]],
   ['percent',['percent',['../class_slic3r_1_1_config_option_float_or_percent.html#a2eea58c97909368dd17e7f55922a27af',1,'Slic3r::ConfigOptionFloatOrPercent']]],
   ['perimeter_5facceleration',['perimeter_acceleration',['../class_slic3r_1_1_print_config.html#a4781b6390fbc6819bd6bfcab6a8c8f8c',1,'Slic3r::PrintConfig']]],
   ['perimeter_5fextruder',['perimeter_extruder',['../class_slic3r_1_1_print_region_config.html#a421b2828c2fd0c30f85bbd9379d97948',1,'Slic3r::PrintRegionConfig']]],

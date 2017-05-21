@@ -8,5 +8,6 @@ var searchData=
   ['_5fobject',['_object',['../class_slic3r_1_1_layer.html#a1fd4788d3132b4fc2e54ea7bb07a6660',1,'Slic3r::Layer']]],
   ['_5fseam_5fposition',['_seam_position',['../class_slic3r_1_1_g_code.html#a82f735d3f7bdcfc9b204682ba7515fb0',1,'Slic3r::GCode']]],
   ['_5fshifted_5fcopies',['_shifted_copies',['../class_slic3r_1_1_print_object.html#a2995228eb4c059acb74be324547051b9',1,'Slic3r::PrintObject']]],
-  ['_5fsingle',['_single',['../class_slic3r_1_1_placeholder_parser.html#a102d36fdacf4b709be94a76559859851',1,'Slic3r::PlaceholderParser']]]
+  ['_5fsingle',['_single',['../class_slic3r_1_1_placeholder_parser.html#a102d36fdacf4b709be94a76559859851',1,'Slic3r::PlaceholderParser']]],
+  ['_5fspacing',['_spacing',['../class_slic3r_1_1_fill.html#a7c41579b4ad95b15c9468241e37862b4',1,'Slic3r::Fill']]]
 ];

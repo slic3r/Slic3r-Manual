@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['hole_5ftype',['hole_type',['../structboost_1_1polygon_1_1polygon__with__holes__traits_3_01_ex_polygon_01_4.html#a7368b8e3c5f55cc5df59d7c316e597f4',1,'boost::polygon::polygon_with_holes_traits&lt; ExPolygon &gt;']]]
+  ['expolygoncollections',['ExPolygonCollections',['../namespace_slic3r.html#acb9916786a5ce10c7af08e50f81f9cea',1,'Slic3r']]],
+  ['expolygons',['ExPolygons',['../namespace_slic3r.html#a9306b728b4672f5e56abe05ba7437fe1',1,'Slic3r']]],
+  ['extrusionentitiesptr',['ExtrusionEntitiesPtr',['../namespace_slic3r.html#aa2aadfc8d6bec8ef8e416bb12f0b464b',1,'Slic3r']]],
+  ['extrusionpaths',['ExtrusionPaths',['../namespace_slic3r.html#a2f0fe99ef6107bc0c3dc4c4bacce29c2',1,'Slic3r']]]
 ];

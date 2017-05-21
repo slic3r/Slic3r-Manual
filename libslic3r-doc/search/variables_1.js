@@ -6,7 +6,7 @@ var searchData=
   ['absolute_5fe',['absolute_E',['../class_slic3r_1_1_extruder.html#a25a00a190060e03a43c18204d78087eb',1,'Slic3r::Extruder']]],
   ['acceleration',['acceleration',['../class_slic3r_1_1_g_code_time_estimator.html#acb6c4612ad72d3ea3d944357ff34342a',1,'Slic3r::GCodeTimeEstimator']]],
   ['aliases',['aliases',['../class_slic3r_1_1_config_option_def.html#aed9082f82f293a715fc42d01420da465',1,'Slic3r::ConfigOptionDef']]],
-  ['angle',['angle',['../class_slic3r_1_1_bridge_detector.html#acfae4e052886fd1f0e25eeb4441a531a',1,'Slic3r::BridgeDetector']]],
+  ['angle',['angle',['../class_slic3r_1_1_bridge_detector.html#acfae4e052886fd1f0e25eeb4441a531a',1,'Slic3r::BridgeDetector::angle()'],['../class_slic3r_1_1_fill.html#aad52233b49247e94b2823c23490a28e2',1,'Slic3r::Fill::angle()']]],
   ['args',['args',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#a23b6db9fca60a0bd384309b3c50a6fab',1,'Slic3r::GCodeReader::GCodeLine']]],
   ['arrows',['arrows',['../class_slic3r_1_1_s_v_g.html#af3ec2eb54bdc7dff2381f15c5771d364',1,'Slic3r::SVG']]],
   ['attributes',['attributes',['../class_slic3r_1_1_model_material.html#ae70e92f39c5a8c96a2a32ad108531740',1,'Slic3r::ModelMaterial']]],

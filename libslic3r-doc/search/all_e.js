@@ -1,7 +1,7 @@
 var searchData=
 [
   ['obj',['OBJ',['../class_slic3r_1_1_i_o_1_1_o_b_j.html',1,'Slic3r::IO']]],
-  ['object',['object',['../class_slic3r_1_1_layer.html#a0e539ca5f5b3b967089f5772f6cf8c95',1,'Slic3r::Layer::object()'],['../class_slic3r_1_1_layer.html#a3c0e4f2129830153379aed83dd14bbda',1,'Slic3r::Layer::object() const']]],
+  ['object',['Object',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_object.html',1,'Slic3r::IO::AMFParserContext::Object'],['../class_slic3r_1_1_layer.html#a0e539ca5f5b3b967089f5772f6cf8c95',1,'Slic3r::Layer::object()'],['../class_slic3r_1_1_layer.html#a3c0e4f2129830153379aed83dd14bbda',1,'Slic3r::Layer::object() const'],['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_object.html#a34701b5dc9e8902601dbb04a9d2ccf81',1,'Slic3r::IO::AMFParserContext::Object::Object()']]],
   ['object_5fconfig',['object_config',['../class_slic3r_1_1_perimeter_generator.html#a10b1dfc6771ad4f17350e1cb135acab4',1,'Slic3r::PerimeterGenerator']]],
   ['object_5fextruders',['object_extruders',['../class_slic3r_1_1_print.html#a3562b7c0ef8ba5628ff3f92f033d8834',1,'Slic3r::Print']]],
   ['objects',['objects',['../class_slic3r_1_1_model.html#a4d61f3f9413788a5cde4c7e14f1ea97f',1,'Slic3r::Model::objects()'],['../class_slic3r_1_1_print.html#ab0a5d71d566e4d21142d8b70fa9fb05f',1,'Slic3r::Print::objects()']]],

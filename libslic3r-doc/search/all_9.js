@@ -1,7 +1,7 @@
 var searchData=
 [
   ['id',['id',['../class_slic3r_1_1_extruder.html#a3341e1a9d3d30505af68586d25e8b034',1,'Slic3r::Extruder::id()'],['../class_slic3r_1_1_layer.html#a3d031d63fa4b34246ca1b1cbbb66b2fc',1,'Slic3r::Layer::id()']]],
-  ['idx',['idx',['../struct_slic3r_1_1_chaining.html#a53b4dc310225743909b65eba61f4f863',1,'Slic3r::Chaining']]],
+  ['idx',['idx',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_object.html#a1cf99e73fd88c93f0dee19b0b745ad33',1,'Slic3r::IO::AMFParserContext::Object::idx()'],['../struct_slic3r_1_1_chaining.html#a53b4dc310225743909b65eba61f4f863',1,'Slic3r::Chaining::idx()']]],
   ['index',['index',['../class_slic3r_1_1_geometry_1_1_arrange_item_index.html#a4ca7611103903f7c6815f68927384116',1,'Slic3r::Geometry::ArrangeItemIndex']]],
   ['index_5fx',['index_x',['../class_slic3r_1_1_geometry_1_1_arrange_item.html#a4dc66a77832b77a0af639378b91eb1b1',1,'Slic3r::Geometry::ArrangeItem']]],
   ['index_5fy',['index_y',['../class_slic3r_1_1_geometry_1_1_arrange_item.html#a95856d98023dbf14de4586e91780b149',1,'Slic3r::Geometry::ArrangeItem']]],
@@ -21,8 +21,9 @@ var searchData=
   ['init_5flayer_5fmp',['init_layer_mp',['../class_slic3r_1_1_avoid_crossing_perimeters.html#a636ab22e5653d616788c911801d2ad02',1,'Slic3r::AvoidCrossingPerimeters']]],
   ['input_5ffile',['input_file',['../class_slic3r_1_1_model_object.html#a803ac870d4cb0df9b9c450930ba55c2d',1,'Slic3r::ModelObject']]],
   ['inset_5foverlap_5ftolerance',['INSET_OVERLAP_TOLERANCE',['../namespace_slic3r.html#a1602217e9079a12a04689983f396a891',1,'Slic3r']]],
+  ['instance',['Instance',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html',1,'Slic3r::IO::AMFParserContext::Instance'],['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#abce5d21f84ead3f658c13678c06608f6',1,'Slic3r::IO::AMFParserContext::Instance::Instance()']]],
   ['instance_5fbounding_5fbox',['instance_bounding_box',['../class_slic3r_1_1_model_object.html#a95732e1ec19066584667229fbdcedc2a',1,'Slic3r::ModelObject']]],
-  ['instances',['instances',['../class_slic3r_1_1_model_object.html#a96b7b4b7c04d64a05dd5fdff3219f904',1,'Slic3r::ModelObject']]],
+  ['instances',['instances',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_object.html#a7e71f9e7f8a05935d8c3214262fdce94',1,'Slic3r::IO::AMFParserContext::Object::instances()'],['../class_slic3r_1_1_model_object.html#a96b7b4b7c04d64a05dd5fdff3219f904',1,'Slic3r::ModelObject::instances()']]],
   ['interface_5fshells',['interface_shells',['../class_slic3r_1_1_print_object_config.html#a022038bcb44cd835c41cd2442447e231',1,'Slic3r::PrintObjectConfig']]],
   ['interior_5fbrim_5fwidth',['interior_brim_width',['../class_slic3r_1_1_print_config.html#a4b13b5ec77d58185a12aa6fcd0fa34a4',1,'Slic3r::PrintConfig']]],
   ['intersect_5fexpolygons',['intersect_expolygons',['../class_slic3r_1_1_extrusion_path.html#a034fa64a23ea9410406b8d5365a8f5b1',1,'Slic3r::ExtrusionPath']]],

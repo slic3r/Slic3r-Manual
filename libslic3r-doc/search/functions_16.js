@@ -1,22 +1,4 @@
 var searchData=
 [
-  ['_7eavoidcrossingperimeters',['~AvoidCrossingPerimeters',['../class_slic3r_1_1_avoid_crossing_perimeters.html#a21e0cf13c50be57b92f20e743c21a117',1,'Slic3r::AvoidCrossingPerimeters']]],
-  ['_7econfigbase',['~ConfigBase',['../class_slic3r_1_1_config_base.html#a30c895697d020cdbac8a677eafe99bd3',1,'Slic3r::ConfigBase']]],
-  ['_7econfigoption',['~ConfigOption',['../class_slic3r_1_1_config_option.html#a115b29c0449d421d63c1b5d905431f6e',1,'Slic3r::ConfigOption']]],
-  ['_7econfigoptiondef',['~ConfigOptionDef',['../class_slic3r_1_1_config_option_def.html#a478791d5e35982ba596d3f2cee06a9f7',1,'Slic3r::ConfigOptionDef']]],
-  ['_7econfigoptionvector',['~ConfigOptionVector',['../class_slic3r_1_1_config_option_vector.html#a4a5fa1cc202a296866ed6db3e027634f',1,'Slic3r::ConfigOptionVector']]],
-  ['_7econfigoptionvectorbase',['~ConfigOptionVectorBase',['../class_slic3r_1_1_config_option_vector_base.html#aef5fb47b808df07ca79e6751aadba064',1,'Slic3r::ConfigOptionVectorBase']]],
-  ['_7edynamicconfig',['~DynamicConfig',['../class_slic3r_1_1_dynamic_config.html#ac3c759fb274a88572d1d6d86d03bae1f',1,'Slic3r::DynamicConfig']]],
-  ['_7eextruder',['~Extruder',['../class_slic3r_1_1_extruder.html#a7174cf28e8568a819445c18f65e2825a',1,'Slic3r::Extruder']]],
-  ['_7eextrusionentity',['~ExtrusionEntity',['../class_slic3r_1_1_extrusion_entity.html#aec65c1c4376d02af1a9ce4b2788adbb3',1,'Slic3r::ExtrusionEntity']]],
-  ['_7eextrusionentitycollection',['~ExtrusionEntityCollection',['../class_slic3r_1_1_extrusion_entity_collection.html#a10774f6f021c18ac3fe142e8748288f6',1,'Slic3r::ExtrusionEntityCollection']]],
-  ['_7elayer',['~Layer',['../class_slic3r_1_1_layer.html#a3b0fd0b0067da4ab31e6050903574047',1,'Slic3r::Layer']]],
-  ['_7emodel',['~Model',['../class_slic3r_1_1_model.html#a3bb168e869b6e20613292d0e4be74bc4',1,'Slic3r::Model']]],
-  ['_7emotionplanner',['~MotionPlanner',['../class_slic3r_1_1_motion_planner.html#a80d28e7ac4ca3604c1e055de8fdb1c4c',1,'Slic3r::MotionPlanner']]],
-  ['_7emultipoint',['~MultiPoint',['../class_slic3r_1_1_multi_point.html#a442f3751dcb2d3884246e26f3d33cc71',1,'Slic3r::MultiPoint']]],
-  ['_7eprint',['~Print',['../class_slic3r_1_1_print.html#a2f42d868cf51213c0c5c5f706a39cae9',1,'Slic3r::Print']]],
-  ['_7esupportlayer',['~SupportLayer',['../class_slic3r_1_1_support_layer.html#adc3e9c436226f44dfbd45f65859fbc83',1,'Slic3r::SupportLayer']]],
-  ['_7esvg',['~SVG',['../class_slic3r_1_1_s_v_g.html#a3b2a82b656be47678c321afc68e61465',1,'Slic3r::SVG']]],
-  ['_7etrianglemesh',['~TriangleMesh',['../class_slic3r_1_1_triangle_mesh.html#aefe1df9108630f6940e000f2f3ab3350',1,'Slic3r::TriangleMesh']]],
-  ['_7etrianglemeshslicer',['~TriangleMeshSlicer',['../class_slic3r_1_1_triangle_mesh_slicer.html#a4ba3bfa8bd19b8b7b9b6d34fad4b9250',1,'Slic3r::TriangleMeshSlicer']]]
+  ['zip',['zip',['../namespace_slic3r.html#a127f5ea6fa960e1a9d94e8874cf23565',1,'Slic3r']]]
 ];

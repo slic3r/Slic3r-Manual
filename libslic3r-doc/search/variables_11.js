@@ -1,7 +1,8 @@
 var searchData=
 [
   ['save',['save',['../class_slic3r_1_1_c_l_i_config.html#acc16cd1beb7f292984e288735deddcac',1,'Slic3r::CLIConfig']]],
-  ['scale',['scale',['../class_slic3r_1_1_c_l_i_config.html#a3233e483ad1a20fc0239bdb8a8cdfdcc',1,'Slic3r::CLIConfig']]],
+  ['scale',['scale',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#a4a560ddf2eaed4ebd4dec4c8d833d029',1,'Slic3r::IO::AMFParserContext::Instance::scale()'],['../class_slic3r_1_1_c_l_i_config.html#a3233e483ad1a20fc0239bdb8a8cdfdcc',1,'Slic3r::CLIConfig::scale()']]],
+  ['scale_5fset',['scale_set',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#a895fc5bc1ba845c0a884fb6686b3e587',1,'Slic3r::IO::AMFParserContext::Instance']]],
   ['scale_5fto_5ffit',['scale_to_fit',['../class_slic3r_1_1_c_l_i_config.html#abf3ae29d7ba85b14540a84c9ab812907',1,'Slic3r::CLIConfig']]],
   ['scaled_5fepsilon',['SCALED_EPSILON',['../namespace_slic3r.html#a2f151364ee9f67e9e37f1e591f24129f',1,'Slic3r']]],
   ['scaled_5fexternal_5finfill_5fmargin',['SCALED_EXTERNAL_INFILL_MARGIN',['../namespace_slic3r.html#aaff29b0b09b5569233d0d5a217cd93a0',1,'Slic3r']]],

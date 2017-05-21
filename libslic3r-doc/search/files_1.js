@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['clipperutils_2ecpp',['ClipperUtils.cpp',['../_clipper_utils_8cpp.html',1,'']]],
-  ['clipperutils_2ehpp',['ClipperUtils.hpp',['../_clipper_utils_8hpp.html',1,'']]],
-  ['config_2ecpp',['Config.cpp',['../_config_8cpp.html',1,'']]],
-  ['config_2ehpp',['Config.hpp',['../_config_8hpp.html',1,'']]]
+  ['boundingbox_2ecpp',['BoundingBox.cpp',['../_bounding_box_8cpp.html',1,'']]],
+  ['boundingbox_2ehpp',['BoundingBox.hpp',['../_bounding_box_8hpp.html',1,'']]],
+  ['bridgedetector_2ecpp',['BridgeDetector.cpp',['../_bridge_detector_8cpp.html',1,'']]],
+  ['bridgedetector_2ehpp',['BridgeDetector.hpp',['../_bridge_detector_8hpp.html',1,'']]]
 ];

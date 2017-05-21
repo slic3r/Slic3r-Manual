@@ -27,5 +27,7 @@ var searchData=
   ['rotate',['rotate',['../class_slic3r_1_1_c_l_i_config.html#a64c4d48fa0abb76bdf9eb2a21740f24f',1,'Slic3r::CLIConfig']]],
   ['rotate_5fx',['rotate_x',['../class_slic3r_1_1_c_l_i_config.html#a97c3f1b9c2d48f17ec349185707e463b',1,'Slic3r::CLIConfig']]],
   ['rotate_5fy',['rotate_y',['../class_slic3r_1_1_c_l_i_config.html#aed9805cbe7de13d6da29f35363090095',1,'Slic3r::CLIConfig']]],
-  ['rotation',['rotation',['../class_slic3r_1_1_model_instance.html#a2d6e9d580d7423d1b5cbf62db39f02c2',1,'Slic3r::ModelInstance']]]
+  ['rotation',['rotation',['../class_slic3r_1_1_model_instance.html#a2d6e9d580d7423d1b5cbf62db39f02c2',1,'Slic3r::ModelInstance']]],
+  ['rz',['rz',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#a2c78d4ebf1f27b2656b7a03c6bfa814a',1,'Slic3r::IO::AMFParserContext::Instance']]],
+  ['rz_5fset',['rz_set',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#a445faad6be4b30f4502612f00c8cb9ee',1,'Slic3r::IO::AMFParserContext::Instance']]]
 ];
