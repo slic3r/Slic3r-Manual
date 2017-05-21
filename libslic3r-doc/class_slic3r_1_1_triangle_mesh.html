@@ -163,6 +163,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a465fa34a496fe929db5fb48fd040c8fb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh.html#a465fa34a496fe929db5fb48fd040c8fb">make_cube</a> (double x, double y, double z)</td></tr>
+<tr class="memdesc:a465fa34a496fe929db5fb48fd040c8fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a mesh representing a cube with dimensions (x, y, z), with one corner at (0,0,0).  <a href="#a465fa34a496fe929db5fb48fd040c8fb">More...</a><br /></td></tr>
 <tr class="separator:a465fa34a496fe929db5fb48fd040c8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a104677199796b2deaa6f73df8c915fbe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh.html#a104677199796b2deaa6f73df8c915fbe">make_cylinder</a> (double r, double h, double fa=(2 *<a class="el" href="namespace_slic3r.html#a5c9e075207afe0701500fff332a281bc">PI</a>/360))</td></tr>
 <tr class="separator:a104677199796b2deaa6f73df8c915fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +175,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a42cb31b8e8ca43e31b713ad73b04514e"><td class="memItemLeft" align="right" valign="top">stl_file&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh.html#a42cb31b8e8ca43e31b713ad73b04514e">stl</a></td></tr>
 <tr class="separator:a42cb31b8e8ca43e31b713ad73b04514e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e42cbf1720ec7648e1c05598da60f20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh.html#a5e42cbf1720ec7648e1c05598da60f20">repaired</a></td></tr>
+<tr class="memdesc:a5e42cbf1720ec7648e1c05598da60f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this mesh has been repaired.  <a href="#a5e42cbf1720ec7648e1c05598da60f20">More...</a><br /></td></tr>
 <tr class="separator:a5e42cbf1720ec7648e1c05598da60f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -479,6 +481,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Generate a mesh representing a cube with dimensions (x, y, z), with one corner at (0,0,0). </p>
+
 </div>
 </div>
 <a id="a104677199796b2deaa6f73df8c915fbe"></a>
@@ -520,6 +524,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Generate a mesh representing a cylinder of radius r and height h, with the base at (0,0,0). param[in] r Radius param[in] h Height param[in] fa Facet angle. A smaller angle produces more facets. Default value is 2pi / 360. </p>
 
 </div>
 </div>
@@ -556,6 +561,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Generate a mesh representing a sphere of radius rho, centered about (0,0,0). param[in] rho Distance from center to the shell of the sphere. param[in] fa Facet angle. A smaller angle produces more facets. Default value is 2pi / 360. </p>
 
 </div>
 </div>
@@ -1132,6 +1138,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Whether or not this mesh has been repaired. </p>
 
 </div>
 </div>

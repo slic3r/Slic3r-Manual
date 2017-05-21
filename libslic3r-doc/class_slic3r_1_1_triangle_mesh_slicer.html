@@ -73,6 +73,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class for processing <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> objects.  
+ <a href="class_slic3r_1_1_triangle_mesh_slicer.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_triangle_mesh_8hpp_source.html">TriangleMesh.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -89,15 +92,101 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad7b6010f68516cc29fb712f421898dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf33444ff6c496576619746508acd082"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#acf33444ff6c496576619746508acd082">slice_facet</a> (float slice_z, const stl_facet &amp;facet, const int &amp;facet_idx, const float &amp;min_z, const float &amp;max_z, std::vector&lt; <a class="el" href="class_slic3r_1_1_intersection_line.html">IntersectionLine</a> &gt; *lines, boost::mutex *lines_mutex=NULL) const</td></tr>
 <tr class="separator:acf33444ff6c496576619746508acd082"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec389aab76dc4c1694a08da38202d7b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#aec389aab76dc4c1694a08da38202d7b8">cut</a> (float z, <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> *upper, <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> *lower) const</td></tr>
-<tr class="separator:aec389aab76dc4c1694a08da38202d7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa050fb31c90cfe53e4019240f4e61be8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#aa050fb31c90cfe53e4019240f4e61be8">_slice_do</a> (size_t facet_idx, std::vector&lt; <a class="el" href="namespace_slic3r.html#ac7ccb74e316abd7606034f0b2179b92f">IntersectionLines</a> &gt; *lines, boost::mutex *lines_mutex, const std::vector&lt; float &gt; &amp;z) const</td></tr>
+<tr class="separator:aa050fb31c90cfe53e4019240f4e61be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af69a3364648d93604cd862a6e6e4e766"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#af69a3364648d93604cd862a6e6e4e766">_make_loops_do</a> (size_t i, std::vector&lt; <a class="el" href="namespace_slic3r.html#ac7ccb74e316abd7606034f0b2179b92f">IntersectionLines</a> &gt; *lines, std::vector&lt; <a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a> &gt; *layers) const</td></tr>
+<tr class="separator:af69a3364648d93604cd862a6e6e4e766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c6b5942b39d4042bbd9a2f79b717d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a93c6b5942b39d4042bbd9a2f79b717d1">make_loops</a> (std::vector&lt; <a class="el" href="class_slic3r_1_1_intersection_line.html">IntersectionLine</a> &gt; &amp;lines, <a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a> *loops) const</td></tr>
+<tr class="separator:a93c6b5942b39d4042bbd9a2f79b717d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b213b07187de2f6e7d339be00609d00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a9b213b07187de2f6e7d339be00609d00">make_expolygons</a> (const <a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a> &amp;loops, <a class="el" href="namespace_slic3r.html#a9306b728b4672f5e56abe05ba7437fe1">ExPolygons</a> *slices) const</td></tr>
+<tr class="separator:a9b213b07187de2f6e7d339be00609d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f40e384886e99444756e12caa6e3714"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a1f40e384886e99444756e12caa6e3714">make_expolygons_simple</a> (std::vector&lt; <a class="el" href="class_slic3r_1_1_intersection_line.html">IntersectionLine</a> &gt; &amp;lines, <a class="el" href="namespace_slic3r.html#a9306b728b4672f5e56abe05ba7437fe1">ExPolygons</a> *slices) const</td></tr>
+<tr class="separator:a1f40e384886e99444756e12caa6e3714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6445cd9892f512a8bc1efa5ab806813b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a6445cd9892f512a8bc1efa5ab806813b">make_expolygons</a> (std::vector&lt; <a class="el" href="class_slic3r_1_1_intersection_line.html">IntersectionLine</a> &gt; &amp;lines, <a class="el" href="namespace_slic3r.html#a9306b728b4672f5e56abe05ba7437fe1">ExPolygons</a> *slices) const</td></tr>
+<tr class="separator:a6445cd9892f512a8bc1efa5ab806813b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb2226689bd68d92cd367ae94f30b3a"><td class="memItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a6fb2226689bd68d92cd367ae94f30b3a">_x</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a6fb2226689bd68d92cd367ae94f30b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad65bda122e33c7c04dc4141d162c7b00"><td class="memItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#ad65bda122e33c7c04dc4141d162c7b00">_y</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:ad65bda122e33c7c04dc4141d162c7b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79673bdebb6f24e4f485f339149d211c"><td class="memItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a79673bdebb6f24e4f485f339149d211c">_z</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a79673bdebb6f24e4f485f339149d211c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeef02558109e163edb71b3da66e37d7"><td class="memItemLeft" align="right" valign="top">const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#afeef02558109e163edb71b3da66e37d7">_x</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:afeef02558109e163edb71b3da66e37d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cfdf404ac2cf0f43923150dd16a8fc9"><td class="memItemLeft" align="right" valign="top">const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a6cfdf404ac2cf0f43923150dd16a8fc9">_y</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:a6cfdf404ac2cf0f43923150dd16a8fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa125fcb4fef51a27a173dbf20ef6d081"><td class="memItemLeft" align="right" valign="top">const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#aa125fcb4fef51a27a173dbf20ef6d081">_z</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:aa125fcb4fef51a27a173dbf20ef6d081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310dfd14c7b9d852ac9ccd63b56db291"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a310dfd14c7b9d852ac9ccd63b56db291"><td class="memTemplItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a310dfd14c7b9d852ac9ccd63b56db291">_x</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a310dfd14c7b9d852ac9ccd63b56db291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a3dc0d4bc4131166ba77f0f0e9972c"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a23a3dc0d4bc4131166ba77f0f0e9972c"><td class="memTemplItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a23a3dc0d4bc4131166ba77f0f0e9972c">_y</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a23a3dc0d4bc4131166ba77f0f0e9972c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad761a8d32cdb28dbd2ebed3582af841"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:aad761a8d32cdb28dbd2ebed3582af841"><td class="memTemplItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#aad761a8d32cdb28dbd2ebed3582af841">_z</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:aad761a8d32cdb28dbd2ebed3582af841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d128c831ec80dff2b3fc2f78262a38"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:aa8d128c831ec80dff2b3fc2f78262a38"><td class="memTemplItemLeft" align="right" valign="top">float const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#aa8d128c831ec80dff2b3fc2f78262a38">_x</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:aa8d128c831ec80dff2b3fc2f78262a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d0b25dbfd4eb97579301ac6c5afe97"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:af6d0b25dbfd4eb97579301ac6c5afe97"><td class="memTemplItemLeft" align="right" valign="top">float const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#af6d0b25dbfd4eb97579301ac6c5afe97">_y</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:af6d0b25dbfd4eb97579301ac6c5afe97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1c18b2af57b1028ff590f4bd03f324"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a0b1c18b2af57b1028ff590f4bd03f324"><td class="memTemplItemLeft" align="right" valign="top">float const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a0b1c18b2af57b1028ff590f4bd03f324">_z</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:a0b1c18b2af57b1028ff590f4bd03f324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0403ac24d44ff6e41fe257192f60fa56"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a0403ac24d44ff6e41fe257192f60fa56"><td class="memTemplItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a0403ac24d44ff6e41fe257192f60fa56">_x</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a0403ac24d44ff6e41fe257192f60fa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492051c7151d300e80b6f05c337929bf"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a492051c7151d300e80b6f05c337929bf"><td class="memTemplItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a492051c7151d300e80b6f05c337929bf">_y</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a492051c7151d300e80b6f05c337929bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a3eb750d1a346132349436549521d3"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a78a3eb750d1a346132349436549521d3"><td class="memTemplItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a78a3eb750d1a346132349436549521d3">_z</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a78a3eb750d1a346132349436549521d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ef9fe98b2db02b1c5fbd20df4ba1bc"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a58ef9fe98b2db02b1c5fbd20df4ba1bc"><td class="memTemplItemLeft" align="right" valign="top">float const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a58ef9fe98b2db02b1c5fbd20df4ba1bc">_x</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:a58ef9fe98b2db02b1c5fbd20df4ba1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf73b42e98772718974ec7b60735a307"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:adf73b42e98772718974ec7b60735a307"><td class="memTemplItemLeft" align="right" valign="top">float const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#adf73b42e98772718974ec7b60735a307">_y</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:adf73b42e98772718974ec7b60735a307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee142606cbe7a61fc552256fe21ce5e"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a8ee142606cbe7a61fc552256fe21ce5e"><td class="memTemplItemLeft" align="right" valign="top">float const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a8ee142606cbe7a61fc552256fe21ce5e">_z</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:a8ee142606cbe7a61fc552256fe21ce5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f63692bf69f04f166682c4da4d900f"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a69f63692bf69f04f166682c4da4d900f"><td class="memTemplItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a69f63692bf69f04f166682c4da4d900f">_x</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a69f63692bf69f04f166682c4da4d900f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51213be3f6cff79144b6c9f48fe20f69"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a51213be3f6cff79144b6c9f48fe20f69"><td class="memTemplItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a51213be3f6cff79144b6c9f48fe20f69">_y</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a51213be3f6cff79144b6c9f48fe20f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454f2196d8a99655a2936b6d1a8f9398"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a454f2196d8a99655a2936b6d1a8f9398"><td class="memTemplItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a454f2196d8a99655a2936b6d1a8f9398">_z</a> (stl_vertex &amp;vertex) const</td></tr>
+<tr class="separator:a454f2196d8a99655a2936b6d1a8f9398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2bb7d0a0c89e90c1d1275e19d753c0d"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:af2bb7d0a0c89e90c1d1275e19d753c0d"><td class="memTemplItemLeft" align="right" valign="top">float const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#af2bb7d0a0c89e90c1d1275e19d753c0d">_x</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:af2bb7d0a0c89e90c1d1275e19d753c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbbbfd468da7db914a5eb162e493701d"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:adbbbfd468da7db914a5eb162e493701d"><td class="memTemplItemLeft" align="right" valign="top">float const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#adbbbfd468da7db914a5eb162e493701d">_y</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:adbbbfd468da7db914a5eb162e493701d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4acd87cfb3a2ff9b73ff9dd6bb4d923"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:ad4acd87cfb3a2ff9b73ff9dd6bb4d923"><td class="memTemplItemLeft" align="right" valign="top">float const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#ad4acd87cfb3a2ff9b73ff9dd6bb4d923">_z</a> (stl_vertex const &amp;vertex) const</td></tr>
+<tr class="separator:ad4acd87cfb3a2ff9b73ff9dd6bb4d923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a17a2625fce7b59bc6f836e1c6e18be5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a17a2625fce7b59bc6f836e1c6e18be5b">mesh</a></td></tr>
 <tr class="separator:a17a2625fce7b59bc6f836e1c6e18be5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7bc19621d691d999fd4207886aa9c6"><td class="memItemLeft" align="right" valign="top">void cut(float z, <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> *upper, <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> *lower) const private t_facets_edge&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#afa7bc19621d691d999fd4207886aa9c6">facets_edges</a> )</td></tr>
+<tr class="memdesc:afa7bc19621d691d999fd4207886aa9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits the current mesh into two parts.  <a href="#afa7bc19621d691d999fd4207886aa9c6">More...</a><br /></td></tr>
+<tr class="separator:afa7bc19621d691d999fd4207886aa9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ecd65e19434352fbdfab0dc82cbbb01"><td class="memItemLeft" align="right" valign="top">stl_vertex *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a4ecd65e19434352fbdfab0dc82cbbb01">v_scaled_shared</a></td></tr>
+<tr class="separator:a4ecd65e19434352fbdfab0dc82cbbb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;Axis A&gt;<br />
+class Slic3r::TriangleMeshSlicer&lt; A &gt;</h3>
+
+<p>Class for processing <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> objects. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af70436176396fcff786a2cc28b7e51f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af70436176396fcff786a2cc28b7e51f3">&#9670;&nbsp;</a></span>TriangleMeshSlicer()</h2>
 
@@ -138,8 +227,8 @@ template&lt;Axis A&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aec389aab76dc4c1694a08da38202d7b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec389aab76dc4c1694a08da38202d7b8">&#9670;&nbsp;</a></span>cut()</h2>
+<a id="af69a3364648d93604cd862a6e6e4e766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af69a3364648d93604cd862a6e6e4e766">&#9670;&nbsp;</a></span>_make_loops_do()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,22 +236,810 @@ template&lt;Axis A&gt; </div>
 template&lt;Axis A&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::cut </td>
+          <td class="memname">void <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::_make_loops_do </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>z</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> *&#160;</td>
-          <td class="paramname"><em>upper</em>, </td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_slic3r.html#ac7ccb74e316abd7606034f0b2179b92f">IntersectionLines</a> &gt; *&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> *&#160;</td>
-          <td class="paramname"><em>lower</em>&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a> &gt; *&#160;</td>
+          <td class="paramname"><em>layers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa050fb31c90cfe53e4019240f4e61be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa050fb31c90cfe53e4019240f4e61be8">&#9670;&nbsp;</a></span>_slice_do()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::_slice_do </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>facet_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_slic3r.html#ac7ccb74e316abd7606034f0b2179b92f">IntersectionLines</a> &gt; *&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::mutex *&#160;</td>
+          <td class="paramname"><em>lines_mutex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fb2226689bd68d92cd367ae94f30b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb2226689bd68d92cd367ae94f30b3a">&#9670;&nbsp;</a></span>_x() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">float&amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::_x </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afeef02558109e163edb71b3da66e37d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeef02558109e163edb71b3da66e37d7">&#9670;&nbsp;</a></span>_x() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const float&amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::_x </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a310dfd14c7b9d852ac9ccd63b56db291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310dfd14c7b9d852ac9ccd63b56db291">&#9670;&nbsp;</a></span>_x() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8aea4f41ceb26107aab036b3cebd6e3a13">X</a> &gt;::_x </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8d128c831ec80dff2b3fc2f78262a38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8d128c831ec80dff2b3fc2f78262a38">&#9670;&nbsp;</a></span>_x() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float const  &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8aea4f41ceb26107aab036b3cebd6e3a13">X</a> &gt;::_x </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0403ac24d44ff6e41fe257192f60fa56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0403ac24d44ff6e41fe257192f60fa56">&#9670;&nbsp;</a></span>_x() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a27608ebdfb47b8076b0ed8c01be502f9">Y</a> &gt;::_x </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58ef9fe98b2db02b1c5fbd20df4ba1bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ef9fe98b2db02b1c5fbd20df4ba1bc">&#9670;&nbsp;</a></span>_x() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float const  &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a27608ebdfb47b8076b0ed8c01be502f9">Y</a> &gt;::_x </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69f63692bf69f04f166682c4da4d900f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69f63692bf69f04f166682c4da4d900f">&#9670;&nbsp;</a></span>_x() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a4ff0bb5a0a25cbaf7b74abc10f83e87e">Z</a> &gt;::_x </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2bb7d0a0c89e90c1d1275e19d753c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2bb7d0a0c89e90c1d1275e19d753c0d">&#9670;&nbsp;</a></span>_x() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float const  &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a4ff0bb5a0a25cbaf7b74abc10f83e87e">Z</a> &gt;::_x </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad65bda122e33c7c04dc4141d162c7b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65bda122e33c7c04dc4141d162c7b00">&#9670;&nbsp;</a></span>_y() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">float&amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::_y </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cfdf404ac2cf0f43923150dd16a8fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cfdf404ac2cf0f43923150dd16a8fc9">&#9670;&nbsp;</a></span>_y() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const float&amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::_y </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23a3dc0d4bc4131166ba77f0f0e9972c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a3dc0d4bc4131166ba77f0f0e9972c">&#9670;&nbsp;</a></span>_y() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8aea4f41ceb26107aab036b3cebd6e3a13">X</a> &gt;::_y </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6d0b25dbfd4eb97579301ac6c5afe97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d0b25dbfd4eb97579301ac6c5afe97">&#9670;&nbsp;</a></span>_y() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float const  &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8aea4f41ceb26107aab036b3cebd6e3a13">X</a> &gt;::_y </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a492051c7151d300e80b6f05c337929bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492051c7151d300e80b6f05c337929bf">&#9670;&nbsp;</a></span>_y() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a27608ebdfb47b8076b0ed8c01be502f9">Y</a> &gt;::_y </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf73b42e98772718974ec7b60735a307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf73b42e98772718974ec7b60735a307">&#9670;&nbsp;</a></span>_y() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float const  &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a27608ebdfb47b8076b0ed8c01be502f9">Y</a> &gt;::_y </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51213be3f6cff79144b6c9f48fe20f69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51213be3f6cff79144b6c9f48fe20f69">&#9670;&nbsp;</a></span>_y() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a4ff0bb5a0a25cbaf7b74abc10f83e87e">Z</a> &gt;::_y </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbbbfd468da7db914a5eb162e493701d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbbbfd468da7db914a5eb162e493701d">&#9670;&nbsp;</a></span>_y() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float const  &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a4ff0bb5a0a25cbaf7b74abc10f83e87e">Z</a> &gt;::_y </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79673bdebb6f24e4f485f339149d211c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79673bdebb6f24e4f485f339149d211c">&#9670;&nbsp;</a></span>_z() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">float&amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::_z </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa125fcb4fef51a27a173dbf20ef6d081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa125fcb4fef51a27a173dbf20ef6d081">&#9670;&nbsp;</a></span>_z() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const float&amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::_z </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad761a8d32cdb28dbd2ebed3582af841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad761a8d32cdb28dbd2ebed3582af841">&#9670;&nbsp;</a></span>_z() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8aea4f41ceb26107aab036b3cebd6e3a13">X</a> &gt;::_z </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b1c18b2af57b1028ff590f4bd03f324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b1c18b2af57b1028ff590f4bd03f324">&#9670;&nbsp;</a></span>_z() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float const  &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8aea4f41ceb26107aab036b3cebd6e3a13">X</a> &gt;::_z </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78a3eb750d1a346132349436549521d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78a3eb750d1a346132349436549521d3">&#9670;&nbsp;</a></span>_z() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a27608ebdfb47b8076b0ed8c01be502f9">Y</a> &gt;::_z </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ee142606cbe7a61fc552256fe21ce5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ee142606cbe7a61fc552256fe21ce5e">&#9670;&nbsp;</a></span>_z() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float const  &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a27608ebdfb47b8076b0ed8c01be502f9">Y</a> &gt;::_z </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a454f2196d8a99655a2936b6d1a8f9398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a454f2196d8a99655a2936b6d1a8f9398">&#9670;&nbsp;</a></span>_z() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a4ff0bb5a0a25cbaf7b74abc10f83e87e">Z</a> &gt;::_z </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4acd87cfb3a2ff9b73ff9dd6bb4d923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4acd87cfb3a2ff9b73ff9dd6bb4d923">&#9670;&nbsp;</a></span>_z() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float const  &amp; <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a4ff0bb5a0a25cbaf7b74abc10f83e87e">Z</a> &gt;::_z </td>
+          <td>(</td>
+          <td class="paramtype">stl_vertex const &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b213b07187de2f6e7d339be00609d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b213b07187de2f6e7d339be00609d00">&#9670;&nbsp;</a></span>make_expolygons() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::make_expolygons </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a> &amp;&#160;</td>
+          <td class="paramname"><em>loops</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_slic3r.html#a9306b728b4672f5e56abe05ba7437fe1">ExPolygons</a> *&#160;</td>
+          <td class="paramname"><em>slices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Input loops are not suitable for evenodd nor nonzero fill types, as we might get two consecutive concentric loops having the same winding order - and we have to respect such order. In that case, evenodd would create wrong inversions, and nonzero would ignore holes inside two concentric contours. So we're ordering loops and collapse consecutive concentric loops having the same winding order. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>find a faster algorithm for this, maybe with some sort of binary search. If we computed a "nesting tree" we could also just remove the consecutive loops having the same winding order, and remove the extra one(s) so that we could just supply everything to <a class="el" href="namespace_slic3r.html#add47402365cb0ce998aa2e3740986978">offset()</a> instead of performing several union/diff calls.</dd></dl>
+<p>we sort by area assuming that the outermost loops have larger area; the previous sorting method, based on $b-&gt;contains($a-&gt;[0]), failed to nest loops correctly in some edge cases when original model had overlapping facets</p>
+
+</div>
+</div>
+<a id="a6445cd9892f512a8bc1efa5ab806813b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6445cd9892f512a8bc1efa5ab806813b">&#9670;&nbsp;</a></span>make_expolygons() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::make_expolygons </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_slic3r_1_1_intersection_line.html">IntersectionLine</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_slic3r.html#a9306b728b4672f5e56abe05ba7437fe1">ExPolygons</a> *&#160;</td>
+          <td class="paramname"><em>slices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f40e384886e99444756e12caa6e3714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f40e384886e99444756e12caa6e3714">&#9670;&nbsp;</a></span>make_expolygons_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::make_expolygons_simple </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_slic3r_1_1_intersection_line.html">IntersectionLine</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_slic3r.html#a9306b728b4672f5e56abe05ba7437fe1">ExPolygons</a> *&#160;</td>
+          <td class="paramname"><em>slices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93c6b5942b39d4042bbd9a2f79b717d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93c6b5942b39d4042bbd9a2f79b717d1">&#9670;&nbsp;</a></span>make_loops()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::make_loops </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_slic3r_1_1_intersection_line.html">IntersectionLine</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a> *&#160;</td>
+          <td class="paramname"><em>loops</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -201,6 +1078,16 @@ template&lt;Axis A&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This method gets called with a list of unscaled Z coordinates and outputs a vector pointer having the same number of items as the original list. Each item is a vector of polygons created by slicing our mesh at the given heights.</p>
+<p>This method should basically combine the behavior of the existing Perl methods defined in lib/Slic3r/TriangleMesh.pm:</p>
+<ul>
+<li>analyze(): this creates the 'facets_edges' and the 'edges_facets' tables (we don't need the 'edges' table)</li>
+<li><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#acf33444ff6c496576619746508acd082">slice_facet()</a>: this has to be done for each facet. It generates intersection lines with each plane identified by the Z list. The get_layer_range() binary search used to identify the Z range of the facet is already ported to C++ (see Object.xsp)</li>
+<li><p class="startli"><a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html#a93c6b5942b39d4042bbd9a2f79b717d1">make_loops()</a>: this has to be done for each layer. It creates polygons from the lines generated by the previous step.</p>
+<p class="startli">At the end, we free the tables generated by analyze() as we don't need them anymore.</p>
+<p class="startli">NOTE: this method accepts a vector of floats because the mesh coordinate type is float.</p>
+</li>
+</ul>
 
 </div>
 </div>
@@ -325,6 +1212,32 @@ template&lt;Axis A&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="afa7bc19621d691d999fd4207886aa9c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa7bc19621d691d999fd4207886aa9c6">&#9670;&nbsp;</a></span>facets_edges</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cut (float z, <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a>* upper, <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a>* lower) const private t_facets_edge <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::facets_edges) </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Splits the current mesh into two parts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">z</td><td>Coordinate plane to cut along. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">upper</td><td><a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> object to add the mesh &gt; z. NULL suppresses saving this. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">lower</td><td><a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> object to save the mesh &lt; z. NULL suppresses saving this. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a17a2625fce7b59bc6f836e1c6e18be5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a17a2625fce7b59bc6f836e1c6e18be5b">&#9670;&nbsp;</a></span>mesh</h2>
 
@@ -335,6 +1248,22 @@ template&lt;Axis A&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a>* <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::mesh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ecd65e19434352fbdfab0dc82cbbb01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ecd65e19434352fbdfab0dc82cbbb01">&#9670;&nbsp;</a></span>v_scaled_shared</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Axis A&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">stl_vertex* <a class="el" href="class_slic3r_1_1_triangle_mesh_slicer.html">Slic3r::TriangleMeshSlicer</a>&lt; A &gt;::v_scaled_shared</td>
         </tr>
       </table>
 </div><div class="memdoc">

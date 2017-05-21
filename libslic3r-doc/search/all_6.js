@@ -3,6 +3,7 @@ var searchData=
   ['f',['F',['../class_slic3r_1_1_g_code_reader.html#a3d72dd730b56dbf0558ecf1640fa92b7',1,'Slic3r::GCodeReader']]],
   ['facetedgetype',['FacetEdgeType',['../namespace_slic3r.html#a8aae0f299cf74413194a5966d41d0acc',1,'Slic3r']]],
   ['facets_5fcount',['facets_count',['../class_slic3r_1_1_model_object.html#ad0b73d643877023bbce271485f205f1b',1,'Slic3r::ModelObject::facets_count()'],['../class_slic3r_1_1_triangle_mesh.html#aff5908410672f10206876d0a5c52d3e1',1,'Slic3r::TriangleMesh::facets_count()']]],
+  ['facets_5fedges',['facets_edges',['../class_slic3r_1_1_triangle_mesh_slicer.html#afa7bc19621d691d999fd4207886aa9c6',1,'Slic3r::TriangleMeshSlicer']]],
   ['fan_5falways_5fon',['fan_always_on',['../class_slic3r_1_1_print_config.html#a415d6312326fd7c5ed518671894fd2dd',1,'Slic3r::PrintConfig']]],
   ['fan_5fbelow_5flayer_5ftime',['fan_below_layer_time',['../class_slic3r_1_1_print_config.html#a49ee87e0cd97627ce16c265c12118811',1,'Slic3r::PrintConfig']]],
   ['febottom',['feBottom',['../namespace_slic3r.html#a8aae0f299cf74413194a5966d41d0acca45043aae4a44dfa8928bed1eaaf26ec3',1,'Slic3r']]],
