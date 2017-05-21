@@ -17,7 +17,7 @@ often filled with people who can provide real-time help:
 RepRap.org Forum
 ----------------
 
-A dedicated [forum for Slic3r](forums.reprap.org/list.php?263) exists in the
+A dedicated [forum for Slic3r](http://forums.reprap.org/list.php?263) exists in the
 RepRap forums.
 
 Issue Tracker
