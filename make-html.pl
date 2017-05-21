@@ -25,6 +25,10 @@ convert_dir('src');
 # copy images and stylesheet
 system qw(cp html-inc/style.css html/);
 
+# copy libslic3r documentation
+system qw(cp -r libslic3r-doc html/);
+
+
 sub convert {
     my ($md, $html) = @_;
     
