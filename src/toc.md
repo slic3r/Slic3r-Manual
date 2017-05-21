@@ -13,11 +13,10 @@
     * [The Important First Layer](/first-print/first-layer)
     * [Working with Models](/first-print/working-with-models)
     * [Printing](/first-print/printing)
-* [Simple Mode](/simple-mode/simple-mode)
+* Print Configurations
     * [Print Settings](/simple-mode/simple-mode#print-settings)
     * [Filament Settings](/simple-mode/simple-mode#filament-settings)
     * [Printer Settings](/simple-mode/simple-mode#printer-settings)
-* Expert Mode
     * [Speed](/expert-mode/speed)
     * [Infill Patterns and Density](/expert-mode/infill)
     * [Infill Optimization](/expert-mode/infill-optimization)
@@ -42,5 +41,7 @@
 * Troubleshooting
     * [Dimension Errors](/troubleshooting/dimension-errors)
     * [Z Wobble](/troubleshooting/troubleshooting#z-wobble)
+* Internals Documentation (Doxygen)
+    * [libslic3r](/libslic3r-doc)
     
 </div>
