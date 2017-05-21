@@ -74,6 +74,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Represents material flow; provides methods to predict material spacing.  
+ <a href="class_slic3r_1_1_flow.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_flow_8hpp_source.html">Flow.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -102,8 +105,10 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e0baa95d231d187bd6d013e3c3f528d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_slic3r_1_1_flow.html">Flow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_flow.html#a8e0baa95d231d187bd6d013e3c3f528d">new_from_config_width</a> (<a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567a">FlowRole</a> role, const <a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html">ConfigOptionFloatOrPercent</a> &amp;<a class="el" href="class_slic3r_1_1_flow.html#a6030c04dfb2372ee8c8a1d9014c4a3cf">width</a>, float <a class="el" href="class_slic3r_1_1_flow.html#ad232e14befb4c7b4ac18c6e81c4e36ed">nozzle_diameter</a>, float <a class="el" href="class_slic3r_1_1_flow.html#a51d6515f3be6a482192432347e8abf00">height</a>, float bridge_flow_ratio)</td></tr>
+<tr class="memdesc:a8e0baa95d231d187bd6d013e3c3f528d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static method to build a <a class="el" href="class_slic3r_1_1_flow.html" title="Represents material flow; provides methods to predict material spacing. ">Flow</a> object from an extrusion width config setting and some other context properties.  <a href="#a8e0baa95d231d187bd6d013e3c3f528d">More...</a><br /></td></tr>
 <tr class="separator:a8e0baa95d231d187bd6d013e3c3f528d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc8c016119602809cc6eea441a7ed09a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_slic3r_1_1_flow.html">Flow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_flow.html#abc8c016119602809cc6eea441a7ed09a">new_from_spacing</a> (float <a class="el" href="class_slic3r_1_1_flow.html#a42ec487a6853ed58d3deff0ce060abd9">spacing</a>, float <a class="el" href="class_slic3r_1_1_flow.html#ad232e14befb4c7b4ac18c6e81c4e36ed">nozzle_diameter</a>, float <a class="el" href="class_slic3r_1_1_flow.html#a51d6515f3be6a482192432347e8abf00">height</a>, bool <a class="el" href="class_slic3r_1_1_flow.html#a83820293c290e04af49afc7d4aec0769">bridge</a>)</td></tr>
+<tr class="memdesc:abc8c016119602809cc6eea441a7ed09a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static method to build a <a class="el" href="class_slic3r_1_1_flow.html" title="Represents material flow; provides methods to predict material spacing. ">Flow</a> object from a specified centerline spacing (center-to-center).  <a href="#abc8c016119602809cc6eea441a7ed09a">More...</a><br /></td></tr>
 <tr class="separator:abc8c016119602809cc6eea441a7ed09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadd5c6973103d034d6e8ee528a011bf7"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:aadd5c6973103d034d6e8ee528a011bf7"><td class="memTemplItemLeft" align="right" valign="top">static T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_flow.html#aadd5c6973103d034d6e8ee528a011bf7">solid_spacing</a> (const T total_width, const T <a class="el" href="class_slic3r_1_1_flow.html#a42ec487a6853ed58d3deff0ce060abd9">spacing</a>)</td></tr>
@@ -120,7 +125,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a83820293c290e04af49afc7d4aec0769"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_flow.html#a83820293c290e04af49afc7d4aec0769">bridge</a></td></tr>
 <tr class="separator:a83820293c290e04af49afc7d4aec0769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents material flow; provides methods to predict material spacing. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a441a5a83187dc581d23e3cf7d2db341a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a441a5a83187dc581d23e3cf7d2db341a">&#9670;&nbsp;</a></span>Flow()</h2>
 
@@ -239,6 +246,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Static method to build a <a class="el" href="class_slic3r_1_1_flow.html" title="Represents material flow; provides methods to predict material spacing. ">Flow</a> object from an extrusion width config setting and some other context properties. </p>
+
 </div>
 </div>
 <a id="abc8c016119602809cc6eea441a7ed09a"></a>
@@ -286,6 +295,8 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Static method to build a <a class="el" href="class_slic3r_1_1_flow.html" title="Represents material flow; provides methods to predict material spacing. ">Flow</a> object from a specified centerline spacing (center-to-center). </p>
 
 </div>
 </div>
@@ -470,6 +481,7 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Calculate a new spacing to fill width with possibly integer number of lines, the first and last line being centered at the interval ends. This function possibly increases the spacing, never decreases, and for a narrow width the increase in spacing may become severe, therefore the adjustment is limited to 20% increase. </p>
 
 </div>
 </div>
@@ -487,6 +499,7 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return the centerline spacing between two adjacent extrusions that have the same properties (width, etc). Models as a rectangle with semicircles at the ends. </p>
 
 </div>
 </div>
@@ -505,6 +518,7 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return the centerline spacing between two <a class="el" href="class_slic3r_1_1_flow.html" title="Represents material flow; provides methods to predict material spacing. ">Flow</a> objects (current and some other flow). </p><dl class="section remark"><dt>Remarks</dt><dd>this-&gt;spacing(other) == other.spacing(this) </dd></dl>
 
 </div>
 </div>

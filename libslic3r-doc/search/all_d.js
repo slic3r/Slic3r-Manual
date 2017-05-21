@@ -12,8 +12,8 @@ var searchData=
   ['negative',['negative',['../class_slic3r_1_1_point.html#a6b399e97b57ca52bf9faa2f20fcd0fce',1,'Slic3r::Point::negative()'],['../class_slic3r_1_1_pointf.html#a967387ae49b59428356d87901fb80dff',1,'Slic3r::Pointf::negative()'],['../class_slic3r_1_1_pointf3.html#a06984f165c7d8917d796353453b05569',1,'Slic3r::Pointf3::negative()']]],
   ['new_5fe',['new_E',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#adf8ac3cfa97eb414517ec19944c3890f',1,'Slic3r::GCodeReader::GCodeLine']]],
   ['new_5ff',['new_F',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#a8661df900abd5199a3d5cde40c33f3bc',1,'Slic3r::GCodeReader::GCodeLine']]],
-  ['new_5ffrom_5fconfig_5fwidth',['new_from_config_width',['../class_flow.html#adad99a84bea22a4e078fd92b6dfeef88',1,'Flow']]],
-  ['new_5ffrom_5fspacing',['new_from_spacing',['../class_flow.html#ab34e0f4e57cc3f5a23d657cf7ecf5ca6',1,'Flow']]],
+  ['new_5ffrom_5fconfig_5fwidth',['new_from_config_width',['../class_slic3r_1_1_flow.html#a8e0baa95d231d187bd6d013e3c3f528d',1,'Slic3r::Flow']]],
+  ['new_5ffrom_5fspacing',['new_from_spacing',['../class_slic3r_1_1_flow.html#abc8c016119602809cc6eea441a7ed09a',1,'Slic3r::Flow']]],
   ['new_5ffrom_5ftype',['new_from_type',['../class_slic3r_1_1_fill.html#ae4f0ccb5cf9427ade958c67faa188c64',1,'Slic3r::Fill::new_from_type(const InfillPattern type)'],['../class_slic3r_1_1_fill.html#a4e2b3b6bde08b10506e94ca14e6e356b',1,'Slic3r::Fill::new_from_type(const std::string &amp;type)']]],
   ['new_5fscale',['new_scale',['../class_slic3r_1_1_point.html#a518d45ac28e86f98cefaaddc104ecc86',1,'Slic3r::Point']]],
   ['new_5funscale',['new_unscale',['../class_slic3r_1_1_pointf.html#ac741720718600343dc7edbdf99a8ec1f',1,'Slic3r::Pointf::new_unscale(coord_t x, coord_t y)'],['../class_slic3r_1_1_pointf.html#ada90e31213a46104e3e764e281c2fb80',1,'Slic3r::Pointf::new_unscale(const Point &amp;p)'],['../class_slic3r_1_1_pointf3.html#a40751c9794d7721c982c279e2b87a3f0',1,'Slic3r::Pointf3::new_unscale()']]],
@@ -49,6 +49,6 @@ var searchData=
   ['normal',['normal',['../class_slic3r_1_1_line.html#afefd711019e7a65c69697af4df65a93c',1,'Slic3r::Line']]],
   ['normalize',['normalize',['../class_slic3r_1_1_dynamic_print_config.html#a2131e30908f45fb6354fc0b12c6426ca',1,'Slic3r::DynamicPrintConfig']]],
   ['notes',['notes',['../class_slic3r_1_1_print_config.html#a82916611e0a3ed5bca17f95bf78facf6',1,'Slic3r::PrintConfig']]],
-  ['nozzle_5fdiameter',['nozzle_diameter',['../class_flow.html#a4876f44304ac16075d73e1ad70e9eca8',1,'Flow::nozzle_diameter()'],['../class_slic3r_1_1_print_config.html#a04d2e50e7cab2f3f704a2edd1eefe3f9',1,'Slic3r::PrintConfig::nozzle_diameter()']]],
+  ['nozzle_5fdiameter',['nozzle_diameter',['../class_slic3r_1_1_flow.html#ad232e14befb4c7b4ac18c6e81c4e36ed',1,'Slic3r::Flow::nozzle_diameter()'],['../class_slic3r_1_1_print_config.html#a04d2e50e7cab2f3f704a2edd1eefe3f9',1,'Slic3r::PrintConfig::nozzle_diameter()']]],
   ['number_5fpolygons',['number_polygons',['../namespace_slic3r.html#a436ba7aff8e795a5ae518eb45504a927',1,'Slic3r::number_polygons(const Surfaces &amp;surfaces)'],['../namespace_slic3r.html#a8071ed81a167a898cc2784c563f7cbd0',1,'Slic3r::number_polygons(const SurfacesPtr &amp;surfaces)']]]
 ];

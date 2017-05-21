@@ -14,6 +14,6 @@ var searchData=
   ['fillrectilinear',['FillRectilinear',['../class_slic3r_1_1_fill_rectilinear.html',1,'Slic3r']]],
   ['fillstars',['FillStars',['../class_slic3r_1_1_fill_stars.html',1,'Slic3r']]],
   ['filltriangles',['FillTriangles',['../class_slic3r_1_1_fill_triangles.html',1,'Slic3r']]],
-  ['flow',['Flow',['../class_flow.html',1,'']]],
+  ['flow',['Flow',['../class_slic3r_1_1_flow.html',1,'Slic3r']]],
   ['fullprintconfig',['FullPrintConfig',['../class_slic3r_1_1_full_print_config.html',1,'Slic3r']]]
 ];
