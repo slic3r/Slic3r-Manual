@@ -127,7 +127,7 @@ var searchData=
   ['costring',['coString',['../namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da1cf926fa9e3c16e3cd6f6e001370eff5',1,'Slic3r']]],
   ['costrings',['coStrings',['../namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05dac242c19dded7e7375fcaa72ecc7e6ec5',1,'Slic3r']]],
   ['coverage',['coverage',['../class_slic3r_1_1_bridge_detector.html#acb5688a50b301a3725b969aa4753a57c',1,'Slic3r::BridgeDetector::coverage() const'],['../class_slic3r_1_1_bridge_detector.html#a5564ca257813d631b75a2025f1964210',1,'Slic3r::BridgeDetector::coverage(double angle) const']]],
-  ['cut',['cut',['../class_slic3r_1_1_c_l_i_config.html#aa3210648ad9af36f19d6b8c65ac10c25',1,'Slic3r::CLIConfig::cut()'],['../class_slic3r_1_1_model_object.html#a02ae091c917fdaf334b8fbfa4e072c08',1,'Slic3r::ModelObject::cut()']]],
+  ['cut',['cut',['../class_slic3r_1_1_c_l_i_config.html#aa3210648ad9af36f19d6b8c65ac10c25',1,'Slic3r::CLIConfig::cut()'],['../class_slic3r_1_1_model_object.html#a02ae091c917fdaf334b8fbfa4e072c08',1,'Slic3r::ModelObject::cut()'],['../class_slic3r_1_1_triangle_mesh_slicer.html#aec389aab76dc4c1694a08da38202d7b8',1,'Slic3r::TriangleMeshSlicer::cut()']]],
   ['cut_5fby_5fgrid',['cut_by_grid',['../class_slic3r_1_1_triangle_mesh.html#adaf5c32f88bb8664dc38166e0fa02343',1,'Slic3r::TriangleMesh']]],
   ['cut_5fgrid',['cut_grid',['../class_slic3r_1_1_c_l_i_config.html#aaf9c4ffb36e87e5db465de5029b32e50',1,'Slic3r::CLIConfig']]],
   ['cut_5fx',['cut_x',['../class_slic3r_1_1_c_l_i_config.html#afaade826902c19037d6f49faa847245c',1,'Slic3r::CLIConfig']]],

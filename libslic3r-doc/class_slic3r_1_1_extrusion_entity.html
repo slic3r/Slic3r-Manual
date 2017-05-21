@@ -104,8 +104,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d3485dd3803b15660fe4c603edecf35"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_slic3r_1_1_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_extrusion_entity.html#a7d3485dd3803b15660fe4c603edecf35">last_point</a> () const =0</td></tr>
 <tr class="separator:a7d3485dd3803b15660fe4c603edecf35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad96c60eea31b4796c84f9e74158b2138"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_extrusion_entity.html#ad96c60eea31b4796c84f9e74158b2138">grow</a> () const =0</td></tr>
+<tr class="memdesc:ad96c60eea31b4796c84f9e74158b2138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce a list of 2D polygons covered by the extruded path.  <a href="#ad96c60eea31b4796c84f9e74158b2138">More...</a><br /></td></tr>
 <tr class="separator:ad96c60eea31b4796c84f9e74158b2138"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d49386c46dc2f961c8bdfb7e97a3f6"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_extrusion_entity.html#aa4d49386c46dc2f961c8bdfb7e97a3f6">min_mm3_per_mm</a> () const =0</td></tr>
+<tr class="memdesc:aa4d49386c46dc2f961c8bdfb7e97a3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum volumetric velocity of this extrusion entity. Used by the constant nozzle pressure algorithm.  <a href="#aa4d49386c46dc2f961c8bdfb7e97a3f6">More...</a><br /></td></tr>
 <tr class="separator:aa4d49386c46dc2f961c8bdfb7e97a3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a544c006b473b7583da8dcd97d94c25bb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_slic3r_1_1_polyline.html">Polyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_extrusion_entity.html#a544c006b473b7583da8dcd97d94c25bb">as_polyline</a> () const =0</td></tr>
 <tr class="separator:a544c006b473b7583da8dcd97d94c25bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -270,6 +272,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Produce a list of 2D polygons covered by the extruded path. </p>
+
 <p>Implemented in <a class="el" href="class_slic3r_1_1_extrusion_loop.html#a3c75dfc42ce617b1354426a6e80800c1">Slic3r::ExtrusionLoop</a>, <a class="el" href="class_slic3r_1_1_extrusion_path.html#ae2de40feed2dfb8c10cb260dfc5bdf85">Slic3r::ExtrusionPath</a>, and <a class="el" href="class_slic3r_1_1_extrusion_entity_collection.html#a660f6cb4b606e112f6cb1648ef816961">Slic3r::ExtrusionEntityCollection</a>.</p>
 
 </div>
@@ -404,6 +408,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Minimum volumetric velocity of this extrusion entity. Used by the constant nozzle pressure algorithm. </p>
 
 <p>Implemented in <a class="el" href="class_slic3r_1_1_extrusion_loop.html#a0f835a74992f9e5afe10ff7d3fa10bc8">Slic3r::ExtrusionLoop</a>, <a class="el" href="class_slic3r_1_1_extrusion_path.html#a0763d544a8f42b6bbf39898729ae63d5">Slic3r::ExtrusionPath</a>, and <a class="el" href="class_slic3r_1_1_extrusion_entity_collection.html#a13ab90f207e8bce7e59fdf5ede414bcc">Slic3r::ExtrusionEntityCollection</a>.</p>
 

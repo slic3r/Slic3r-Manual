@@ -62,6 +62,6 @@ var searchData=
   ['convex_5fpoints',['convex_points',['../class_slic3r_1_1_polygon.html#ac21417244d7e117048b6f47bb9024a9f',1,'Slic3r::Polygon']]],
   ['copies',['copies',['../class_slic3r_1_1_print_object.html#ad33f100cd5d421381f4d39a254027359',1,'Slic3r::PrintObject']]],
   ['coverage',['coverage',['../class_slic3r_1_1_bridge_detector.html#acb5688a50b301a3725b969aa4753a57c',1,'Slic3r::BridgeDetector::coverage() const'],['../class_slic3r_1_1_bridge_detector.html#a5564ca257813d631b75a2025f1964210',1,'Slic3r::BridgeDetector::coverage(double angle) const']]],
-  ['cut',['cut',['../class_slic3r_1_1_model_object.html#a02ae091c917fdaf334b8fbfa4e072c08',1,'Slic3r::ModelObject']]],
+  ['cut',['cut',['../class_slic3r_1_1_model_object.html#a02ae091c917fdaf334b8fbfa4e072c08',1,'Slic3r::ModelObject::cut()'],['../class_slic3r_1_1_triangle_mesh_slicer.html#aec389aab76dc4c1694a08da38202d7b8',1,'Slic3r::TriangleMeshSlicer::cut()']]],
   ['cut_5fby_5fgrid',['cut_by_grid',['../class_slic3r_1_1_triangle_mesh.html#adaf5c32f88bb8664dc38166e0fa02343',1,'Slic3r::TriangleMesh']]]
 ];

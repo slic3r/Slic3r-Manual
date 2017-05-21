@@ -1,7 +1,6 @@
 var searchData=
 [
   ['f',['F',['../class_slic3r_1_1_g_code_reader.html#a3d72dd730b56dbf0558ecf1640fa92b7',1,'Slic3r::GCodeReader']]],
-  ['facets_5fedges',['facets_edges',['../class_slic3r_1_1_triangle_mesh_slicer.html#afa7bc19621d691d999fd4207886aa9c6',1,'Slic3r::TriangleMeshSlicer']]],
   ['fan_5falways_5fon',['fan_always_on',['../class_slic3r_1_1_print_config.html#a415d6312326fd7c5ed518671894fd2dd',1,'Slic3r::PrintConfig']]],
   ['fan_5fbelow_5flayer_5ftime',['fan_below_layer_time',['../class_slic3r_1_1_print_config.html#a49ee87e0cd97627ce16c265c12118811',1,'Slic3r::PrintConfig']]],
   ['filament_5fcolour',['filament_colour',['../class_slic3r_1_1_print_config.html#abf12ba67bd751de3877e9b38bec264c6',1,'Slic3r::PrintConfig']]],

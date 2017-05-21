@@ -10,8 +10,7 @@ var indexSectionsWithContent =
   7: "acefgips",
   8: "cefgipsxyz",
   9: "lmopt",
-  10: "_cefopstx",
-  11: "t"
+  10: "_cefopstx"
 };
 
 var indexSectionNames =
@@ -26,8 +25,7 @@ var indexSectionNames =
   7: "enums",
   8: "enumvalues",
   9: "related",
-  10: "defines",
-  11: "pages"
+  10: "defines"
 };
 
 var indexSectionLabels =
@@ -42,7 +40,6 @@ var indexSectionLabels =
   7: "Enumerations",
   8: "Enumerator",
   9: "Friends",
-  10: "Macros",
-  11: "Pages"
+  10: "Macros"
 };
 
