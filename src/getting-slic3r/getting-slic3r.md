@@ -4,7 +4,7 @@ Slic3r can be downloaded directly from:
 <http://slic3r.org/download>.
 
 Pre-compiled packages are available for Windows, Mac OS X and Linux.
-Windows and Linux users can choose between 32 and 64 bit versions to
+Windows users can choose between 32 and 64 bit versions to
 match their system.
 
 Source
@@ -21,11 +21,17 @@ Windows
 -------
 
 Unzip the downloaded zip file to a folder of your choosing, there is no
-installer script. The resulting folder contains two executables:
+installer script. The resulting folder contains three executables:
 
--   `slic3r.exe` - starts the GUI version.
+-   `Slic3r.exe` - starts the GUI version.
 
--   `slic3r-console.exe` - can be used from the command line.
+-   `Slic3r-console.exe` - can be used from the command line.
+
+-   `Slic3r-debug-console.exe` - starts the GUI version and provides a debugging output console.
+
+The folder also contains a `libexec` directory, which contains the rest of the
+important support files for Slic3r. Do not remove this folder or move it away
+from the exe files or Slic3r will not work!
 
 The zip file may then be deleted.
 
@@ -40,20 +46,14 @@ dmg file may then be deleted.
 Linux
 -----
 
-Extract the archive to a folder of your choosing. Either:
-
--   Start Slic3r directly by running the Slic3r executable, found in the
-    bin directory, or
-
--   Install Slic3r by running the do-install executable, also found in
-    the bin folder.
+Extract the archive to a folder of your choosing.  Start Slic3r directly by
+running the Slic3r shell script, found in the root directory.
+    
 
 The archive file may then be deleted.
 
 Building from source
 ====================
-
-
 
 For those wishing to live on the cutting edge, Slic3r can be compiled
 from the latest source files found on GitHub[^1].
