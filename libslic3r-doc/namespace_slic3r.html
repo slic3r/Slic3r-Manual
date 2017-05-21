@@ -179,8 +179,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_extrusion_path.html">ExtrusionPath</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_flow.html">Flow</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_full_print_config.html">FullPrintConfig</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_g_code.html">GCode</a></td></tr>
@@ -456,18 +454,6 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a17cb28edccd7ad002331b1fff3fe1703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special flags describing loop.  <a href="namespace_slic3r.html#a17cb28edccd7ad002331b1fff3fe1703">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a17cb28edccd7ad002331b1fff3fe1703"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bcb312043a874462f942e362c16567a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567a">FlowRole</a> { <br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567aa73b23230c5b13dd721893c50d09a9d5f">frExternalPerimeter</a>, 
-<a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567aa76382120c41343ceddf63472ce33ceaf">frPerimeter</a>, 
-<a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567aadc1f79acb9a303b4dcd74d6aaaa637e2">frInfill</a>, 
-<a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567aa7d4497c484372805525d52c0809d85a0">frSolidInfill</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567aa1659c28f8384ed923cc03781bf910c54">frTopSolidInfill</a>, 
-<a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567aa16d80b2546547565f4e334f9cf68a415">frSupportMaterial</a>, 
-<a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567aa994c86d4a3903ed69cf3b69fa2be90a2">frSupportMaterialInterface</a>
-<br />
- }</td></tr>
-<tr class="separator:a4bcb312043a874462f942e362c16567a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec0518765dd6991c31ac6c40872edef8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8">Axis</a> { <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8aea4f41ceb26107aab036b3cebd6e3a13">X</a> =0, 
 <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a27608ebdfb47b8076b0ed8c01be502f9">Y</a>, 
 <a class="el" href="namespace_slic3r.html#aec0518765dd6991c31ac6c40872edef8a4ff0bb5a0a25cbaf7b74abc10f83e87e">Z</a>
@@ -1646,29 +1632,6 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a8aae0f299cf74413194a5966d41d0accab1eab14c434d5ab651e97df355099998"></a>feTop&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a8aae0f299cf74413194a5966d41d0acca45043aae4a44dfa8928bed1eaaf26ec3"></a>feBottom&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a8aae0f299cf74413194a5966d41d0acca47f5623bc954afe23baa62a569369510"></a>feHorizontal&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a4bcb312043a874462f942e362c16567a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bcb312043a874462f942e362c16567a">&#9670;&nbsp;</a></span>FlowRole</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="namespace_slic3r.html#a4bcb312043a874462f942e362c16567a">Slic3r::FlowRole</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4bcb312043a874462f942e362c16567aa73b23230c5b13dd721893c50d09a9d5f"></a>frExternalPerimeter&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4bcb312043a874462f942e362c16567aa76382120c41343ceddf63472ce33ceaf"></a>frPerimeter&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4bcb312043a874462f942e362c16567aadc1f79acb9a303b4dcd74d6aaaa637e2"></a>frInfill&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4bcb312043a874462f942e362c16567aa7d4497c484372805525d52c0809d85a0"></a>frSolidInfill&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4bcb312043a874462f942e362c16567aa1659c28f8384ed923cc03781bf910c54"></a>frTopSolidInfill&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4bcb312043a874462f942e362c16567aa16d80b2546547565f4e334f9cf68a415"></a>frSupportMaterial&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4bcb312043a874462f942e362c16567aa994c86d4a3903ed69cf3b69fa2be90a2"></a>frSupportMaterialInterface&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

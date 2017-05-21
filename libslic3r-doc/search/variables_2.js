@@ -10,7 +10,7 @@ var searchData=
   ['bottom_5finfill_5fpattern',['bottom_infill_pattern',['../class_slic3r_1_1_print_region_config.html#a9892ec5717ded83b3077b37a17a8e6f9',1,'Slic3r::PrintRegionConfig']]],
   ['bottom_5flayer',['bottom_layer',['../class_slic3r_1_1_s_l_a_print_1_1_support_pillar.html#a148cdbb90ea9550ea69db19db41ac9b1',1,'Slic3r::SLAPrint::SupportPillar']]],
   ['bottom_5fsolid_5flayers',['bottom_solid_layers',['../class_slic3r_1_1_print_region_config.html#ad7ce6767400496d947cc584833988e53',1,'Slic3r::PrintRegionConfig']]],
-  ['bridge',['bridge',['../class_slic3r_1_1_flow.html#a83820293c290e04af49afc7d4aec0769',1,'Slic3r::Flow']]],
+  ['bridge',['bridge',['../class_flow.html#a6223d00ebcee9108aced97967521737a',1,'Flow']]],
   ['bridge_5facceleration',['bridge_acceleration',['../class_slic3r_1_1_print_config.html#a4895f0a09da69400de9432cc42d181a5',1,'Slic3r::PrintConfig']]],
   ['bridge_5fangle',['bridge_angle',['../class_slic3r_1_1_surface.html#aaa7cb31ff126b05381ed24037410de25',1,'Slic3r::Surface']]],
   ['bridge_5fextra_5fspacing',['BRIDGE_EXTRA_SPACING',['../namespace_slic3r.html#acc507236f3ad6ccc35452c9315da3e96',1,'Slic3r']]],
