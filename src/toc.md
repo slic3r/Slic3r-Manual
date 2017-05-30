@@ -38,6 +38,7 @@
     * [Command Line Usage](/advanced/command-line)
     * [Post-Processing Scripts](/advanced/post-processing)
     * [Flow Math](/advanced/flow-math)
+    * [Modifier Meshes](/advanced/modifier-mesh)
 * Troubleshooting
     * [Dimension Errors](/troubleshooting/dimension-errors)
     * [Z Wobble](/troubleshooting/troubleshooting#z-wobble)
