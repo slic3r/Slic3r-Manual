@@ -22,5 +22,6 @@ var searchData=
   ['no_5fsort',['no_sort',['../class_slic3r_1_1_fill.html#a9c92987423a6b578c4456620bf8d4408',1,'Slic3r::Fill::no_sort()'],['../class_slic3r_1_1_fill_concentric.html#ace1306855b07ed3a0be18f5390196e19',1,'Slic3r::FillConcentric::no_sort()']]],
   ['normal',['normal',['../class_slic3r_1_1_line.html#afefd711019e7a65c69697af4df65a93c',1,'Slic3r::Line']]],
   ['normalize',['normalize',['../class_slic3r_1_1_dynamic_print_config.html#a2131e30908f45fb6354fc0b12c6426ca',1,'Slic3r::DynamicPrintConfig']]],
+  ['notes',['notes',['../class_slic3r_1_1_g_code.html#ab74d63ffcfae0ebc79d40b3b1c544317',1,'Slic3r::GCode::notes()'],['../class_slic3r_1_1_g_code_writer.html#a84aba7a50d947edb6ee9be6df11f4fb9',1,'Slic3r::GCodeWriter::notes()']]],
   ['number_5fpolygons',['number_polygons',['../namespace_slic3r.html#a436ba7aff8e795a5ae518eb45504a927',1,'Slic3r::number_polygons(const Surfaces &amp;surfaces)'],['../namespace_slic3r.html#a8071ed81a167a898cc2784c563f7cbd0',1,'Slic3r::number_polygons(const SurfacesPtr &amp;surfaces)']]]
 ];

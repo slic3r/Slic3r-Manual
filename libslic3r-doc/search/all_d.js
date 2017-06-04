@@ -48,7 +48,7 @@ var searchData=
   ['nodes',['nodes',['../class_slic3r_1_1_motion_planner_graph.html#a717c798586769e09a7e4ce463922d399',1,'Slic3r::MotionPlannerGraph']]],
   ['normal',['normal',['../class_slic3r_1_1_line.html#afefd711019e7a65c69697af4df65a93c',1,'Slic3r::Line']]],
   ['normalize',['normalize',['../class_slic3r_1_1_dynamic_print_config.html#a2131e30908f45fb6354fc0b12c6426ca',1,'Slic3r::DynamicPrintConfig']]],
-  ['notes',['notes',['../class_slic3r_1_1_print_config.html#a82916611e0a3ed5bca17f95bf78facf6',1,'Slic3r::PrintConfig']]],
+  ['notes',['notes',['../class_slic3r_1_1_g_code_config.html#afdff676d7444bb7418fbb029b4e0eb15',1,'Slic3r::GCodeConfig::notes()'],['../class_slic3r_1_1_g_code.html#ab74d63ffcfae0ebc79d40b3b1c544317',1,'Slic3r::GCode::notes()'],['../class_slic3r_1_1_g_code_writer.html#a84aba7a50d947edb6ee9be6df11f4fb9',1,'Slic3r::GCodeWriter::notes()']]],
   ['nozzle_5fdiameter',['nozzle_diameter',['../class_slic3r_1_1_flow.html#ad232e14befb4c7b4ac18c6e81c4e36ed',1,'Slic3r::Flow::nozzle_diameter()'],['../class_slic3r_1_1_print_config.html#a04d2e50e7cab2f3f704a2edd1eefe3f9',1,'Slic3r::PrintConfig::nozzle_diameter()']]],
   ['number_5fpolygons',['number_polygons',['../namespace_slic3r.html#a436ba7aff8e795a5ae518eb45504a927',1,'Slic3r::number_polygons(const Surfaces &amp;surfaces)'],['../namespace_slic3r.html#a8071ed81a167a898cc2784c563f7cbd0',1,'Slic3r::number_polygons(const SurfacesPtr &amp;surfaces)']]]
 ];

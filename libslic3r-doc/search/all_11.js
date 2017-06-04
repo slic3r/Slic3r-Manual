@@ -107,6 +107,7 @@ var searchData=
   ['split_5fat',['split_at',['../class_slic3r_1_1_extrusion_loop.html#ae433587d7d56a760e4db69ad4d812aa5',1,'Slic3r::ExtrusionLoop::split_at()'],['../class_slic3r_1_1_polyline.html#afe15b95ad0e7637890486d52234538e4',1,'Slic3r::Polyline::split_at()']]],
   ['split_5fat_5ffirst_5fpoint',['split_at_first_point',['../class_slic3r_1_1_polygon.html#abf140b25598594eda56f07a439485360',1,'Slic3r::Polygon']]],
   ['split_5fat_5findex',['split_at_index',['../class_slic3r_1_1_polygon.html#a31cd9e89f63d38271adee5c010324857',1,'Slic3r::Polygon']]],
+  ['split_5fat_5fregex',['split_at_regex',['../utils_8cpp.html#a8ab91f774b605294d4e0ae7553214153',1,'split_at_regex(const std::string &amp;input, const std::string &amp;regex):&#160;utils.cpp'],['../utils_8hpp.html#a8ab91f774b605294d4e0ae7553214153',1,'split_at_regex(const std::string &amp;input, const std::string &amp;regex):&#160;utils.cpp']]],
   ['split_5fat_5fvertex',['split_at_vertex',['../class_slic3r_1_1_extrusion_loop.html#a1e620608182d198421cd01cf888fde60',1,'Slic3r::ExtrusionLoop::split_at_vertex()'],['../class_slic3r_1_1_polygon.html#a29afdd3040ed3029ad816b7a28e633e6',1,'Slic3r::Polygon::split_at_vertex()']]],
   ['spnearest',['spNearest',['../namespace_slic3r.html#a07c946bf9d2d193c88a83cbfc15df326a0cebea9e2de9dd6842a44ee83dcea58c',1,'Slic3r']]],
   ['sprandom',['spRandom',['../namespace_slic3r.html#a07c946bf9d2d193c88a83cbfc15df326a6b978f0a7fb26139477622fadc03ad5a',1,'Slic3r']]],

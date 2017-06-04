@@ -97,7 +97,7 @@ var searchData=
   ['printconfig_2ehpp',['PrintConfig.hpp',['../_print_config_8hpp.html',1,'']]],
   ['printconfigbase',['PrintConfigBase',['../class_slic3r_1_1_print_config_base.html',1,'Slic3r::PrintConfigBase'],['../class_slic3r_1_1_print_config_base.html#acba317b17f78aa536cb270499ebc6ed8',1,'Slic3r::PrintConfigBase::PrintConfigBase()']]],
   ['printconfigdef',['PrintConfigDef',['../class_slic3r_1_1_print_config_def.html',1,'Slic3r::PrintConfigDef'],['../class_slic3r_1_1_print_config_def.html#a5711dcf3215240c9d21a28cec88a7d78',1,'Slic3r::PrintConfigDef::PrintConfigDef()']]],
-  ['printer_5fnotes',['printer_notes',['../class_slic3r_1_1_print_config.html#a77bda5f25efa29725e7ad68048a7c6ee',1,'Slic3r::PrintConfig']]],
+  ['printer_5fnotes',['printer_notes',['../class_slic3r_1_1_g_code_config.html#af6088dbd1ff241903309fd665093c215',1,'Slic3r::GCodeConfig']]],
   ['printobject',['PrintObject',['../class_slic3r_1_1_print_object.html',1,'Slic3r::PrintObject'],['../class_slic3r_1_1_layer.html#a836e37e4dd0da9377e41b8deb706070b',1,'Slic3r::Layer::PrintObject()'],['../class_slic3r_1_1_support_layer.html#a836e37e4dd0da9377e41b8deb706070b',1,'Slic3r::SupportLayer::PrintObject()']]],
   ['printobject_2ecpp',['PrintObject.cpp',['../_print_object_8cpp.html',1,'']]],
   ['printobjectconfig',['PrintObjectConfig',['../class_slic3r_1_1_print_object_config.html',1,'Slic3r::PrintObjectConfig'],['../class_slic3r_1_1_print_object_config.html#a4a16da930d432dc15f4b461dfb60d9d2',1,'Slic3r::PrintObjectConfig::PrintObjectConfig()']]],

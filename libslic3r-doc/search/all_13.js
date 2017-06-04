@@ -24,5 +24,6 @@ var searchData=
   ['use_5frelative_5fe_5fdistances',['use_relative_e_distances',['../class_slic3r_1_1_g_code_config.html#a4210962bea328992aa63479873bb3e78',1,'Slic3r::GCodeConfig']]],
   ['use_5fvolumetric_5fe',['use_volumetric_e',['../class_slic3r_1_1_g_code_config.html#aaa185ad7694257a982d448cf01324abd',1,'Slic3r::GCodeConfig']]],
   ['used_5ffilament',['used_filament',['../class_slic3r_1_1_extruder.html#a0a6931ae6964f15b3847c046e416a2ed',1,'Slic3r::Extruder']]],
-  ['utils_2ecpp',['utils.cpp',['../utils_8cpp.html',1,'']]]
+  ['utils_2ecpp',['utils.cpp',['../utils_8cpp.html',1,'']]],
+  ['utils_2ehpp',['utils.hpp',['../utils_8hpp.html',1,'']]]
 ];

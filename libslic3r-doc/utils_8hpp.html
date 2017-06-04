@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libslic3r: src/libslic3r/utils.cpp File Reference</title>
+<title>libslic3r: src/libslic3r/utils.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,68 +67,21 @@ $(function() {
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">utils.cpp File Reference</div>  </div>
+<div class="title">utils.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;xsinit.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils.hpp</a>&quot;</code><br />
-<code>#include &lt;regex&gt;</code><br />
-</div><table class="memberdecls">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div>
+<p><a href="utils_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab82d8c0093d2d133902aaba13deb66a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#ab82d8c0093d2d133902aaba13deb66a1">confess_at</a> (const char *file, int line, const char *func, const char *pat,...)</td></tr>
-<tr class="separator:ab82d8c0093d2d133902aaba13deb66a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ab91f774b605294d4e0ae7553214153"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#a8ab91f774b605294d4e0ae7553214153">split_at_regex</a> (const std::string &amp;input, const std::string &amp;regex)</td></tr>
+<tr class="memitem:a8ab91f774b605294d4e0ae7553214153"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8hpp.html#a8ab91f774b605294d4e0ae7553214153">split_at_regex</a> (const std::string &amp;input, const std::string &amp;regex)</td></tr>
 <tr class="memdesc:a8ab91f774b605294d4e0ae7553214153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility functions that aren't necessarily part of libslic3r but are used by it.  <a href="#a8ab91f774b605294d4e0ae7553214153">More...</a><br /></td></tr>
 <tr class="separator:a8ab91f774b605294d4e0ae7553214153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab82d8c0093d2d133902aaba13deb66a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab82d8c0093d2d133902aaba13deb66a1">&#9670;&nbsp;</a></span>confess_at()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void confess_at </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>func</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>pat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8ab91f774b605294d4e0ae7553214153"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ab91f774b605294d4e0ae7553214153">&#9670;&nbsp;</a></span>split_at_regex()</h2>
 
