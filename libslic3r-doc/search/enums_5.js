@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['infillpattern',['InfillPattern',['../namespace_slic3r.html#aa49ce8a748a4910451492842fa4bf1d0',1,'Slic3r']]]
+  ['hosttype',['HostType',['../namespace_slic3r.html#a7cfe5e298f1919f7fb2ae9f0c0f6a7d3',1,'Slic3r']]]
 ];

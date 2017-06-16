@@ -18,5 +18,9 @@ var searchData=
   ['hole_5ftype',['hole_type',['../structboost_1_1polygon_1_1polygon__with__holes__traits_3_01_ex_polygon_01_4.html#a7368b8e3c5f55cc5df59d7c316e597f4',1,'boost::polygon::polygon_with_holes_traits&lt; ExPolygon &gt;']]],
   ['holes',['holes',['../class_slic3r_1_1_ex_polygon.html#a7dece9a47e8d6a4b82ba5fa81ae95572',1,'Slic3r::ExPolygon::holes()'],['../class_slic3r_1_1_ex_polygon_collection.html#ad36d1b03e9dc90cabaa589e252763157',1,'Slic3r::ExPolygonCollection::holes()']]],
   ['horizontal_5fprojection',['horizontal_projection',['../class_slic3r_1_1_triangle_mesh.html#a3b95085d339b4e4fa013ff237557907e',1,'Slic3r::TriangleMesh']]],
-  ['hostconfig',['HostConfig',['../class_slic3r_1_1_host_config.html',1,'Slic3r::HostConfig'],['../class_slic3r_1_1_host_config.html#a325108a665aeb8e620cc658fdc9145f8',1,'Slic3r::HostConfig::HostConfig()']]]
+  ['host_5ftype',['host_type',['../class_slic3r_1_1_host_config.html#aa5ef6041d7964d62ae20b882e542b707',1,'Slic3r::HostConfig']]],
+  ['hostconfig',['HostConfig',['../class_slic3r_1_1_host_config.html',1,'Slic3r::HostConfig'],['../class_slic3r_1_1_host_config.html#a325108a665aeb8e620cc658fdc9145f8',1,'Slic3r::HostConfig::HostConfig()']]],
+  ['hosttype',['HostType',['../namespace_slic3r.html#a7cfe5e298f1919f7fb2ae9f0c0f6a7d3',1,'Slic3r']]],
+  ['htduet',['htDuet',['../namespace_slic3r.html#a7cfe5e298f1919f7fb2ae9f0c0f6a7d3a7519a766bcbe0036ce01c730e0a40271',1,'Slic3r']]],
+  ['htoctoprint',['htOctoprint',['../namespace_slic3r.html#a7cfe5e298f1919f7fb2ae9f0c0f6a7d3a0bfc60642c2684f69eb369f17c555954',1,'Slic3r']]]
 ];

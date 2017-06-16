@@ -5,5 +5,6 @@ var searchData=
   ['hex_5fcenter',['hex_center',['../struct_slic3r_1_1_fill_honeycomb_1_1_cache_data.html#a6d9b8ee882bf5cc095b79c1a356c96d2',1,'Slic3r::FillHoneycomb::CacheData']]],
   ['hex_5fside',['hex_side',['../struct_slic3r_1_1_fill_honeycomb_1_1_cache_data.html#a4ca427000693d845d9ae806a0f091808',1,'Slic3r::FillHoneycomb::CacheData']]],
   ['hex_5fwidth',['hex_width',['../struct_slic3r_1_1_fill_honeycomb_1_1_cache_data.html#ac96cead385211a24153bff0979988fd7',1,'Slic3r::FillHoneycomb::CacheData']]],
-  ['holes',['holes',['../class_slic3r_1_1_ex_polygon.html#a7dece9a47e8d6a4b82ba5fa81ae95572',1,'Slic3r::ExPolygon']]]
+  ['holes',['holes',['../class_slic3r_1_1_ex_polygon.html#a7dece9a47e8d6a4b82ba5fa81ae95572',1,'Slic3r::ExPolygon']]],
+  ['host_5ftype',['host_type',['../class_slic3r_1_1_host_config.html#aa5ef6041d7964d62ae20b882e542b707',1,'Slic3r::HostConfig']]]
 ];
