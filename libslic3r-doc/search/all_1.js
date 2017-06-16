@@ -21,7 +21,7 @@ var searchData=
   ['addouterpolynodetoexpolygons',['AddOuterPolyNodeToExPolygons',['../namespace_slic3r.html#a32bb98b7e6f413723667252eb1d2abda',1,'Slic3r::AddOuterPolyNodeToExPolygons(ClipperLib::PolyNode &amp;polynode, ExPolygons *expolygons)'],['../namespace_slic3r.html#a22392364ee1cf84bbe465752135c9239',1,'Slic3r::AddOuterPolyNodeToExPolygons(ClipperLib::PolyNode &amp;polynode, Slic3r::ExPolygons &amp;expolygons)']]],
   ['adjust_5flayer_5fheight',['adjust_layer_height',['../class_slic3r_1_1_print_object.html#ad68c8a2c416dd5646f904f3163ae9206',1,'Slic3r::PrintObject']]],
   ['aliases',['aliases',['../class_slic3r_1_1_config_option_def.html#aed9082f82f293a715fc42d01420da465',1,'Slic3r::ConfigOptionDef']]],
-  ['align_5finstances_5fto_5forigin',['align_instances_to_origin',['../class_slic3r_1_1_model_object.html#a83246cc39bfefc8624ead2974d077685',1,'Slic3r::ModelObject']]],
+  ['align_5finstances_5fto_5forigin',['align_instances_to_origin',['../class_slic3r_1_1_model.html#aaf082fb0fb3cd166d7bde86e143b708c',1,'Slic3r::Model']]],
   ['align_5fto_5fgrid',['align_to_grid',['../class_slic3r_1_1_point.html#aba7ab94397d93d2770998e1f66fb61d8',1,'Slic3r::Point']]],
   ['align_5fto_5fground',['align_to_ground',['../class_slic3r_1_1_model_object.html#a901bd944fa08e90df62a432b75519e1a',1,'Slic3r::ModelObject']]],
   ['align_5fto_5forigin',['align_to_origin',['../class_slic3r_1_1_triangle_mesh.html#a37c9d7f764da35c0c480b635af3e0281',1,'Slic3r::TriangleMesh']]],
