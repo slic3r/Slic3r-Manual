@@ -92,10 +92,13 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a2d6e9d580d7423d1b5cbf62db39f02c2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_instance.html#a2d6e9d580d7423d1b5cbf62db39f02c2">rotation</a></td></tr>
+<tr class="memdesc:a2d6e9d580d7423d1b5cbf62db39f02c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation around the Z axis, in radians around mesh center point.  <a href="#a2d6e9d580d7423d1b5cbf62db39f02c2">More...</a><br /></td></tr>
 <tr class="separator:a2d6e9d580d7423d1b5cbf62db39f02c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fb4930ae3c339bfe47781584a1d3b62"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_instance.html#a7fb4930ae3c339bfe47781584a1d3b62">scaling_factor</a></td></tr>
+<tr class="memdesc:a7fb4930ae3c339bfe47781584a1d3b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">scaling factor  <a href="#a7fb4930ae3c339bfe47781584a1d3b62">More...</a><br /></td></tr>
 <tr class="separator:a7fb4930ae3c339bfe47781584a1d3b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8efb2f38a72e87f7216319dba818863"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_pointf.html">Pointf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_instance.html#ad8efb2f38a72e87f7216319dba818863">offset</a></td></tr>
+<tr class="memdesc:ad8efb2f38a72e87f7216319dba818863"><td class="mdescLeft">&#160;</td><td class="mdescRight">offset in unscaled coordinates  <a href="#ad8efb2f38a72e87f7216319dba818863">More...</a><br /></td></tr>
 <tr class="separator:ad8efb2f38a72e87f7216319dba818863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -103,7 +106,9 @@ Friends</h2></td></tr>
 <tr class="memitem:aa8c2bf09eb9d929d57be9ae9277e82de"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_instance.html#aa8c2bf09eb9d929d57be9ae9277e82de">ModelObject</a></td></tr>
 <tr class="separator:aa8c2bf09eb9d929d57be9ae9277e82de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A single instance of a <a class="el" href="class_slic3r_1_1_model_object.html">ModelObject</a>. Knows the affine transformation of an object. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad50d4fc7bdb71dbc2efd466bc0dce3e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad50d4fc7bdb71dbc2efd466bc0dce3e3">&#9670;&nbsp;</a></span>get_object()</h2>
 
@@ -126,6 +131,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get the owning <a class="el" href="class_slic3r_1_1_model_object.html">ModelObject</a> </p><dl class="section return"><dt>Returns</dt><dd>ModelObject* pointer to the owner <a class="el" href="class_slic3r_1_1_model_object.html">ModelObject</a> </dd></dl>
 
 </div>
 </div>
@@ -154,6 +160,14 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Transform an external bounding box. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bbox</td><td><a class="el" href="class_slic3r_1_1_bounding_boxf3.html">BoundingBoxf3</a> the bounding box to be transformed </td></tr>
+    <tr><td class="paramname">dont_translate</td><td>bool whether to translate the bounding box or not </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_slic3r_1_1_bounding_boxf3.html">BoundingBoxf3</a> the bounding box after transformation </dd></dl>
 
 </div>
 </div>
@@ -182,6 +196,13 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Transform an external <a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a> object </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>TriangleMesh* pointer to the the mesh </td></tr>
+    <tr><td class="paramname">dont_translate</td><td>bool whether to translate the mesh or not </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -210,6 +231,14 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Calculate a bounding box of a transformed mesh. To be called on an external mesh. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>TriangleMesh* pointer to the the mesh </td></tr>
+    <tr><td class="paramname">dont_translate</td><td>bool whether to translate the bounding box or not </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_slic3r_1_1_bounding_boxf3.html">BoundingBoxf3</a> the bounding box after transformation </dd></dl>
 
 </div>
 </div>
@@ -228,6 +257,12 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Rotate or scale an external polygon. It does not translate the polygon. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">polygon</td><td>Polygon* a pointer to the <a class="el" href="class_slic3r_1_1_polygon.html">Polygon</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -267,6 +302,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>offset in unscaled coordinates </p>
+
 </div>
 </div>
 <a id="a2d6e9d580d7423d1b5cbf62db39f02c2"></a>
@@ -281,6 +318,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Rotation around the Z axis, in radians around mesh center point. </p>
+
 </div>
 </div>
 <a id="a7fb4930ae3c339bfe47781584a1d3b62"></a>
@@ -294,6 +333,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>scaling factor </p>
 
 </div>
 </div>

@@ -94,12 +94,15 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aad3c2832c35e8a391b79c12f00a547b9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#aad3c2832c35e8a391b79c12f00a547b9">name</a></td></tr>
+<tr class="memdesc:aad3c2832c35e8a391b79c12f00a547b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of this <a class="el" href="class_slic3r_1_1_model_volume.html">ModelVolume</a> object.  <a href="#aad3c2832c35e8a391b79c12f00a547b9">More...</a><br /></td></tr>
 <tr class="separator:aad3c2832c35e8a391b79c12f00a547b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95ec125abed630f90d3a46741e60e13b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_triangle_mesh.html">TriangleMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#a95ec125abed630f90d3a46741e60e13b">mesh</a></td></tr>
+<tr class="memdesc:a95ec125abed630f90d3a46741e60e13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The triangular model.  <a href="#a95ec125abed630f90d3a46741e60e13b">More...</a><br /></td></tr>
 <tr class="separator:a95ec125abed630f90d3a46741e60e13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedae3fe7f61868045c6202c5562bb549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_dynamic_print_config.html">DynamicPrintConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#aedae3fe7f61868045c6202c5562bb549">config</a></td></tr>
 <tr class="separator:aedae3fe7f61868045c6202c5562bb549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadbe029f67828c16f16a1a962788e8aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#aadbe029f67828c16f16a1a962788e8aa">modifier</a></td></tr>
+<tr class="memdesc:aadbe029f67828c16f16a1a962788e8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it an object to be printed, or a modifier volume?  <a href="#aadbe029f67828c16f16a1a962788e8aa">More...</a><br /></td></tr>
 <tr class="separator:aadbe029f67828c16f16a1a962788e8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -107,7 +110,9 @@ Friends</h2></td></tr>
 <tr class="memitem:aa8c2bf09eb9d929d57be9ae9277e82de"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#aa8c2bf09eb9d929d57be9ae9277e82de">ModelObject</a></td></tr>
 <tr class="separator:aa8c2bf09eb9d929d57be9ae9277e82de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An object STL, or a modifier volume, over which a different set of parameters shall be applied. <a class="el" href="class_slic3r_1_1_model_volume.html">ModelVolume</a> instances are owned by a <a class="el" href="class_slic3r_1_1_model_object.html">ModelObject</a>. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac848dc0ec9bc91ca0e590de8137fdb6f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac848dc0ec9bc91ca0e590de8137fdb6f">&#9670;&nbsp;</a></span>assign_unique_material()</h2>
 
@@ -122,6 +127,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Add a unique <a class="el" href="class_slic3r_1_1_model_material.html">ModelMaterial</a> to the current <a class="el" href="class_slic3r_1_1_model_volume.html">ModelVolume</a> </p><dl class="section return"><dt>Returns</dt><dd>ModelMaterial* pointer to the new <a class="el" href="class_slic3r_1_1_model_material.html">ModelMaterial</a> </dd></dl>
 
 </div>
 </div>
@@ -147,6 +153,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get the parent object owning this modifier volume. </p><dl class="section return"><dt>Returns</dt><dd>ModelObject* pointer to the owner <a class="el" href="class_slic3r_1_1_model_object.html">ModelObject</a> </dd></dl>
 
 </div>
 </div>
@@ -164,6 +171,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the current <a class="el" href="class_slic3r_1_1_model_material.html">ModelMaterial</a> in this <a class="el" href="class_slic3r_1_1_model_volume.html">ModelVolume</a> object </p><dl class="section return"><dt>Returns</dt><dd>ModelMaterial* a pointer to the <a class="el" href="class_slic3r_1_1_model_material.html">ModelMaterial</a> </dd></dl>
 
 </div>
 </div>
@@ -181,6 +189,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the material id of this <a class="el" href="class_slic3r_1_1_model_volume.html">ModelVolume</a> object </p><dl class="section return"><dt>Returns</dt><dd>t_model_material_id the material id string </dd></dl>
 
 </div>
 </div>
@@ -199,6 +208,12 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set the material id to this <a class="el" href="class_slic3r_1_1_model_volume.html">ModelVolume</a> object </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">material_id</td><td>t_model_material_id the id of the material </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -227,6 +242,13 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Add a new <a class="el" href="class_slic3r_1_1_model_material.html">ModelMaterial</a> to this <a class="el" href="class_slic3r_1_1_model_volume.html">ModelVolume</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">material_id</td><td>t_model_material_id the id of the material to be added </td></tr>
+    <tr><td class="paramname">material</td><td><a class="el" href="class_slic3r_1_1_model_material.html">ModelMaterial</a> the material to be coppied </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -265,6 +287,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Configuration parameters specific to an object model geometry or a modifier volume, overriding the global <a class="el" href="namespace_slic3r.html">Slic3r</a> settings and the <a class="el" href="class_slic3r_1_1_model_object.html">ModelObject</a> settings. </p>
 
 </div>
 </div>
@@ -280,6 +303,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The triangular model. </p>
+
 </div>
 </div>
 <a id="aadbe029f67828c16f16a1a962788e8aa"></a>
@@ -294,6 +319,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Is it an object to be printed, or a modifier volume? </p>
+
 </div>
 </div>
 <a id="aad3c2832c35e8a391b79c12f00a547b9"></a>
@@ -307,6 +334,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Name of this <a class="el" href="class_slic3r_1_1_model_volume.html">ModelVolume</a> object. </p>
 
 </div>
 </div>

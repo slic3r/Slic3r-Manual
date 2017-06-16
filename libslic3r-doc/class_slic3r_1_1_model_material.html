@@ -86,8 +86,10 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae70e92f39c5a8c96a2a32ad108531740"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#abf860bf20933429dd92a430e1bd7ed17">t_model_material_attributes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_material.html#ae70e92f39c5a8c96a2a32ad108531740">attributes</a></td></tr>
+<tr class="memdesc:ae70e92f39c5a8c96a2a32ad108531740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attributes are defined by the AMF file format, but they don't seem to be used by <a class="el" href="namespace_slic3r.html">Slic3r</a> for any purpose.  <a href="#ae70e92f39c5a8c96a2a32ad108531740">More...</a><br /></td></tr>
 <tr class="separator:ae70e92f39c5a8c96a2a32ad108531740"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaa6bd92e8ee1387315137d8f6241ec9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_dynamic_print_config.html">DynamicPrintConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_material.html#abaa6bd92e8ee1387315137d8f6241ec9">config</a></td></tr>
+<tr class="memdesc:abaa6bd92e8ee1387315137d8f6241ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic configuration storage for the object specific configuration values, overriding the global configuration.  <a href="#abaa6bd92e8ee1387315137d8f6241ec9">More...</a><br /></td></tr>
 <tr class="separator:abaa6bd92e8ee1387315137d8f6241ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -95,7 +97,9 @@ Friends</h2></td></tr>
 <tr class="memitem:a2bf2a0e9b454c55aa5dcb5aa4698697b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_material.html#a2bf2a0e9b454c55aa5dcb5aa4698697b">Model</a></td></tr>
 <tr class="separator:a2bf2a0e9b454c55aa5dcb5aa4698697b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_slic3r_1_1_model.html">Model</a> Material class Material, which may be shared across multiple ModelObjects of a single <a class="el" href="class_slic3r_1_1_model.html">Model</a>. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad231c48720a06dbf3d676ab918c6f84c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad231c48720a06dbf3d676ab918c6f84c">&#9670;&nbsp;</a></span>apply()</h2>
 
@@ -111,6 +115,12 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Apply attributes defined by the AMF file format </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attributes</td><td>t_model_material_attributes the attributes map </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -136,6 +146,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get the parent model owing this material </p><dl class="section return"><dt>Returns</dt><dd>Model* the onwer <a class="el" href="class_slic3r_1_1_model.html">Model</a> </dd></dl>
 
 </div>
 </div>
@@ -175,6 +186,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Attributes are defined by the AMF file format, but they don't seem to be used by <a class="el" href="namespace_slic3r.html">Slic3r</a> for any purpose. </p>
+
 </div>
 </div>
 <a id="abaa6bd92e8ee1387315137d8f6241ec9"></a>
@@ -188,6 +201,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Dynamic configuration storage for the object specific configuration values, overriding the global configuration. </p>
 
 </div>
 </div>
