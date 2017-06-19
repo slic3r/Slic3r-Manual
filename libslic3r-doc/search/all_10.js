@@ -19,6 +19,7 @@ var searchData=
   ['region_5fcount',['region_count',['../class_slic3r_1_1_layer.html#afc65f8537e064abac683eb617334dd0a',1,'Slic3r::Layer']]],
   ['region_5fvolumes',['region_volumes',['../class_slic3r_1_1_print_object.html#a14a6e3edbc608b11b58e3ce0424cd424',1,'Slic3r::PrintObject']]],
   ['regions',['regions',['../class_slic3r_1_1_layer.html#afe845be2acd5ec7846b0532f1d7f63e1',1,'Slic3r::Layer::regions()'],['../class_slic3r_1_1_print.html#a26d18f8596a8c9a8b67c28a78b48af1a',1,'Slic3r::Print::regions()']]],
+  ['regions_5foverlap',['regions_overlap',['../class_slic3r_1_1_print_object_config.html#a4e450814b9735ff3565155b904d672b4',1,'Slic3r::PrintObjectConfig']]],
   ['reload_5fmodel_5finstances',['reload_model_instances',['../class_slic3r_1_1_print_object.html#abffd13f34545e13bd02abebbf17ce433',1,'Slic3r::PrintObject::reload_model_instances()'],['../class_slic3r_1_1_print.html#a5e7d465179b40815b3c6a364e3b609cb',1,'Slic3r::Print::reload_model_instances()']]],
   ['reload_5fobject',['reload_object',['../class_slic3r_1_1_print.html#a280cbdafba7d7e192413df8684f70b4f',1,'Slic3r::Print']]],
   ['remove',['remove',['../class_slic3r_1_1_extrusion_entity_collection.html#aaa81810f9f4d0b36e285abc5e2d4ff0e',1,'Slic3r::ExtrusionEntityCollection']]],

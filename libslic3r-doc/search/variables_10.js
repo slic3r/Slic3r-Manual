@@ -8,6 +8,7 @@ var searchData=
   ['readonly',['readonly',['../class_slic3r_1_1_config_option_def.html#a5177a4fe4faeada70507b49a7c1532c1',1,'Slic3r::ConfigOptionDef']]],
   ['region_5fvolumes',['region_volumes',['../class_slic3r_1_1_print_object.html#a14a6e3edbc608b11b58e3ce0424cd424',1,'Slic3r::PrintObject']]],
   ['regions',['regions',['../class_slic3r_1_1_layer.html#afe845be2acd5ec7846b0532f1d7f63e1',1,'Slic3r::Layer::regions()'],['../class_slic3r_1_1_print.html#a26d18f8596a8c9a8b67c28a78b48af1a',1,'Slic3r::Print::regions()']]],
+  ['regions_5foverlap',['regions_overlap',['../class_slic3r_1_1_print_object_config.html#a4e450814b9735ff3565155b904d672b4',1,'Slic3r::PrintObjectConfig']]],
   ['repaired',['repaired',['../class_slic3r_1_1_triangle_mesh.html#a5e42cbf1720ec7648e1c05598da60f20',1,'Slic3r::TriangleMesh']]],
   ['resolution',['resolution',['../class_slic3r_1_1_bridge_detector.html#aa50125dca65906a7567fcc04e56baf9f',1,'Slic3r::BridgeDetector::resolution()'],['../class_slic3r_1_1_print_config.html#ad98162453655af9c29a32a7058cabe14',1,'Slic3r::PrintConfig::resolution()'],['../namespace_slic3r.html#ab9962e4cd8fa98c5fe171f9faf11e8f3',1,'Slic3r::RESOLUTION()']]],
   ['restart_5fextra',['restart_extra',['../class_slic3r_1_1_extruder.html#a9eb7665ead75965bf6f4d8bbec964568',1,'Slic3r::Extruder']]],
