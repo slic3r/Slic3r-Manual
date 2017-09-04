@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['precision',['PRECISION',['../_g_code_writer_8cpp.html#a917c21a4f4c732cdc1afdc4f15e3b927',1,'GCodeWriter.cpp']]]
+  ['opt_5fptr',['OPT_PTR',['../_print_config_8hpp.html#a92918e1079ac65f9cfd862beef261525',1,'PrintConfig.hpp']]]
 ];

@@ -177,6 +177,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8902e0824606b33534f601271836f828"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a2f698375db05709614654b236a38a7be">t_layer_height_ranges</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_object.html#a8902e0824606b33534f601271836f828">layer_height_ranges</a></td></tr>
 <tr class="memdesc:a8902e0824606b33534f601271836f828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variation of a layer thickness for spans of Z coordinates.  <a href="#a8902e0824606b33534f601271836f828">More...</a><br /></td></tr>
 <tr class="separator:a8902e0824606b33534f601271836f828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8235ded08b399598a923c44fa31d0d3c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_object.html#a8235ded08b399598a923c44fa31d0d3c">part_number</a></td></tr>
+<tr class="memdesc:a8235ded08b399598a923c44fa31d0d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">It's used for the 3MF items part numbers in the build element.  <a href="#a8235ded08b399598a923c44fa31d0d3c">More...</a><br /></td></tr>
+<tr class="separator:a8235ded08b399598a923c44fa31d0d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdb4932459b5671dae78bfa794ebb769"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_pointf3.html">Pointf3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_object.html#acdb4932459b5671dae78bfa794ebb769">origin_translation</a></td></tr>
 <tr class="separator:acdb4932459b5671dae78bfa794ebb769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ebfd96476827c2399e9c24c88631b8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_bounding_boxf3.html">BoundingBoxf3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_object.html#a2ebfd96476827c2399e9c24c88631b8e">_bounding_box</a></td></tr>
@@ -1125,6 +1128,22 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This vector accumulates the total translation applied to the object by the <a class="el" href="class_slic3r_1_1_model_object.html#a3c7703105a71370582025638b5224288" title="Center the current ModelObject to origin by translating the ModelVolumes. ">center_around_origin()</a> method. Callers might want to apply the same translation to new volumes before adding them to this object in order to preserve alignment when user expects that. </p>
+
+</div>
+</div>
+<a id="a8235ded08b399598a923c44fa31d0d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8235ded08b399598a923c44fa31d0d3c">&#9670;&nbsp;</a></span>part_number</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Slic3r::ModelObject::part_number</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>It's used for the 3MF items part numbers in the build element. </p>
 
 </div>
 </div>

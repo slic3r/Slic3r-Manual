@@ -31,6 +31,8 @@ var searchData=
   ['_7eprint',['~Print',['../class_slic3r_1_1_print.html#a2f42d868cf51213c0c5c5f706a39cae9',1,'Slic3r::Print']]],
   ['_7esupportlayer',['~SupportLayer',['../class_slic3r_1_1_support_layer.html#adc3e9c436226f44dfbd45f65859fbc83',1,'Slic3r::SupportLayer']]],
   ['_7esvg',['~SVG',['../class_slic3r_1_1_s_v_g.html#a3b2a82b656be47678c321afc68e61465',1,'Slic3r::SVG']]],
+  ['_7etmfeditor',['~TMFEditor',['../class_slic3r_1_1_i_o_1_1_t_m_f_editor.html#ab23afed7ab0f1f60c3cf77268d6affdf',1,'Slic3r::IO::TMFEditor']]],
   ['_7etrianglemesh',['~TriangleMesh',['../class_slic3r_1_1_triangle_mesh.html#aefe1df9108630f6940e000f2f3ab3350',1,'Slic3r::TriangleMesh']]],
-  ['_7etrianglemeshslicer',['~TriangleMeshSlicer',['../class_slic3r_1_1_triangle_mesh_slicer.html#a4ba3bfa8bd19b8b7b9b6d34fad4b9250',1,'Slic3r::TriangleMeshSlicer']]]
+  ['_7etrianglemeshslicer',['~TriangleMeshSlicer',['../class_slic3r_1_1_triangle_mesh_slicer.html#a4ba3bfa8bd19b8b7b9b6d34fad4b9250',1,'Slic3r::TriangleMeshSlicer']]],
+  ['_7eziparchive',['~ZipArchive',['../class_slic3r_1_1_zip_archive.html#a843e081d1f8f5aabe2023ce2f732b427',1,'Slic3r::ZipArchive']]]
 ];

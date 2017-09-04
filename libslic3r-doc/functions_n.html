@@ -67,6 +67,9 @@ $(function() {
 : <a class="el" href="class_slic3r_1_1_model_object.html#a3fe28b2958454b2b84f805d458c1d5ca">Slic3r::ModelObject</a>
 , <a class="el" href="class_slic3r_1_1_model_volume.html#aad3c2832c35e8a391b79c12f00a547b9">Slic3r::ModelVolume</a>
 </li>
+<li>namespaces
+: <a class="el" href="class_slic3r_1_1_i_o_1_1_t_m_f_editor.html#a8c6712f32bf2e068730ea0caa4c43da3">Slic3r::IO::TMFEditor</a>
+</li>
 <li>nearest_env_point()
 : <a class="el" href="class_slic3r_1_1_motion_planner_env.html#a0822fc2f713105048dc4640b30eac815">Slic3r::MotionPlannerEnv</a>
 </li>
@@ -74,7 +77,7 @@ $(function() {
 : <a class="el" href="class_slic3r_1_1_point.html#a67468f0c160d9a14632091754a9487c9">Slic3r::Point</a>
 </li>
 <li>nearest_point_index()
-: <a class="el" href="class_slic3r_1_1_point.html#a85ef238a19d555195ad0a9229d04b04f">Slic3r::Point</a>
+: <a class="el" href="class_slic3r_1_1_point.html#a85405b76c4ecf783f40002a1965ac5e5">Slic3r::Point</a>
 </li>
 <li>nearest_waypoint()
 : <a class="el" href="class_slic3r_1_1_point.html#ab4bc82f724534fbe0ec48db21e34c8de">Slic3r::Point</a>
@@ -136,6 +139,15 @@ $(function() {
 <li>NODE_TYPE_AMF
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500ca7ea9f5672d5c43fd5525943ef0722180">Slic3r::IO::AMFParserContext</a>
 </li>
+<li>NODE_TYPE_BUILD
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86aeb9a833790b80ca3ce69b3dbc7e4691f">Slic3r::IO::TMFParserContext</a>
+</li>
+<li>NODE_TYPE_COMPONENT
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86afafbd121fc188b762aad15c7ee6d4a14">Slic3r::IO::TMFParserContext</a>
+</li>
+<li>NODE_TYPE_COMPONENTS
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86a222d4eef1b143275ed7330a3a5ca93f8">Slic3r::IO::TMFParserContext</a>
+</li>
 <li>NODE_TYPE_CONSTELLATION
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500caff4613d53dca393bc735cf05db00e5e9">Slic3r::IO::AMFParserContext</a>
 </li>
@@ -163,17 +175,29 @@ $(function() {
 <li>NODE_TYPE_INVALID
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500cabed681d82293f9f7d65e2837967ad539">Slic3r::IO::AMFParserContext</a>
 </li>
+<li>NODE_TYPE_ITEM
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86a9071b355d36afd8985a5076dfe751759">Slic3r::IO::TMFParserContext</a>
+</li>
 <li>NODE_TYPE_MATERIAL
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500cabc3053ce91c39c009e5baafd68179f0a">Slic3r::IO::AMFParserContext</a>
 </li>
 <li>NODE_TYPE_MESH
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500ca7bef1ec64a2032aa058e7ab2888c735c">Slic3r::IO::AMFParserContext</a>
+, <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86a5d16b0b6098e6dbdb686c8f268a696ab">Slic3r::IO::TMFParserContext</a>
 </li>
 <li>NODE_TYPE_METADATA
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500ca428b858e90f47009034677992066605b">Slic3r::IO::AMFParserContext</a>
+, <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86ad7815657975608a5972412440a57e845">Slic3r::IO::TMFParserContext</a>
+</li>
+<li>NODE_TYPE_MODEL
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86ac14c782c22718a2f986f8ea1b2f9df2d">Slic3r::IO::TMFParserContext</a>
 </li>
 <li>NODE_TYPE_OBJECT
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500cadb2e3cd7dd338abead7df6177976c5dd">Slic3r::IO::AMFParserContext</a>
+, <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86aedcac47c6f44f81462ca1cfd6f47a0d1">Slic3r::IO::TMFParserContext</a>
+</li>
+<li>NODE_TYPE_RESOURCES
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86aa2150af9c2d5a5bb0169d53708321203">Slic3r::IO::TMFParserContext</a>
 </li>
 <li>NODE_TYPE_RZ
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500ca03c73420a00be811bd825667a3b80ee0">Slic3r::IO::AMFParserContext</a>
@@ -181,14 +205,32 @@ $(function() {
 <li>NODE_TYPE_SCALE
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500ca9233a3bbf44901fabc450232b51b03c7">Slic3r::IO::AMFParserContext</a>
 </li>
+<li>NODE_TYPE_SLIC3R_METADATA
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86aa87561148ee623ed053be27d42f18ded">Slic3r::IO::TMFParserContext</a>
+</li>
+<li>NODE_TYPE_SLIC3R_OBJECT_CONFIG
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86a39f42da0145f610923298ab0d01010b9">Slic3r::IO::TMFParserContext</a>
+</li>
+<li>NODE_TYPE_SLIC3R_VOLUME
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86a4610c7f7cc16b5c699a12f46e0db8065">Slic3r::IO::TMFParserContext</a>
+</li>
+<li>NODE_TYPE_SLIC3R_VOLUMES
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86ae4fd69b711e64e1ea93442eda04eeb63">Slic3r::IO::TMFParserContext</a>
+</li>
 <li>NODE_TYPE_TRIANGLE
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500ca1a71336678a7e38083fd162e1798fe88">Slic3r::IO::AMFParserContext</a>
+, <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86a62de991339133354a022dad6f23412dc">Slic3r::IO::TMFParserContext</a>
+</li>
+<li>NODE_TYPE_TRIANGLES
+: <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86aeb4a1b823d210424b6628eab8603c8f1">Slic3r::IO::TMFParserContext</a>
 </li>
 <li>NODE_TYPE_UNKNOWN
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500ca15ead278e1615fa99e63cce53df6f222">Slic3r::IO::AMFParserContext</a>
+, <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86a4cdf5e4d4ee8d88f963ee02cd3fce8ca">Slic3r::IO::TMFParserContext</a>
 </li>
 <li>NODE_TYPE_VERTEX
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500cad16d53652fe27b14f5e64910ffbd10af">Slic3r::IO::AMFParserContext</a>
+, <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86ac60492883f55b5d80a2a4d0235e61d50">Slic3r::IO::TMFParserContext</a>
 </li>
 <li>NODE_TYPE_VERTEX1
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500ca606fde22c84b618ff9375a7f50e43160">Slic3r::IO::AMFParserContext</a>
@@ -201,6 +243,7 @@ $(function() {
 </li>
 <li>NODE_TYPE_VERTICES
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500caefdd34e17725d120595f995b32b10984">Slic3r::IO::AMFParserContext</a>
+, <a class="el" href="struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86ae14dbe8c88fd692a18f99f7b48d7d7a0">Slic3r::IO::TMFParserContext</a>
 </li>
 <li>NODE_TYPE_VOLUME
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500cace1453a6f9004dfb3500125d22280ce0">Slic3r::IO::AMFParserContext</a>
