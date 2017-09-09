@@ -39,6 +39,7 @@
     * [Post-Processing Scripts](/advanced/post-processing)
     * [Flow Math](/advanced/flow-math)
     * [Modifier Meshes](/advanced/modifier-mesh)
+    * [Filament Swaps](/advanced/filament-swaps)
 * Troubleshooting
     * [Dimension Errors](/troubleshooting/dimension-errors)
     * [Z Wobble](/troubleshooting/troubleshooting#z-wobble)
