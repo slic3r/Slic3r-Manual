@@ -3,6 +3,7 @@ var searchData=
   ['segment_5ftraits_3c_20line_20_3e',['segment_traits&lt; Line &gt;',['../structboost_1_1polygon_1_1segment__traits_3_01_line_01_4.html',1,'boost::polygon']]],
   ['slaprint',['SLAPrint',['../class_slic3r_1_1_s_l_a_print.html',1,'Slic3r']]],
   ['slaprintconfig',['SLAPrintConfig',['../class_slic3r_1_1_s_l_a_print_config.html',1,'Slic3r']]],
+  ['slicingadaptive',['SlicingAdaptive',['../class_slic3r_1_1_slicing_adaptive.html',1,'Slic3r']]],
   ['spiralvase',['SpiralVase',['../class_slic3r_1_1_spiral_vase.html',1,'Slic3r']]],
   ['staticconfig',['StaticConfig',['../class_slic3r_1_1_static_config.html',1,'Slic3r']]],
   ['staticprintconfig',['StaticPrintConfig',['../class_slic3r_1_1_static_print_config.html',1,'Slic3r']]],

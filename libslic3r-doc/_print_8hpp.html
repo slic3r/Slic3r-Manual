@@ -86,6 +86,8 @@ $(function() {
 <code>#include &quot;<a class="el" href="_layer_8hpp_source.html">Layer.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_model_8hpp_source.html">Model.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_placeholder_parser_8hpp_source.html">PlaceholderParser.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_slicing_adaptive_8hpp_source.html">SlicingAdaptive.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_layer_height_spline_8hpp_source.html">LayerHeightSpline.hpp</a>&quot;</code><br />
 </div>
 <p><a href="_print_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -136,12 +138,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="separator:a64467311ef101236e18bc66eb62db4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac87b8f7bce3c06653f7686052d71d51e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51e">Slic3r::PrintObjectStep</a> { <br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea13a463b7b5554cfee45b1db0c3e035c0">Slic3r::posSlice</a>, 
+&#160;&#160;<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea12cb088bca5a34309cd2abebd226e3b7">Slic3r::posLayers</a>, 
+<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea13a463b7b5554cfee45b1db0c3e035c0">Slic3r::posSlice</a>, 
 <a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea3444c21c85d2732782c64add44e099c4">Slic3r::posPerimeters</a>, 
 <a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51eab9514e080882eae4f82fe809d6aba910">Slic3r::posDetectSurfaces</a>, 
-<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51eac2ef902dc541cec1f5405f3e48c1814d">Slic3r::posPrepareInfill</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea1f21c0c18989fb64eda78c7abdf9b98d">Slic3r::posInfill</a>, 
+&#160;&#160;<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51eac2ef902dc541cec1f5405f3e48c1814d">Slic3r::posPrepareInfill</a>, 
+<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea1f21c0c18989fb64eda78c7abdf9b98d">Slic3r::posInfill</a>, 
 <a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea38f82b24c5b6c9f41b723f1bc6e6e2e2">Slic3r::posSupportMaterial</a>
 <br />
  }</td></tr>

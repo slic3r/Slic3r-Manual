@@ -2,6 +2,8 @@ var searchData=
 [
   ['slaprint_2ecpp',['SLAPrint.cpp',['../_s_l_a_print_8cpp.html',1,'']]],
   ['slaprint_2ehpp',['SLAPrint.hpp',['../_s_l_a_print_8hpp.html',1,'']]],
+  ['slicingadaptive_2ecpp',['SlicingAdaptive.cpp',['../_slicing_adaptive_8cpp.html',1,'']]],
+  ['slicingadaptive_2ehpp',['SlicingAdaptive.hpp',['../_slicing_adaptive_8hpp.html',1,'']]],
   ['spiralvase_2ecpp',['SpiralVase.cpp',['../_spiral_vase_8cpp.html',1,'']]],
   ['spiralvase_2ehpp',['SpiralVase.hpp',['../_spiral_vase_8hpp.html',1,'']]],
   ['supportmaterial_2ehpp',['SupportMaterial.hpp',['../_support_material_8hpp.html',1,'']]],

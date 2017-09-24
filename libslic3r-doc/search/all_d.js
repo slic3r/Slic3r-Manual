@@ -21,6 +21,7 @@ var searchData=
   ['new_5fx',['new_X',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#acde44e278ee2f424e2207603411a4892',1,'Slic3r::GCodeReader::GCodeLine']]],
   ['new_5fy',['new_Y',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#af505b9dfc6c8aaf6042e4229dc8c6bbf',1,'Slic3r::GCodeReader::GCodeLine']]],
   ['new_5fz',['new_Z',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#a191b0dfb45d053ddd3033674b0de4a2a',1,'Slic3r::GCodeReader::GCodeLine']]],
+  ['next_5flayer_5fheight',['next_layer_height',['../class_slic3r_1_1_slicing_adaptive.html#a3e5e9cdb878d1ab83b7f8e79009afe85',1,'Slic3r::SlicingAdaptive']]],
   ['no_5fsort',['no_sort',['../class_slic3r_1_1_extrusion_entity_collection.html#ab04ccc596ee8dec59e78235b8bff5c45',1,'Slic3r::ExtrusionEntityCollection::no_sort()'],['../class_slic3r_1_1_fill.html#a9c92987423a6b578c4456620bf8d4408',1,'Slic3r::Fill::no_sort()'],['../class_slic3r_1_1_fill_concentric.html#ace1306855b07ed3a0be18f5390196e19',1,'Slic3r::FillConcentric::no_sort()']]],
   ['node_5ftype_5famf',['NODE_TYPE_AMF',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context.html#a9bd547627c14e1a574a8bb887243500ca7ea9f5672d5c43fd5525943ef0722180',1,'Slic3r::IO::AMFParserContext']]],
   ['node_5ftype_5fbuild',['NODE_TYPE_BUILD',['../struct_slic3r_1_1_i_o_1_1_t_m_f_parser_context.html#a5d263ffeb74aea4391a99d5030cdaa86aeb9a833790b80ca3ce69b3dbc7e4691f',1,'Slic3r::IO::TMFParserContext']]],

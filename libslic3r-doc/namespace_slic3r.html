@@ -232,6 +232,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_layer.html">Layer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_layer_height_spline.html">LayerHeightSpline</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_layer_region.html">LayerRegion</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_line.html">Line</a></td></tr>
@@ -301,6 +303,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_s_l_a_print.html">SLAPrint</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_s_l_a_print_config.html">SLAPrintConfig</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_slicing_adaptive.html">SlicingAdaptive</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_spiral_vase.html">SpiralVase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -516,12 +520,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="separator:a64467311ef101236e18bc66eb62db4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac87b8f7bce3c06653f7686052d71d51e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51e">PrintObjectStep</a> { <br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea13a463b7b5554cfee45b1db0c3e035c0">posSlice</a>, 
+&#160;&#160;<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea12cb088bca5a34309cd2abebd226e3b7">posLayers</a>, 
+<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea13a463b7b5554cfee45b1db0c3e035c0">posSlice</a>, 
 <a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea3444c21c85d2732782c64add44e099c4">posPerimeters</a>, 
 <a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51eab9514e080882eae4f82fe809d6aba910">posDetectSurfaces</a>, 
-<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51eac2ef902dc541cec1f5405f3e48c1814d">posPrepareInfill</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea1f21c0c18989fb64eda78c7abdf9b98d">posInfill</a>, 
+&#160;&#160;<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51eac2ef902dc541cec1f5405f3e48c1814d">posPrepareInfill</a>, 
+<a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea1f21c0c18989fb64eda78c7abdf9b98d">posInfill</a>, 
 <a class="el" href="namespace_slic3r.html#ac87b8f7bce3c06653f7686052d71d51ea38f82b24c5b6c9f41b723f1bc6e6e2e2">posSupportMaterial</a>
 <br />
  }</td></tr>
@@ -799,6 +804,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a0306096ca00b909407af793c7a3bb1b1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0306096ca00b909407af793c7a3bb1b1"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a0306096ca00b909407af793c7a3bb1b1">nearest_point_index</a> (const std::vector&lt; <a class="el" href="struct_slic3r_1_1_chaining.html">Chaining</a> &gt; &amp;pairs, const <a class="el" href="class_slic3r_1_1_point.html">Point</a> &amp;start_near, bool no_reverse)</td></tr>
 <tr class="separator:a0306096ca00b909407af793c7a3bb1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7661b87779d1c07b1d9bf7b182970033"><td class="memItemLeft" align="right" valign="top">std::pair&lt; float, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a7661b87779d1c07b1d9bf7b182970033">face_z_span</a> (const stl_facet *f)</td></tr>
+<tr class="separator:a7661b87779d1c07b1d9bf7b182970033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac55cedaece1d416b5ff25319d32f701f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ac55cedaece1d416b5ff25319d32f701f">to_polygons</a> (const <a class="el" href="namespace_slic3r.html#a974dd7a4e3e39746ab1e4197e1aa54b0">Surfaces</a> &amp;surfaces)</td></tr>
 <tr class="separator:ac55cedaece1d416b5ff25319d32f701f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5592430e9c33f877b965f27487333e73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a5592430e9c33f877b965f27487333e73">to_polygons</a> (const <a class="el" href="namespace_slic3r.html#a07ec75e65c5a526deed75bc28a762789">SurfacesPtr</a> &amp;surfaces)</td></tr>
@@ -1823,7 +1830,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac87b8f7bce3c06653f7686052d71d51ea13a463b7b5554cfee45b1db0c3e035c0"></a>posSlice&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac87b8f7bce3c06653f7686052d71d51ea12cb088bca5a34309cd2abebd226e3b7"></a>posLayers&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac87b8f7bce3c06653f7686052d71d51ea13a463b7b5554cfee45b1db0c3e035c0"></a>posSlice&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac87b8f7bce3c06653f7686052d71d51ea3444c21c85d2732782c64add44e099c4"></a>posPerimeters&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac87b8f7bce3c06653f7686052d71d51eab9514e080882eae4f82fe809d6aba910"></a>posDetectSurfaces&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac87b8f7bce3c06653f7686052d71d51eac2ef902dc541cec1f5405f3e48c1814d"></a>posPrepareInfill&#160;</td><td class="fielddoc"></td></tr>
@@ -3110,6 +3118,24 @@ template&lt;class T &gt; </div>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>strs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7661b87779d1c07b1d9bf7b182970033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7661b87779d1c07b1d9bf7b182970033">&#9670;&nbsp;</a></span>face_z_span()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;float, float&gt; Slic3r::face_z_span </td>
+          <td>(</td>
+          <td class="paramtype">const stl_facet *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

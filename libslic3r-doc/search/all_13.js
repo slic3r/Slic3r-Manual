@@ -16,6 +16,7 @@ var searchData=
   ['update_5fbounding_5fbox',['update_bounding_box',['../class_slic3r_1_1_model_object.html#af05d96d1ce6fc57d10609774806c6b89',1,'Slic3r::ModelObject']]],
   ['update_5fprogress',['update_progress',['../class_slic3r_1_1_g_code_writer.html#acdb4af43a7de1eb5306916d49ece48a6',1,'Slic3r::GCodeWriter']]],
   ['update_5ftimestamp',['update_timestamp',['../class_slic3r_1_1_placeholder_parser.html#af947adb9d65f0d23e5c6f5bf617b36f9',1,'Slic3r::PlaceholderParser']]],
+  ['updatelayerheights',['updateLayerHeights',['../class_slic3r_1_1_layer_height_spline.html#a6b459405784b191fe0421af3ecca8cf2',1,'Slic3r::LayerHeightSpline']]],
   ['upper_5flayer',['upper_layer',['../class_slic3r_1_1_layer.html#a01c730472baa33af9e8a95fd24591be7',1,'Slic3r::Layer']]],
   ['use_5fbridge_5fflow',['use_bridge_flow',['../class_slic3r_1_1_fill.html#aaf8e9814b2950810f845f02a8547c224',1,'Slic3r::Fill::use_bridge_flow()'],['../class_slic3r_1_1_fill3_d_honeycomb.html#a9d986fa8a98e468a32b759a17e3b4219',1,'Slic3r::Fill3DHoneycomb::use_bridge_flow()']]],
   ['use_5fexternal_5fmp',['use_external_mp',['../class_slic3r_1_1_avoid_crossing_perimeters.html#a9af0237a92c8d3a6c5157bd504d34497',1,'Slic3r::AvoidCrossingPerimeters']]],

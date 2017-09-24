@@ -1,6 +1,7 @@
 var searchData=
 [
   ['object_5fconfig',['object_config',['../class_slic3r_1_1_perimeter_generator.html#a10b1dfc6771ad4f17350e1cb135acab4',1,'Slic3r::PerimeterGenerator']]],
+  ['object_5fsize',['object_size',['../class_slic3r_1_1_slicing_adaptive.html#a55ec338384b0929913ac1c3332edf377',1,'Slic3r::SlicingAdaptive']]],
   ['objects',['objects',['../class_slic3r_1_1_model.html#a4d61f3f9413788a5cde4c7e14f1ea97f',1,'Slic3r::Model::objects()'],['../class_slic3r_1_1_print.html#ab0a5d71d566e4d21142d8b70fa9fb05f',1,'Slic3r::Print::objects()']]],
   ['octoprint_5fapikey',['octoprint_apikey',['../class_slic3r_1_1_host_config.html#a9f63e8bfb9f1fe3978a0777b2e8702a0',1,'Slic3r::HostConfig']]],
   ['offset',['offset',['../class_slic3r_1_1_model_instance.html#ad8efb2f38a72e87f7216319dba818863',1,'Slic3r::ModelInstance']]],

@@ -19,6 +19,7 @@ var searchData=
   ['new_5fx',['new_X',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#acde44e278ee2f424e2207603411a4892',1,'Slic3r::GCodeReader::GCodeLine']]],
   ['new_5fy',['new_Y',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#af505b9dfc6c8aaf6042e4229dc8c6bbf',1,'Slic3r::GCodeReader::GCodeLine']]],
   ['new_5fz',['new_Z',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#a191b0dfb45d053ddd3033674b0de4a2a',1,'Slic3r::GCodeReader::GCodeLine']]],
+  ['next_5flayer_5fheight',['next_layer_height',['../class_slic3r_1_1_slicing_adaptive.html#a3e5e9cdb878d1ab83b7f8e79009afe85',1,'Slic3r::SlicingAdaptive']]],
   ['no_5fsort',['no_sort',['../class_slic3r_1_1_fill.html#a9c92987423a6b578c4456620bf8d4408',1,'Slic3r::Fill::no_sort()'],['../class_slic3r_1_1_fill_concentric.html#ace1306855b07ed3a0be18f5390196e19',1,'Slic3r::FillConcentric::no_sort()']]],
   ['normal',['normal',['../class_slic3r_1_1_line.html#afefd711019e7a65c69697af4df65a93c',1,'Slic3r::Line']]],
   ['normalize',['normalize',['../class_slic3r_1_1_dynamic_print_config.html#a2131e30908f45fb6354fc0b12c6426ca',1,'Slic3r::DynamicPrintConfig']]],

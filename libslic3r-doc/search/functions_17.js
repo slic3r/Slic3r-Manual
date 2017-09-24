@@ -29,6 +29,7 @@ var searchData=
   ['_7emotionplanner',['~MotionPlanner',['../class_slic3r_1_1_motion_planner.html#a80d28e7ac4ca3604c1e055de8fdb1c4c',1,'Slic3r::MotionPlanner']]],
   ['_7emultipoint',['~MultiPoint',['../class_slic3r_1_1_multi_point.html#a442f3751dcb2d3884246e26f3d33cc71',1,'Slic3r::MultiPoint']]],
   ['_7eprint',['~Print',['../class_slic3r_1_1_print.html#a2f42d868cf51213c0c5c5f706a39cae9',1,'Slic3r::Print']]],
+  ['_7eslicingadaptive',['~SlicingAdaptive',['../class_slic3r_1_1_slicing_adaptive.html#a1e7531cf22c945c1c851ba767010462b',1,'Slic3r::SlicingAdaptive']]],
   ['_7esupportlayer',['~SupportLayer',['../class_slic3r_1_1_support_layer.html#adc3e9c436226f44dfbd45f65859fbc83',1,'Slic3r::SupportLayer']]],
   ['_7esvg',['~SVG',['../class_slic3r_1_1_s_v_g.html#a3b2a82b656be47678c321afc68e61465',1,'Slic3r::SVG']]],
   ['_7etmfeditor',['~TMFEditor',['../class_slic3r_1_1_i_o_1_1_t_m_f_editor.html#ab23afed7ab0f1f60c3cf77268d6affdf',1,'Slic3r::IO::TMFEditor']]],

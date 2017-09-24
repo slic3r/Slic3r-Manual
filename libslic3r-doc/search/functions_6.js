@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['face_5fz_5fspan',['face_z_span',['../namespace_slic3r.html#a7661b87779d1c07b1d9bf7b182970033',1,'Slic3r']]],
   ['facets_5fcount',['facets_count',['../class_slic3r_1_1_model_object.html#ad0b73d643877023bbce271485f205f1b',1,'Slic3r::ModelObject::facets_count()'],['../class_slic3r_1_1_triangle_mesh.html#aff5908410672f10206876d0a5c52d3e1',1,'Slic3r::TriangleMesh::facets_count()']]],
   ['filament_5fcost',['filament_cost',['../class_slic3r_1_1_extruder.html#aee98f0f00c0d39581b5990dd21363f83',1,'Slic3r::Extruder']]],
   ['filament_5fdensity',['filament_density',['../class_slic3r_1_1_extruder.html#a26a7f25ed15e2d89320a8ee471beaa48',1,'Slic3r::Extruder']]],
