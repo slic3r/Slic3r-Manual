@@ -74,6 +74,23 @@ the left of the screen around the bed. Note that the dimensions of the
 bed should match your printer, as given during the initial configuration
 above.
 
+You can move a selected instance using keyboard.
+* On MacOS and Linux: You can use either <kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>←</kbd>, <kbd>→</kbd> or  <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd>.
+* On Windows: You can use **only** <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd>.
+
+![2D Plater View.](images/working-with-models/rsz_2d_plater.png "fig:")
+
+You are also able to configure the displacement or nudge value. To change the nudge value (it's 1mm by default):
+* Press <kbd>Ctrl or ⌘ Command</kbd> + <kbd>,</kbd>.
+
+In the "2D plater nudge value" box you can assign integer values as well as decimal values (the minimum value is 0.1 mm).
+
+![2D Nudge Value Configuration.](images/working-with-models/rsz_2d_nudge_config.png "fig:")
+
+You can use the select prev. or select next object shortcuts <kbd>Ctrl or ⌘ Command</kbd> + <kbd>→ or ←</kbd>. If the object selected has more than 1 instance, the first instance will be the selected one by default and it will be colored red.
+
+![Multiple Instanes of Same Object in 2D plater view.](images/working-with-models/rsz_2d_plater_instances.png "fig:")
+
 On the right-hand side is the list of currently loaded files. The
 buttons along the top of the file list allow you to arrange the models.
 
