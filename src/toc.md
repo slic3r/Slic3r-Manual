@@ -14,10 +14,10 @@
     * [Working with Models](/first-print/working-with-models)
     * [Printing](/first-print/printing)
 * Print Configurations
-    * [Print Settings](/simple-mode/simple-mode#print-settings)
-    * [Filament Settings](/simple-mode/simple-mode#filament-settings)
-    * [Printer Settings](/simple-mode/simple-mode#printer-settings)
-    * [Speed](/expert-mode/speed)
+    * [Print Settings](/expert-mode/print-settings)
+    * [Filament Settings](/expert-mode/filament-settings)
+    * [Printer Settings](/expert-mode/printer-settings)
+    * [Speed](/expert-mode/print-settings#speed)
     * [Infill Patterns and Density](/expert-mode/infill)
     * [Infill Optimization](/expert-mode/infill-optimization)
     * [Fighting Ooze](/expert-mode/fighting-ooze)
@@ -45,5 +45,4 @@
     * [Z Wobble](/troubleshooting/troubleshooting#z-wobble)
 * Internals Documentation (Doxygen)
     * [libslic3r](/libslic3r-doc)
-    
 </div>

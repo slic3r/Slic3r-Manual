@@ -1,13 +1,8 @@
-% Simple Mode
+% Print Settings
 
-Slic3r has two modes of operation, Simple and Expert. These may be
-chosen from the `Preferences` window (found under the `File` menu).
-
-![Preferences.](images/preferences_general.png "fig:")
-
-Simple mode offers a reduced set of options, enough for the beginner to
-get started with. Expert mode give more control over how Slic3r produces
-the G-code and will be looked at later.
+This page will provide an overview of the available configuration settings in
+Slic3r. Every configuration option has a tooltip and it is recommended to read
+those tooltips. 
 
 Print Settings
 --------------
@@ -17,7 +12,7 @@ related to the actual print. Whereas the other tabs are changed rarely,
 the settings on this tab will be modified regularly, possibly for each
 model printed.
 
-![Simple Mode: Print Settings.](images/simple_mode_print_settings.png "fig:")
+![Print Settings: Layers and Perimeters](images/print_settings_1.png "fig:")
 
 
 #### General.
@@ -70,6 +65,7 @@ model.](images/solid_layers_vases.png "fig:")
 
 
 #### Infill.
+![Print Settings: Infill](images/print_settings_2.png "fig:")
 
  `Fill density` is defined on a scale of between 0
 and 1, where 1 is 100% and 0.4 would be 40%. For the majority of cases
@@ -92,6 +88,7 @@ cases, and so most of the time the infill pattern is either
 but is slower than both rectilinear or line.
 
 #### Support material.
+![Print Settings: Support Material](images/print_settings_4.png "fig:")
 
  Printing a model from the bottom up, as
 with FDM, means that any significant overhangs will be printed in the
@@ -115,6 +112,7 @@ required and is not recommended. The raft also requires post-processing
 to remove it.
 
 #### Speed.
+![Print Settings: Speed](images/print_settings_5.png "fig:")
 
  In simple mode there are only three speed settings
 to consider:
@@ -133,6 +131,7 @@ to consider:
     nozzle.
 
 #### Brim.
+![Print Settings: Skirt and Brim](images/print_settings_3.png "fig:")
 
  `Brim width` is used to add more perimeters to the
 first layer, as a base flange, in order to provide more surface area for
@@ -144,6 +143,8 @@ print is finished and removed from the bed.
 
 
 #### Sequential Printing.
+![Print Settings: Output Options](images/print_settings_output_options.png "fig:")
+
 
  This feature allows to compose a plate of
 objects but have the printer complete each one individually before going
