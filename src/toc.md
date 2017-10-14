@@ -21,7 +21,7 @@
     * [Infill Patterns and Density](/expert-mode/print-settings#infill-patterns)
     * [Infill Optimization](/expert-mode/print-settings#infill-optimization)
     * [Fighting Ooze](/expert-mode/fighting-ooze)
-    * [Skirt and brim](/expert-mode/print-settings#skirt)
+    * [Skirt and brim](/expert-mode/print-settings#skirt-and-brim)
     * [Cooling](/expert-mode/cooling)
     * [Support Material](/expert-mode/print-settings#support-material)
     * [Extrusion Width](/expert-mode/print-settings#extrusion-width)
