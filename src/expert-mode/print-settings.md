@@ -67,15 +67,13 @@ model.](images/solid_layers_vases.png "fig:")
 #### Infill.
 ![Print Settings: Infill](images/print_settings_2.png "fig:")
 
- `Fill density` is defined on a scale of between 0
-and 1, where 1 is 100% and 0.4 would be 40%. For the majority of cases
-it makes no sense to 100% fill the model with plastic, this would be a
-waste of material and take a long time. Instead, most models can be
-filled with less material which is then sandwiched between layers filled
-at 100% (see `Solid layers` above).
+`Fill density` is from 0% to 100%.  it makes no sense to 100% fill the model
+with plastic, this would be a waste of material and take a long time. Instead,
+most models can be filled with less material which is then sandwiched between
+layers filled at 100% (see `Solid layers` above).
 
-A density value of 0.4 is enough to give almost all models good
-mechanical strength. A value of 0.2 is usually the minimum required to
+A density value of 40% is enough to give almost all models good
+mechanical strength. A value of 20% is usually the minimum required to
 support flat ceilings.
 
 Slic3r offers several fill patterns which will be discussed in more
@@ -86,6 +84,119 @@ fill methods are usually too slow and unnecessarily complex for most use
 cases, and so most of the time the infill pattern is either
 `rectilinear`, `line`, or `honeycomb`. Honeycomb gives the most strength
 but is slower than both rectilinear or line.
+
+##### Infill Patterns
+
+There are several considerations when choosing an infill pattern: object
+strength, time and material, personal preference. It can be inferred
+that a more complex pattern will require more moves, and hence take more
+time and material.
+
+Slic3r offers several infill patterns, four regular, and three more
+exotic flavours. The numbers given in brackets below each figure are a
+rough estimate of material used and time taken for a simple 20mm cube
+model[^2]. Note that this is only indicative, as model complexity and
+other factors will affect time and material.
+
+ ![Infill pattern: Line (344.51mm /
+5m:20s)](images/infill_line.png "fig:") 
+
+ ![Infill pattern: Rectilinear (350.57mm /
+5m:23s)](images/infill_rectilinear.png "fig:")
+
+
+ ![Infill pattern: Concentric (351.80mm /
+5m:30s)](images/infill_concentric.png "fig:")
+
+
+ ![Infill pattern: Honeycomb (362.73mm /
+5m:39s)](images/infill_honeycomb.png "fig:") 
+
+ ![Infill pattern: Hilbert Curve (332.82mm /
+5m:28s)](images/infill_hilbertcurve.png "fig:")
+
+
+ ![Infill pattern: Archimedean Chords (333.66mm /
+5m:27s)](images/infill_archimedeanchords.png "fig:")
+
+
+ ![Infill pattern: Octagram Spiral (318.63mm /
+5m:15s)](images/infill_octagramspiral.png "fig:")
+
+
+Certain model types are more suited for a particular pattern, for
+example organic versus mechanical types. Figure
+ shows how a honeycomb fill may
+suit this mechanical part better because each hexagon bonds with the
+same underlying pattern each layer, forming a strong vertical structure.
+
+ ![Infill pattern comparison in a complex object. Left to Right:
+honeycomb, line](images/complex_object_infill_comparison.png "fig:")
+
+
+Most models require only a low density infill, as providing more than,
+say, 50% will produce a very tightly packed model which uses more
+material than required. For this reason a common range of patterns is
+between 10% and 30%, however the requirements of the model will
+determine which density is best. Figure 
+shows how the patterns change as the density increases.
+
+ ![Infill patterns at varying densities. Left to Right:
+20%,40%,60%,80%. Top to Bottom: Honeycomb, Concentric, Line,
+Rectilinear, Hilbert Curve, Archimedean Chords, Octagram
+Spiral](images/infills.png "fig:") 
+
+
+There are several 3D patterns available for 3d infill as well.
+
+- `Cubic` infill is a 3D cube pattern with each cube stacked on corners.
+ ![Infill pattern: Cubic](images/infill_cubic.png "fig:")
+
+- `3D Honeycomb` is a true honeycomb pattern.
+ ![Infill pattern: 3D Honeycomb](images/infill_3dhoney.png "fig:")
+
+
+##### Infill Optimization
+Slic3r contains several advanced infill settings which can help produce
+better extrusions.
+
+-   `Infill every n layers` - Will produce sparse vertical infill by
+    skipping a set number of layers. This can be used to speed up print
+    times where the missing infill is acceptable.
+
+-   `Only infill where needed` - Slic3r will analyse the model and
+    choose where infill is required in order to support internal
+    ceilings and overhangs. Useful for reducing time and materials.
+
+-   `Solid infill every n layers` - Forces a solid fill pattern on the
+    specified layers. Zero will disable this option.
+
+-   `Fill angle` - By default the infill pattern runs at 45° to the
+    model to provide the best adhesion to wall structures. Infill
+    extrusions that run adjacent to perimeters are liable to de-laminate
+    under stress. Some models may benefit from rotating the fill angle
+    to ensure the optimal direction of the extrusion.
+
+-   `Solid infill threshold area` - Small areas within the model are
+    usually best off being filled completely to provide structural
+    integrity. This will however take more time and material, and can
+    result in parts being unnecessarily solid. Adjust this option to
+    balance these needs.
+
+-   `Only retract when crossing perimeters` - Retracting, to prevent
+    ooze, is unnecessary if the extruder remains within the boundaries
+    of the model. Care should be taken if the print material oozes
+    excessively, as not retracting may result in enough material loss to
+    affect the quality of the subsequent extrusion. However, most modern
+    printers and materials rarely suffer from such extreme ooze
+    problems.
+
+-   `Infill before perimeters` - Reverses the order in which the layer
+    is printed. Usually the perimeter is laid down initially, followed
+    by the infill, and this is usually the preferable as the perimeter
+    acts as a wall containing the infill.
+
+
 
 #### Support material.
 ![Print Settings: Support Material](images/print_settings_4.png "fig:")
@@ -204,14 +315,10 @@ rule is to have the perimeter go a little slower than the infill in
 order to reduce possible blemishes on the surface (infill can be faster
 because slight gaps will not matter as much).
 
-Expert mode offers more parameters to fine tune printer speeds.
-Differentiation between external, small and other perimeters, infill
-locations, and bridges and gaps are available, as well as the ability to
-slow down for the first layer.
-
-
-#### Brim.
+#### Skirt and Brim
 ![Print Settings: Skirt and Brim](images/print_settings_3.png "fig:")
+
+##### Brim
 
  `Brim width` is used to add more perimeters to the first layer, as a base
  flange, in order to provide more surface area for the print to stick to the
@@ -221,20 +328,71 @@ slow down for the first layer.
 
  ![An example of brim.](images/brim.jpg "fig:")
 
-A skirt is used to both prime extruders and enclose the print area to maintain
-heat. The number of `loops` determines how thick the skirt is in XY. The
-`height` parameter is in Z. It is recommended to set this value to 1 even if
-you do not wish to use a skirt to retain heat so that the extruder can be
-primed properly.
+##### Skirt
+
+The `Skirt` setting adds an extrusion a short distance away from the
+perimiter of the object. This can ensure that the material is flowing
+smoothly from the extruder before it starts on the model proper.
+
+-   `Loops` - How many circuits should be completed before starting on
+    the model. One loop is usually sufficient.
+
+-   `Distance from object` - The millimeters between the object and the
+    skirt. The default of 6mm is usually sufficient.
+
+-   `Skirt height` - The number of layers to lay down a skirt for. For
+    ensuring the material is flowing smoothly, one layer is sufficient,
+    however the skirt function can also be used to build walls around
+    the object in case it should be protected from draughts.
+
+-   `Minimum extrusion length` - Dictates a minimum number of
+    millimeters that the skirt should be, should the loop around the
+    object not be enough.
+
+#### Extrusion Width
+
+![Extrusion widths options.](images/print_settings_advanced.png"fig:")
 
 
-#### Sequential Printing.
-![Print Settings: Output Options](images/print_settings_output_options.png "fig:")
+One reason for modifying the extrusion width has already been discussed:
+increasing first layer extrusion width in order to improve bed adhesion
+(see p.). There are some further cases where it may be beneficial to
+modify extrusion widths.
 
+-   `Perimeter` - A lower value will produce thinner extrusions which in
+    turn will produce more accurate surfaces.
 
- This feature allows to compose a plate of
-objects but have the printer complete each one individually before going
-back to Z = 0 and starting with the next one. See the section about
-Sequential Printing in the Advanced Topics chapter.
+-   `Infill` and `Solid Infill` - A thicker extrusion for infill will
+    produce faster prints and stronger parts.
+
+-   `Top infill` - A thinner extrusion will improve surface finish and
+    ensure corners are tightly filled.
+
+-   `Support material` - As with the infill options, a thicker extrusion
+    will speed up print time.
+
+It is important to remember that if the extrusion width is expressed as
+a percentage then this is computed from the `Layer height` property, and
+not the `Default extrusion width` setting.
+
+#### G-Code Output Options
+![Print Settings: Output Options](images/print_settings_output.png "fig:")
+
+##### Sequential Printing.
+
+ This feature allows to compose a plate of objects but have the printer
+ complete each one individually before going back to Z = 0 and starting with
+ the next one. See the section about Sequential Printing in the Advanced Topics
+ chapter.
+
+##### Output File Options
+
+- `Verbose G-Code` turns on extra comments to document the types of print moves in the output G-Code. Very useful for debugging. 
+- `Output filename format` describes the general format for how Slic3r automatically names export G-Code files. All of the usual variables are supported here.
+
+##### Post-Processing Scripts
+
+Post-processing scripts are a powerful way to modify output G-Code after the slicing process has completed and as such have their own section in Advanced Topics.
 
 [^1]: http://slic3r.org/blog/tip-printing-vases
+[^2]: Taken from http://gcode.ws
