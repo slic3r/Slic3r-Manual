@@ -34,6 +34,7 @@
 * Topics
     * [Multiple Extruders](/expert-mode/multiple-extruders)
     * [Draft Quality](/topics/draft-quality)
+    * [3D Model File Format Overview](/topics/supported-file-formats)
 * Advanced Topics
     * [Command Line Usage](/advanced/command-line)
     * [Post-Processing Scripts](/advanced/post-processing)

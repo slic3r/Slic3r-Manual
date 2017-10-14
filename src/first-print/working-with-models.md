@@ -6,9 +6,7 @@ found and then sliced.
 Model Formats
 -------------
 
-
-
-Slic3r accepts the following file types.
+Slic3r accepts the following file types. A more detailed description of the formats is given in the Topics section.
 
 -   STereoLithography (STL) files can come from a wide variety of
     sources and are now a de facto standard in 3D printing. The files
