@@ -29,10 +29,12 @@ Slic3r accepts the following file types.
     format is deemed a standard it has yet to be widely adopted in the
     3D maker community.
 
+-   [3MF](https://3mf.io/) is a XML-based file format, similar to AMF in
+    features and capabilities.
+    It is supported natively by Windows 3D Builder.
+
 Finding Models
 --------------
-
-
 
 The 3D model files may come from an online repository, such as
 Thingiverse[^1] or GrabCAD[^2], or be created from a CAD program, such
@@ -81,13 +83,13 @@ You can move a selected instance using keyboard.
 ![2D Plater View.](images/working-with-models/rsz_2d_plater.png "fig:")
 
 You are also able to configure the displacement or nudge value. To change the nudge value (it's 1mm by default):
-* Press <kbd>Ctrl or ⌘ Command</kbd> + <kbd>,</kbd>.
+* Press <kbd>Ctrl</kbd> or <kdb>⌘ Command</kbd> + <kbd>,</kbd>.
 
 In the "2D plater nudge value" box you can assign integer values as well as decimal values (the minimum value is 0.1 mm).
 
 ![2D Nudge Value Configuration.](images/working-with-models/rsz_2d_nudge_config.png "fig:")
 
-You can use the select prev. or select next object shortcuts <kbd>Ctrl or ⌘ Command</kbd> + <kbd>→ or ←</kbd>. If the object selected has more than 1 instance, the first instance will be the selected one by default and it will be colored red.
+You can use the select prev. or select next object shortcuts <kbd>Ctrl</kbd> or <kbd>⌘ Command</kbd> + <kbd>→</kbd> or <kbd>←</kbd>. If the object selected has more than 1 instance, the first instance will be the selected one by default and it will be colored red.
 
 ![Multiple Instanes of Same Object in 2D plater view.](images/working-with-models/rsz_2d_plater_instances.png "fig:")
 
@@ -114,7 +116,7 @@ auto-arrange, or export the models.
 
 -   **Delete/Delete All** - Remove one or all models from the plater.
 
--   **Autoarrange** - Attempt to arrange the models to give the optimal
+-   **Autoarrange** - Attempt to arrange the models to give an optimal
     layout.
 
 -   **Export G-code** - Starts slicing the model and produces a G-Code
