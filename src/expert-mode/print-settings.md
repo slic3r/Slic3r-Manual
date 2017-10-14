@@ -196,8 +196,6 @@ better extrusions.
     by the infill, and this is usually the preferable as the perimeter
     acts as a wall containing the infill.
 
-
-
 #### Support material.
 ![Print Settings: Support Material](images/print_settings_4.png "fig:")
 
@@ -217,10 +215,16 @@ Tip: It is sometimes worth considering altering the orientation of the
 model in order to possibly reduce overhangs.
 
 `Raft layers` will add additional layers underneath the model and stems
-from the early days of 3D printing. It can help with prints without a
-heated bed, or where the bed is not very flat, but it is usually not
-required and is not recommended. The raft also requires post-processing
-to remove it.
+from the early days of 3D printing.
+The following use cases are appropriate for raft usage:
+- Print is using a material that usually requires a heated bed to not warp and there is no heated bed.
+- The bed is not very flat. A raft then absobes the variance in Z for the first layer.
+- The part has a very small contact area with the bed. Usually a wide brim is a better solution.
+
+Otherwise, rafts are generally not recommended. The raft also requires
+post-processing to remove it.
+
+Rafts are classified as support material, while the top layer of the raft (the one directly underneath the model) is interface material and as such uses those settings.
 
 #### Speed
 ![Print Settings: Speed](images/print_settings_5.png "fig:")
