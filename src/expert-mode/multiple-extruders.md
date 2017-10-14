@@ -87,16 +87,13 @@ multi-material AMF file.
 -   Split the original design into the separate parts within the CAD
     program, and export each part as STL.
 
--   Within Slic3r, choose `Combine multi-material STL files...` from the
-    `File` menu.
-
--   When prompted with a file dialog, choose the first STL, which will
-    be assigned the first material (and hence the first extruder). Click
-    `Open` to be prompted for the next STL, and so on until each STL is
-    assigned a material. To signal there are no more STL files, choose
-    `Cancel`.
-
--   The following file dialog prompts for the location and name of the
-    AMF file.
+-   Within Slic3r, load one of the STLs into the plater.
+-   Right-click on the part and select "Settings".
+ ![Part Settings Window.](images/part-settings.png "fig:")
+-   Select "Load Part" and select one of the STL files.
+-   Select it in the UI and move it around.
+-   Assign it an extruder.
+-   Continue until all parts have been added and positioned. 
+-   Click "OK" and right-click the combined part again and select "Export to AMF". 
 
 Once generated the file can be loaded and printed as described above.
