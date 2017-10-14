@@ -394,5 +394,18 @@ not the `Default extrusion width` setting.
 
 Post-processing scripts are a powerful way to modify output G-Code after the slicing process has completed and as such have their own section in Advanced Topics.
 
+#### Shortcuts
+![Print Settings: Shortcuts](images/print_settings_shortcuts.png "fig:")
+
+For configuration options that you modify often, Slic3r provides a way to
+pre-register those options so that they are configurable from the plater.
+Simply check a box for each.
+
+##### Profile Compatibility
+![Print Settings: Compatible Printers](images/print_settings_compatible.png "fig:")
+
+Use this dialog to mark which printer profile(s) this print profile can be used
+with. The default is to "All" printer profiles.
+
 [^1]: http://slic3r.org/blog/tip-printing-vases
 [^2]: Taken from http://gcode.ws
