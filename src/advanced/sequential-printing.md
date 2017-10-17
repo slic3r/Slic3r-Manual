@@ -9,6 +9,7 @@ dragged into other parts of the print during each layer.
  ![Sequential printing
 options.](images/sequential_printing_options.png "fig:")
 
+###Extruder Clearance
 
 Care has to be taken that the nozzle and extruder does not interfere
 with already printed parts. Slic3r should warn if it detects the nozzle
@@ -26,3 +27,16 @@ parameters help Slic3r detect potential collisions:
  ![The clearance cylinder around an
 extruder.](images/extruder_clearance.jpg "fig:")
 
+###Print Order
+
+By default, sequentially printed objects are printed in order of height (from
+shortest to tallest). In the majority of cases, this behavior minimizes issues
+with height clearance around the extruder. In specific use cases, one may wish
+to manually order sequentially printed objects. This may be achieved by modifying
+the optional sequential-print-priority parameter (default: 0) for each object.
+This option may be accessed either by double-clicking on the object in the 3D plater
+view or by selecting the object and clicking on the "Settings" button in the toolbar.
+Objects assigned the same print priority are sorted in order of height.
+
+ ![Sequential print order
+options.](images/sequential_printing_order.png "fig:")
