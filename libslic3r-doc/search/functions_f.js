@@ -26,7 +26,7 @@ var searchData=
   ['preamble',['preamble',['../class_slic3r_1_1_g_code.html#a1b9cd040ce1ef5fbc7d0ff2676b3fb50',1,'Slic3r::GCode::preamble()'],['../class_slic3r_1_1_g_code_writer.html#a48eee9aa8426351149b13b8398365887',1,'Slic3r::GCodeWriter::preamble()']]],
   ['prepare',['prepare',['../class_slic3r_1_1_slicing_adaptive.html#adbdeaa54e465cbd0742a53d49ebf0aa0',1,'Slic3r::SlicingAdaptive']]],
   ['prepare_5ffill_5fsurfaces',['prepare_fill_surfaces',['../class_slic3r_1_1_layer_region.html#a14d4a54c8406ed90590dbf7864947687',1,'Slic3r::LayerRegion']]],
-  ['print',['print',['../class_slic3r_1_1_print_region.html#a221413970e5a4d4bf2a7f8820c135570',1,'Slic3r::PrintRegion::print()'],['../class_slic3r_1_1_print_object.html#a7743156b1e8508ea720a3f3cbf85a865',1,'Slic3r::PrintObject::print()'],['../class_slic3r_1_1_print.html#ac6d338946a17b57878c862a715b18931',1,'Slic3r::Print::Print()']]],
+  ['print',['Print',['../class_slic3r_1_1_print.html#ac6d338946a17b57878c862a715b18931',1,'Slic3r::Print::Print()'],['../class_slic3r_1_1_print_region.html#a221413970e5a4d4bf2a7f8820c135570',1,'Slic3r::PrintRegion::print()'],['../class_slic3r_1_1_print_object.html#a7743156b1e8508ea720a3f3cbf85a865',1,'Slic3r::PrintObject::print()']]],
   ['print_5finfo',['print_info',['../class_slic3r_1_1_model.html#a3da36d40de325c1918b0df1237b04afb',1,'Slic3r::Model::print_info()'],['../class_slic3r_1_1_model_object.html#aac0758e5bda0f54f0cef1056aa9003e6',1,'Slic3r::ModelObject::print_info()']]],
   ['printconfig',['PrintConfig',['../class_slic3r_1_1_print_config.html#a0cbc23863639376045bbc467a05c5afb',1,'Slic3r::PrintConfig']]],
   ['printconfigbase',['PrintConfigBase',['../class_slic3r_1_1_print_config_base.html#acba317b17f78aa536cb270499ebc6ed8',1,'Slic3r::PrintConfigBase']]],

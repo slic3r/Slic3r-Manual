@@ -10,6 +10,7 @@ var searchData=
   ['scaling_5ffactor',['scaling_factor',['../class_slic3r_1_1_model_instance.html#a7fb4930ae3c339bfe47781584a1d3b62',1,'Slic3r::ModelInstance::scaling_factor()'],['../namespace_slic3r.html#a61a8e610b852bddce92e1d653ea90eda',1,'Slic3r::SCALING_FACTOR()']]],
   ['scaling_5fvector',['scaling_vector',['../class_slic3r_1_1_model_instance.html#add6e61f270a85a3cf761e9cc9e2b95d6',1,'Slic3r::ModelInstance']]],
   ['seam_5fposition',['seam_position',['../class_slic3r_1_1_print_object_config.html#ae331d8a54f486992d1fc2bac0129b524',1,'Slic3r::PrintObjectConfig']]],
+  ['sequential_5fprint_5fpriority',['sequential_print_priority',['../class_slic3r_1_1_print_object_config.html#a6af6d04ae53fef4b9431bc451c2e13f3',1,'Slic3r::PrintObjectConfig']]],
   ['serial_5fport',['serial_port',['../class_slic3r_1_1_host_config.html#a3b63d991c9d004028e050243cc40f2dc',1,'Slic3r::HostConfig']]],
   ['serial_5fspeed',['serial_speed',['../class_slic3r_1_1_host_config.html#a855fdba86cdc06557accc6478f00a72c',1,'Slic3r::HostConfig']]],
   ['shortcut',['shortcut',['../class_slic3r_1_1_config_option_def.html#ab5746c302df3a58f3cf46caf64ab96aa',1,'Slic3r::ConfigOptionDef']]],
