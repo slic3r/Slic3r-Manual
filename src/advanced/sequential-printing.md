@@ -1,4 +1,4 @@
-% Sequential Printing
+# Sequential Printing
 
 When printing several objects at once it can be useful to print each one
 separately as this will minimise oozing and strings running between the
@@ -9,7 +9,7 @@ dragged into other parts of the print during each layer.
  ![Sequential printing
 options.](images/sequential_printing_options.png "fig:")
 
-###Extruder Clearance
+### Extruder Clearance
 
 Care has to be taken that the nozzle and extruder does not interfere
 with already printed parts. Slic3r should warn if it detects the nozzle
@@ -27,7 +27,7 @@ parameters help Slic3r detect potential collisions:
  ![The clearance cylinder around an
 extruder.](images/extruder_clearance.jpg "fig:")
 
-###Print Order
+### Print Order
 
 By default, sequentially printed objects are printed in order of height (from
 shortest to tallest). In the majority of cases, this behavior minimizes issues
