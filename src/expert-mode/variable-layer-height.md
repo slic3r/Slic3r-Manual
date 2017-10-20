@@ -4,7 +4,6 @@
 
 - Left click: quadratic manipulator
 - right click: linear manipulator
-- for high precision settings: old layer height table is still valid and overrides
 
 
 Slic3r gives the ability to adjust the layer height along the Z axis.
@@ -17,7 +16,7 @@ The layer thickness distribution can be influenced by:
 
 - automatic pre-computing of good thicknesses with [Adaptive Slicing](#adaptive-slicing)
 - interactive refinement in the [Adaptive Layers](#interactive-layer-refinement) settings tab
-- setting a fixed layer height for a particular range in the [Layers](#static-layer-height-table) setting tab
+- setting a fixed layer height for a particular range in the [Layer height table](#static-layer-height-table) setting tab
 
  ![Example model highlighting use case for variable layer
 heights.](images/variable_layer_height/example_model.png)
@@ -57,8 +56,8 @@ Interactive Layer Refinement {#interactive-layer-refinement}
 ----------------
 
 A tool to interactively refine the layer heights of an object is available by
-double clicking an object in the 3D tab-or taking the `Layer heights...`
-short-cut in the Plater. This opens Adaptive Layers tab in the Settings
+double clicking an object in the 3D tab or taking the `Layer heights...`
+short-cut on the Plater. This opens `Adaptive Layers` tab in the Settings
 dialogue, where the layer thickness curve can be modified for each individual
 model on the plater.
 
@@ -69,43 +68,22 @@ model on the plater.
 Static Layer Height Table {#static-layer-height-table}
 ----------------
 
+The layer height table allows to define a layer height for a particular
+range along the Z axis, given in millimeters.
+The values from this table will override both, the default and adaptively
+generated layer heights, but not the interactively modified curve in the
+`Adaptive layers` tab.
 
-The second tab (fig. )
-presents a table where each row defines a layer height for a particular
-range along the Z axis, given in millimeters. In this example the walls
-of the model are printed at 0.4mm, the steeper parts of the roof are
-printed at 0.2mm, and the less steep at 0.15mm. Note that each range
-divides exactly by the given layer height so there are no "gaps" between
-sections.
+In this example the steepest base of the model is printed at 0.4mm, the steeper
+parts of the roof are printed at 0.2mm, and the less steep at 0.15mm. Note that
+each range divides exactly by the given layer height so there are no "gaps"
+between sections.
 
- ![Variable layer height options -
-Layers.](images/variable_layer_height/variable_layer_height_options_tab_2.png "fig:")
-
-
-The resulting G-Code (fig.
-) shows a higher
-definition which should result in a higher quality print.
-
- ![Example with variable layer
-height.](images/variable_layer_height/example_gcode_variable_layer_heights.png "fig:")
+ ![User defined table of layer heights certain ranges of the
+ object.](images/variable_layer_height/layer_height_table.png "fig:")
 
 
-Fig.  shows the example model printed. The print on
-the left has 0.4mm layer height throughout, whereas the print on the
-right has the variable layer height.
-
- ![Example print with variable layer
-height.](images/variable_layer_height/example_print.jpg "fig:")
-
-
-An additional feature of the variable layers height option is that by
-entering a zero for a range that part of the model will not be printed.
-Fig.  shows the G-Code where layers
-between 0 and 4mm are skipped. This is a useful way of dividing a tall
-model into multiple, shorter sections which can be printed individually
-and assembled afterwards.
-
- ![Example with skipped
-layers.](images/variable_layer_height/example_gcode_skipped_layers.png "fig:")
+ ![Resulting G-Code from the settings in the table shown
+ above.](images/variable_layer_height/layer_height_table_gcode.png "fig:")
 
 [^1]: [Adaptive Slicing for the FDM Process Revisited, 13th IEEE Conference on Automation Science and Engineering (CASE-2017)](https://tams.informatik.uni-hamburg.de/publications/2017/Adaptive Slicing for the FDM Process Revisited.pdf)
