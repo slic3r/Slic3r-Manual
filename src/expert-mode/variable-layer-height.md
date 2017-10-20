@@ -39,9 +39,8 @@ Technical details are provided in a paper [^1].
 
 The `Adaptive quality` option adjusts the overall quality between 0% - thickest
 printable layers over the entire object to 100% - thinnest possible layers.
-Upper and lower limits for the layer thickness are set per extruder in the
-`Printer Settings` tab.
-The `Z full steps/mm` parameter is allways respected by the adaptive slicing
+
+The `Z full steps/mm` parameter is always respected by the adaptive slicing
 process, also the `Combine infill` logic is not affected.
 Example: if `Combine infill` is set to 3, Slic3r will combine up to 3 infill
 layers, even if those layers are of different thickness. The number of combined
@@ -51,6 +50,15 @@ layers will vary along the Z axis, depending on the local thickness of layers.
 
  ![Activate adaptive slicing and set desired quality in the Print settings 
  dialog.](images/variable_layer_height/settings_dialog.png)
+
+Upper and lower limits for the layer thickness are set per extruder in the
+`Printer Settings` tab. Slic3r automatically uses the values for all extruders
+which are used for a particular print. If for example only one extruder is used
+from a dual nozzle printer, the limits of the second extruder won't reduce the
+maximum layer thickness.
+
+ ![Set the minimum / maximum possible layer thickness for each extruder
+ in the Printer settings.](images/variable_layer_height/min_max_settings_dialog.png)
 
 Interactive Layer Refinement {#interactive-layer-refinement}
 ----------------
