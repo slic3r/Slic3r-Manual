@@ -34,9 +34,11 @@
 * Topics
     * [Multiple Extruders](/expert-mode/multiple-extruders)
     * [Draft Quality](/topics/draft-quality)
+    * [3D Model File Format Overview](/topics/supported-file-formats)
 * Advanced Topics
     * [Command Line Usage](/advanced/command-line)
     * [Post-Processing Scripts](/advanced/post-processing)
+    * [Conditional G-Code](/advanced/conditional-gcode)
     * [Flow Math](/advanced/flow-math)
     * [Modifier Meshes](/advanced/modifier-mesh)
     * [Filament Swaps](/advanced/filament-swaps)
