@@ -59,6 +59,7 @@ var searchData=
   ['rotate_5fz',['rotate_z',['../class_slic3r_1_1_triangle_mesh.html#ad82c1075191973c5e4fc2e81118537ce',1,'Slic3r::TriangleMesh']]],
   ['rotated',['rotated',['../class_slic3r_1_1_bounding_box.html#a563e1fe9bad17bb91e5b5cf4a5cbe7b9',1,'Slic3r::BoundingBox::rotated(double angle) const'],['../class_slic3r_1_1_bounding_box.html#aa2b3a6dcd38574dd2d210461e76bc943',1,'Slic3r::BoundingBox::rotated(double angle, const Point &amp;center) const'],['../class_slic3r_1_1_point.html#a20ddf5c3f5c63538bff60f2e6016cf5e',1,'Slic3r::Point::rotated(double angle) const'],['../class_slic3r_1_1_point.html#ad211ac45fa6ffba2ae2bbd5f6079109f',1,'Slic3r::Point::rotated(double angle, const Point &amp;center) const']]],
   ['rotation',['rotation',['../class_slic3r_1_1_model_instance.html#a2d6e9d580d7423d1b5cbf62db39f02c2',1,'Slic3r::ModelInstance']]],
+  ['rtrim',['rtrim',['../namespace_slic3r.html#a672d112ecbb4c2ae37f80c3752417b86',1,'Slic3r']]],
   ['rz',['rz',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#a2c78d4ebf1f27b2656b7a03c6bfa814a',1,'Slic3r::IO::AMFParserContext::Instance']]],
   ['rz_5fset',['rz_set',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#a445faad6be4b30f4502612f00c8cb9ee',1,'Slic3r::IO::AMFParserContext::Instance']]]
 ];

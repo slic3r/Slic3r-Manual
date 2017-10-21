@@ -30,5 +30,5 @@ var searchData=
   ['triangulate_5fconvex',['triangulate_convex',['../class_slic3r_1_1_polygon.html#a470967afcaf9d3cf33654e9aac3efbba',1,'Slic3r::Polygon']]],
   ['triangulate_5fp2t',['triangulate_p2t',['../class_slic3r_1_1_ex_polygon.html#a1990d007643d6f97561cbc78a41f0293',1,'Slic3r::ExPolygon']]],
   ['triangulate_5fpp',['triangulate_pp',['../class_slic3r_1_1_ex_polygon.html#ab4e4ac17511ce9efb2b841978783e597',1,'Slic3r::ExPolygon']]],
-  ['trim',['trim',['../namespace_slic3r.html#a3fada5f7fb26da70483a4360a19a1ec9',1,'Slic3r']]]
+  ['trim',['trim',['../namespace_slic3r.html#ab7b665b8658dc4e1ca7b34471a727396',1,'Slic3r::trim(std::string &amp;s)'],['../namespace_slic3r.html#a3fada5f7fb26da70483a4360a19a1ec9',1,'Slic3r::trim(Pointfs &amp;pts, coordf_t minX, coordf_t minY, coordf_t maxX, coordf_t maxY)']]]
 ];

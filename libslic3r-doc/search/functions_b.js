@@ -17,5 +17,6 @@ var searchData=
   ['lines',['lines',['../class_slic3r_1_1_ex_polygon.html#a6a0b1be17acc3357fe8534377cdad44e',1,'Slic3r::ExPolygon::lines()'],['../class_slic3r_1_1_ex_polygon_collection.html#a6fd1d10f6f7a58618866d8a7041dfdb9',1,'Slic3r::ExPolygonCollection::lines()'],['../class_slic3r_1_1_multi_point.html#ae9e8896b13f8eead951628834c72e0f1',1,'Slic3r::MultiPoint::lines()'],['../class_slic3r_1_1_polygon.html#aed148c3f090ccd57dcca4540e0a6460c',1,'Slic3r::Polygon::lines()'],['../class_slic3r_1_1_polyline.html#ae874f990a326168dc9c9bec16eeb6932',1,'Slic3r::Polyline::lines()']]],
   ['linint',['linint',['../namespace_slic3r_1_1_geometry.html#a35a172d6d50d7fb4328abeca34388c3b',1,'Slic3r::Geometry']]],
   ['load',['load',['../class_slic3r_1_1_config_base.html#ae7d39a3b8239c1cf926bd9bbda4a0684',1,'Slic3r::ConfigBase']]],
-  ['looks_5flike_5fmultipart_5fobject',['looks_like_multipart_object',['../class_slic3r_1_1_model.html#ab87b1d98c2f923e447479dc2c0f488ff',1,'Slic3r::Model']]]
+  ['looks_5flike_5fmultipart_5fobject',['looks_like_multipart_object',['../class_slic3r_1_1_model.html#ab87b1d98c2f923e447479dc2c0f488ff',1,'Slic3r::Model']]],
+  ['ltrim',['ltrim',['../namespace_slic3r.html#adbbf72d73e1043737f82fb8602362e3b',1,'Slic3r']]]
 ];
