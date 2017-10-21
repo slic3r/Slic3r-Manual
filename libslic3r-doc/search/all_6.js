@@ -66,6 +66,7 @@ var searchData=
   ['flatten',['flatten',['../class_slic3r_1_1_extrusion_entity_collection.html#a106c5778e058d1a9cdc8128e4867bfb8',1,'Slic3r::ExtrusionEntityCollection::flatten(ExtrusionEntityCollection *retval) const'],['../class_slic3r_1_1_extrusion_entity_collection.html#a3bc9911c5f024828fe15a186e923f31b',1,'Slic3r::ExtrusionEntityCollection::flatten() const']]],
   ['flavor_5fis',['FLAVOR_IS',['../_g_code_8cpp.html#a114b61c878ef35349c4a95e9402e34a7',1,'FLAVOR_IS():&#160;GCode.cpp'],['../_g_code_writer_8cpp.html#a114b61c878ef35349c4a95e9402e34a7',1,'FLAVOR_IS():&#160;GCodeWriter.cpp']]],
   ['flavor_5fis_5fnot',['FLAVOR_IS_NOT',['../_g_code_writer_8cpp.html#a8f9b7b87994d5f6b59094a4024c3ca84',1,'GCodeWriter.cpp']]],
+  ['flipy',['flipY',['../class_slic3r_1_1_s_v_g.html#a48fb2d536643b7ac8406a1ce12374de3',1,'Slic3r::SVG']]],
   ['flow',['Flow',['../class_slic3r_1_1_flow.html',1,'Slic3r::Flow'],['../class_slic3r_1_1_flow.html#a441a5a83187dc581d23e3cf7d2db341a',1,'Slic3r::Flow::Flow()'],['../class_slic3r_1_1_layer_region.html#a62a88236d6533b97743d3de6041c5ee4',1,'Slic3r::LayerRegion::flow()'],['../class_slic3r_1_1_print_region.html#a26d84aed61afe137db58e261fb830cc6',1,'Slic3r::PrintRegion::flow()']]],
   ['flow_2ecpp',['Flow.cpp',['../_flow_8cpp.html',1,'']]],
   ['flow_2ehpp',['Flow.hpp',['../_flow_8hpp.html',1,'']]],
