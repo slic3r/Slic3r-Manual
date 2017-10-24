@@ -719,6 +719,20 @@ Functions</h2></td></tr>
 <tr class="separator:a9846e43c06dcde20910df7e980a30e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa059683aceec9f102521a81da3516f5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a9306b728b4672f5e56abe05ba7437fe1">Slic3r::ExPolygons</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#aa059683aceec9f102521a81da3516f5f">union_ex</a> (const <a class="el" href="namespace_slic3r.html#a974dd7a4e3e39746ab1e4197e1aa54b0">Slic3r::Surfaces</a> &amp;subject, bool safety_offset_=false)</td></tr>
 <tr class="separator:aa059683aceec9f102521a81da3516f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbbf72d73e1043737f82fb8602362e3b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#adbbf72d73e1043737f82fb8602362e3b">ltrim</a> (std::string &amp;s)</td></tr>
+<tr class="separator:adbbf72d73e1043737f82fb8602362e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672d112ecbb4c2ae37f80c3752417b86"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a672d112ecbb4c2ae37f80c3752417b86">rtrim</a> (std::string &amp;s)</td></tr>
+<tr class="separator:a672d112ecbb4c2ae37f80c3752417b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b665b8658dc4e1ca7b34471a727396"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ab7b665b8658dc4e1ca7b34471a727396">trim</a> (std::string &amp;s)</td></tr>
+<tr class="separator:ab7b665b8658dc4e1ca7b34471a727396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cfd976ecd1b426067a990ae4a72d29c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a3cfd976ecd1b426067a990ae4a72d29c">apply_math</a> (const std::string &amp;input)</td></tr>
+<tr class="memdesc:a3cfd976ecd1b426067a990ae4a72d29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start of recursive function to parse gcode file.  <a href="#a3cfd976ecd1b426067a990ae4a72d29c">More...</a><br /></td></tr>
+<tr class="separator:a3cfd976ecd1b426067a990ae4a72d29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b51ebe9a05802ffdd2ea58fd77a514"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#af0b51ebe9a05802ffdd2ea58fd77a514">evaluate</a> (const std::string &amp;expression_string)</td></tr>
+<tr class="separator:af0b51ebe9a05802ffdd2ea58fd77a514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c135034ec6a71a5a93e51abcb7eddc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ac5c135034ec6a71a5a93e51abcb7eddc">expression</a> (const std::string &amp;input, const int depth)</td></tr>
+<tr class="memdesc:ac5c135034ec6a71a5a93e51abcb7eddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an expression and return a string. We assume that <a class="el" href="class_slic3r_1_1_placeholder_parser.html">PlaceholderParser</a> has expanded all variables.  <a href="#ac5c135034ec6a71a5a93e51abcb7eddc">More...</a><br /></td></tr>
+<tr class="separator:ac5c135034ec6a71a5a93e51abcb7eddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e87a52c2cac1469b96a2765775bb7c0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a2e87a52c2cac1469b96a2765775bb7c0">escape_string_cstyle</a> (const std::string &amp;str)</td></tr>
 <tr class="separator:a2e87a52c2cac1469b96a2765775bb7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0ba93eb38e1604641b4f38c82994b20"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#af0ba93eb38e1604641b4f38c82994b20">escape_strings_cstyle</a> (const std::vector&lt; std::string &gt; &amp;strs)</td></tr>
@@ -876,7 +890,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a398a14115930a6f2b221cb8f235b680e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_slic3r.html#a2ac5c755948c74f5f5f975acd5057fe9">coordf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a398a14115930a6f2b221cb8f235b680e">SUPPORT_MATERIAL_MARGIN</a> = 1.5</td></tr>
 <tr class="separator:a398a14115930a6f2b221cb8f235b680e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a href="https://github.com/alexrj/Slic3r/wiki/Conditional-Gcode-Syntax-Spec">https://github.com/alexrj/Slic3r/wiki/Conditional-Gcode-Syntax-Spec</a> </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="ab6d77625bc973b0c03e577944f90f297"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6d77625bc973b0c03e577944f90f297">&#9670;&nbsp;</a></span>coord_t</h2>
 
@@ -2599,6 +2615,27 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a3cfd976ecd1b426067a990ae4a72d29c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cfd976ecd1b426067a990ae4a72d29c">&#9670;&nbsp;</a></span>apply_math()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Slic3r::apply_math </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start of recursive function to parse gcode file. </p>
+<p>External access function to begin replac. </p>
+
+</div>
+</div>
 <a id="a6d753975a98dfcdef7b12a2c45874674"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d753975a98dfcdef7b12a2c45874674">&#9670;&nbsp;</a></span>apply_speed_factor()</h2>
 
@@ -3125,6 +3162,56 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="af0b51ebe9a05802ffdd2ea58fd77a514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b51ebe9a05802ffdd2ea58fd77a514">&#9670;&nbsp;</a></span>evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Slic3r::evaluate </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>expression_string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Evaluate expressions with exprtk Everything must resolve to a number. </p>
+
+</div>
+</div>
+<a id="ac5c135034ec6a71a5a93e51abcb7eddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c135034ec6a71a5a93e51abcb7eddc">&#9670;&nbsp;</a></span>expression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Slic3r::expression </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parse an expression and return a string. We assume that <a class="el" href="class_slic3r_1_1_placeholder_parser.html">PlaceholderParser</a> has expanded all variables. </p>
+<p>Recursive expression parser. Offloads mathematics to exprtk. Precondition: All strings inside {} are able to be understood by exprtk (and thus parsed to a number). Starts from the end of the string and works from the inside out. Any statements that resolve to {if0} will remove everything on the same line. </p>
+
+</div>
+</div>
 <a id="a7661b87779d1c07b1d9bf7b182970033"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7661b87779d1c07b1d9bf7b182970033">&#9670;&nbsp;</a></span>face_z_span()</h2>
 
@@ -3457,6 +3544,32 @@ template&lt;class T &gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbbf72d73e1043737f82fb8602362e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbbf72d73e1043737f82fb8602362e3b">&#9670;&nbsp;</a></span>ltrim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Slic3r::ltrim </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -4793,6 +4906,32 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a672d112ecbb4c2ae37f80c3752417b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672d112ecbb4c2ae37f80c3752417b86">&#9670;&nbsp;</a></span>rtrim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Slic3r::rtrim </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa1222f6f07c43243ade2d626db4557ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1222f6f07c43243ade2d626db4557ab">&#9670;&nbsp;</a></span>safety_offset()</h2>
 
@@ -5249,8 +5388,34 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="ab7b665b8658dc4e1ca7b34471a727396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b665b8658dc4e1ca7b34471a727396">&#9670;&nbsp;</a></span>trim() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Slic3r::trim </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3fada5f7fb26da70483a4360a19a1ec9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fada5f7fb26da70483a4360a19a1ec9">&#9670;&nbsp;</a></span>trim()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fada5f7fb26da70483a4360a19a1ec9">&#9670;&nbsp;</a></span>trim() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

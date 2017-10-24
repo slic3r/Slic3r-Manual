@@ -31,6 +31,7 @@ var searchData=
   ['apply',['apply',['../class_slic3r_1_1_config_base.html#a2bd0c2e3992bf03b0cc357e01babef6d',1,'Slic3r::ConfigBase::apply()'],['../class_slic3r_1_1_model_material.html#ad231c48720a06dbf3d676ab918c6f84c',1,'Slic3r::ModelMaterial::apply()']]],
   ['apply_5fconfig',['apply_config',['../class_slic3r_1_1_g_code_reader.html#a28f914bed7efac122e23b33cb477a411',1,'Slic3r::GCodeReader::apply_config()'],['../class_slic3r_1_1_placeholder_parser.html#aa44058f942bcce0761319d55a24d2a45',1,'Slic3r::PlaceholderParser::apply_config()'],['../class_slic3r_1_1_print.html#aa77d15c95c452a25882cf355d2e9869d',1,'Slic3r::Print::apply_config()']]],
   ['apply_5fenv_5fvariables',['apply_env_variables',['../class_slic3r_1_1_placeholder_parser.html#af388072790c99f195b83c644fefeff4a',1,'Slic3r::PlaceholderParser']]],
+  ['apply_5fmath',['apply_math',['../namespace_slic3r.html#a3cfd976ecd1b426067a990ae4a72d29c',1,'Slic3r']]],
   ['apply_5fonly',['apply_only',['../class_slic3r_1_1_config_base.html#a563a12e741b4846174b707660fd92ee5',1,'Slic3r::ConfigBase']]],
   ['apply_5fprint_5fconfig',['apply_print_config',['../class_slic3r_1_1_g_code.html#a7b877f79ab3624962b83514ec57c5e6d',1,'Slic3r::GCode::apply_print_config()'],['../class_slic3r_1_1_g_code_writer.html#a0d9068f6a16f55b700fb8efb28aa141c',1,'Slic3r::GCodeWriter::apply_print_config()']]],
   ['apply_5fspeed_5ffactor',['apply_speed_factor',['../namespace_slic3r.html#a6d753975a98dfcdef7b12a2c45874674',1,'Slic3r']]],

@@ -44,5 +44,6 @@ var searchData=
   ['loop_5fclipping_5flength_5fover_5fnozzle_5fdiameter',['LOOP_CLIPPING_LENGTH_OVER_NOZZLE_DIAMETER',['../namespace_slic3r.html#a4b1c8a57877c8c201250c9bc57e72e69',1,'Slic3r']]],
   ['loops',['loops',['../class_slic3r_1_1_perimeter_generator.html#aff9a14ec9dd21936c66064106046f22f',1,'Slic3r::PerimeterGenerator']]],
   ['lower_5flayer',['lower_layer',['../class_slic3r_1_1_layer.html#aff84b8f549804babf9ecaee1a49e260e',1,'Slic3r::Layer']]],
-  ['lower_5fslices',['lower_slices',['../class_slic3r_1_1_bridge_detector.html#a8ff570060a63482d1043a00664085bca',1,'Slic3r::BridgeDetector::lower_slices()'],['../class_slic3r_1_1_perimeter_generator.html#ab8fdc6f859da64a2799bdcd50d4962b5',1,'Slic3r::PerimeterGenerator::lower_slices()']]]
+  ['lower_5fslices',['lower_slices',['../class_slic3r_1_1_bridge_detector.html#a8ff570060a63482d1043a00664085bca',1,'Slic3r::BridgeDetector::lower_slices()'],['../class_slic3r_1_1_perimeter_generator.html#ab8fdc6f859da64a2799bdcd50d4962b5',1,'Slic3r::PerimeterGenerator::lower_slices()']]],
+  ['ltrim',['ltrim',['../namespace_slic3r.html#adbbf72d73e1043737f82fb8602362e3b',1,'Slic3r']]]
 ];

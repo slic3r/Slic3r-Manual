@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libslic3r: src/libslic3r/SVG.hpp File Reference</title>
+<title>libslic3r: src/libslic3r/ConditionalGcode.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,30 +65,31 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">SVG.hpp File Reference</div>  </div>
+<div class="title">ConditionalGcode.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="libslic3r_8h_source.html">libslic3r.h</a>&quot;</code><br />
-<code>#include &quot;clipper.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="_ex_polygon_8hpp_source.html">ExPolygon.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_line_8hpp_source.html">Line.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_triangle_mesh_8hpp_source.html">TriangleMesh.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_surface_8hpp_source.html">Surface.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 </div>
-<p><a href="_s_v_g_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="_conditional_gcode_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_s_v_g.html">Slic3r::SVG</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespace_slic3r"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html">Slic3r</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac5c135034ec6a71a5a93e51abcb7eddc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ac5c135034ec6a71a5a93e51abcb7eddc">Slic3r::expression</a> (const std::string &amp;input, const int depth)</td></tr>
+<tr class="memdesc:ac5c135034ec6a71a5a93e51abcb7eddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an expression and return a string. We assume that <a class="el" href="class_slic3r_1_1_placeholder_parser.html">PlaceholderParser</a> has expanded all variables.  <a href="namespace_slic3r.html#ac5c135034ec6a71a5a93e51abcb7eddc">More...</a><br /></td></tr>
+<tr class="separator:ac5c135034ec6a71a5a93e51abcb7eddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cfd976ecd1b426067a990ae4a72d29c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a3cfd976ecd1b426067a990ae4a72d29c">Slic3r::apply_math</a> (const std::string &amp;input)</td></tr>
+<tr class="memdesc:a3cfd976ecd1b426067a990ae4a72d29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start of recursive function to parse gcode file.  <a href="namespace_slic3r.html#a3cfd976ecd1b426067a990ae4a72d29c">More...</a><br /></td></tr>
+<tr class="separator:a3cfd976ecd1b426067a990ae4a72d29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
