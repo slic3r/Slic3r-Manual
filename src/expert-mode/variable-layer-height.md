@@ -1,11 +1,5 @@
 % Variable Layer Height
 
-  - min / max layer height settings per extruder
-
-- Left click: quadratic manipulator
-- right click: linear manipulator
-
-
 Slic3r gives the ability to adjust the layer height along the Z axis.
 That is, parts of the model could be printed
 with a coarse layer height, for example vertical sections, and other
@@ -71,6 +65,22 @@ model on the plater.
 
  ![Variable layer height
  control curve.](images/variable_layer_height/model_adaptive_control.png)
+
+Use the mouse to drag the layer height curve:
+
+- Right click to trigger linear manipulation. Drag vertically to select the
+range and horizontally to set the layer height.
+- Left click to trigger quadratic manipulation. Use this to generate smooth
+thickness transitions.
+
+  ![Screenshot of linear
+  manipulation.](images/variable_layer_height/screenshot_linear.png)
+  ![Screenshot of quadratic
+  manipulation.](images/variable_layer_height/screenshot_quadratic.png)
+
+  ![The same object printed with static thick layers (**left**), static thin
+  layers (**center**) and adaptive layers 
+  (**right**).](images/variable_layer_height/lm8uu_prints.png)
 
 
 Static Layer Height Table {#static-layer-height-table}
