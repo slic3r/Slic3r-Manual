@@ -28,6 +28,7 @@ var searchData=
   ['repair',['repair',['../class_slic3r_1_1_model.html#aae3dca1100b86eebbdc80aa360469e43',1,'Slic3r::Model::repair()'],['../class_slic3r_1_1_model_object.html#aaea2556a54c68c55c04a7d391b311c20',1,'Slic3r::ModelObject::repair()'],['../class_slic3r_1_1_triangle_mesh.html#a11f293892f1af889bb5b9850c1d8f58e',1,'Slic3r::TriangleMesh::repair()']]],
   ['repaired',['repaired',['../class_slic3r_1_1_triangle_mesh.html#a5e42cbf1720ec7648e1c05598da60f20',1,'Slic3r::TriangleMesh']]],
   ['replace',['replace',['../class_slic3r_1_1_extrusion_entity_collection.html#a6b6c48e4e1a7318bf15d86d746b9393e',1,'Slic3r::ExtrusionEntityCollection']]],
+  ['replace_5fsubstr',['replace_substr',['../namespace_slic3r.html#a6dd7f07d9512c05af02c3cc5dc631a06',1,'Slic3r']]],
   ['require_5fshared_5fvertices',['require_shared_vertices',['../class_slic3r_1_1_triangle_mesh.html#a2d89247104b407c487c6fef061035d3a',1,'Slic3r::TriangleMesh']]],
   ['reset',['reset',['../class_slic3r_1_1_extruder.html#a04ae8c433341107e9fec537912a95ee8',1,'Slic3r::Extruder']]],
   ['reset_5fe',['reset_e',['../class_slic3r_1_1_g_code_writer.html#ac98fe6c3bb46ab111e09c866c5f85340',1,'Slic3r::GCodeWriter']]],
