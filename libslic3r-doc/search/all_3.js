@@ -54,7 +54,7 @@ var searchData=
   ['cofloat',['coFloat',['../namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da6fc8e2b47c21774d7b1b2177c9330a68',1,'Slic3r']]],
   ['cofloatorpercent',['coFloatOrPercent',['../namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da79487730eddc1a2e9588d1e8e9d0aea6',1,'Slic3r']]],
   ['cofloats',['coFloats',['../namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05dade03a632a71a60d75e7fa4ae91850611',1,'Slic3r']]],
-  ['coincides_5fwith',['coincides_with',['../class_slic3r_1_1_line.html#a24c00ace88daae45d1390be2efb6afd3',1,'Slic3r::Line::coincides_with()'],['../class_slic3r_1_1_point.html#a8c0c712111ffbe0886adefed480813bf',1,'Slic3r::Point::coincides_with()']]],
+  ['coincides_5fwith',['coincides_with',['../class_slic3r_1_1_line.html#a24c00ace88daae45d1390be2efb6afd3',1,'Slic3r::Line::coincides_with()'],['../class_slic3r_1_1_point.html#a8c0c712111ffbe0886adefed480813bf',1,'Slic3r::Point::coincides_with()'],['../class_slic3r_1_1_point3.html#a90dffe9bdb078c3f0073449374c8817c',1,'Slic3r::Point3::coincides_with()']]],
   ['coincides_5fwith_5fepsilon',['coincides_with_epsilon',['../class_slic3r_1_1_point.html#a905d7664022b039f9327056523c2018b',1,'Slic3r::Point']]],
   ['coint',['coInt',['../namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da6208ed2b3dd884c139f42c396058c26c',1,'Slic3r']]],
   ['coints',['coInts',['../namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da3fda88472dbd7030ce02672dd6ae44b8',1,'Slic3r']]],
