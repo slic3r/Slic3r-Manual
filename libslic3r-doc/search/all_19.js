@@ -17,6 +17,7 @@ var searchData=
   ['_7efillconcentric',['~FillConcentric',['../class_slic3r_1_1_fill_concentric.html#a77e399193c309cbd761948312a239880',1,'Slic3r::FillConcentric']]],
   ['_7efillcubic',['~FillCubic',['../class_slic3r_1_1_fill_cubic.html#afdbf8454400443cda3be2ec0e29eac0f',1,'Slic3r::FillCubic']]],
   ['_7efillgrid',['~FillGrid',['../class_slic3r_1_1_fill_grid.html#a526c744b005a68771f6c16d468a0883c',1,'Slic3r::FillGrid']]],
+  ['_7efillgyroid',['~FillGyroid',['../class_slic3r_1_1_fill_gyroid.html#a2c997f492aad3d469d69cda19a4ea763',1,'Slic3r::FillGyroid']]],
   ['_7efillhilbertcurve',['~FillHilbertCurve',['../class_slic3r_1_1_fill_hilbert_curve.html#a58683d47d519bdda2445b342535be466',1,'Slic3r::FillHilbertCurve']]],
   ['_7efillhoneycomb',['~FillHoneycomb',['../class_slic3r_1_1_fill_honeycomb.html#a603d5f198ca99d1ec8f3a5023fe1a000',1,'Slic3r::FillHoneycomb']]],
   ['_7efilloctagramspiral',['~FillOctagramSpiral',['../class_slic3r_1_1_fill_octagram_spiral.html#a7f20163d02062a06a58ffc57887381c4',1,'Slic3r::FillOctagramSpiral']]],

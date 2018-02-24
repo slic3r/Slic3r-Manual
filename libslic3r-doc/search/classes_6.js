@@ -7,6 +7,7 @@ var searchData=
   ['fillconcentric',['FillConcentric',['../class_slic3r_1_1_fill_concentric.html',1,'Slic3r']]],
   ['fillcubic',['FillCubic',['../class_slic3r_1_1_fill_cubic.html',1,'Slic3r']]],
   ['fillgrid',['FillGrid',['../class_slic3r_1_1_fill_grid.html',1,'Slic3r']]],
+  ['fillgyroid',['FillGyroid',['../class_slic3r_1_1_fill_gyroid.html',1,'Slic3r']]],
   ['fillhilbertcurve',['FillHilbertCurve',['../class_slic3r_1_1_fill_hilbert_curve.html',1,'Slic3r']]],
   ['fillhoneycomb',['FillHoneycomb',['../class_slic3r_1_1_fill_honeycomb.html',1,'Slic3r']]],
   ['filloctagramspiral',['FillOctagramSpiral',['../class_slic3r_1_1_fill_octagram_spiral.html',1,'Slic3r']]],

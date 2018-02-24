@@ -6,6 +6,7 @@ var searchData=
   ['ipconcentric',['ipConcentric',['../namespace_slic3r.html#aa49ce8a748a4910451492842fa4bf1d0a34c84fa363677f6c3465fdf3ad296c2f',1,'Slic3r']]],
   ['ipcubic',['ipCubic',['../namespace_slic3r.html#aa49ce8a748a4910451492842fa4bf1d0aa4e6ee0fea08458bea772266cf6433eb',1,'Slic3r']]],
   ['ipgrid',['ipGrid',['../namespace_slic3r.html#aa49ce8a748a4910451492842fa4bf1d0a1af242c1f2f088f5cb8606d65b6d6882',1,'Slic3r']]],
+  ['ipgyroid',['ipGyroid',['../namespace_slic3r.html#aa49ce8a748a4910451492842fa4bf1d0ad22edf1652da8198fbd9fc48fefe3bd2',1,'Slic3r']]],
   ['iphilbertcurve',['ipHilbertCurve',['../namespace_slic3r.html#aa49ce8a748a4910451492842fa4bf1d0a16c08ee09f28b7e8bdbe23ed29954ceb',1,'Slic3r']]],
   ['iphoneycomb',['ipHoneycomb',['../namespace_slic3r.html#aa49ce8a748a4910451492842fa4bf1d0a9ab65fe60393bf811c7d2b2ceb490914',1,'Slic3r']]],
   ['ipoctagramspiral',['ipOctagramSpiral',['../namespace_slic3r.html#aa49ce8a748a4910451492842fa4bf1d0ab35955fab96a0cd1283b67eef21c779d',1,'Slic3r']]],
