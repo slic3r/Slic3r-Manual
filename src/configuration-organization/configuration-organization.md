@@ -35,6 +35,15 @@ Note that loading a config file doesn't store it as a preset automatically, so i
 
 The `Export Config Bundle...` allows to export the **entire** set of profiles to a single file (not just the selected profiles). This is handy if you want to clone a Slic3r setup from one computer to another, or make a backup.
 
+Import Configuration from GCode
+-------------------------------
+
+If you want to use the same settings/configuration from model B in your model A, you can do so by simply importing the GCode-file from model B.
+In `File` choose `Import Config from GCode-File...` and select your previously saved GCode (model B) file.
+
+When you click `OK` on your model B, a new `.ini` file will be created in the same directory as your model B. It's named just like your model B: `<name-of-model-B>.ini`. After the file has been created, it will automatically be imported in Slic3r. This `.ini` file holds your settings and could also be shared with others without revealing your CGode.
+
+Note that this only works for GCode files which were sliced using Slic3r. Also, these settings are not stored in Slic3r.
 
 Using a Custom Data Directory
 =============================
