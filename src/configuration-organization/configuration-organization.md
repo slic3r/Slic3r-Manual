@@ -90,7 +90,7 @@ Simple Usage
 To use another color scheme, you can switch from the default to Solarized (by Ethan Schoonover: http://ethanschoonover.com/solarized).
 Go to `File` -> `Preferences` -> `Color Scheme` and choose `Solarized` (or leave at default). Click `OK` and restart Slic3r.
 
-All colors have been changed to a reduced brighness contrast.
+All viewport colors have been changed to a reduced brighness contrast.
 ![Solarized Color-Scheme of the *3D* Plater.](images/colorscheme_3dplater.png)
 
 ![Solarized Color-Scheme of the *2D* Tab.](images/colorscheme_2dplater.png)
