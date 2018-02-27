@@ -92,11 +92,15 @@ Go to `File` -> `Preferences` -> `Color Scheme` and choose `Solarized` (or leave
 
 All viewport colors have been changed to a reduced brighness contrast.
 
-<img align="left" src="./images/colorscheme_3dplater.png" alt="Solarized Color-Scheme of the *3D* Plater" title="3D Plater" width="45%" hspace="5%"/>
-<img align="left" src="./images/colorscheme_2dplater.png" alt="Solarized Color-Scheme of the *2D* Tab" title="2D Tab" width="45%"/><br/>
+| ![Solarized Color-Scheme of the *3D* Plater](./images/colorscheme_3dplater.png)  | ![Solarized Color-Scheme of the *2D* Tab](./images/colorscheme_2dplater.png) |
+|:---:|:---:|
+| *3D* Plater | *2D* Tab |
 
-<img align="left" src="./images/colorscheme_3dpreview.png" alt="Solarized Color-Scheme of the 3D *Preview* Tab" title="3D Preview" width="45%" hspace="5%"/>
-<img align="left" src="./images/colorscheme_2dlayers.png" alt="Solarized Color-Scheme of the 2D *Layers* Tab" title="2D Layers" width="45%"/><br/>
+
+| ![Solarized Color-Scheme of the 3D *Preview* Tab](./images/colorscheme_3dpreview.png)  | ![Solarized Color-Scheme of the 2D *Layers* Tab](./images/colorscheme_2dlayers.png) |
+|:---:|:---:|
+| 3D *Preview* | 2D *Layers* |
+
 
 Advanced Usage
 --------------
