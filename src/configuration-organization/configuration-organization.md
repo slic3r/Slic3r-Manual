@@ -88,7 +88,7 @@ Simple Usage
 ------------
 
 To use another color scheme, you can switch from the default to Solarized (by Ethan Schoonover: http://ethanschoonover.com/solarized).
-Go to `File` -> `Preferences` -> `Color Scheme` and choose `Solarized` (or leave at default). Click `OK` and restart Slic3r.
+Go to `File` -> `Preferences` -> `Color Scheme` and choose `Solarized` (or change back to the default colors). Click `OK` and restart Slic3r.
 
 All viewport colors have been changed to a reduced brighness contrast.
 
@@ -105,9 +105,4 @@ All viewport colors have been changed to a reduced brighness contrast.
 Advanced Usage
 --------------
 
-Take a look at the file:
-
-```
-./lib/Slic3r/GUI/ColorScheme.pm
-```
-for comments on how to create your own color-scheme or to change the colors.
+Take a look at the files `./lib/Slic3r/GUI/ColorScheme.pm` and `./lib/Slic3r/GUI/Preferences.pm` in the `colorscheme`-section for comments on how to create your own color-scheme or to change the colors.
