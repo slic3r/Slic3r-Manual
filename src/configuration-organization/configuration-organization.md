@@ -93,17 +93,17 @@ Go to `File` -> `Preferences` -> `Color Scheme` and choose `Solarized` (or leave
 All viewport colors have been changed to a reduced brighness contrast.
 
 <img align="left" src="./images/colorscheme_3dplater.png" alt="Solarized Color-Scheme of the *3D* Plater" title="3D Plater" width="45%" hspace="5%"/>
-<img align="left" src="./images/colorscheme_2dplater.png" alt="Solarized Color-Scheme of the *2D* Tab" title="2D Tab" width="45%"/>
+<img align="left" src="./images/colorscheme_2dplater.png" alt="Solarized Color-Scheme of the *2D* Tab" title="2D Tab" width="45%"/><br/>
 
 <img align="left" src="./images/colorscheme_3dpreview.png" alt="Solarized Color-Scheme of the 3D *Preview* Tab" title="3D Preview" width="45%" hspace="5%"/>
-<img align="left" src="./images/colorscheme_2dlayers.png" alt="Solarized Color-Scheme of the 2D *Layers* Tab" title="2D Layers" width="45%"/>
+<img align="left" src="./images/colorscheme_2dlayers.png" alt="Solarized Color-Scheme of the 2D *Layers* Tab" title="2D Layers" width="45%"/><br/>
 
 Advanced Usage
 --------------
 
-Check out the file:
+Take a look at the file:
 
 ```
 ./lib/Slic3r/GUI/ColorScheme.pm
 ```
-for comments on how to create your own color-scheme or just change the colors.
+for comments on how to create your own color-scheme or to change the colors.
