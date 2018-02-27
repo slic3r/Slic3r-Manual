@@ -80,3 +80,29 @@ And finally we create a symbolic link:
 ```
 ln -s ~/Dropbox/Slic3r-settings "/Users/al/Library/Application Support/Slic3r"
 ```
+
+Using another Color-Scheme
+==========================
+
+Simple Usage
+------------
+
+To use another color scheme, you can switch from the default to Solarized (by Ethan Schoonover: http://ethanschoonover.com/solarized).
+Go to `File` -> `Preferences` -> `Color Scheme` and choose `Solarized` (or change back to the default colors). Click `OK` and restart Slic3r.
+
+All viewport colors have been changed to a reduced brighness contrast.
+
+| ![Solarized Color-Scheme of the *3D* Plater](./images/colorscheme_3dplater.png)  | ![Solarized Color-Scheme of the *2D* Tab](./images/colorscheme_2dplater.png) |
+|:---:|:---:|
+| *3D* Plater | *2D* Tab |
+
+
+| ![Solarized Color-Scheme of the 3D *Preview* Tab](./images/colorscheme_3dpreview.png)  | ![Solarized Color-Scheme of the 2D *Layers* Tab](./images/colorscheme_2dlayers.png) |
+|:---:|:---:|
+| 3D *Preview* | 2D *Layers* |
+
+
+Advanced Usage
+--------------
+
+Take a look at the files `./lib/Slic3r/GUI/ColorScheme.pm` and `./lib/Slic3r/GUI/Preferences.pm` in the `colorscheme`-section for comments on how to create your own color-scheme or to change the colors.
