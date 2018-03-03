@@ -4,11 +4,11 @@ Unless the material being extruded has a very high viscosity it will
 ooze from the nozzle in between extrusions. There are several settings
 in Slic3r to which can help to remedy this.
 
-The retraction settings, found in the `Printer` tab, tell the printer to
-pull back the filament between extrusion moves. This can alleviate the
-pressure in the nozzle, thus reducing ooze. After the subsequent travel
-move the retraction is reversed to prepare the extruder for the next
-extrusion.
+The retraction settings, found in the `Extruder` section of `Printer` tab,
+tell the printer to pull back the filament between extrusion moves. This
+can alleviate the pressure in the nozzle, thus reducing ooze. After the
+subsequent travel move the retraction is reversed to prepare the extruder
+for the next extrusion.
 
  ![Retraction settings.](images/retraction_settings.png "fig:")
 
