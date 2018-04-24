@@ -239,7 +239,7 @@ can be useful to ensure the nozzle will not catch on any already laid
 filament, however it is usually not necessary and will slow the print
 speed. A value of 0.1mm is usually sufficient.
 
-#### Start, End and Layer Chance G-codes.
+#### Start, End and Layer Change G-codes.
 
  Custom G-code commands can be run before a print
 starts and after a print finishes.
