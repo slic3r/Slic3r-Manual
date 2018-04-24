@@ -63,7 +63,7 @@ filament, however it is usually not necessary and will slow the print
 speed. A value of 0.1mm is usually sufficient.
 
 ### Custom G-Code
-#### Start, End and Layer Chance G-Codes.
+#### Start, End and Layer Change G-Codes.
 ![Printer Settings: Custom G-Code (1)](images/printer_settings_custom_gcode1.png "fig:")
 ![Printer Settings: Custom G-Code (2)](images/printer_settings_custom_gcode_2.png "fig:")
 
