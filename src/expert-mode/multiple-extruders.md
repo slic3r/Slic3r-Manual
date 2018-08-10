@@ -68,7 +68,7 @@ with a particular extrusion, the `Multiple Extruders` section of the
 extrusion type.
 
  ![Multiple extruder options - Print Settings
-Tab.](images/multipleextruders/print_settings_multiple_extruder_options.png "fig:")
+Tab.](images/print_settings_multiple_extruders.png "fig:")
 
 Printing Multi-material Objects
 -------------------------------
