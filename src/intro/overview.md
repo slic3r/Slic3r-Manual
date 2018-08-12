@@ -1,7 +1,8 @@
 % Overview
 
-*This manual was sponsored by* ![image](images/lulzbot_logo.png)
-*and written by Gary Hodgson*
+*This manual was sponsored by* ![image](images/lulzbot_logo.png).
+
+*Original manual written by Gary Hodgson, with various other contributions.*
 
 Slic3r is a tool which translates digital 3D models into instructions
 that are understood by a 3D printer. It slices the model into horizontal
