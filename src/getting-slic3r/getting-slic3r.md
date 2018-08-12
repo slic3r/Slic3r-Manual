@@ -1,17 +1,19 @@
 % Downloading
 
 Slic3r can be downloaded directly from:
-<http://slic3r.org/download>.
+<https://slic3r.org/download> or <https://github.com/slic3r/Slic3r/releases>.
 
 Pre-compiled packages are available for Windows, Mac OS X and Linux.
 Windows users can choose between 32 and 64 bit versions to
 match their system.
 
+Development (pre-release) builds are available at <https://dl.slic3r.org/dev>
+
 Source
 ------
 
 The source code is available via GitHub:
-<https://github.com/alexrj/Slic3r>. For more details on building from
+<https://github.com/slic3r/Slic3r>. For more details on building from
 source see § below.
 
 Installing
@@ -63,14 +65,14 @@ found on the Slic3r wiki.
 
 -   **GNU Linux**
 
-    <https://github.com/alexrj/Slic3r/wiki/Running-Slic3r-from-git-on-GNU-Linux>
+    <https://github.com/slic3r/Slic3r/wiki/Running-Slic3r-from-git-on-GNU-Linux>
 
 -   **OS X**
 
-    <https://github.com/alexrj/Slic3r/wiki/Running-Slic3r-from-git-on-OS-X>
+    <https://github.com/slic3r/Slic3r/wiki/Running-Slic3r-from-git-on-OS-X>
 
 -   **Windows**
 
-    <https://github.com/alexrj/Slic3r/wiki/Running-Slic3r-from-git-on-Windows>
+    <https://github.com/slic3r/Slic3r/wiki/Running-Slic3r-from-git-on-Windows>
 
-[^1]: <https://github.com/alexrj/Slic3r>
+[^1]: <https://github.com/slic3r/Slic3r>
