@@ -355,7 +355,7 @@ smoothly from the extruder before it starts on the model proper.
 
 #### Extrusion Width
 
-![Extrusion widths options.](images/print_settings_advanced.png"fig:")
+![Extrusion widths options.](images/print_settings_advanced.png "fig:")
 
 
 One reason for modifying the extrusion width has already been discussed:
