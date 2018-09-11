@@ -34,8 +34,23 @@ output:
     echo "Post-processing G-code file: $*"
     env | grep ^SLIC3R
 
-For security reasons you can't supply arguments to the scripts. However, you
-can just write a wrapper script.
+
+#### Post-Processing Script Parameters
+
+You can use parameters with your script as such:
+
+Examples:
+
+`/path/to/executable` becomes `/path/to/executable` with the arg `outputfilename.gcode`
+
+`/path/to/executable -arg -arg2` becomes `/path/to/executable` with `args -arg, -arg2`, and `outputfilename.gcode`
+
+`/path/to/executable! with! spaces -arg -arg2` becomes `/path/to/executable with spaces with args -arg, -arg2`, and `outputfilename.gcode`
+
+`/path/to/executable!! -arg -arg2` becomes `/path/to/executable!` with `args -arg, -arg2`, and `outputfilename.gcode`
+
+`/path/to/executable option! with! spaces` becomes `/path/to/executable` with args `option with spaces` and `outputfilename.gcode`
+
 
 Perl example
 ------------
@@ -58,3 +73,27 @@ If you are getting a *can't do inplace edit without backup* error when specifyin
 the post-process script, try adding `$^I = '.bak';` before the while loop. This will
 create a backup file of the generated G-Code file. Windows does not like to have two
 scripts creating and/or accessing a single file at once, so a backup is needed.
+
+
+Python example
+--------------
+
+#### Windows
+To use a Python post-processing script with Windows, you'll need to adjust the paths like this:
+
+    C:\Program! Files! (x86)\Python37-32\python.exe c:\dev\SCPP\Slic3rConfigPrettyPrint.py -o --au "John Doe"
+
+Note the **!** before all white-spaces! Make sure you adjust the path to your script as well.
+Yes, you can save your G-Code file to somewhere with spaces in it's path.
+
+Your script needs to accept at least one parameter: The filename of your G-Code file.
+`-o` and `--au "John Doe"` are optional parameters. The filename, of your G-Code, will be added to the end of this string.
+
+Python.exe will then run your script with the specified parameters.
+
+This `example.py` will just output the filename submitted by Slic3r:
+
+    import sys
+    print ('This is the name of your G-Code file: {0}'.format(sys.argv[1]))
+
+`sys.argv[0]` is the script `example.py`.
