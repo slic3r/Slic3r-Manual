@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Requirements
+#
+# apt-get install pandoc
+# apt-get install texlive-xetex
+# apt-get install imagemagick
+
+echo create tmp directory with sources: src.pdf
+rm -rf    src.pdf
+cp -R src src.pdf
+cd        src.pdf
+
+mkdir     tmp
+
+echo create tmp direcetory for images
+for DIR in $(find ../src -type d -name images); do cp -R $DIR .; done
+
+echo create create book.pdf
+
+FILES=""
+
+for FILE in $(grep "^    *" toc.md | cut -d/ -f2- | tr ')' '#' | cut -d'#' -f1 | uniq)
+do
+	SRC=${FILE}.md
+	DST=$(basename $SRC .md).pdf
+
+	printf "create %-32s from %s\n" ${DST} ${SRC}.md
+	pandoc ${SRC} -o tmp/${DST}
+
+	FILES="$FILES tmp/$DST"
+done
+
+echo create slic3r-book.pdf
+convert -quality 100 -density 300x300 $FILES slic3r-book.pdf
+
+rm -rf tmp
