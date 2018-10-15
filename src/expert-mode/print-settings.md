@@ -232,7 +232,7 @@ Rafts are classified as support material, while the top layer of the raft (the o
 There are two general categories of speeds: print moves and non-print moves. 
 
 For print moves, each type of printing move can be configured to have a
-different speed, either in absolute terms (mm/s) or as a percentage of the the
+different speed, either in absolute terms (mm/s) or as a percentage of the
 more general move.
 
 -   `Perimeters` - The outline of the model may benefit from being printed
@@ -335,7 +335,7 @@ because slight gaps will not matter as much).
 ##### Skirt
 
 The `Skirt` setting adds an extrusion a short distance away from the
-perimiter of the object. This can ensure that the material is flowing
+perimeter of the object. This can ensure that the material is flowing
 smoothly from the extruder before it starts on the model proper.
 
 -   `Loops` - How many circuits should be completed before starting on
