@@ -20,6 +20,7 @@
     * [Speed](/expert-mode/print-settings#speed)
     * [Infill Patterns and Density](/expert-mode/print-settings#infill-patterns)
     * [Infill Optimization](/expert-mode/print-settings#infill-optimization)
+    * [Top fill Ironing](/expert-mode/print-settings#ironing)
     * [Fighting Ooze](/expert-mode/fighting-ooze)
     * [Skirt and brim](/expert-mode/print-settings#skirt-and-brim)
     * [Cooling](/expert-mode/cooling)
