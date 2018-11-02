@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – Manual Filament Swaps with Slic3r.</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">Manual Filament Swaps with Slic3r.</h1>
+</div>
+<p>This page explains a useful trick to use Slic3r to use manual filament swaps in lieu of multiple extruders.</p>
+<h4 id="theory-overview">Theory &amp; Overview</h4>
+<p>Slic3r has the ability to insert custom G-Code at the point of every toolchange, and this G-Code is always inserted if a tool change event occurs.</p>
+<p>Normally, with a single extruder you would never generate a toolchange event from Slic3r; but we can override that with modifier meshes. Also, you'll need to tell Slic3r you have more than one extruder temporarily so that you can edit the configuration.</p>
+<h4 id="procedure">Procedure</h4>
+<ol style="list-style-type: decimal">
+<li>Load your model into the plater.</li>
+<li>Right-click on the</li>
+<li>Add a new modifier mesh. For this, we use the slab modifier. Any modifier will do.
+<ul>
+<li>You want to enclose the entire area you want to be the new color/filament. <img src="images/manual-swap/generic-modifier.png" alt="image" /></li>
+</ul></li>
+<li>Select the modifier mesh and set the extruder to 2.</li>
+<li>Move the modifer mesh where you want to to be on the model.</li>
+<li>Click &quot;ok&quot;</li>
+<li>Open Printer Settings.</li>
+<li>Change the number of extruders to 2. <img src="images/manual-swap/extruders-2.png" alt="image" /></li>
+<li>Select &quot;Custom G-Code&quot;</li>
+<li>Scroll down to Tool-Change G-Code.</li>
+<li>Add whatever you need to implement the filament swap here.
+<ul>
+<li>Marlin firmware has M600 available if you have an LCD for the swap.</li>
+</ul></li>
+<li>Go back to the Printer settings page.</li>
+<li>Change the number of extruders to 1. <img src="images/manual-swap/extruder-1.png" alt="image" /></li>
+<li>Save this profile as a new profile.</li>
+<li>Download <a href="https://github.com/alexrj/Slic3r/tree/master/utils/post-processing/strip-toolchange.pl">this post processing script</a></li>
+<li>Open Print Settings.</li>
+<li>Select &quot;Output Options&quot;</li>
+<li>Add the path to the post processing script to the Post-Processing scripts.
+<ul>
+<li>See <a href="/advanced/post-processing">Post-Processing Scripts</a> for more information.</li>
+</ul></li>
+</ol>
+<h4 id="notes">Notes</h4>
+<p>This technically works with anything that would cause a toolchange event; so selecting different support extruder, etc, would work the same way. More complex usages may cause a lot of swaps, so you have been warned.</p>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

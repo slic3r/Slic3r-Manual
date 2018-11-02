@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – Printer Settings</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">Printer Settings</h1>
+</div>
+<h2 id="printer-settings">Printer Settings</h2>
+<p>The <code>Printer Settings</code> will be updated the least, unless Slic3r is going to be used for many printers, for example, in a 3D printer farm.</p>
+<div class="figure">
+<img src="images/printer_settings_1.png" title="fig:" alt="Printer Settings: General" />
+<p class="caption">Printer Settings: General</p>
+</div>
+<h4 id="size-and-coordinates.">Size and coordinates.</h4>
+<p>The <code>Bed size</code> setting is taken from the wizard (see p.) and is only used for previewing the model in the plater.</p>
+<p>The <code>Print center</code> is the point around which the print will be centered. A <code>Bed size</code> of 200mmx200mm and a <code>Print center</code> of 100mmx100mm would sit the print in the middle. Should it be desired to print away from the center, because of a scratch in the glass perhaps, then this option should be used.</p>
+<p><code>Z offset</code> can be used to compensate for an incorrectly calibrated Z end-stop. If the nozzle stops slightly too far from the bed, then adding a negative value will offset all layers by that amount. The correct solution however is to fix the end-stop itself.</p>
+<p>The optimal Z endstop position is where the nozzle tip barely touches the surface of the bed when homed. A sheet of paper makes a good gauge for this very small distance. It is not recommended to use this setting to try and improve layer adhesion, by &quot;squashing&quot; the bottom layer into the bed, instead look at the suggestions in section .</p>
+<h4 id="firmware.">Firmware.</h4>
+<p>As selected in the wizard (see p.), <code>G-code flavour</code> defines the dialect of G-code generated.</p>
+<h3 id="extruder-settings">Extruder Settings</h3>
+<div class="figure">
+<img src="images/printer_settings_extruder.png" title="fig:" alt="Printer Settings: Extruder" />
+<p class="caption">Printer Settings: Extruder</p>
+</div>
+<h4 id="extruder.">Extruder.</h4>
+<p><code>Nozzle diameter</code> was defined in the wizard (see p.).</p>
+<h4 id="retraction.">Retraction.</h4>
+<p>Unless the material being extruded has a very high viscosity it may ooze between extrusions due to gravity. This can be remedied by actively retracting the filament between extrusions. Setting the <code>Length</code> parameter to a positive value will cause the filament to be reversed by that many millimeters before travel. The retraction will then be compensated for by the same amount after the travel move, before starting the new extrusion path.</p>
+<p>A value of between 1 and 2mm is usually recommended. Bowden extruders may need up to 4 or 5mm due to the hysteresis introduced by the tube. Setting the <code>Lift Z</code> parameter to a positive value will raise the entire extruder on the Z axis by that many millimeters during each travel. This can be useful to ensure the nozzle will not catch on any already laid filament, however it is usually not necessary and will slow the print speed. A value of 0.1mm is usually sufficient.</p>
+<h3 id="custom-g-code">Custom G-Code</h3>
+<h4 id="start-end-and-layer-change-g-codes.">Start, End and Layer Change G-Codes.</h4>
+<p><img src="images/printer_settings_custom_gcode1.png" title="fig:" alt="Printer Settings: Custom G-Code (1)" /> <img src="images/printer_settings_custom_gcode_2.png" title="fig:" alt="Printer Settings: Custom G-Code (2)" /></p>
+<p>Custom G-code commands can be run before a print starts and after a print finishes.</p>
+<p>Placeholders can be inserted in the G-code commands<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. For example [next_extruder] would return the index of the next extruder.</p>
+<p>The RepRap wiki is a good resource to learn about the variety of G-codes available: <code>http://reprap.org/wiki/G-code</code>.</p>
+<p>Note: Be sure to check that a given G-code is valid for your firmware.</p>
+<p>The codes specified in <code>Start G-code</code> are inserted at the beginning of the output file, directly after the temperature control commands for extruder and bed. Note that if temperature control commands are specified (M104 and M190) then these will replace the temperature G-codes introduced by the <code>Filament</code> settings.</p>
+<p>Some common G-codes to use before the print starts are:</p>
+<ul>
+<li><strong>G28</strong> - Homes all the axes.</li>
+</ul>
+<p>Some common G-codes to use after the print ends are:</p>
+<ul>
+<li><p><strong>M104 S0</strong> - Sets the extruder temperature to zero.</p></li>
+<li><p><strong>M140 S0</strong> - Sets the heated bed temperature to zero.</p></li>
+<li><p><strong>G28 X0</strong> - Home the X axis.</p></li>
+<li><p><strong>M84</strong> - Disables the motors.</p></li>
+</ul>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>https://github.com/alexrj/Slic3r/wiki/FAQ#what-placeholders-can-i-use-in-custom-g-code<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

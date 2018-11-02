@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – Variable Layer Height</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">Variable Layer Height</h1>
+</div>
+<p>Slic3r gives the ability to adjust the layer height along the Z axis. That is, parts of the model could be printed with a coarse layer height, for example vertical sections, and other parts could be printed with a finer layer height, for example sloping gradients where layering appears more pronounced.</p>
+<p>The layer thickness distribution can be influenced by:</p>
+<ul>
+<li>automatic pre-computing of good thicknesses with <a href="#adaptive-slicing">Adaptive Slicing</a></li>
+<li>interactive refinement in the <a href="#interactive-layer-refinement">Adaptive Layers</a> settings tab</li>
+<li>setting a fixed layer height for a particular range in the <a href="#static-layer-height-table">Layer height table</a> setting tab</li>
+</ul>
+<div class="figure">
+<img src="images/variable_layer_height/example_model.png" alt="Example model highlighting use case for variable layer heights." />
+<p class="caption">Example model highlighting use case for variable layer heights.</p>
+</div>
+<div class="figure">
+<img src="images/variable_layer_height/model_coarse_adaptive_layers.png" alt="Static coarse layer height (left) and adaptive heights generated by Slic3r (right)." />
+<p class="caption">Static coarse layer height (<strong>left</strong>) and adaptive heights generated by Slic3r (<strong>right</strong>).</p>
+</div>
+<h2 id="adaptive-slicing">Adaptive Slicing</h2>
+<p>Maintaining a good balance between printing time and quality is a fundamental trade-off problem for 3D printing.</p>
+<p>If the <code>Use adaptive slicing</code> option is enabled, Slic3r automatically computes the individual thickness of each layer based on the angle of the surface. Technical details are provided in a paper <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
+<p>The <code>Adaptive quality</code> option adjusts the overall quality between 0% - thickest printable layers over the entire object to 100% - thinnest possible layers.</p>
+<p>The <code>Z full steps/mm</code> parameter is always respected by the adaptive slicing process, also the <code>Combine infill</code> logic is not affected. Example: if <code>Combine infill</code> is set to 3, Slic3r will combine up to 3 infill layers, even if those layers are of different thickness. The number of combined layers will vary along the Z axis, depending on the local thickness of layers.</p>
+<div class="figure">
+<img src="images/variable_layer_height/settings_dialog.png" alt="Activate adaptive slicing and set desired quality in the Print settings dialog." />
+<p class="caption">Activate adaptive slicing and set desired quality in the Print settings dialog.</p>
+</div>
+<p>Upper and lower limits for the layer thickness are set per extruder in the <code>Printer Settings</code> tab. Slic3r automatically uses the values for all extruders which are used for a particular print. If for example only one extruder is used from a dual nozzle printer, the limits of the second extruder won't reduce the maximum layer thickness.</p>
+<div class="figure">
+<img src="images/variable_layer_height/min_max_settings_dialog.png" alt="Set the minimum / maximum possible layer thickness for each extruder in the Printer settings." />
+<p class="caption">Set the minimum / maximum possible layer thickness for each extruder in the Printer settings.</p>
+</div>
+<h2 id="interactive-layer-refinement">Interactive Layer Refinement</h2>
+<p>A tool to interactively refine the layer heights of an object is available by double clicking an object in the 3D tab or taking the <code>Layer heights...</code> short-cut on the Plater. This opens <code>Adaptive Layers</code> tab in the Settings dialogue, where the layer thickness curve can be modified for each individual model on the plater.</p>
+<div class="figure">
+<img src="images/variable_layer_height/model_adaptive_control.png" alt="Variable layer height control curve." />
+<p class="caption">Variable layer height control curve.</p>
+</div>
+<p>Use the mouse to drag the layer height curve:</p>
+<ul>
+<li>Right click to trigger linear manipulation. Drag vertically to select the range and horizontally to set the layer height.</li>
+<li>Left click to trigger quadratic manipulation. Use this to generate smooth thickness transitions.</li>
+</ul>
+<p><img src="images/variable_layer_height/screenshot_linear.png" alt="Screenshot of linear manipulation." /> <img src="images/variable_layer_height/screenshot_quadratic.png" alt="Screenshot of quadratic manipulation." /></p>
+<div class="figure">
+<img src="images/variable_layer_height/lm8uu_prints.png" alt="The same object printed with static thick layers (left), static thin layers (center) and adaptive layers (right)." />
+<p class="caption">The same object printed with static thick layers (<strong>left</strong>), static thin layers (<strong>center</strong>) and adaptive layers (<strong>right</strong>).</p>
+</div>
+<h2 id="static-layer-height-table">Static Layer Height Table</h2>
+<p>The layer height table allows to define a layer height for a particular range along the Z axis, given in millimeters. The values from this table will override both, the default and adaptively generated layer heights, but not the interactively modified curve in the <code>Adaptive layers</code> tab.</p>
+<p>In this example the steepest base of the model is printed at 0.4mm, the steeper parts of the roof are printed at 0.2mm, and the less steep at 0.15mm. Note that each range divides exactly by the given layer height so there are no &quot;gaps&quot; between sections.</p>
+<div class="figure">
+<img src="images/variable_layer_height/layer_height_table.png" title="fig:" alt="User defined table of layer heights certain ranges of the object." />
+<p class="caption">User defined table of layer heights certain ranges of the object.</p>
+</div>
+<div class="figure">
+<img src="images/variable_layer_height/layer_height_table_gcode.png" title="fig:" alt="Resulting G-Code from the settings in the table shown above." />
+<p class="caption">Resulting G-Code from the settings in the table shown above.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://tams.informatik.uni-hamburg.de/publications/2017/Adaptive%20Slicing%20for%20the%20FDM%20Process%20Revisited.pdf">Adaptive Slicing for the FDM Process Revisited, 13th IEEE Conference on Automation Science and Engineering (CASE-2017)</a><a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

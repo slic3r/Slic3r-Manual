@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – Draft Quality</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">Draft Quality</h1>
+</div>
+<p>Several options can be disabled or tuned in order to achieve faster G-code generation speed and shorter print times.</p>
+<h3 id="print-settings-layers-and-perimeters-quality">Print Settings &gt; Layers and perimeters &gt; Quality</h3>
+<div class="figure">
+<img src="images/draft_quality_options.png" alt="Quality options" />
+<p class="caption">Quality options</p>
+</div>
+<p>These options provide nicer and cleaner objects but require more CPU time. They can be disabled for draft quality prints.</p>
+<ul>
+<li><code>Extra perimeters if needed</code>: this feature checks whether adding more perimeters to sloping layers would help hiding the internal infill, thus make the object look nicer.</li>
+<li><code>Avoid crossing perimeters</code>: this feature blends travel moves so that the nozzle stays fully inside or outside the object whenever possible, thus reducing the number of times it crosses perimeters and triggers a retraction. This prevents stringing but requires much CPU time during G-code export because complex motion planning algorithms are used for each single layer.</li>
+<li><code>Detect thin walls</code>: this feature checks for collisions between perimeters. It ensures that the printer doesn't try to extrude too close paths, and uses the medial axis algorithm in order to transform thin walls into single-pass extrusions.</li>
+<li><code>Detect bridging perimeters</code>: this feature detects the bridging/overhanging portions of perimeters and applies bridge flow/speed to them.</li>
+</ul>
+<h3 id="print-settings-infill">Print Settings &gt; Infill</h3>
+<p>The <em>Hilbert Curve</em>, <em>Archimedean Chords</em> and <em>Octagram Spiral</em> infill patterns are generally much slower. You might want to avoid them in your draft quality prints if you care about slicing speed.</p>
+<h3 id="print-settings-advanced-resolution">Print Settings &gt; Advanced &gt; Resolution</h3>
+<p>By default, Slic3r does not simplify the input geometry and will render all details into the output G-code for maximum accuracy. However, high-resolution models often carry more resolution than the printer is able to print, so they can be simplified especially when you want faster slicing. You can set the <em>Resolution</em> option to something like 0.05mm or even 0.1mm for your draft quality prints.</p>
+<h3 id="print-settings-advanced-threads">Print settings &gt; Advanced &gt; Threads</h3>
+<p>(This hint applies to all kind of prints, not just draft quality.) Many algorithms in Slic3r support parallelization using multiple threads. You should set this option to the number of processors or cores of your computer.</p>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

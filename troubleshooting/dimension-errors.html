@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – Dimension Errors</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">Dimension Errors</h1>
+</div>
+<p>If you're not satisfied by the dimensional accuracy of your prints, first off make sure your <strong>firmware</strong> is correctly configured: the <strong>steps/mm</strong> values for <strong>X, Y, and Z axes</strong> must be calculated according to your belts, pulleys and leadscrews. Please don't calibrate by trial-and-error: those values should be exact. Use Josef Prusa's <a href="http://calculator.josefprusa.cz">Calculator</a>.</p>
+<h3 id="vertical-dimensions">Vertical dimensions</h3>
+<p>If your vertical dimensions are wrong (i.e. <strong>along the Z axis</strong>) -and your object is usually shorter than expected- it means your nozzle is <strong>too low</strong>, thus the first layer is pressed too much on the print bed. To fix this, you might want to raise your Z endstop or increase the <em>Z offset</em> option in Slic3r.</p>
+<h3 id="horizontal-dimensions">Horizontal dimensions</h3>
+<p>The usual issue is about holes being too small. This usually only affects holes on the horizontal plane (XY). There are several reasons for this. Let's see them one by one:</p>
+<h4 id="plastic-shrinkage">Plastic shrinkage</h4>
+<p>Plastic <strong>shrinks when cooling</strong>. Different kinds of plastic exhibit different shrinkage, which might also depend on temperature. Because of such shrinkage, circular (or polygonal) holes laid by the extruder at the nominal diameter will end up smaller after cooling.</p>
+<h4 id="more-material-is-deposited-in-the-inside">More material is deposited in the inside</h4>
+<p>When you extrude along a curve, more material per distance unit is deposited in the concave side. Such excessive material makes the internal radius shorter. A <a href="http://reprap.org/wiki/ArcCompensation">compensation algorithm</a> was proposed by Adrian Bowyer, and it was implemented in Slic3r some time ago but many users complained about holes being too large – it was removed thereafter since smaller holes are better than larger holes since they can be drilled.</p>
+<h4 id="curves-are-approximated-by-polygons">Curves are approximated by polygons</h4>
+<p>STL files only contain meshes composed by flat triangles, so its planar sections can only contain polygonal shapes. For example, a circular hole is approximated by a polygon:</p>
+<div class="figure">
+<img src="images/dimension-errors/polygonal-hole.png" alt="image" />
+<p class="caption">image</p>
+</div>
+<p>Increasing the <strong>number of segments</strong> in your CAD before exporting the STL file will help reducing the error. OpenSCAD users might want to use the <code>polyhole()</code> function developed by <a href="http://hydraraptor.blogspot.it/2011/02/polyholes.html">nophead</a> that calculates the optimal number of segments.</p>
+<h4 id="filament-tends-to-cut-corners">Filament tends to cut corners</h4>
+<p>Since curves are approximated by polygons, there are sharp vertices at their vertices. However, <strong>plastic tends to make rounded corners</strong>, thus reducing the internal area of the hole even more.</p>
+<h4 id="z-wobble">Z wobble</h4>
+<p>Even if the dimensional accuracy of a single layer was correct, several stacked layers might make the hole smaller if they're not exactly aligned. <a href="troubleshooting#z-wobble">Z wobble</a> caused by mechanical issues will reduce hole size to the internal envelope of the stacked layers:</p>
+<div class="figure">
+<img src="images/dimension-errors/z-wobble.png" alt="image" />
+<p class="caption">image</p>
+</div>
+<h4 id="non-regular-filament-section">Non-regular filament section</h4>
+<p>Low-quality and medium-quality filaments are not very regular in diameter. If you measure their diameter along a single meter of them, you'll often find many different values (and many low-quality filaments are even not perfectly round in section). This continuous <strong>variation in diameter</strong> will produce <strong>irregular flow</strong> and the resulting hole will still be the internal envelope of all the layers:</p>
+<div class="figure">
+<img src="images/dimension-errors/irregular-filament.png" alt="image" />
+<p class="caption">image</p>
+</div>
+<h4 id="backlash">Backlash</h4>
+<p>Backlash is a mechanical defect of one or more axes that basically reduces the amount of actual motion whenever a motor inverts its spinning direction. It's generally caused by loose belts. On printers with a moving bed, its axis (usually Y) is more subject to backlash because of inertia. So, <strong>if you get different dimension errors in X and Y, that's caused by backlash</strong>. You'll need to tighten your belt. No software hack can reasonably compensate for a badly assembled printer.</p>
+<h4 id="flow-math">Flow math</h4>
+<p>Okay, all of the above causes do not depend on Slic3r and, when possible, they need to be fixed <strong>before</strong> attempting any software solution.</p>
+<p>That said, the flow math used in Slic3r plays a good role in making correct dimensions, since it tries to guess what the shape of the extruded material will be and how thick the extrusion will result on the horizontal plane given an amount of material. Being an approximation, it carries an error. The usual way to deal with these issues involves tuning the <em>Extrusion Multiplier</em> setting in order to increase/reduce the amount of plastic, thus making extrusions more or less thick. But this will also affect solid surfaces, so it's not the ideal solution.</p>
+<p>For more exact dimensions you need to check the <strong>External Perimeters First</strong> option. Printing external perimeters first will prevent the shift caused by extrudate overlap. On the other hand, printing internal perimeters first hides seams better, so it's your take.</p>
+<p>A new <strong>XY Size Compensation</strong> option was also introduced that allows to grow/shrink object shape in order to compensate for the measured error. Supposing your holes are smaller by 0.1mm, you can just enter -0.05 in this option to get them compensated (negative sign means shrink inwards).</p>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

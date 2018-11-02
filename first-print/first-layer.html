@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – The Important First Layer</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">The Important First Layer</h1>
+</div>
+<p>Before delving into producing the first print it is worthwhile taking a little detour to talk about the importance of getting the first layer right. As many have found through trial and error, if the first layer is not the best it can be then it can lead to complete failure, parts detaching, and warping. There are several techniques and recommendations one can heed in order to minimise the chance of this happening.</p>
+<h4 id="level-bed.">Level bed.</h4>
+<p>Having a level bed is critical. If the distance between the nozzle tip and the bed deviates by even a small amount it can result in either the material not lying down on the bed (because the nozzle is too close and scrapes the bed instead), or the material lying too high from the bed and not adhering correctly.</p>
+<h4 id="higher-temperature.">Higher temperature.</h4>
+<p>The extruder hot-end and bed, if it is heated, can be made hotter for the first layer, thus decreasing the viscosity of the material being printed. As a rule of thumb, an additonal 5° is recommended.</p>
+<h4 id="lower-speeds.">Lower speeds.</h4>
+<p>Slowing down the extruder for the first layer reduces the forces applied to the molten material as it emerges, reducing the chances of it being stretched too much and not adhering correctly. 30% or 50% of the normal speed is recommended.</p>
+<h4 id="correctly-calibrated-extrusion-rates.">Correctly calibrated extrusion rates.</h4>
+<p>If too much material is laid down then the nozzle may drag through it on the second pass, causing it to lift off the bed (particularly if the material has cooled). Too little material may result in the first layer coming loose later in the print, leading either to detached objects or warping. For these reasons it is important to have a well-calibrated extrusion rate as recommended in §[calibration]).</p>
+<h4 id="first-layer-height.">First layer height.</h4>
+<p>A thicker layer height will provide more flow, and consequently more heat, making the extrusion adhere to the bed more. It also gives the benefit of giving more tolerance for the levelness of the bed. It is recommended to raise the first layer height to match the diameter of the nozzle, e.g. a first layer height of 0.35mm for a 0.35mm nozzle. Note: The first layer height is set this way automatically in simple mode.</p>
+<h4 id="fatter-extrusion-width.">Fatter extrusion width.</h4>
+<p>The more material touching the bed, the better the object will adhere to it, and this can be achieved by increasing the extrusion width of the first layer, either by a percentage or a fixed amount. Any spaces between the extrusions are adjusted accordingly.</p>
+<p>A value of approximately 200% is usually recommended, but note that the value is calculated from the layer height and so the value should only be set if the layer height is the highest possible. For example, if the layer height is 0.1mm, and the extrusion width is set to 200%, then the actual extruded width will only be 0.2mm, which is smaller than the nozzle. This would cause poor flow and lead to a failed print. It is therefore highly recommended to combine the high first layer height technique recommended above with this one. Setting the first layer height to 0.35mm and the first extrusion width to 200% would result in a nice fat extrusion 0.65mm wide.</p>
+<h4 id="bed-material.">Bed material.</h4>
+<p>Many options exist for the material to use for the bed, and preparing the right surface can vastly improve first layer adhesion.</p>
+<p>PLA is more forgiving and works well on PET, Kapton, or blue painters tape.</p>
+<p>ABS usually needs more cajoling and, whilst it can print well on PET and Kapton, there are reports that people have success by applying hairspray to the bed before printing. Others have reported that an ABS slurry (made from dissolving some ABS in Acetone) thinly applied can also help keep the print attached.</p>
+<h4 id="no-cooling.">No cooling.</h4>
+<p>Directly related with the above, it makes no sense to increase the temperature of the first layer and still have a fan or other cooling mechanism at work. Keeping the fan turned off for the first few layers is generally recommended.</p>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

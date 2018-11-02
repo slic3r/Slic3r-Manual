@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – Working with Models</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">Working with Models</h1>
+</div>
+<p>Yet another step lies between now and the first print - a model has to found and then sliced.</p>
+<h2 id="model-formats">Model Formats</h2>
+<p>Slic3r accepts the following file types. A more detailed description of the formats is given in the Topics section.</p>
+<ul>
+<li><p>STereoLithography (STL) files can come from a wide variety of sources and are now a de facto standard in 3D printing. The files simply describe the surface geometry of a 3D object without any additional information (such as colour or material), and it is this simplicity that has probably made the format ubiquitous.</p></li>
+<li><p>Wavefront OBJ files are an open format originally used in an animation application from Wavefront Technologies, but has since been adopted by the wider 3D modelling community. It is similar to the STL format.</p></li>
+<li><p>Additive Manufacturing File Format (AMF) was developed in response to the limited nature of the STL format. In addition to describing the geometry of the 3D model it can also describe colours and materials, as well as more complex attributes, such as gradient mixes and multiple object arrangements (constellations). Whilst the format is deemed a standard it has yet to be widely adopted in the 3D maker community.</p></li>
+<li><p><a href="https://3mf.io/">3MF</a> is a XML-based file format, similar to AMF in features and capabilities. It is supported natively by Windows 3D Builder.</p></li>
+</ul>
+<h2 id="finding-models">Finding Models</h2>
+<p>The 3D model files may come from an online repository, such as Thingiverse<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> or GrabCAD<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, or be created from a CAD program, such as FreeCAD<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>, Sketchup<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>, or OpenSCAD<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>, or an online CAD tool such as Shapesmith<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a>.</p>
+<p>You may wish to view the files before slicing and there are many free applications available, one of which is Meshlab<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a> - a comprehensive tool for viewing and working with 3D files.</p>
+<div class="figure">
+<img src="images/working-with-models/shapesmith.png" title="fig:" alt="Shapesmith online CAD tool." />
+<p class="caption">Shapesmith online CAD tool.</p>
+</div>
+<h2 id="working-with-plater">Working with Plater</h2>
+<p>Slic3r has a tool, called Plater, which allows one or more models to be loaded and arranged before being sliced.</p>
+<div class="figure">
+<img src="images/working-with-models/plater.png" title="fig:" alt="Plater" />
+<p class="caption">Plater</p>
+</div>
+<p>Once you have acquired a model, drag it onto the Plater window (or use the Add button below the file list) to load it into Slic3r. In the figure below, the traditional RepRap Minimug<a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a> is loaded, and is viewed from above. The ring around the model is a skirt - a single perimeter, several millimeters away from the model, which is extruded first. This is useful in making sure the plastic is flowing smoothly from the nozzle when the model is starting to be printed.</p>
+<div class="figure">
+<img src="images/working-with-models/minimug_model.png" title="fig:" alt="Minimug model." />
+<p class="caption">Minimug model.</p>
+</div>
+<div class="figure">
+<img src="images/working-with-models/plater_model_loaded.png" title="fig:" alt="STL file loaded." />
+<p class="caption">STL file loaded.</p>
+</div>
+<p>The model can be repositioned by dragging the representation of it on the left of the screen around the bed. Note that the dimensions of the bed should match your printer, as given during the initial configuration above.</p>
+<p>You can move a selected instance using keyboard. * On MacOS and Linux: You can use either <kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>←</kbd>, <kbd>→</kbd> or <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd>. * On Windows: You can use <strong>only</strong> <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd>.</p>
+<div class="figure">
+<img src="images/working-with-models/rsz_2d_plater.png" title="fig:" alt="2D Plater View." />
+<p class="caption">2D Plater View.</p>
+</div>
+<p>You are also able to configure the displacement or nudge value. To change the nudge value (it's 1mm by default): * Press <kbd>Ctrl</kbd> or <kdb>⌘ Command</kbd> + <kbd>,</kbd>.</p>
+<p>In the &quot;2D plater nudge value&quot; box you can assign integer values as well as decimal values (the minimum value is 0.1 mm).</p>
+<div class="figure">
+<img src="images/working-with-models/rsz_2d_nudge_config.png" title="fig:" alt="2D Nudge Value Configuration." />
+<p class="caption">2D Nudge Value Configuration.</p>
+</div>
+<p>You can use the select prev. or select next object shortcuts <kbd>Ctrl</kbd> or <kbd>⌘ Command</kbd> + <kbd>→</kbd> or <kbd>←</kbd>. If the object selected has more than 1 instance, the first instance will be the selected one by default and it will be colored red.</p>
+<div class="figure">
+<img src="images/working-with-models/rsz_2d_plater_instances.png" title="fig:" alt="Multiple Instanes of Same Object in 2D plater view." />
+<p class="caption">Multiple Instanes of Same Object in 2D plater view.</p>
+</div>
+<p>On the right-hand side is the list of currently loaded files. The buttons along the top of the file list allow you to arrange the models.</p>
+<ul>
+<li><p><strong>More/Less</strong> - Adjust how many copies should be printed.</p></li>
+<li><p><strong>45°/Rotate</strong> - Rotate the selected model around the Z axis, either in 45° increments clockwise or counter-clockwise, or by a given amount.</p></li>
+<li><p><strong>Scale</strong> - Increase or decrease the size of the printed model.</p></li>
+<li><p><strong>Split</strong> - Divides a model which consists of more than one part into it’s constituent parts, allowing each one to be arranged individually.</p></li>
+</ul>
+<p>The buttons along the bottom of the file list allow you to add, remove, auto-arrange, or export the models.</p>
+<ul>
+<li><p><strong>Add</strong> - Opens a file dialog to add a model to the plater, as an alternative to dropping a file directly.</p></li>
+<li><p><strong>Delete/Delete All</strong> - Remove one or all models from the plater.</p></li>
+<li><p><strong>Autoarrange</strong> - Attempt to arrange the models to give an optimal layout.</p></li>
+<li><p><strong>Export G-code</strong> - Starts slicing the model and produces a G-Code file.</p></li>
+<li><p><strong>Export STL</strong> - Save the current set of models as a single STL file.</p></li>
+</ul>
+<h2 id="cleaning-stls">Cleaning STLs</h2>
+<p>If the 3D mesh described in the model contains holes, or edges are misaligned (known as being non-manifold), then Slic3r may have problems working on it. Slic3r will attempt to fix any problems it can, but some problems are out of its reach. If the application complains that a model cannot be sliced correctly then there are several options available: see the chapter about Repairing Models.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="http://www.thingiverse.com" class="uri">http://www.thingiverse.com</a><a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p><a href="http://grabcad.com" class="uri">http://grabcad.com</a><a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p><a href="http://sourceforge.net/projects/free-cad" class="uri">http://sourceforge.net/projects/free-cad</a><a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p><a href="http://www.sketchup.com" class="uri">http://www.sketchup.com</a><a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p><a href="http://www.openscad.org" class="uri">http://www.openscad.org</a><a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p><a href="http://shapesmith.net" class="uri">http://shapesmith.net</a><a href="#fnref6">↩</a></p></li>
+<li id="fn7"><p><a href="http://www.meshlab.org" class="uri">http://www.meshlab.org</a><a href="#fnref7">↩</a></p></li>
+<li id="fn8"><p><a href="http://www.thingiverse.com/thing:18357" class="uri">http://www.thingiverse.com/thing:18357</a><a href="#fnref8">↩</a></p></li>
+</ol>
+</div>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – Command Line Usage</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">Command Line Usage</h1>
+</div>
+<p>Almost all Slic3r features can be accessed from the command line. You can thus call Slic3r as part of a script or install it in an embedded system or headless server.</p>
+<p>To get the full listing and reference of available command line switches, just run:</p>
+<pre><code>slic3r --help</code></pre>
+<p><strong>Note:</strong> you might need to replace <code>slic3r</code> with the name and/or path to the Slic3r executable which might be:</p>
+<ul>
+<li><code>slic3r-console.exe</code> on Windows</li>
+<li><code>slic3r</code> on GNU/Linux</li>
+<li><code>Slic3r.app/Contents/MacOS/slic3r</code> on MacOS X</li>
+<li><code>perl slic3r.pl</code> on all platforms if you're running from git/source code</li>
+</ul>
+<h2 id="generating-g-code">Generating G-code</h2>
+<p>In order to slice a model into G-code you just need to supply the STL file along with any config option you'd like to use:</p>
+<pre><code>slic3r my_model.stl --layer-height 0.2</code></pre>
+<p>This will generate a file named <em>my_model.gcode</em> in the same directory as the input STL file. You may want to specify a custom output path:</p>
+<pre><code>slic3r my_model.stl --layer-height 0.2 --output /path/to/output.gcode</code></pre>
+<p>The argument for <code>--output</code> can also be a directory; in that case the file will follow the automatic naming scheme (which you can override using the <code>--output-filename-format</code> option; see manual chapter about placeholders).</p>
+<h3 id="options">Options</h3>
+<p>To get the full listing, reference and defaults of available command line switches, just run:</p>
+<pre><code>slic3r --help</code></pre>
+<p>Most of the options accept an argument, like <code>--layer-height 0.2</code> or <code>--perimeters 3</code>. Howevere there are some boolean options that work as simple flags, like <code>--wipe</code> or <code>--avoid-crossing-perimeters</code>. To negate those options you just need to prepend <code>--no-</code> to them (as in <code>--no-wipe</code> or <code>--no-avoid-crossing-perimeters</code>).</p>
+<p>Some options, including the ones related to multiple extruders, accept multiple values. You can just append them multiple times:</p>
+<pre><code>slic3r --infill-extruder 2 --nozzle-diameter 0.35 --nozzle-diameter 0.5</code></pre>
+<h3 id="configuration">Configuration</h3>
+<p><strong>Note:</strong> the print/filament/printer presets defined in the graphical interface are completely ignored when running in command line mode. Slic3r will always default to its factory default settings.</p>
+<p>You'll need to export your desired configuration with the <em>Export Config...</em> command, which is located in the <em>File</em> menu. It will prompt you to save a <code>.ini</code> file that you can load from command line this way:</p>
+<pre><code>slic3r my_model.stl --load my_config.ini</code></pre>
+<p>You can override single options by appending them as command line switches:</p>
+<pre><code>slic3r my_model.stl --load my_config.ini --fill-pattern concentric</code></pre>
+<p>You can also create a config file from command line:</p>
+<pre><code>slic3r --nozzle-diameter 0.35 --filament-diameter 2.85 \
+    --temperature 185 --first-layer-temperature 195 --layer-height 0.2 \
+    --save my_config.ini</code></pre>
+<p>If you're an advanced user you can split your configuration into multiple <em>.ini</em> files and load them by appending multiple <code>--load</code> switches.</p>
+<p>One more way to use the print/filament/printer presets on command line is launching Slic3r with the <code>--autosave</code> option:</p>
+<pre><code>slic3r --autosave my_config.ini</code></pre>
+<p>The above command will launch the graphical interface of Slic3r but will automatically export the current configuration to the specified file. Thus, the last used presets will be remembered whenever you <code>--load</code> that file.</p>
+<h3 id="processing-multiple-input-files">Processing multiple input files</h3>
+<p>If you supply multiple input files Slic3r will process them separately, by generating a distinct G-code file for each one:</p>
+<pre><code>slic3r model1.stl model2.stl model3.stl</code></pre>
+<p>The command above will generate <em>model1.gcode</em>, <em>model2.gcode</em>, <em>model3.gcode</em>.</p>
+<p>If you want to process multiple files as a single print job, you can use the <code>--merge</code> (or <code>-m</code>) option:</p>
+<pre><code>slic3r -m model1.stl model2.stl model3.stl</code></pre>
+<p>This will only generate a file named <em>model1.gcode</em> (but you can use the <code>--output</code> option described above to set a custom name) containing all three objects. Note that auto-arranging currently works best when all objects have similar sizes.</p>
+<h3 id="positioning-objects-in-the-g-code-coordinates">Positioning objects in the G-code coordinates</h3>
+<p>While in the graphical interface you can freely position your objects in the bed, command line provides two ways for telling position(s) to Slic3r:</p>
+<ol style="list-style-type: decimal">
+<li><p>Use the <code>--print-center X,Y</code> option for defining a point in G-code coordinates and Slic3r will center the print around that point:</p>
+<p>slic3r my_model.stl --print-center 40,40</p></li>
+</ol>
+<p>(By default, the center point is set to 100,100.)</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>If you trust the coordinates of your STL file(s) and they coincide with your machine's print bed, you can use <code>--dont-arrange</code>: Slic3r will leave the input locations untouched.</p>
+<p>slic3r my_model.stl --dont-arrange</p></li>
+</ol>
+<p>Note that the bed shape configured in the graphical interface is ignored when performing command line slicing, as it only serves as a visual guidance.</p>
+<h2 id="repairing-models">Repairing models</h2>
+<p>Slic3r can be used to repair files from command line:</p>
+<pre><code>slic3r --repair my_model.stl</code></pre>
+<p>This will generate a file named <em>my_model_fixed.obj</em> in the same directory as the original one. This output filename is not customizable at the moment, as well as the OBJ output format which is preferred over STL because it will keep the model manifold by avoiding numerical issues frequently happening with STL. Note that Slic3r and most 3D applications are able to read OBJ files.</p>
+<p>The <code>--info</code> switch can be used to get information about a file:</p>
+<pre><code>slic3r --info cube.stl
+Info about cube.stl:
+  size:              x=20.000 y=20.000 z=20.000
+  number of facets:  12
+  number of shells:  1
+  volume:            8000
+  needed repair:     no</code></pre>
+<h2 id="cutting-models">Cutting models</h2>
+<p>Slic3r can be used to repair models from command line:</p>
+<pre><code>slic3r --cut 10.2 my_model.stl</code></pre>
+<p>This will generate two files named <em>my_model_lower.stl</em> and <em>my_model_upper.stl</em> in the same directory as the original model.</p>
+<p><strong>Note:</strong> the object will be automatically placed on the <em>z = 0</em> plane before cutting, so the argument for the <code>--cut</code> option is relative to the object's bottom, and not to the original coordinate system.</p>
+<h2 id="embedding-slic3r">Embedding Slic3r</h2>
+<p>The following options can be useful for embedding Slic3r into host applications:</p>
+<ul>
+<li><code>--no-plater</code> will launch Slic3r in a configuration-only mode, thus avoiding confusion if the host application provides its own model loading dialog;</li>
+<li><code>--autosave</code> will automatically export the last selected config to a specified file (see the above paragraph about <a href="#configuration">Configuration</a> for its usage);</li>
+<li><code>--gui-mode</code> can take the <code>simple</code> or <code>expert</code> arguments, and will force Slic3r to launch in the specified mode regardless of the Preferences setting.</li>
+<li><code>--datadir</code> followed by the path to a directory will tell Slic3r to use that directory for storing and reading its configuration instead of the default system preferences directory. (See the page about <a href="/configuration-organization/configuration-organization">configuration organization</a> for more details.)</li>
+</ul>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

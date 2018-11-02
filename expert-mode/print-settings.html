@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – Print Settings</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">Print Settings</h1>
+</div>
+<p>This page will provide an overview of the available configuration settings in Slic3r. Every configuration option has a tooltip and it is recommended to read those tooltips.</p>
+<h2 id="print-settings">Print Settings</h2>
+<p>The <code>Print Settings</code> tab provides the opportunity to change settings related to the actual print. Whereas the other tabs are changed rarely, the settings on this tab will be modified regularly, possibly for each model printed.</p>
+<div class="figure">
+<img src="images/print_settings_1.png" title="fig:" alt="Print Settings: Layers and Perimeters" />
+<p class="caption">Print Settings: Layers and Perimeters</p>
+</div>
+<h4 id="general.">General.</h4>
+<p><code>Layer height</code> is the thickness of each layer, and it is the step along the vertical axis taken before extruding a new layer atop the previous one. There are several factors that influence how high each layer should be:</p>
+<ul>
+<li><p><strong>Desired resolution</strong> - Lower layer height should result in prints with less noticeable ribs or bands, as each layer is smaller. Aesthetics plays a role here, but also the type of model, for example, a mechanical part may not need such a high resolution finish, whereas a presentation piece may do so.</p></li>
+<li><p><strong>Print speed</strong> - Shorter layers will result in smoother prints but each print will take longer, simply because the extruder must trace the pattern more times. A later goal will be to strike a balance between layer height, the speed of the printer, and the quality of the resulting print.</p></li>
+</ul>
+<p><code>Perimeters</code> defines the minimum number of vertical shells (i.e. walls) a print will have. Unless the model requires single width walls it is generally recommended to have a minimum of two perimeters as this gives some insurance that if a section of the perimeter is not printed correctly then the second perimeter will help cover it.</p>
+<p>The upper and lowermost layers that sandwich the model are filled with a <code>Solid layers</code> pattern. For the bottom layers the important factor to consider is how the surface will look should there be a mistake whilst laying down the first layer, and for this reason it is recommended to have at least two bottom layers.</p>
+<p>A similar consideration is required for the top layers. Because the intermediate layers are likely to be filled with a pattern set less than 100% then the covering layers will have to bridge this pattern and this can require more than one pass to cover completely.</p>
+<div class="figure">
+<img src="images/bad_top_infill.jpg" title="fig:" alt="An example of insufficient top layers." />
+<p class="caption">An example of insufficient top layers.</p>
+</div>
+<p>Another tip to consider: Setting the top solid layer to zero, and setting the infill also to zero, will result in a hollow receptacle, ideal for turning models into vases<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> for example. Here manipulating the settings within Slic3r can be used to generate different kinds of prints, and not only be used to control surface accuracy.</p>
+<div class="figure">
+<img src="images/solid_layers_vases.png" title="fig:" alt="Creating a vase from a solid model." />
+<p class="caption">Creating a vase from a solid model.</p>
+</div>
+<h4 id="infill.">Infill.</h4>
+<div class="figure">
+<img src="images/print_settings_2.png" title="fig:" alt="Print Settings: Infill" />
+<p class="caption">Print Settings: Infill</p>
+</div>
+<p><code>Fill density</code> is from 0% to 100%. it makes no sense to 100% fill the model with plastic, this would be a waste of material and take a long time. Instead, most models can be filled with less material which is then sandwiched between layers filled at 100% (see <code>Solid layers</code> above).</p>
+<p>A density value of 40% is enough to give almost all models good mechanical strength. A value of 20% is usually the minimum required to support flat ceilings.</p>
+<p>Slic3r offers several fill patterns which will be discussed in more depth in section - Infill Choices. Choosing a <code>Fill pattern</code> will depend on the kind of model, the desired structural strength, print speed, and personal taste. The more exotic fill methods are usually too slow and unnecessarily complex for most use cases, and so most of the time the infill pattern is either <code>rectilinear</code>, <code>line</code>, or <code>honeycomb</code>. Honeycomb gives the most strength but is slower than both rectilinear or line.</p>
+<h5 id="infill-patterns">Infill Patterns</h5>
+<p>There are several considerations when choosing an infill pattern: object strength, time and material, personal preference. It can be inferred that a more complex pattern will require more moves, and hence take more time and material.</p>
+<p>Slic3r offers several infill patterns, four regular, and three more exotic flavours. The numbers given in brackets below each figure are a rough estimate of material used and time taken for a simple 20mm cube model<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. Note that this is only indicative, as model complexity and other factors will affect time and material.</p>
+<div class="figure">
+<img src="images/infill_line.png" title="fig:" alt="Infill pattern: Line (344.51mm / 5m:20s)" />
+<p class="caption">Infill pattern: Line (344.51mm / 5m:20s)</p>
+</div>
+<div class="figure">
+<img src="images/infill_rectilinear.png" title="fig:" alt="Infill pattern: Rectilinear (350.57mm / 5m:23s)" />
+<p class="caption">Infill pattern: Rectilinear (350.57mm / 5m:23s)</p>
+</div>
+<div class="figure">
+<img src="images/infill_concentric.png" title="fig:" alt="Infill pattern: Concentric (351.80mm / 5m:30s)" />
+<p class="caption">Infill pattern: Concentric (351.80mm / 5m:30s)</p>
+</div>
+<div class="figure">
+<img src="images/infill_honeycomb.png" title="fig:" alt="Infill pattern: Honeycomb (362.73mm / 5m:39s)" />
+<p class="caption">Infill pattern: Honeycomb (362.73mm / 5m:39s)</p>
+</div>
+<div class="figure">
+<img src="images/infill_hilbertcurve.png" title="fig:" alt="Infill pattern: Hilbert Curve (332.82mm / 5m:28s)" />
+<p class="caption">Infill pattern: Hilbert Curve (332.82mm / 5m:28s)</p>
+</div>
+<div class="figure">
+<img src="images/infill_archimedeanchords.png" title="fig:" alt="Infill pattern: Archimedean Chords (333.66mm / 5m:27s)" />
+<p class="caption">Infill pattern: Archimedean Chords (333.66mm / 5m:27s)</p>
+</div>
+<div class="figure">
+<img src="images/infill_octagramspiral.png" title="fig:" alt="Infill pattern: Octagram Spiral (318.63mm / 5m:15s)" />
+<p class="caption">Infill pattern: Octagram Spiral (318.63mm / 5m:15s)</p>
+</div>
+<p>Certain model types are more suited for a particular pattern, for example organic versus mechanical types. Figure shows how a honeycomb fill may suit this mechanical part better because each hexagon bonds with the same underlying pattern each layer, forming a strong vertical structure.</p>
+<div class="figure">
+<img src="images/complex_object_infill_comparison.png" title="fig:" alt="Infill pattern comparison in a complex object. Left to Right: honeycomb, line" />
+<p class="caption">Infill pattern comparison in a complex object. Left to Right: honeycomb, line</p>
+</div>
+<p>Most models require only a low density infill, as providing more than, say, 50% will produce a very tightly packed model which uses more material than required. For this reason a common range of patterns is between 10% and 30%, however the requirements of the model will determine which density is best. Figure shows how the patterns change as the density increases.</p>
+<div class="figure">
+<img src="images/infills.png" title="fig:" alt="Infill patterns at varying densities. Left to Right: 20%,40%,60%,80%. Top to Bottom: Honeycomb, Concentric, Line, Rectilinear, Hilbert Curve, Archimedean Chords, Octagram Spiral" />
+<p class="caption">Infill patterns at varying densities. Left to Right: 20%,40%,60%,80%. Top to Bottom: Honeycomb, Concentric, Line, Rectilinear, Hilbert Curve, Archimedean Chords, Octagram Spiral</p>
+</div>
+<p>There are several 3D patterns available for 3d infill as well.</p>
+<ul>
+<li><p><code>Cubic</code> infill is a 3D cube pattern with each cube stacked on corners. <img src="images/infill_cubic.png" title="fig:" alt="Infill pattern: Cubic" /></p></li>
+<li><p><code>3D Honeycomb</code> is a true honeycomb pattern. <img src="images/infill_3dhoney.png" title="fig:" alt="Infill pattern: 3D Honeycomb" /></p></li>
+</ul>
+<h5 id="infill-optimization">Infill Optimization</h5>
+<p>Slic3r contains several advanced infill settings which can help produce better extrusions.</p>
+<ul>
+<li><p><code>Infill every n layers</code> - Will produce sparse vertical infill by skipping a set number of layers. This can be used to speed up print times where the missing infill is acceptable.</p></li>
+<li><p><code>Only infill where needed</code> - Slic3r will analyse the model and choose where infill is required in order to support internal ceilings and overhangs. Useful for reducing time and materials.</p></li>
+<li><p><code>Solid infill every n layers</code> - Forces a solid fill pattern on the specified layers. Zero will disable this option.</p></li>
+<li><p><code>Fill angle</code> - By default the infill pattern runs at 45° to the model to provide the best adhesion to wall structures. Infill extrusions that run adjacent to perimeters are liable to de-laminate under stress. Some models may benefit from rotating the fill angle to ensure the optimal direction of the extrusion.</p></li>
+<li><p><code>Solid infill threshold area</code> - Small areas within the model are usually best off being filled completely to provide structural integrity. This will however take more time and material, and can result in parts being unnecessarily solid. Adjust this option to balance these needs.</p></li>
+<li><p><code>Only retract when crossing perimeters</code> - Retracting, to prevent ooze, is unnecessary if the extruder remains within the boundaries of the model. Care should be taken if the print material oozes excessively, as not retracting may result in enough material loss to affect the quality of the subsequent extrusion. However, most modern printers and materials rarely suffer from such extreme ooze problems.</p></li>
+<li><p><code>Infill before perimeters</code> - Reverses the order in which the layer is printed. Usually the perimeter is laid down initially, followed by the infill, and this is usually the preferable as the perimeter acts as a wall containing the infill.</p></li>
+</ul>
+<h4 id="support-material.">Support material.</h4>
+<div class="figure">
+<img src="images/print_settings_4.png" title="fig:" alt="Print Settings: Support Material" />
+<p class="caption">Print Settings: Support Material</p>
+</div>
+<p>Printing a model from the bottom up, as with FDM, means that any significant overhangs will be printed in the air, and most likely droop or not print correctly. Choosing support material (<code>Generate support material</code>) will add additional structures around the model which will build up to then support the overhanging part. The <code>Pattern spacing</code> option determines how dense the support material is printed.</p>
+<div class="figure">
+<img src="images/support_example.jpg" title="fig:" alt="An example of an object printed with support material." />
+<p class="caption">An example of an object printed with support material.</p>
+</div>
+<p>Tip: It is sometimes worth considering altering the orientation of the model in order to possibly reduce overhangs.</p>
+<p><code>Raft layers</code> will add additional layers underneath the model and stems from the early days of 3D printing. The following use cases are appropriate for raft usage: - Print is using a material that usually requires a heated bed to not warp and there is no heated bed. - The bed is not very flat. A raft then absobes the variance in Z for the first layer. - The part has a very small contact area with the bed. Usually a wide brim is a better solution.</p>
+<p>Otherwise, rafts are generally not recommended. The raft also requires post-processing to remove it.</p>
+<p>Rafts are classified as support material, while the top layer of the raft (the one directly underneath the model) is interface material and as such uses those settings.</p>
+<h4 id="speed">Speed</h4>
+<div class="figure">
+<img src="images/print_settings_5.png" title="fig:" alt="Print Settings: Speed" />
+<p class="caption">Print Settings: Speed</p>
+</div>
+<p>There are two general categories of speeds: print moves and non-print moves.</p>
+<p>For print moves, each type of printing move can be configured to have a different speed, either in absolute terms (mm/s) or as a percentage of the the more general move.</p>
+<ul>
+<li><p><code>Perimeters</code> - The outline of the model may benefit from being printed slightly slower so that the outside skin of the print has fewer blemishes.</p>
+<ul>
+<li><p><code>Small perimeters</code> - Meant for holes, islands and fine details, a slower speed here is recommended.</p></li>
+<li><p><code>External perimeters</code> - A slightly slower value may ensure cleaner surfaces.</p></li>
+</ul></li>
+<li><p><code>Infill</code> - As the infill is hidden this can be extruded a little faster. Take care though not to go too fast as higher speeds results in thinner extrusions, and this may affect how the extrusions bond.</p>
+<ul>
+<li><p><code>Solid infill</code> - The bottom of the model, and any additional solid layers is usually slightly slower than infill but faster than perimeters.</p></li>
+<li><p><code>Top solid infill</code> - Allow time for the extrusion to cleanly cover the previous top layers and result in a tidy top surface. the last few layers should have bridged the infill structure nicely, preparing the way for a neat finish.</p></li>
+<li><p><code>Gap fill</code> - Filling in small gaps results in the extruder quickly oscillating and the resulting shaking and resonance could have a detrimental affect on the printer. A smaller value here can guard against this. Gap fill may be disabled in the 'Infill' settings.</p></li>
+</ul></li>
+<li><p><code>Bridges</code> - Having the extrusion span distances depends on the material and cooling. Going too slow will result in sagging, too fast will result in broken strands. Experimentation is the key here, but generally bridging runs slower than perimeters.</p></li>
+<li><p><code>Support material</code> - These are used if any support material (including rafts and brims) is included in the print. Usually it is printed as thick as possible, so a high speed may cause flow rate issues.</p></li>
+</ul>
+<p>The one non-print move is travel moves.</p>
+<ul>
+<li><code>Travel</code> - The jump between the end of one extrusion and the next should usually be performed as quickly as the printer will allow in order to minimise any mess caused by material oozing from the nozzle.</li>
+</ul>
+<p>All print moves on the first layer may be changed with the provided modifier, either as a flat percentage or a fixed speed.</p>
+<h5 id="acceleration">Acceleration</h5>
+<p>If your printer firmware supports acceleration control, you can enter in values here to change acceleration for the different general print moves.</p>
+<h5 id="autospeed">Autospeed</h5>
+<p>If you set any print speed value to <code>auto</code>, configure the fastest printing speed you want for this print and Slic3r will choose speeds itself in an attempt to maintain constant pressure in the extruder.</p>
+<p>Setting <code>Max volumetric speed</code> will tell Slic3r to not exceed the given flow rate for any printing moves. Set it to 0 to disable this feature.</p>
+<p>There are 2 experimental methods to derive the max extrusion rate:</p>
+<ol style="list-style-type: decimal">
+<li>Print fast and use live tuning via M221 until you see or feel the filament slipping in the extruder (easy on a standard UM, maybe more difficult on others, and it heavily depends on the extruder mechanism how much pressure it can deliver without slipping).</li>
+<li>Perform the following extruder calibration routine (either manually in pronterface, or with some to-be-done tool): Heat the printe's hotend up a middle of the road temp (i.e. 210C for PLA), and push i.e. 20mm filament through the nozzle at a given speed (steps/sec or mm/sec), starting with i.e. 1mm/s, and observe whether or not the filament was slipping. If not, continue increasing the speed by 20%, and test again. If so, this value indicates a maximum extrusion rate for this temperature has been reached.</li>
+</ol>
+<h5 id="recommendations">Recommendations</h5>
+<p>Once the printer is reliably producing good quality prints it may be desirable to increase the speed. Doing this provides several benefits, the most obvious of which is that the results are produced quicker, but also faster print times can be utilised in producing more layers, i.e. lower layer height, thus improving perceived print quality. An additional benefit is that a faster travel movement, between extrusions, can reduce the effects of oozing.</p>
+<p>The best approach is to increment the various speed parameters in small steps and observe the effect each change has on print quality. Travel speed is a safe starting point, and it is not unrealistic to attain speeds of up to 250mm/s (if your printer can handle it). Adjusting the speed of perimeters, infill is available in simple mode, and the general rule is to have the perimeter go a little slower than the infill in order to reduce possible blemishes on the surface (infill can be faster because slight gaps will not matter as much).</p>
+<h4 id="skirt-and-brim">Skirt and Brim</h4>
+<div class="figure">
+<img src="images/print_settings_3.png" title="fig:" alt="Print Settings: Skirt and Brim" />
+<p class="caption">Print Settings: Skirt and Brim</p>
+</div>
+<h5 id="brim">Brim</h5>
+<p><code>Brim width</code> is used to add more perimeters to the first layer, as a base flange, in order to provide more surface area for the print to stick to the bed with in order to reduce warping (see §). The brim is then cut away once the print is finished and removed from the bed. <code>Interior brim width</code> adds a brim inside of holes in the print.</p>
+<div class="figure">
+<img src="images/brim.jpg" title="fig:" alt="An example of brim." />
+<p class="caption">An example of brim.</p>
+</div>
+<h5 id="skirt">Skirt</h5>
+<p>The <code>Skirt</code> setting adds an extrusion a short distance away from the perimiter of the object. This can ensure that the material is flowing smoothly from the extruder before it starts on the model proper.</p>
+<ul>
+<li><p><code>Loops</code> - How many circuits should be completed before starting on the model. One loop is usually sufficient.</p></li>
+<li><p><code>Distance from object</code> - The millimeters between the object and the skirt. The default of 6mm is usually sufficient.</p></li>
+<li><p><code>Skirt height</code> - The number of layers to lay down a skirt for. For ensuring the material is flowing smoothly, one layer is sufficient, however the skirt function can also be used to build walls around the object in case it should be protected from draughts.</p></li>
+<li><p><code>Minimum extrusion length</code> - Dictates a minimum number of millimeters that the skirt should be, should the loop around the object not be enough.</p></li>
+</ul>
+<h4 id="extrusion-width">Extrusion Width</h4>
+<div class="figure">
+<img src="images/print_settings_advanced.png" title="fig:" alt="Extrusion widths options." />
+<p class="caption">Extrusion widths options.</p>
+</div>
+<p>One reason for modifying the extrusion width has already been discussed: increasing first layer extrusion width in order to improve bed adhesion (see p.). There are some further cases where it may be beneficial to modify extrusion widths.</p>
+<ul>
+<li><p><code>Perimeter</code> - A lower value will produce thinner extrusions which in turn will produce more accurate surfaces.</p></li>
+<li><p><code>Infill</code> and <code>Solid Infill</code> - A thicker extrusion for infill will produce faster prints and stronger parts.</p></li>
+<li><p><code>Top infill</code> - A thinner extrusion will improve surface finish and ensure corners are tightly filled.</p></li>
+<li><p><code>Support material</code> - As with the infill options, a thicker extrusion will speed up print time.</p></li>
+</ul>
+<p>It is important to remember that if the extrusion width is expressed as a percentage then this is computed from the <code>Layer height</code> property, and not the <code>Default extrusion width</code> setting.</p>
+<h4 id="g-code-output-options">G-Code Output Options</h4>
+<div class="figure">
+<img src="images/print_settings_output.png" title="fig:" alt="Print Settings: Output Options" />
+<p class="caption">Print Settings: Output Options</p>
+</div>
+<h5 id="sequential-printing.">Sequential Printing.</h5>
+<p>This feature allows to compose a plate of objects but have the printer complete each one individually before going back to Z = 0 and starting with the next one. See the section about Sequential Printing in the Advanced Topics chapter.</p>
+<h5 id="output-file-options">Output File Options</h5>
+<ul>
+<li><code>Verbose G-Code</code> turns on extra comments to document the types of print moves in the output G-Code. Very useful for debugging.</li>
+<li><code>Output filename format</code> describes the general format for how Slic3r automatically names export G-Code files. All of the usual variables are supported here.</li>
+</ul>
+<h5 id="post-processing-scripts">Post-Processing Scripts</h5>
+<p>Post-processing scripts are a powerful way to modify output G-Code after the slicing process has completed and as such have their own section in Advanced Topics.</p>
+<h4 id="shortcuts">Shortcuts</h4>
+<div class="figure">
+<img src="images/print_settings_shortcuts.png" title="fig:" alt="Print Settings: Shortcuts" />
+<p class="caption">Print Settings: Shortcuts</p>
+</div>
+<p>For configuration options that you modify often, Slic3r provides a way to pre-register those options so that they are configurable from the plater. Simply check a box for each.</p>
+<h5 id="profile-compatibility">Profile Compatibility</h5>
+<div class="figure">
+<img src="images/print_settings_compatible.png" title="fig:" alt="Print Settings: Compatible Printers" />
+<p class="caption">Print Settings: Compatible Printers</p>
+</div>
+<p>Use this dialog to mark which printer profile(s) this print profile can be used with. The default is to &quot;All&quot; printer profiles.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>http://slic3r.org/blog/tip-printing-vases<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Taken from http://gcode.ws<a href="#fnref2">↩</a></p></li>
+</ol>
+</div>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

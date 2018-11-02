@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – </title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<h1 id="slic3r-supported-file-formats">Slic3r Supported File Formats</h1>
+<p>Slic3r supports STL, OBJ, AMF formats. This document shows what each format carries and what is supported by Slic3r.</p>
+<h2 id="stl">STL</h2>
+<ul>
+<li>Slic3r fully supports STL binary and Ascii files.</li>
+<li>STL doesn't support color, materials, metadata or other common CAD model attributes. Most of those attributes are not needed for 3D printing.</li>
+<li>One of the biggest disadvantages in STL format that it doesn't contain a list of all the vertices indices as all vertices are defined in their facets. This problem appear became obvious when you are trying to find whether two facets are neighbors or not, all you can is to compare between vertices numerically which of course having rounding errors.</li>
+</ul>
+<h2 id="obj">OBJ</h2>
+<ul>
+<li>Slic3r supports OBJ file formats.</li>
+<li>OBJ is a simple data format carrying the 3D geometry of the model (its vertices, vertex normals, meshes and UV position of each texture coordinate vertex)</li>
+<li>OBJ materials are stored in external .mtl files. However, Materials in OBJ format carry information about the color of the facets, their textures, and attributes of a surface according to <a href="https://en.wikipedia.org/wiki/Phong_reflection_model">Phong reflection model</a> and those attributes are not used in Slic3r as they say nothing about the interior of the object.</li>
+</ul>
+<h3 id="what-is-supported-by-slic3r-when-readingwriting-obj-files">What is supported by Slic3r when reading/writing OBJ files:</h3>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Supported in Slic3r</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Materials</td>
+<td align="center">NO</td>
+</tr>
+<tr class="even">
+<td>Textures and .mtl files</td>
+<td align="center">NO</td>
+</tr>
+</tbody>
+</table>
+<h2 id="amf">AMF</h2>
+<ul>
+<li>Slic3r supports AMF.</li>
+<li>AMF is by far better than STL, It can represent one object or more objects arranged in a constellation. Also, It can specify the material for each volume in an object. It contains metadata about the objects and other elements.</li>
+<li><p>Materials in AMF format are properties of the volumes not just like OBJ format. They carry information about the nature of the surface. These are examples of the materials in AMF XML structure.</p>
+<pre><code>&lt;material id=&quot;1&quot;&gt;
+&lt;metadata type=&quot;Name&quot;&gt;StiffMaterial&lt;/metadata&gt;
+  &lt;/material&gt;
+  &lt;material id=&quot;2&quot;&gt;
+&lt;metadata type=&quot;Name&quot;&gt;FlexibleMaterial&lt;/metadata&gt;
+  &lt;/material&gt;
+  &lt;material id=&quot;3&quot;&gt;
+&lt;metadata type=&quot;Name&quot;&gt;MediumMaterial&lt;/metadata&gt;
+&lt;composite materialid=&quot;1&quot;&gt;0.4&lt;/composite&gt;
+&lt;composite materialid=&quot;2&quot;&gt;0.6&lt;/composite&gt;
+  &lt;/material&gt;
+  &lt;material id=&quot;4&quot;&gt;
+&lt;metadata type=&quot;Name&quot;&gt;VerticallyGraded&lt;/metadata&gt;
+&lt;composite materialid=&quot;1&quot;&gt;z&lt;/composite&gt;
+&lt;composite materialid=&quot;2&quot;&gt;10-z&lt;/composite&gt;
+  &lt;/material&gt;
+  &lt;material id=&quot;5&quot;&gt;
+&lt;metadata type=&quot;Name&quot;&gt;Checkerboard&lt;/metadata &gt;
+&lt;composite materialid=&quot;1&quot;&gt; 
+      floor(x+y+z%1)+0.5) &lt;/composite&gt;
+&lt;composite materialid=&quot;2&quot;&gt; 
+      1-floor(x+y+z%1)+0.5) &lt;/composite&gt;
+  &lt;/material&gt;</code></pre></li>
+</ul>
+<h3 id="amf-simple-structure-example">AMF Simple Structure Example</h3>
+<p>This Example is a taken from the Wikipedia example but it's more simplified</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;utf-8&quot;<span class="kw">?&gt;</span>
+<span class="kw">&lt;amf</span><span class="ot"> unit=</span><span class="st">&quot;inch&quot;</span><span class="ot"> version=</span><span class="st">&quot;1.1&quot;</span><span class="kw">&gt;</span>  <span class="co">&lt;!-- All elements should be contained in the &lt;amf&gt; element --&gt;</span>
+  <span class="kw">&lt;metadata</span><span class="ot"> type=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;&lt;/metadata&gt;</span> <span class="co">&lt;!-- Metadata element --&gt;</span>
+  <span class="kw">&lt;object</span><span class="ot"> id=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Object element with identifier --&gt;</span>
+    <span class="kw">&lt;mesh&gt;</span> <span class="co">&lt;!-- Mesh inside an object --&gt;</span>
+      <span class="kw">&lt;vertices&gt;</span> <span class="co">&lt;!-- Mesh Vertices --&gt;</span>
+        <span class="kw">&lt;vertex&gt;&lt;coordinates&gt;&lt;x&gt;</span>0<span class="kw">&lt;/x&gt;&lt;y&gt;</span>0<span class="kw">&lt;/y&gt;&lt;z&gt;</span>0<span class="kw">&lt;/z&gt;&lt;/coordinates&gt;&lt;/vertex&gt;</span> <span class="co">&lt;!-- A Vertex (x, y, z) coordinates --&gt;</span>
+      <span class="kw">&lt;/vertices&gt;</span>
+      <span class="kw">&lt;volume</span><span class="ot"> materialid=</span><span class="st">&quot;1&quot;</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Volume having material with an identifier --&gt;</span>
+        <span class="kw">&lt;metadata</span><span class="ot"> type=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span>Hard side<span class="kw">&lt;/metadata&gt;</span>  <span class="co">&lt;!-- Metadata element --&gt;</span>
+        <span class="co">&lt;!-- Triangular Mesh consits of three vertices from the mentioned above in the mesh vertices elements --&gt;</span>
+        <span class="kw">&lt;triangle&gt;&lt;v1&gt;</span>2<span class="kw">&lt;/v1&gt;&lt;v2&gt;</span>1<span class="kw">&lt;/v2&gt;&lt;v3&gt;</span>0<span class="kw">&lt;/v3&gt;&lt;/triangle&gt;</span>
+      <span class="kw">&lt;/volume&gt;</span>
+    <span class="kw">&lt;/mesh&gt;</span>
+  <span class="kw">&lt;/object&gt;</span>
+  <span class="kw">&lt;material</span><span class="ot"> id=</span><span class="st">&quot;2&quot;</span><span class="kw">&gt;</span>  <span class="co">&lt;!-- Material element --&gt;</span>
+    <span class="kw">&lt;metadata</span><span class="ot"> type=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span>Hard material<span class="kw">&lt;/metadata&gt;</span>
+    <span class="kw">&lt;color&gt;&lt;r&gt;</span>0.1<span class="kw">&lt;/r&gt;&lt;g&gt;</span>0.1<span class="kw">&lt;/g&gt;&lt;b&gt;</span>0.1<span class="kw">&lt;/b&gt;&lt;/color&gt;</span>
+  <span class="kw">&lt;/material&gt;</span>
+<span class="kw">&lt;/amf&gt;</span></code></pre></div>
+<h3 id="what-is-supported-by-slic3r-when-readingwriting-amf-files">What is supported by Slic3r when reading/writing AMF files:</h3>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Supported in Slic3r</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Materials</td>
+<td align="center">YES</td>
+</tr>
+<tr class="even">
+<td>Metadata</td>
+<td align="center">YES</td>
+</tr>
+<tr class="odd">
+<td>Curved triangles</td>
+<td align="center">NO</td>
+</tr>
+<tr class="even">
+<td>Constellations</td>
+<td align="center">YES</td>
+</tr>
+<tr class="odd">
+<td>Textures</td>
+<td align="center">NO</td>
+</tr>
+</tbody>
+</table>
+<p>when writing AMF files, we save additional data which are: * Print configuration for each object and each Material. * Print configuration for each volume and whether it's a modifier volume or not. * Slic3r version in each metadata element in objects, materials, and volumes</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/STL_(file_format)">STL (file format) - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">Wavefront .obj file - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Additive_Manufacturing_File_Format">Additive Manufacturing File Format - Wikipedia</a></li>
+<li><a href="http://blog.grabcad.com/blog/2015/07/21/amf-vs-3mf/">3D printing file format cage match: AMF vs. 3MF - GrabCAD Blog</a></li>
+<li><a href="http://amf.wikispaces.com/file/view/AMF_V0.48.pdf">Standrad Specification for AMF</a></li>
+</ul>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>

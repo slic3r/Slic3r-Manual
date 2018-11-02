@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Slic3r Manual – Flow Math</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="back-to-website">
+    <a href="http://slic3r.org/">slic3r.org &raquo;</a>
+</div>
+<h1 id="manual-header">
+    <a href="/"><img src="/images/slic3r.png" style="float: left" /></a>
+    <span>Slic3r Manual</span>
+</h1>
+<div style="clear: both"></div>
+<div id="manual-toc">
+<ul>
+<li><a href="/intro/overview">Introduction</a>
+<ul>
+<li><a href="/intro/overview">Overview</a></li>
+<li><a href="/intro/getting-support">Getting Support</a></li>
+</ul></li>
+<li><a href="/getting-slic3r/getting-slic3r">Getting Slic3r</a>
+<ul>
+<li><a href="/getting-slic3r/getting-slic3r#downloading">Downloading</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#installing">Installing</a></li>
+<li><a href="/getting-slic3r/getting-slic3r#building-from-source">Building from source</a></li>
+</ul></li>
+<li><a href="/first-print/calibration">First Print</a>
+<ul>
+<li><a href="/first-print/calibration">Calibration</a></li>
+<li><a href="/first-print/configuration-wizard">Configuration Wizard</a></li>
+<li><a href="/first-print/first-layer">The Important First Layer</a></li>
+<li><a href="/first-print/working-with-models">Working with Models</a></li>
+<li><a href="/first-print/printing">Printing</a></li>
+</ul></li>
+<li>Print Configurations
+<ul>
+<li><a href="/expert-mode/print-settings">Print Settings</a></li>
+<li><a href="/expert-mode/filament-settings">Filament Settings</a></li>
+<li><a href="/expert-mode/printer-settings">Printer Settings</a></li>
+<li><a href="/expert-mode/print-settings#speed">Speed</a></li>
+<li><a href="/expert-mode/print-settings#infill-patterns">Infill Patterns and Density</a></li>
+<li><a href="/expert-mode/print-settings#infill-optimization">Infill Optimization</a></li>
+<li><a href="/expert-mode/fighting-ooze">Fighting Ooze</a></li>
+<li><a href="/expert-mode/print-settings#skirt-and-brim">Skirt and brim</a></li>
+<li><a href="/expert-mode/cooling">Cooling</a></li>
+<li><a href="/expert-mode/print-settings#support-material">Support Material</a></li>
+<li><a href="/expert-mode/print-settings#extrusion-width">Extrusion Width</a></li>
+<li><a href="/advanced/sequential-printing">Sequential Printing</a></li>
+<li><a href="/expert-mode/variable-layer-height">Variable Layer Height</a></li>
+<li><a href="/configuration-organization/configuration-organization">Profiles and configuration</a></li>
+</ul></li>
+<li>Input/output files
+<ul>
+<li><a href="/advanced/repairing-models">Repairing Models</a></li>
+<li><a href="/advanced/svg-output">SVG Output</a></li>
+</ul></li>
+<li>Topics
+<ul>
+<li><a href="/expert-mode/multiple-extruders">Multiple Extruders</a></li>
+<li><a href="/topics/draft-quality">Draft Quality</a></li>
+<li><a href="/topics/supported-file-formats">3D Model File Format Overview</a></li>
+</ul></li>
+<li>Advanced Topics
+<ul>
+<li><a href="/advanced/command-line">Command Line Usage</a></li>
+<li><a href="/advanced/post-processing">Post-Processing Scripts</a></li>
+<li><a href="/advanced/conditional-gcode">Conditional G-Code</a></li>
+<li><a href="/advanced/flow-math">Flow Math</a></li>
+<li><a href="/advanced/modifier-mesh">Modifier Meshes</a></li>
+<li><a href="/advanced/filament-swaps">Filament Swaps</a></li>
+</ul></li>
+<li>Troubleshooting
+<ul>
+<li><a href="/troubleshooting/dimension-errors">Dimension Errors</a></li>
+<li><a href="/troubleshooting/troubleshooting#z-wobble">Z Wobble</a></li>
+</ul></li>
+<li>Internals Documentation (Doxygen)
+<ul>
+<li><a href="/libslic3r-doc">libslic3r</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="manual-body">
+<div id="header">
+<h1 class="title">Flow Math</h1>
+</div>
+<p>This page explains the math used in Slic3r to determine the amount of flow. Documenting it serves as reference and as request for comments since better models might be worth to try.</p>
+<h4 id="understanding-extrusion-width">Understanding extrusion width</h4>
+<p>Two main questions affect Slic3r's work:</p>
+<ol style="list-style-type: decimal">
+<li><strong>How distant</strong> should extrusion paths be positioned in order to get a good continuous finish?</li>
+<li><strong>How much material</strong> must be extruded along such paths?</li>
+</ol>
+<p>If two adjacent paths are <strong>too close</strong> (or <strong>too much material</strong> is extruded), they'll overlap. If two adjacent paths are <strong>too distant</strong> (or <strong>not enough material</strong> is extruded), gaps will be visible and/or the extrusions will delaminate because of not enough bonding.</p>
+<p>By extruding more or less while moving (i.e. by changing the <strong>flow speed/head speed ratio</strong>) we can make paths thicker or thinner:</p>
+<div class="figure">
+<img src="images/flow-math/extrusion-width.png" alt="image" />
+<p class="caption">image</p>
+</div>
+<p><strong>Thicker paths</strong> will have <strong>better bonding</strong> with the lower layer, thus are good for mechanical parts. However, they'll be less able to approximate the object shape and fill tiny gaps or narrow curves (think of a drill bit: a larger one will not be able to enter narrow places). On the contrary, <strong>thinner paths</strong> will provide less bonding but better shape accuracy.</p>
+<p>However note that extrusion width can be controlled only when extruding over an existing surface (such as a previous layer or print bed). If we extrude in <strong>free air</strong> (i.e. when bridging), the resulting shape will be always <strong>round</strong> and equal to the <strong>nozzle diameter</strong>:</p>
+<div class="figure">
+<img src="images/flow-math/bridge.png" alt="image" />
+<p class="caption">image</p>
+</div>
+<p>Actually, if you reduce the material flow you'll get smaller circles to some extent, until the plastic viscosity decides it's time to break your bridge because of too much tension. If, on the contrary, you extrude too much material, the shape of the extruded filament won't change (still equal to nozzle diameter) but you'll get a loose bridge.</p>
+<p>So, let's start from a definition:</p>
+<blockquote>
+<p>Extrusion Width is the <strong>thickness of a single filament</strong> extruded either in free air or above a surface. It's <strong>not</strong> the distance of two adjacent paths since some overlap will be generally applied in order to get better bonding.</p>
+</blockquote>
+<h4 id="bridges-the-easy-case">Bridges: the easy case</h4>
+<p>As said above, there's only one correct flow rate for bridging: the one that doesn't make your bridge sag or break. Extrusions are <strong>round</strong> and their <strong>diameter is equal to the nozzle diameter</strong>. Parallel paths will be positioned so that they are <strong>tangent</strong>, thus the spacing between one path and its neighbor is equal to nozzle diameter as well. (In case of bridges, we want no overlap because it has proven to drag the existing paths.)</p>
+<p>The required material volume for a path of unitary length is calculated accordingly to the cylindric shape, thus with a circular cross-sectional area:</p>
+<pre><code>E = (nozzle_diameter/2)^2 * PI</code></pre>
+<h4 id="extruding-on-top-of-a-surface">Extruding on top of a surface</h4>
+<p>In this case the problem is: <strong>what shape</strong> will our extrusion get? We know it will get squashed horizontally, but will it have a rectangular or oval shape? What's the maximum extrusion width we can get with a given nozzle diameter before plastic starts curling at the sides?</p>
+<p>Slic3r assumes that the cross-sectional shape of an extrusion is a rectangle with semicircular ends. So the relationship between desired extrusion width and volume to extrude is the following:</p>
+<div class="figure">
+<img src="images/flow-math/area1.png" alt="image" />
+<p class="caption">image</p>
+</div>
+<p>When target extrusion width is thinner than layer height the shape is unpredictable so we just use the same rectangular formula but discourage usage of such thin extrusion values.</p>
+<p>The above formula provides a function that correlates the target extrusion width with the amount of material to extrude per distance unit:</p>
+<p><code>E = f(extrusion_width, layer_height)</code></p>
+<h4 id="spacing-paths">Spacing paths</h4>
+<p>Okay, now we we know how much to extrude to make a single path of the desired width. But <strong>how much should we overlap</strong> paths in order to get perfect bonding?</p>
+<p>Supposing no overlap, thus tangent paths, there would be empty space (yellow):</p>
+<div class="figure">
+<img src="images/flow-math/tangent.png" alt="image" />
+<p class="caption">image</p>
+</div>
+<p>The cross-section area of such voids is generally:</p>
+<p><code>void_area = layer_height^2 - (layer_height/2)^2 * PI</code></p>
+<p>Ideally, we would want to fill all of that yellow area by placing the extrusions closed to each other. However, it's very unlikely that the second extrusion will fill the space below the previous one, so there would still be a little void. The ideal overlap would be something like:</p>
+<p><code>0 &lt; overlap_factor*void_area &lt; void_area</code></p>
+<p>with <code>overlap_factor</code> ranging from 0 to 1. <code>overlap_factor</code> represents how much void remains between the extrusions. It's difficult to estimate this amount, since it probably depends also on viscosity of plastic, extrusion speed and temperature. In the past, several values were tried for <code>overlap_factor</code>, but some users were still reporting too sparse paths. A value of 1 is currently being used to guarantee that the error (which is always present) is fully on the side of abundant extrusion rather than lacking material.</p>
+<p>Path spacing is thus:</p>
+<p><code>spacing = extrusion_width - layer_height * (1 - PI/4)</code></p>
+<h4 id="sane-defaults">Sane defaults</h4>
+<p>Slic3r allows users to define extrusion width manually for each kind of extrusion (perimeters, infill, support material etc.) but will calculate sane defaults if no custom values are entered.</p>
+<p>For the <strong>outermost loop</strong> of perimeters (aka <em>external perimeters</em>) Slic3r will default to a <strong>thin extrusion width</strong>, equal to <code>nozzle diameter * 1.05</code>. This is considered the thinnest safe extrusion width. A thin extrusion width provides <strong>better accuracy</strong> to the object shape and minimizes the flow errors caused by irregular filament.</p>
+<p>Extrusion width for other things is calculated by getting the cross-sectional area of the configured nozzle diameter and then calculating the extrusion width produced by extruding that amount of material. In other words, by <strong>matching flow speed and head speed</strong>. The purpose of this logic is to find the &quot;native&quot; flow that minimizes side forces during extrusion. Such calculated extrusion with is capped to max value equal to <code>nozzle_diameter * 1.7</code>, except for internal sparse infill where the full native flow is used.</p>
+</div>
+<div id="manual-footer">
+    Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
+    Sponsored by <a href="http://lulzbot.com/">LulzBot</a> - &copy; Aleph Objects, Inc.<br />
+    Permission is granted to copy, distribute and/or modify this document under the terms of the 
+    <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0 license</a>
+</div>
+</body>
+</html>
