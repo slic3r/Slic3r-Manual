@@ -1,0 +1,72 @@
+# we use a rw SSH key instead of the default one injected by CircleCI because we
+# use it for deploy as well
+anchor_2: &add_ssh_keys
+    fingerprints:
+      - "fb:83:7b:63:34:46:87:5f:df:b6:84:7f:af:fd:d9:cc"
+
+defaults: &defaults
+    working_directory: /tmp/manual
+    docker:
+      - image: perl:latest
+
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - add_ssh_keys: *add_ssh_keys
+      - checkout
+
+      - run:
+        name: Install pandoc
+        command: apt-get update && apt-get install -y pandoc
+
+      - run: perl make-html.pl
+      
+      - persist_to_workspace:
+          root: /tmp/manual
+          paths:
+            - html
+            - .circleci
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp/manual
+      
+      - add_ssh_keys: *add_ssh_keys
+      - checkout:
+          path: /tmp/gh-pages
+      - deploy:
+          name: Deploy
+          command: |
+            git config --global user.email no-reply@slic3r.org
+            git config --global user.name "Deploy Bot"
+            cd /tmp/gh-pages
+            git checkout gh-pages || git checkout --orphan gh-pages
+            git rm -rf .
+            cp -a /tmp/manual/html/. .
+            # copy .circleci as well so that the branch filter is honored
+            mkdir -p .circleci && cp -a /tmp/manual/.circleci/. .circleci/.
+            git add -A
+            git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+            git push origin gh-pages
+
+workflows:
+  version: 2
+  build-test-and-approval-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
+                - gh-pages-deploy
