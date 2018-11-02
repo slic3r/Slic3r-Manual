@@ -18,8 +18,8 @@ jobs:
       - checkout
 
       - run:
-        name: Install pandoc
-        command: apt-get update && apt-get install -y pandoc
+          name: Install pandoc
+          command: apt-get update && apt-get install -y pandoc
 
       - run: perl make-html.pl
       
