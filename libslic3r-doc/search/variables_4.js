@@ -6,6 +6,7 @@ var searchData=
   ['default_5fregion_5fconfig',['default_region_config',['../class_slic3r_1_1_print.html#ac9bbab27f2f2b0672e8271a9ebb6d9f0',1,'Slic3r::Print']]],
   ['default_5fvalue',['default_value',['../class_slic3r_1_1_config_option_def.html#a3840f0a99853f2da3d6fdf8a8a97f50e',1,'Slic3r::ConfigOptionDef']]],
   ['defined',['defined',['../class_slic3r_1_1_bounding_box_base.html#a7aa7c516cdebbc7c585e394377d5cd59',1,'Slic3r::BoundingBoxBase']]],
+  ['degenerate_5ffacets',['degenerate_facets',['../struct_slic3r_1_1mesh__stats.html#a1e325cec84f02f718f09012c0ec787c2',1,'Slic3r::mesh_stats']]],
   ['deltax',['deltax',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#ab778e90524ea4ae51331ef71c9300568',1,'Slic3r::IO::AMFParserContext::Instance']]],
   ['deltax_5fset',['deltax_set',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#a3829047c131d836f8c18789bb98480d7',1,'Slic3r::IO::AMFParserContext::Instance']]],
   ['deltay',['deltay',['../struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#ad6a79594a4455252f378349374f78601',1,'Slic3r::IO::AMFParserContext::Instance']]],

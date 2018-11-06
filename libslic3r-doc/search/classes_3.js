@@ -4,6 +4,7 @@ var searchData=
   ['chaining',['Chaining',['../struct_slic3r_1_1_chaining.html',1,'Slic3r']]],
   ['cliconfig',['CLIConfig',['../class_slic3r_1_1_c_l_i_config.html',1,'Slic3r']]],
   ['cliconfigdef',['CLIConfigDef',['../class_slic3r_1_1_c_l_i_config_def.html',1,'Slic3r']]],
+  ['config',['Config',['../class_slic3r_1_1_config.html',1,'Slic3r']]],
   ['configbase',['ConfigBase',['../class_slic3r_1_1_config_base.html',1,'Slic3r']]],
   ['configdef',['ConfigDef',['../class_slic3r_1_1_config_def.html',1,'Slic3r']]],
   ['configoption',['ConfigOption',['../class_slic3r_1_1_config_option.html',1,'Slic3r']]],

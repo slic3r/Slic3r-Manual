@@ -80,8 +80,9 @@ $(function() {
 <li>index_y
 : <a class="el" href="class_slic3r_1_1_geometry_1_1_arrange_item.html#a95856d98023dbf14de4586e91780b149">Slic3r::Geometry::ArrangeItem</a>
 </li>
-<li>infill
-: <a class="el" href="class_slic3r_1_1_s_l_a_print_1_1_layer.html#ab41d5350dac2d5986bbe64125b745484">Slic3r::SLAPrint::Layer</a>
+<li>infill()
+: <a class="el" href="class_slic3r_1_1_print_object.html#aad5e0c2e4a7dfabc4168c2b7926d2fb7">Slic3r::PrintObject</a>
+, <a class="el" href="class_slic3r_1_1_s_l_a_print_1_1_layer.html#ab41d5350dac2d5986bbe64125b745484">Slic3r::SLAPrint::Layer</a>
 </li>
 <li>infill_acceleration
 : <a class="el" href="class_slic3r_1_1_print_config.html#a7ba19739d7fb6e87fd88bf58c3a20ad2">Slic3r::PrintConfig</a>
@@ -113,6 +114,7 @@ $(function() {
 </li>
 <li>info
 : <a class="el" href="class_slic3r_1_1_c_l_i_config.html#a6591e4fd3dc43c73c88c90d0dc01885c">Slic3r::CLIConfig</a>
+, <a class="el" href="class_slic3r_1_1_log.html#a279acaa84f6bf541a796d7c2cf140b09">Slic3r::Log</a>
 </li>
 <li>init_external_mp()
 : <a class="el" href="class_slic3r_1_1_avoid_crossing_perimeters.html#a3ab0d13fe0db59cebfd8c472c9a11849">Slic3r::AvoidCrossingPerimeters</a>
@@ -122,6 +124,13 @@ $(function() {
 </li>
 <li>input_file
 : <a class="el" href="class_slic3r_1_1_model_object.html#a803ac870d4cb0df9b9c450930ba55c2d">Slic3r::ModelObject</a>
+, <a class="el" href="class_slic3r_1_1_model_volume.html#ae814cf34188dd4877655cf09c3b79b6b">Slic3r::ModelVolume</a>
+</li>
+<li>input_file_obj_idx
+: <a class="el" href="class_slic3r_1_1_model_volume.html#a21e4ef46924b51d46e0b3f6cc86a4e6e">Slic3r::ModelVolume</a>
+</li>
+<li>input_file_vol_idx
+: <a class="el" href="class_slic3r_1_1_model_volume.html#a923adf73333913eacc4b1164228aa60a">Slic3r::ModelVolume</a>
 </li>
 <li>Instance()
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_instance.html#abce5d21f84ead3f658c13678c06608f6">Slic3r::IO::AMFParserContext::Instance</a>
@@ -133,8 +142,20 @@ $(function() {
 : <a class="el" href="struct_slic3r_1_1_i_o_1_1_a_m_f_parser_context_1_1_object.html#a7e71f9e7f8a05935d8c3214262fdce94">Slic3r::IO::AMFParserContext::Object</a>
 , <a class="el" href="class_slic3r_1_1_model_object.html#a96b7b4b7c04d64a05dd5fdff3219f904">Slic3r::ModelObject</a>
 </li>
+<li>interface_angle
+: <a class="el" href="struct_slic3r_1_1toolpaths__params.html#a39ddd4e0118681ab2e3024ff9503f07d">Slic3r::toolpaths_params</a>
+</li>
+<li>interface_density
+: <a class="el" href="struct_slic3r_1_1toolpaths__params.html#a0cb0e2524d5333fbfb6a970af0c14211">Slic3r::toolpaths_params</a>
+</li>
+<li>interface_flow
+: <a class="el" href="class_slic3r_1_1_support_material.html#a6f361d972c25b5098828aa9a6097cd0c">Slic3r::SupportMaterial</a>
+</li>
 <li>interface_shells
 : <a class="el" href="class_slic3r_1_1_print_object_config.html#a022038bcb44cd835c41cd2442447e231">Slic3r::PrintObjectConfig</a>
+</li>
+<li>interface_spacing
+: <a class="el" href="struct_slic3r_1_1toolpaths__params.html#a1d285408a80b47981e27914a032afcf1">Slic3r::toolpaths_params</a>
 </li>
 <li>interior_brim_width
 : <a class="el" href="class_slic3r_1_1_print_config.html#a4b13b5ec77d58185a12aa6fcd0fa34a4">Slic3r::PrintConfig</a>
@@ -177,6 +198,12 @@ $(function() {
 : <a class="el" href="class_slic3r_1_1_print.html#a77fe13a17cf05ed6ae2209b70ee5f2fc">Slic3r::Print</a>
 , <a class="el" href="class_slic3r_1_1_print_object.html#a6db8cff190aad58f9772416f10c4b1f9">Slic3r::PrintObject</a>
 </li>
+<li>InvalidOptionType()
+: <a class="el" href="class_slic3r_1_1_invalid_option_type.html#ae766a739d8c7dc36d221ec5a5fabb436">Slic3r::InvalidOptionType</a>
+</li>
+<li>InvalidOptionValue()
+: <a class="el" href="class_slic3r_1_1_invalid_option_value.html#af797f5645f85f92559d12eebf97ca53e">Slic3r::InvalidOptionValue</a>
+</li>
 <li>is_bottom()
 : <a class="el" href="class_slic3r_1_1_surface.html#a59f23864153e397680a77843af60db37">Slic3r::Surface</a>
 </li>
@@ -205,7 +232,8 @@ $(function() {
 , <a class="el" href="class_slic3r_1_1_surface.html#a7fa6cd63ba516167d4853abc330f8482">Slic3r::Surface</a>
 </li>
 <li>is_infill()
-: <a class="el" href="class_slic3r_1_1_extrusion_loop.html#a01cff3a55d440863ee895d45652decb6">Slic3r::ExtrusionLoop</a>
+: <a class="el" href="class_slic3r_1_1_extrusion_entity.html#aa140debd493adaf178b5bb827b924646">Slic3r::ExtrusionEntity</a>
+, <a class="el" href="class_slic3r_1_1_extrusion_loop.html#a01cff3a55d440863ee895d45652decb6">Slic3r::ExtrusionLoop</a>
 , <a class="el" href="class_slic3r_1_1_extrusion_path.html#a4a52f9dcad109269601d6e3769affe9e">Slic3r::ExtrusionPath</a>
 </li>
 <li>is_internal()
@@ -222,7 +250,8 @@ $(function() {
 : <a class="el" href="class_slic3r_1_1_triangle_mesh.html#a9e6b589b02a36301057883eb7b8e75ab">Slic3r::TriangleMesh</a>
 </li>
 <li>is_perimeter()
-: <a class="el" href="class_slic3r_1_1_extrusion_loop.html#a5b08d4aade6a264353b7310dade8f0e5">Slic3r::ExtrusionLoop</a>
+: <a class="el" href="class_slic3r_1_1_extrusion_entity.html#adb75f387b9569d979322fe31e253753d">Slic3r::ExtrusionEntity</a>
+, <a class="el" href="class_slic3r_1_1_extrusion_loop.html#a5b08d4aade6a264353b7310dade8f0e5">Slic3r::ExtrusionLoop</a>
 , <a class="el" href="class_slic3r_1_1_extrusion_path.html#af013406834db45c3df558c9b75a8d206">Slic3r::ExtrusionPath</a>
 </li>
 <li>is_positive_volume()
@@ -233,7 +262,8 @@ $(function() {
 , <a class="el" href="struct_slic3r_1_1_surface_group_attrib.html#a0e12383bb032ca365898bb7abf26026f">Slic3r::SurfaceGroupAttrib</a>
 </li>
 <li>is_solid_infill()
-: <a class="el" href="class_slic3r_1_1_extrusion_loop.html#aaee8449ba3448127e7dc746ac588c203">Slic3r::ExtrusionLoop</a>
+: <a class="el" href="class_slic3r_1_1_extrusion_entity.html#a8a3d995d8d424ad3154b19284bbdb024">Slic3r::ExtrusionEntity</a>
+, <a class="el" href="class_slic3r_1_1_extrusion_loop.html#aaee8449ba3448127e7dc746ac588c203">Slic3r::ExtrusionLoop</a>
 , <a class="el" href="class_slic3r_1_1_extrusion_path.html#a85fc20fa02a1975ae2d5c5777d78faf9">Slic3r::ExtrusionPath</a>
 </li>
 <li>is_started()
@@ -241,6 +271,10 @@ $(function() {
 </li>
 <li>is_straight()
 : <a class="el" href="class_slic3r_1_1_polyline.html#a6220d5518f7325d2b8435906049f5443">Slic3r::Polyline</a>
+</li>
+<li>is_support()
+: <a class="el" href="class_slic3r_1_1_layer.html#af7ca9599a0b3022dcb2757554d58e3e9">Slic3r::Layer</a>
+, <a class="el" href="class_slic3r_1_1_support_layer.html#ae9e92a80608b37ff15d9c39d35ed7497">Slic3r::SupportLayer</a>
 </li>
 <li>is_valid()
 : <a class="el" href="class_slic3r_1_1_ex_polygon.html#abb7d6b0c697997e75b3c8ffddbdc87cb">Slic3r::ExPolygon</a>

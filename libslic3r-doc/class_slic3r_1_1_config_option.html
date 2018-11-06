@@ -76,7 +76,7 @@ $(function() {
 <p>Public interface for configuration options.  
  <a href="class_slic3r_1_1_config_option.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_config_8hpp_source.html">Config.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_config_base_8hpp_source.html">ConfigBase.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Slic3r::ConfigOption:</div>
 <div class="dyncontent">
@@ -119,6 +119,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a78800592be78a66830a85da7f382d13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4053d8e5c10b52c368232e2767f9792e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option.html#a4053d8e5c10b52c368232e2767f9792e">setInt</a> (int val)</td></tr>
 <tr class="separator:a4053d8e5c10b52c368232e2767f9792e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a64f82fe41f122a21779975c14e0baf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option.html#a3a64f82fe41f122a21779975c14e0baf">setFloat</a> (double val)</td></tr>
+<tr class="separator:a3a64f82fe41f122a21779975c14e0baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aafa48f367571d2b17b95557e4b7ec4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option.html#a2aafa48f367571d2b17b95557e4b7ec4">setString</a> (std::string val)</td></tr>
+<tr class="separator:a2aafa48f367571d2b17b95557e4b7ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8555c22bc73e825ef51d62672d0ff88c"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option.html#a8555c22bc73e825ef51d62672d0ff88c">getString</a> () const</td></tr>
 <tr class="separator:a8555c22bc73e825ef51d62672d0ff88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -182,7 +186,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; T &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; HostType &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; SeamPosition &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; GCodeFlavor &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; InfillPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; SupportMaterialPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_bools.html#a940014a2727366d812ba3bc79db8b33e">Slic3r::ConfigOptionBools</a>, <a class="el" href="class_slic3r_1_1_config_option_bool.html#afa9d8a6ce45539ddf51531df13b495f8">Slic3r::ConfigOptionBool</a>, <a class="el" href="class_slic3r_1_1_config_option_points.html#aec176ae862e94530b48e4f05f8805f67">Slic3r::ConfigOptionPoints</a>, <a class="el" href="class_slic3r_1_1_config_option_point3.html#a9cd32db547023f8981f9f81f6bdb42c7">Slic3r::ConfigOptionPoint3</a>, <a class="el" href="class_slic3r_1_1_config_option_point.html#a3c7fe9297c661cb8e7392ccffb708386">Slic3r::ConfigOptionPoint</a>, <a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html#a94610e7aa21be44a3451c1d97c003f7b">Slic3r::ConfigOptionFloatOrPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_percent.html#ac2d0719e2e52ff40204a52469ecfc3d9">Slic3r::ConfigOptionPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_strings.html#abc060dd1d17ad7839ca9c84835a4efe6">Slic3r::ConfigOptionStrings</a>, <a class="el" href="class_slic3r_1_1_config_option_string.html#a9938fb1fe529a0c0177664c99fd13098">Slic3r::ConfigOptionString</a>, <a class="el" href="class_slic3r_1_1_config_option_ints.html#aa19fcc374517bcbaff3f5c877a8f5fd9">Slic3r::ConfigOptionInts</a>, <a class="el" href="class_slic3r_1_1_config_option_int.html#adfaf26add217268ecbbb281e6d9ead7d">Slic3r::ConfigOptionInt</a>, <a class="el" href="class_slic3r_1_1_config_option_floats.html#a4c05598138796c2b378f4631b74311e4">Slic3r::ConfigOptionFloats</a>, and <a class="el" href="class_slic3r_1_1_config_option_float.html#aacdf174931f339e65d78747fcee062d7">Slic3r::ConfigOptionFloat</a>.</p>
+<p>Implemented in <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; T &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; HostType &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; SeamPosition &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; GCodeFlavor &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; InfillPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#af0e38f6ad833902f1a5e9ad50bd35db4">Slic3r::ConfigOptionEnum&lt; SupportMaterialPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_bools.html#a940014a2727366d812ba3bc79db8b33e">Slic3r::ConfigOptionBools</a>, <a class="el" href="class_slic3r_1_1_config_option_bool.html#afa9d8a6ce45539ddf51531df13b495f8">Slic3r::ConfigOptionBool</a>, <a class="el" href="class_slic3r_1_1_config_option_points.html#aec176ae862e94530b48e4f05f8805f67">Slic3r::ConfigOptionPoints</a>, <a class="el" href="class_slic3r_1_1_config_option_point3.html#a9cd32db547023f8981f9f81f6bdb42c7">Slic3r::ConfigOptionPoint3</a>, <a class="el" href="class_slic3r_1_1_config_option_point.html#a3c7fe9297c661cb8e7392ccffb708386">Slic3r::ConfigOptionPoint</a>, <a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html#a94610e7aa21be44a3451c1d97c003f7b">Slic3r::ConfigOptionFloatOrPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_percent.html#ac2d0719e2e52ff40204a52469ecfc3d9">Slic3r::ConfigOptionPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_strings.html#abc060dd1d17ad7839ca9c84835a4efe6">Slic3r::ConfigOptionStrings</a>, <a class="el" href="class_slic3r_1_1_config_option_string.html#a9938fb1fe529a0c0177664c99fd13098">Slic3r::ConfigOptionString</a>, <a class="el" href="class_slic3r_1_1_config_option_ints.html#a2f2fbeac3d3c8f947a41dd96e0760460">Slic3r::ConfigOptionInts</a>, <a class="el" href="class_slic3r_1_1_config_option_int.html#a7e720a3ec50a36550cb5014bf3742060">Slic3r::ConfigOptionInt</a>, <a class="el" href="class_slic3r_1_1_config_option_floats.html#a4c05598138796c2b378f4631b74311e4">Slic3r::ConfigOptionFloats</a>, and <a class="el" href="class_slic3r_1_1_config_option_float.html#a2ea7da9221271efb0d94365b77e0b98c">Slic3r::ConfigOptionFloat</a>.</p>
 
 </div>
 </div>
@@ -220,7 +224,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_slic3r_1_1_config_option_enum_generic.html#ab7790326640ad952154c80da6a504ce6">Slic3r::ConfigOptionEnumGeneric</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; T &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; HostType &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; SeamPosition &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; GCodeFlavor &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; InfillPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; SupportMaterialPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_bools.html#ac0c9735c43800ae02254379f11113474">Slic3r::ConfigOptionBools</a>, <a class="el" href="class_slic3r_1_1_config_option_bool.html#ae3017e5430f7ccf3e7acbbcbdcd389b9">Slic3r::ConfigOptionBool</a>, <a class="el" href="class_slic3r_1_1_config_option_points.html#ad7946b5c5b05fa2dad89e58ce30b05ab">Slic3r::ConfigOptionPoints</a>, <a class="el" href="class_slic3r_1_1_config_option_point3.html#a3e66efda8bee736b4433940fda2921ae">Slic3r::ConfigOptionPoint3</a>, <a class="el" href="class_slic3r_1_1_config_option_point.html#a27f2056b75e2b6406ac55bed5d9b67ca">Slic3r::ConfigOptionPoint</a>, <a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html#ac0cc6fee6bc51a7e23eed6f525eba1a8">Slic3r::ConfigOptionFloatOrPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_percent.html#ade6ef97d34074ab433b64fd5870b86fd">Slic3r::ConfigOptionPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_strings.html#a4cb74feebc5ee350d98dec3675d6f12a">Slic3r::ConfigOptionStrings</a>, <a class="el" href="class_slic3r_1_1_config_option_string.html#a1d3f55a057f4b9a5d9007a119bfbfc18">Slic3r::ConfigOptionString</a>, <a class="el" href="class_slic3r_1_1_config_option_ints.html#a680b1f8b1525aab873519092b91d5dd0">Slic3r::ConfigOptionInts</a>, <a class="el" href="class_slic3r_1_1_config_option_int.html#a7fcaa0a0e537a9c96e44e10f935572aa">Slic3r::ConfigOptionInt</a>, <a class="el" href="class_slic3r_1_1_config_option_floats.html#a29a92cafd7a5fc3cf1d6e043e894d280">Slic3r::ConfigOptionFloats</a>, and <a class="el" href="class_slic3r_1_1_config_option_float.html#afa89a6f54890b1c9f9ce291ea8758bfe">Slic3r::ConfigOptionFloat</a>.</p>
+<p>Implemented in <a class="el" href="class_slic3r_1_1_config_option_enum_generic.html#ab7790326640ad952154c80da6a504ce6">Slic3r::ConfigOptionEnumGeneric</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; T &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; HostType &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; SeamPosition &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; GCodeFlavor &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; InfillPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#a48c684ed54c6b55c07f61d5ab54e051b">Slic3r::ConfigOptionEnum&lt; SupportMaterialPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_bools.html#ac0c9735c43800ae02254379f11113474">Slic3r::ConfigOptionBools</a>, <a class="el" href="class_slic3r_1_1_config_option_bool.html#ae3017e5430f7ccf3e7acbbcbdcd389b9">Slic3r::ConfigOptionBool</a>, <a class="el" href="class_slic3r_1_1_config_option_points.html#ad7946b5c5b05fa2dad89e58ce30b05ab">Slic3r::ConfigOptionPoints</a>, <a class="el" href="class_slic3r_1_1_config_option_point3.html#a3e66efda8bee736b4433940fda2921ae">Slic3r::ConfigOptionPoint3</a>, <a class="el" href="class_slic3r_1_1_config_option_point.html#a27f2056b75e2b6406ac55bed5d9b67ca">Slic3r::ConfigOptionPoint</a>, <a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html#ac0cc6fee6bc51a7e23eed6f525eba1a8">Slic3r::ConfigOptionFloatOrPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_percent.html#ade6ef97d34074ab433b64fd5870b86fd">Slic3r::ConfigOptionPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_strings.html#a4cb74feebc5ee350d98dec3675d6f12a">Slic3r::ConfigOptionStrings</a>, <a class="el" href="class_slic3r_1_1_config_option_string.html#a1d3f55a057f4b9a5d9007a119bfbfc18">Slic3r::ConfigOptionString</a>, <a class="el" href="class_slic3r_1_1_config_option_ints.html#a8c234f90606f5785ab5239a5df7f357e">Slic3r::ConfigOptionInts</a>, <a class="el" href="class_slic3r_1_1_config_option_int.html#a6ee92278a38ccb18419cc7eee9ee26ba">Slic3r::ConfigOptionInt</a>, <a class="el" href="class_slic3r_1_1_config_option_floats.html#a29a92cafd7a5fc3cf1d6e043e894d280">Slic3r::ConfigOptionFloats</a>, and <a class="el" href="class_slic3r_1_1_config_option_float.html#ae655dfa23d6c9c0b17952bdb2ef491b7">Slic3r::ConfigOptionFloat</a>.</p>
 
 </div>
 </div>
@@ -274,7 +278,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_slic3r_1_1_config_option_float.html#a60ce8956bc5efc8c0608f9b7c5bdc741">Slic3r::ConfigOptionFloat</a>.</p>
+<p>Reimplemented in <a class="el" href="class_slic3r_1_1_config_option_float.html#acf9ea0da3e94f0c8aae41b0d786c8424">Slic3r::ConfigOptionFloat</a>.</p>
 
 </div>
 </div>
@@ -301,7 +305,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_slic3r_1_1_config_option_int.html#a45aee46f54b11cc1c473bf5fcde6d883">Slic3r::ConfigOptionInt</a>.</p>
+<p>Reimplemented in <a class="el" href="class_slic3r_1_1_config_option_int.html#a74149c07927eb0befb992b91271aeaa1">Slic3r::ConfigOptionInt</a>.</p>
 
 </div>
 </div>
@@ -328,7 +332,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_slic3r_1_1_config_option_string.html#a15a4184adefcd100469c658dabef5f0d">Slic3r::ConfigOptionString</a>.</p>
+<p>Reimplemented in <a class="el" href="class_slic3r_1_1_config_option_string.html#a15a4184adefcd100469c658dabef5f0d">Slic3r::ConfigOptionString</a>, <a class="el" href="class_slic3r_1_1_config_option_int.html#a99c9880edbabb4a3dceb2fedac134737">Slic3r::ConfigOptionInt</a>, and <a class="el" href="class_slic3r_1_1_config_option_float.html#afc5593a80b7c3366d6b2245443f40880">Slic3r::ConfigOptionFloat</a>.</p>
 
 </div>
 </div>
@@ -355,7 +359,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_slic3r_1_1_config_option_enum_generic.html#ab188c5201b9b43a47e048a6301be9988">Slic3r::ConfigOptionEnumGeneric</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; T &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; HostType &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; SeamPosition &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; GCodeFlavor &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; InfillPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; SupportMaterialPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_bools.html#aec1f00a1ed461010de450e0fbfdf1a0a">Slic3r::ConfigOptionBools</a>, <a class="el" href="class_slic3r_1_1_config_option_bool.html#a6d8edb8351425ea0ff35b0a259d319c3">Slic3r::ConfigOptionBool</a>, <a class="el" href="class_slic3r_1_1_config_option_points.html#a0a72bbbba29e59877151012edfa538b6">Slic3r::ConfigOptionPoints</a>, <a class="el" href="class_slic3r_1_1_config_option_point3.html#a28d686e0709fba723593135b4c76eaea">Slic3r::ConfigOptionPoint3</a>, <a class="el" href="class_slic3r_1_1_config_option_point.html#a9ba388ae61fa71e7516f05eedb961994">Slic3r::ConfigOptionPoint</a>, <a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html#a180b96bde02bfa4f6e53f8fd90ea5664">Slic3r::ConfigOptionFloatOrPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_percent.html#a7d5e3eff87aa780bfc940a615a185a90">Slic3r::ConfigOptionPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_strings.html#a24a3e54da302ff5b587f89be0066aef9">Slic3r::ConfigOptionStrings</a>, <a class="el" href="class_slic3r_1_1_config_option_string.html#a90c755bf9dd6d6b27326b3d8003faa32">Slic3r::ConfigOptionString</a>, <a class="el" href="class_slic3r_1_1_config_option_ints.html#aed06dbaf48490dc9d013a68fa57d89b5">Slic3r::ConfigOptionInts</a>, <a class="el" href="class_slic3r_1_1_config_option_int.html#a4ac102e93917aadd150c052255e52eb4">Slic3r::ConfigOptionInt</a>, <a class="el" href="class_slic3r_1_1_config_option_floats.html#ac03be9bcb15d883de12d4d4cfc5d7af5">Slic3r::ConfigOptionFloats</a>, and <a class="el" href="class_slic3r_1_1_config_option_float.html#a29f60266acbfceed26bd0a7c5a386824">Slic3r::ConfigOptionFloat</a>.</p>
+<p>Implemented in <a class="el" href="class_slic3r_1_1_config_option_enum_generic.html#ab188c5201b9b43a47e048a6301be9988">Slic3r::ConfigOptionEnumGeneric</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; T &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; HostType &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; SeamPosition &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; GCodeFlavor &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; InfillPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_enum.html#aae48a8308c27f0cb9263e56da216674b">Slic3r::ConfigOptionEnum&lt; SupportMaterialPattern &gt;</a>, <a class="el" href="class_slic3r_1_1_config_option_bools.html#aec1f00a1ed461010de450e0fbfdf1a0a">Slic3r::ConfigOptionBools</a>, <a class="el" href="class_slic3r_1_1_config_option_bool.html#a6d8edb8351425ea0ff35b0a259d319c3">Slic3r::ConfigOptionBool</a>, <a class="el" href="class_slic3r_1_1_config_option_points.html#a0a72bbbba29e59877151012edfa538b6">Slic3r::ConfigOptionPoints</a>, <a class="el" href="class_slic3r_1_1_config_option_point3.html#a28d686e0709fba723593135b4c76eaea">Slic3r::ConfigOptionPoint3</a>, <a class="el" href="class_slic3r_1_1_config_option_point.html#a9ba388ae61fa71e7516f05eedb961994">Slic3r::ConfigOptionPoint</a>, <a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html#a180b96bde02bfa4f6e53f8fd90ea5664">Slic3r::ConfigOptionFloatOrPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_percent.html#a7d5e3eff87aa780bfc940a615a185a90">Slic3r::ConfigOptionPercent</a>, <a class="el" href="class_slic3r_1_1_config_option_strings.html#a24a3e54da302ff5b587f89be0066aef9">Slic3r::ConfigOptionStrings</a>, <a class="el" href="class_slic3r_1_1_config_option_string.html#a90c755bf9dd6d6b27326b3d8003faa32">Slic3r::ConfigOptionString</a>, <a class="el" href="class_slic3r_1_1_config_option_ints.html#a123dc5e75817e7a7b3971757c9480779">Slic3r::ConfigOptionInts</a>, <a class="el" href="class_slic3r_1_1_config_option_int.html#aaf25a9507e4ebf9c833458c7975005c7">Slic3r::ConfigOptionInt</a>, <a class="el" href="class_slic3r_1_1_config_option_floats.html#ac03be9bcb15d883de12d4d4cfc5d7af5">Slic3r::ConfigOptionFloats</a>, and <a class="el" href="class_slic3r_1_1_config_option_float.html#a32da62878bec931bc7c1001f2febff2e">Slic3r::ConfigOptionFloat</a>.</p>
 
 </div>
 </div>
@@ -387,6 +391,34 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a3a64f82fe41f122a21779975c14e0baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a64f82fe41f122a21779975c14e0baf">&#9670;&nbsp;</a></span>setFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Slic3r::ConfigOption::setFloat </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_slic3r_1_1_config_option_float.html#a91915ff5f1994d502988939b0e9ae9c4">Slic3r::ConfigOptionFloat</a>.</p>
+
+</div>
+</div>
 <a id="a4053d8e5c10b52c368232e2767f9792e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4053d8e5c10b52c368232e2767f9792e">&#9670;&nbsp;</a></span>setInt()</h2>
 
@@ -411,7 +443,33 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_slic3r_1_1_config_option_int.html#af106fd960247998c676ec9af2ddc6242">Slic3r::ConfigOptionInt</a>.</p>
+<p>Reimplemented in <a class="el" href="class_slic3r_1_1_config_option_int.html#a0431769f48fecffd0b8e67dae8432244">Slic3r::ConfigOptionInt</a>, and <a class="el" href="class_slic3r_1_1_config_option_float.html#a480e7f8a6970507cbff68826af865b12">Slic3r::ConfigOptionFloat</a>.</p>
+
+</div>
+</div>
+<a id="a2aafa48f367571d2b17b95557e4b7ec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aafa48f367571d2b17b95557e4b7ec4">&#9670;&nbsp;</a></span>setString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Slic3r::ConfigOption::setString </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -489,7 +547,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/libslic3r/<a class="el" href="_config_8hpp_source.html">Config.hpp</a></li>
+<li>src/libslic3r/<a class="el" href="_config_base_8hpp_source.html">ConfigBase.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -101,6 +101,15 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a95ec125abed630f90d3a46741e60e13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedae3fe7f61868045c6202c5562bb549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_dynamic_print_config.html">DynamicPrintConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#aedae3fe7f61868045c6202c5562bb549">config</a></td></tr>
 <tr class="separator:aedae3fe7f61868045c6202c5562bb549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae814cf34188dd4877655cf09c3b79b6b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#ae814cf34188dd4877655cf09c3b79b6b">input_file</a></td></tr>
+<tr class="memdesc:ae814cf34188dd4877655cf09c3b79b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input file path needed for reloading the volume from disk.  <a href="#ae814cf34188dd4877655cf09c3b79b6b">More...</a><br /></td></tr>
+<tr class="separator:ae814cf34188dd4877655cf09c3b79b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e4ef46924b51d46e0b3f6cc86a4e6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#a21e4ef46924b51d46e0b3f6cc86a4e6e">input_file_obj_idx</a></td></tr>
+<tr class="memdesc:a21e4ef46924b51d46e0b3f6cc86a4e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input file object index.  <a href="#a21e4ef46924b51d46e0b3f6cc86a4e6e">More...</a><br /></td></tr>
+<tr class="separator:a21e4ef46924b51d46e0b3f6cc86a4e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a923adf73333913eacc4b1164228aa60a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#a923adf73333913eacc4b1164228aa60a">input_file_vol_idx</a></td></tr>
+<tr class="memdesc:a923adf73333913eacc4b1164228aa60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input file volume index.  <a href="#a923adf73333913eacc4b1164228aa60a">More...</a><br /></td></tr>
+<tr class="separator:a923adf73333913eacc4b1164228aa60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadbe029f67828c16f16a1a962788e8aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_model_volume.html#aadbe029f67828c16f16a1a962788e8aa">modifier</a></td></tr>
 <tr class="memdesc:aadbe029f67828c16f16a1a962788e8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it an object to be printed, or a modifier volume?  <a href="#aadbe029f67828c16f16a1a962788e8aa">More...</a><br /></td></tr>
 <tr class="separator:aadbe029f67828c16f16a1a962788e8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,6 +297,55 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Configuration parameters specific to an object model geometry or a modifier volume, overriding the global <a class="el" href="namespace_slic3r.html">Slic3r</a> settings and the <a class="el" href="class_slic3r_1_1_model_object.html">ModelObject</a> settings. </p>
+
+</div>
+</div>
+<a id="ae814cf34188dd4877655cf09c3b79b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae814cf34188dd4877655cf09c3b79b6b">&#9670;&nbsp;</a></span>input_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Slic3r::ModelVolume::input_file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Input file path needed for reloading the volume from disk. </p>
+<p>Input file path </p>
+
+</div>
+</div>
+<a id="a21e4ef46924b51d46e0b3f6cc86a4e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e4ef46924b51d46e0b3f6cc86a4e6e">&#9670;&nbsp;</a></span>input_file_obj_idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Slic3r::ModelVolume::input_file_obj_idx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Input file object index. </p>
+
+</div>
+</div>
+<a id="a923adf73333913eacc4b1164228aa60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a923adf73333913eacc4b1164228aa60a">&#9670;&nbsp;</a></span>input_file_vol_idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Slic3r::ModelVolume::input_file_vol_idx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Input file volume index. </p>
 
 </div>
 </div>

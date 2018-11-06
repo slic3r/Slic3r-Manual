@@ -70,9 +70,10 @@ $(function() {
 <div class="title">utils.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;xsinit.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils.hpp</a>&quot;</code><br />
 <code>#include &lt;regex&gt;</code><br />
+<code>#include &lt;xsinit.h&gt;</code><br />
+<code>#include &lt;cstdarg&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -81,8 +82,31 @@ Functions</h2></td></tr>
 <tr class="memitem:a8ab91f774b605294d4e0ae7553214153"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#a8ab91f774b605294d4e0ae7553214153">split_at_regex</a> (const std::string &amp;input, const std::string &amp;regex)</td></tr>
 <tr class="memdesc:a8ab91f774b605294d4e0ae7553214153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility functions that aren't necessarily part of libslic3r but are used by it.  <a href="#a8ab91f774b605294d4e0ae7553214153">More...</a><br /></td></tr>
 <tr class="separator:a8ab91f774b605294d4e0ae7553214153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9041792feae2bbadc716e88f03142b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#aae9041792feae2bbadc716e88f03142b">_trim_zeroes</a> (std::string in)</td></tr>
+<tr class="separator:aae9041792feae2bbadc716e88f03142b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8f68cc220fad2a3a1f7b8bbc5cdb9c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#ada8f68cc220fad2a3a1f7b8bbc5cdb9c">trim_zeroes</a> (std::string in)</td></tr>
+<tr class="memdesc:ada8f68cc220fad2a3a1f7b8bbc5cdb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove extra zeroes generated from std::to_string on doubles.  <a href="#ada8f68cc220fad2a3a1f7b8bbc5cdb9c">More...</a><br /></td></tr>
+<tr class="separator:ada8f68cc220fad2a3a1f7b8bbc5cdb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aae9041792feae2bbadc716e88f03142b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae9041792feae2bbadc716e88f03142b">&#9670;&nbsp;</a></span>_trim_zeroes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string _trim_zeroes </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab82d8c0093d2d133902aaba13deb66a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab82d8c0093d2d133902aaba13deb66a1">&#9670;&nbsp;</a></span>confess_at()</h2>
 
@@ -157,6 +181,26 @@ Functions</h2></td></tr>
 
 <p>Utility functions that aren't necessarily part of libslic3r but are used by it. </p>
 <p>Separate a string based on some regular expression string. </p>
+
+</div>
+</div>
+<a id="ada8f68cc220fad2a3a1f7b8bbc5cdb9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada8f68cc220fad2a3a1f7b8bbc5cdb9c">&#9670;&nbsp;</a></span>trim_zeroes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string trim_zeroes </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove extra zeroes generated from std::to_string on doubles. </p>
 
 </div>
 </div>

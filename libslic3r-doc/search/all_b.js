@@ -1,6 +1,7 @@
 var searchData=
 [
   ['label',['label',['../class_slic3r_1_1_config_option_def.html#ab10367dc39bc011ecb964a8e0b79d471',1,'Slic3r::ConfigOptionDef']]],
+  ['label_5fprinted_5fobjects',['label_printed_objects',['../class_slic3r_1_1_g_code_config.html#a89dd3ef61ca518099328031ca6eb3a42',1,'Slic3r::GCodeConfig']]],
   ['last',['last',['../struct_slic3r_1_1_chaining.html#a80abbc8c8b796a76f7fe3d295dcf6271',1,'Slic3r::Chaining']]],
   ['last_5fpoint',['last_point',['../class_slic3r_1_1_extrusion_entity.html#a7d3485dd3803b15660fe4c603edecf35',1,'Slic3r::ExtrusionEntity::last_point()'],['../class_slic3r_1_1_extrusion_path.html#afc662e8f551bcd4ad98fbe31c980deae',1,'Slic3r::ExtrusionPath::last_point()'],['../class_slic3r_1_1_extrusion_loop.html#ab54ac893b64ec5e394bc3c534f1cd1fb',1,'Slic3r::ExtrusionLoop::last_point()'],['../class_slic3r_1_1_extrusion_entity_collection.html#aa5065ba1b0fec3ad24be5af63244c8c2',1,'Slic3r::ExtrusionEntityCollection::last_point()'],['../class_slic3r_1_1_multi_point.html#a58f0e2fdd695f15c66df485828f02658',1,'Slic3r::MultiPoint::last_point()'],['../class_slic3r_1_1_polygon.html#a6287825ac762b14eb6b2986ff1e87695',1,'Slic3r::Polygon::last_point()'],['../class_slic3r_1_1_polyline.html#ab0ba780edd35ed43f8dba290f047a41f',1,'Slic3r::Polyline::last_point()']]],
   ['last_5fpos',['last_pos',['../class_slic3r_1_1_g_code.html#a935d5bd6724a00bd0de46fbedb581786',1,'Slic3r::GCode']]],
@@ -39,6 +40,9 @@ var searchData=
   ['linint',['linint',['../namespace_slic3r_1_1_geometry.html#a35a172d6d50d7fb4328abeca34388c3b',1,'Slic3r::Geometry']]],
   ['link_5fmax_5flength',['link_max_length',['../class_slic3r_1_1_fill.html#a54a56f5bc04922e2c94d215872c8647c',1,'Slic3r::Fill']]],
   ['load',['load',['../class_slic3r_1_1_c_l_i_config.html#afc09c1b2b91586431cce2b9e1cdd0313',1,'Slic3r::CLIConfig::load()'],['../class_slic3r_1_1_config_base.html#ae7d39a3b8239c1cf926bd9bbda4a0684',1,'Slic3r::ConfigBase::load()']]],
+  ['log',['Log',['../class_slic3r_1_1_log.html',1,'Slic3r']]],
+  ['log_2ehpp',['Log.hpp',['../_log_8hpp.html',1,'']]],
+  ['log_5fstring',['log_string',['../namespace_slic3r.html#a952e4de0a1ce8b662a16e13cc9614ec5',1,'Slic3r']]],
   ['looks_5flike_5fmultipart_5fobject',['looks_like_multipart_object',['../class_slic3r_1_1_model.html#ab87b1d98c2f923e447479dc2c0f488ff',1,'Slic3r::Model']]],
   ['loop_5fclipping',['loop_clipping',['../class_slic3r_1_1_fill.html#a0eb5f5cab82248f199168186da375284',1,'Slic3r::Fill']]],
   ['loop_5fclipping_5flength_5fover_5fnozzle_5fdiameter',['LOOP_CLIPPING_LENGTH_OVER_NOZZLE_DIAMETER',['../namespace_slic3r.html#a4b1c8a57877c8c201250c9bc57e72e69',1,'Slic3r']]],

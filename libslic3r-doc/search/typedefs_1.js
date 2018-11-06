@@ -3,6 +3,7 @@ var searchData=
   ['cache',['Cache',['../class_slic3r_1_1_fill_honeycomb.html#aa05d7e7f315db7f373e33557c2f9fc06',1,'Slic3r::FillHoneycomb']]],
   ['cacheid',['CacheID',['../class_slic3r_1_1_fill_honeycomb.html#a4f73aba21a545314766fb60adce81283',1,'Slic3r::FillHoneycomb']]],
   ['callback_5ft',['callback_t',['../class_slic3r_1_1_g_code_reader.html#af3168d70f8de2b7af6714d1ee14f2740',1,'Slic3r::GCodeReader']]],
+  ['config_5fptr',['config_ptr',['../namespace_slic3r.html#a3ee129f32778859e520fb5eb7493a967',1,'Slic3r']]],
   ['coord_5ft',['coord_t',['../namespace_slic3r.html#ab6d77625bc973b0c03e577944f90f297',1,'Slic3r']]],
   ['coordf_5ft',['coordf_t',['../namespace_slic3r.html#a2ac5c755948c74f5f5f975acd5057fe9',1,'Slic3r']]],
   ['coordinate_5fdifference',['coordinate_difference',['../structboost_1_1polygon_1_1coordinate__traits_3_01coord__t_01_4.html#ab012e33832b5e8e6753fa36b11a13c96',1,'boost::polygon::coordinate_traits&lt; coord_t &gt;']]],

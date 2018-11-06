@@ -67,7 +67,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_slic3r_1_1_fill_gyroid-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Slic3r::FillGyroid Class Reference</div>  </div>
@@ -81,7 +80,7 @@ Inheritance diagram for Slic3r::FillGyroid:</div>
  <div class="center">
   <img src="class_slic3r_1_1_fill_gyroid.png" usemap="#Slic3r::FillGyroid_map" alt=""/>
   <map id="Slic3r::FillGyroid_map" name="Slic3r::FillGyroid_map">
-<area href="class_slic3r_1_1_fill.html" alt="Slic3r::Fill" shape="rect" coords="0,0,106,24"/>
+<area href="class_slic3r_1_1_fill.html" title="Abstract base class for the infill generators. " alt="Slic3r::Fill" shape="rect" coords="0,0,106,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -100,10 +99,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a39d0d160d3300bc7ef7c6bdd09ce86ff inherit pub_methods_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a39d0d160d3300bc7ef7c6bdd09ce86ff">~Fill</a> ()</td></tr>
 <tr class="separator:a39d0d160d3300bc7ef7c6bdd09ce86ff inherit pub_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c92987423a6b578c4456620bf8d4408 inherit pub_methods_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a9c92987423a6b578c4456620bf8d4408">no_sort</a> () const</td></tr>
+<tr class="memdesc:a9c92987423a6b578c4456620bf8d4408 inherit pub_methods_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not sort the fill lines to optimize the print head path?  <a href="class_slic3r_1_1_fill.html#a9c92987423a6b578c4456620bf8d4408">More...</a><br /></td></tr>
 <tr class="separator:a9c92987423a6b578c4456620bf8d4408 inherit pub_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4e365707b5c5e74abe3d20bdbcc004b inherit pub_methods_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#aa4e365707b5c5e74abe3d20bdbcc004b">can_solid</a> () const</td></tr>
+<tr class="memdesc:aa4e365707b5c5e74abe3d20bdbcc004b inherit pub_methods_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can this pattern be used for solid infill?  <a href="class_slic3r_1_1_fill.html#aa4e365707b5c5e74abe3d20bdbcc004b">More...</a><br /></td></tr>
 <tr class="separator:aa4e365707b5c5e74abe3d20bdbcc004b inherit pub_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ef4e8d229a385d91a929c5bd9c0f9b inherit pub_methods_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_slic3r.html#a498065f79ccb865fc410d4afeacffc9c">Polylines</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a79ef4e8d229a385d91a929c5bd9c0f9b">fill_surface</a> (const <a class="el" href="class_slic3r_1_1_surface.html">Surface</a> &amp;surface)</td></tr>
+<tr class="memdesc:a79ef4e8d229a385d91a929c5bd9c0f9b inherit pub_methods_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the fill.  <a href="class_slic3r_1_1_fill.html#a79ef4e8d229a385d91a929c5bd9c0f9b">More...</a><br /></td></tr>
 <tr class="separator:a79ef4e8d229a385d91a929c5bd9c0f9b inherit pub_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5989abf5bbdb9532d33c80a079cb6d6a inherit pub_methods_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a2ac5c755948c74f5f5f975acd5057fe9">coordf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a5989abf5bbdb9532d33c80a079cb6d6a">spacing</a> () const</td></tr>
 <tr class="separator:a5989abf5bbdb9532d33c80a079cb6d6a inherit pub_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,36 +114,17 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad2786a4fc502d7fd07a0fef2f1bc2a48"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill_gyroid.html#ad2786a4fc502d7fd07a0fef2f1bc2a48">_fill_surface_single</a> (unsigned int thickness_layers, const std::pair&lt; float, <a class="el" href="class_slic3r_1_1_point.html">Point</a> &gt; &amp;direction, <a class="el" href="class_slic3r_1_1_ex_polygon.html">ExPolygon</a> &amp;expolygon, <a class="el" href="namespace_slic3r.html#a498065f79ccb865fc410d4afeacffc9c">Polylines</a> *polylines_out)</td></tr>
 <tr class="separator:ad2786a4fc502d7fd07a0fef2f1bc2a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3d6e9928b8304ee9babe3c99c1f30dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a498065f79ccb865fc410d4afeacffc9c">Polylines</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill_gyroid.html#af3d6e9928b8304ee9babe3c99c1f30dd">makeGrid</a> (<a class="el" href="namespace_slic3r.html#ab6d77625bc973b0c03e577944f90f297">coord_t</a> gridZ, double <a class="el" href="class_slic3r_1_1_fill.html#ad7c1a26cf2aca99c48a0aaa4ad725ee3">density</a>, double layer_width, size_t gridWidth, size_t gridHeight, size_t curveType)</td></tr>
-<tr class="memdesc:af3d6e9928b8304ee9babe3c99c1f30dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">create the gyroid grid to clip.  <a href="#af3d6e9928b8304ee9babe3c99c1f30dd">More...</a><br /></td></tr>
-<tr class="separator:af3d6e9928b8304ee9babe3c99c1f30dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca7eedc4ad5c3f356d47a5529c3d82b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill_gyroid.html#aca7eedc4ad5c3f356d47a5529c3d82b3">correctOrderAndAdd</a> (const int num, <a class="el" href="class_slic3r_1_1_polyline.html">Polyline</a> poly, <a class="el" href="namespace_slic3r.html#a498065f79ccb865fc410d4afeacffc9c">Polylines</a> &amp;array)</td></tr>
-<tr class="memdesc:aca7eedc4ad5c3f356d47a5529c3d82b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">add line poly in reverse if needed into array  <a href="#aca7eedc4ad5c3f356d47a5529c3d82b3">More...</a><br /></td></tr>
-<tr class="separator:aca7eedc4ad5c3f356d47a5529c3d82b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee3c573b475dc172e4b2d8c00d20aa64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_polyline.html">Polyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill_gyroid.html#aee3c573b475dc172e4b2d8c00d20aa64">makeLineHori</a> (double xPos, double yPos, double width, double height, double currentYBegin, double segmentSize, <a class="el" href="namespace_slic3r.html#ab6d77625bc973b0c03e577944f90f297">coord_t</a> scaleFactor, double zCs, double zSn, bool flip, double decal=0)</td></tr>
-<tr class="memdesc:aee3c573b475dc172e4b2d8c00d20aa64"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a curved horinzontal line (for each x, compute y)  <a href="#aee3c573b475dc172e4b2d8c00d20aa64">More...</a><br /></td></tr>
-<tr class="separator:aee3c573b475dc172e4b2d8c00d20aa64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1406bd41e488a9df60c705a596f1651b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_polyline.html">Polyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill_gyroid.html#a1406bd41e488a9df60c705a596f1651b">makeLineVert</a> (double xPos, double yPos, double width, double height, double currentXBegin, double segmentSize, <a class="el" href="namespace_slic3r.html#ab6d77625bc973b0c03e577944f90f297">coord_t</a> scaleFactor, double zCs, double zSn, bool flip, double decal=0)</td></tr>
-<tr class="memdesc:a1406bd41e488a9df60c705a596f1651b"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a curved vertival line (for each y, compute x)  <a href="#a1406bd41e488a9df60c705a596f1651b">More...</a><br /></td></tr>
-<tr class="separator:a1406bd41e488a9df60c705a596f1651b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_slic3r_1_1_fill"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_slic3r_1_1_fill')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_slic3r_1_1_fill.html">Slic3r::Fill</a></td></tr>
 <tr class="memitem:ab54c7a38fa419589fbc48f72999357d4 inherit pro_methods_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#ab54c7a38fa419589fbc48f72999357d4">Fill</a> ()</td></tr>
 <tr class="separator:ab54c7a38fa419589fbc48f72999357d4 inherit pro_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83171760fd32ff9bcd0a4aa016f3211d inherit pro_methods_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a83171760fd32ff9bcd0a4aa016f3211d">_fill_surface_single</a> (unsigned int thickness_layers, const <a class="el" href="class_slic3r_1_1_fill.html#aa70bd367e59c45c2c803367811e8d8ae">direction_t</a> &amp;direction, <a class="el" href="class_slic3r_1_1_ex_polygon.html">ExPolygon</a> &amp;expolygon, <a class="el" href="namespace_slic3r.html#a498065f79ccb865fc410d4afeacffc9c">Polylines</a> *polylines_out)</td></tr>
+<tr class="memdesc:a83171760fd32ff9bcd0a4aa016f3211d inherit pro_methods_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">The expolygon may be modified by the method to avoid a copy.  <a href="class_slic3r_1_1_fill.html#a83171760fd32ff9bcd0a4aa016f3211d">More...</a><br /></td></tr>
 <tr class="separator:a83171760fd32ff9bcd0a4aa016f3211d inherit pro_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e6b2460dd2db46764168006bab78550 inherit pro_methods_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a5e6b2460dd2db46764168006bab78550">_layer_angle</a> (size_t idx) const</td></tr>
+<tr class="memdesc:a5e6b2460dd2db46764168006bab78550 inherit pro_methods_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementations can override the following virtual method:  <a href="class_slic3r_1_1_fill.html#a5e6b2460dd2db46764168006bab78550">More...</a><br /></td></tr>
 <tr class="separator:a5e6b2460dd2db46764168006bab78550 inherit pro_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f031ea46d6a9cac1c5c2c277903c63d inherit pro_methods_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_fill.html#aa70bd367e59c45c2c803367811e8d8ae">direction_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a7f031ea46d6a9cac1c5c2c277903c63d">_infill_direction</a> (const <a class="el" href="class_slic3r_1_1_surface.html">Surface</a> &amp;surface) const</td></tr>
 <tr class="separator:a7f031ea46d6a9cac1c5c2c277903c63d inherit pro_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a1d00d19c63c548414fd499b0ff22f018"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill_gyroid.html#a1d00d19c63c548414fd499b0ff22f018">scaling</a></td></tr>
-<tr class="memdesc:a1d00d19c63c548414fd499b0ff22f018"><td class="mdescLeft">&#160;</td><td class="mdescRight">mult of density, to have a good of weight for each density parameter  <a href="#a1d00d19c63c548414fd499b0ff22f018">More...</a><br /></td></tr>
-<tr class="separator:a1d00d19c63c548414fd499b0ff22f018"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_slic3r_1_1_fill"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_slic3r_1_1_fill')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_slic3r_1_1_fill.html">Slic3r::Fill</a></td></tr>
-<tr class="memitem:a7c41579b4ad95b15c9468241e37862b4 inherit pro_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a2ac5c755948c74f5f5f975acd5057fe9">coordf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a7c41579b4ad95b15c9468241e37862b4">_spacing</a></td></tr>
-<tr class="separator:a7c41579b4ad95b15c9468241e37862b4 inherit pro_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -152,32 +135,45 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a4e2b3b6bde08b10506e94ca14e6e356b inherit pub_static_methods_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_slic3r_1_1_fill"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_slic3r_1_1_fill')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_slic3r_1_1_fill.html">Slic3r::Fill</a></td></tr>
 <tr class="memitem:ac27c24dafac249a26f8f040252a3a4c5 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#ac27c24dafac249a26f8f040252a3a4c5">layer_id</a></td></tr>
+<tr class="memdesc:ac27c24dafac249a26f8f040252a3a4c5 inherit pub_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the layer.  <a href="class_slic3r_1_1_fill.html#ac27c24dafac249a26f8f040252a3a4c5">More...</a><br /></td></tr>
 <tr class="separator:ac27c24dafac249a26f8f040252a3a4c5 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12967046cdc37118b196e50e580a0ab2 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a2ac5c755948c74f5f5f975acd5057fe9">coordf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a12967046cdc37118b196e50e580a0ab2">z</a></td></tr>
+<tr class="memdesc:a12967046cdc37118b196e50e580a0ab2 inherit pub_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z coordinate of the top print surface, in unscaled coordinates.  <a href="class_slic3r_1_1_fill.html#a12967046cdc37118b196e50e580a0ab2">More...</a><br /></td></tr>
 <tr class="separator:a12967046cdc37118b196e50e580a0ab2 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8adc3aa53df4a6ec46f6e798d9c79f5 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a2ac5c755948c74f5f5f975acd5057fe9">coordf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#af8adc3aa53df4a6ec46f6e798d9c79f5">min_spacing</a></td></tr>
+<tr class="memdesc:af8adc3aa53df4a6ec46f6e798d9c79f5 inherit pub_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">in unscaled coordinates  <a href="class_slic3r_1_1_fill.html#af8adc3aa53df4a6ec46f6e798d9c79f5">More...</a><br /></td></tr>
 <tr class="separator:af8adc3aa53df4a6ec46f6e798d9c79f5 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc87bb3ac6251d9c145c963c6dd5ca1e inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#adc87bb3ac6251d9c145c963c6dd5ca1e">endpoints_overlap</a></td></tr>
+<tr class="memdesc:adc87bb3ac6251d9c145c963c6dd5ca1e inherit pub_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">overlap over spacing for extrusion endpoints  <a href="class_slic3r_1_1_fill.html#adc87bb3ac6251d9c145c963c6dd5ca1e">More...</a><br /></td></tr>
 <tr class="separator:adc87bb3ac6251d9c145c963c6dd5ca1e inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad52233b49247e94b2823c23490a28e2 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#aad52233b49247e94b2823c23490a28e2">angle</a></td></tr>
+<tr class="memdesc:aad52233b49247e94b2823c23490a28e2 inherit pub_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">in radians, ccw, 0 = East  <a href="class_slic3r_1_1_fill.html#aad52233b49247e94b2823c23490a28e2">More...</a><br /></td></tr>
 <tr class="separator:aad52233b49247e94b2823c23490a28e2 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54a56f5bc04922e2c94d215872c8647c inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#ab6d77625bc973b0c03e577944f90f297">coord_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a54a56f5bc04922e2c94d215872c8647c">link_max_length</a></td></tr>
 <tr class="separator:a54a56f5bc04922e2c94d215872c8647c inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eb5f5cab82248f199168186da375284 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#ab6d77625bc973b0c03e577944f90f297">coord_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a0eb5f5cab82248f199168186da375284">loop_clipping</a></td></tr>
+<tr class="memdesc:a0eb5f5cab82248f199168186da375284 inherit pub_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">In scaled coordinates. Used by the concentric infill pattern to clip the loops to create extrusion paths.  <a href="class_slic3r_1_1_fill.html#a0eb5f5cab82248f199168186da375284">More...</a><br /></td></tr>
 <tr class="separator:a0eb5f5cab82248f199168186da375284 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa39166f35639ffe6c80b467ee251d97b inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#aa39166f35639ffe6c80b467ee251d97b">bounding_box</a></td></tr>
 <tr class="separator:aa39166f35639ffe6c80b467ee251d97b inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7c1a26cf2aca99c48a0aaa4ad725ee3 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#ad7c1a26cf2aca99c48a0aaa4ad725ee3">density</a></td></tr>
+<tr class="memdesc:ad7c1a26cf2aca99c48a0aaa4ad725ee3 inherit pub_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_slic3r_1_1_fill.html" title="Abstract base class for the infill generators. ">Fill</a> density, fraction in &lt;0, 1&gt;  <a href="class_slic3r_1_1_fill.html#ad7c1a26cf2aca99c48a0aaa4ad725ee3">More...</a><br /></td></tr>
 <tr class="separator:ad7c1a26cf2aca99c48a0aaa4ad725ee3 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a216f96303da59b4360f6b12d13b011ba inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a216f96303da59b4360f6b12d13b011ba">dont_connect</a></td></tr>
+<tr class="memdesc:a216f96303da59b4360f6b12d13b011ba inherit pub_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">Don't connect the fill lines around the inner perimeter.  <a href="class_slic3r_1_1_fill.html#a216f96303da59b4360f6b12d13b011ba">More...</a><br /></td></tr>
 <tr class="separator:a216f96303da59b4360f6b12d13b011ba inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20fff5484c23994c677f0d8b2048ee77 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a20fff5484c23994c677f0d8b2048ee77">dont_adjust</a></td></tr>
+<tr class="memdesc:a20fff5484c23994c677f0d8b2048ee77 inherit pub_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">Don't adjust spacing to fill the space evenly.  <a href="class_slic3r_1_1_fill.html#a20fff5484c23994c677f0d8b2048ee77">More...</a><br /></td></tr>
 <tr class="separator:a20fff5484c23994c677f0d8b2048ee77 inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e81e520b7e10f70878141abf97c7f6b inherit pub_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a4e81e520b7e10f70878141abf97c7f6b">complete</a></td></tr>
 <tr class="separator:a4e81e520b7e10f70878141abf97c7f6b inherit pub_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_types_class_slic3r_1_1_fill"><td colspan="2" onclick="javascript:toggleInherit('pro_types_class_slic3r_1_1_fill')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="class_slic3r_1_1_fill.html">Slic3r::Fill</a></td></tr>
 <tr class="memitem:aa70bd367e59c45c2c803367811e8d8ae inherit pro_types_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; float, <a class="el" href="class_slic3r_1_1_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#aa70bd367e59c45c2c803367811e8d8ae">direction_t</a></td></tr>
 <tr class="separator:aa70bd367e59c45c2c803367811e8d8ae inherit pro_types_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_slic3r_1_1_fill"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_slic3r_1_1_fill')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_slic3r_1_1_fill.html">Slic3r::Fill</a></td></tr>
+<tr class="memitem:a7c41579b4ad95b15c9468241e37862b4 inherit pro_attribs_class_slic3r_1_1_fill"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a2ac5c755948c74f5f5f975acd5057fe9">coordf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_fill.html#a7c41579b4ad95b15c9468241e37862b4">_spacing</a></td></tr>
+<tr class="memdesc:a7c41579b4ad95b15c9468241e37862b4 inherit pro_attribs_class_slic3r_1_1_fill"><td class="mdescLeft">&#160;</td><td class="mdescRight">the actual one in unscaled coordinates, we fill this while generating paths  <a href="class_slic3r_1_1_fill.html#a7c41579b4ad95b15c9468241e37862b4">More...</a><br /></td></tr>
+<tr class="separator:a7c41579b4ad95b15c9468241e37862b4 inherit pro_attribs_class_slic3r_1_1_fill"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adc507bd941e1f275d74b3247e76a2528"></a>
@@ -306,297 +302,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aca7eedc4ad5c3f356d47a5529c3d82b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca7eedc4ad5c3f356d47a5529c3d82b3">&#9670;&nbsp;</a></span>correctOrderAndAdd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Slic3r::FillGyroid::correctOrderAndAdd </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>num</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_slic3r_1_1_polyline.html">Polyline</a>&#160;</td>
-          <td class="paramname"><em>poly</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespace_slic3r.html#a498065f79ccb865fc410d4afeacffc9c">Polylines</a> &amp;&#160;</td>
-          <td class="paramname"><em>array</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>add line poly in reverse if needed into array </p>
-
-</div>
-</div>
-<a id="af3d6e9928b8304ee9babe3c99c1f30dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3d6e9928b8304ee9babe3c99c1f30dd">&#9670;&nbsp;</a></span>makeGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_slic3r.html#a498065f79ccb865fc410d4afeacffc9c">Polylines</a> Slic3r::FillGyroid::makeGrid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_slic3r.html#ab6d77625bc973b0c03e577944f90f297">coord_t</a>&#160;</td>
-          <td class="paramname"><em>gridZ</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>density</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>layer_width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>gridWidth</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>gridHeight</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>curveType</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>create the gyroid grid to clip. </p>
-<p>Generate a set of curves (array of array of 2d points) that describe a horizontal slice of a truncated regular octahedron with a specified grid square size. </p>
-
-</div>
-</div>
-<a id="aee3c573b475dc172e4b2d8c00d20aa64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee3c573b475dc172e4b2d8c00d20aa64">&#9670;&nbsp;</a></span>makeLineHori()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_slic3r_1_1_polyline.html">Polyline</a> Slic3r::FillGyroid::makeLineHori </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>xPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>yPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>currentYBegin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>segmentSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespace_slic3r.html#ab6d77625bc973b0c03e577944f90f297">coord_t</a>&#160;</td>
-          <td class="paramname"><em>scaleFactor</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>zCs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>zSn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>flip</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>decal</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>create a curved horinzontal line (for each x, compute y) </p>
-
-</div>
-</div>
-<a id="a1406bd41e488a9df60c705a596f1651b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1406bd41e488a9df60c705a596f1651b">&#9670;&nbsp;</a></span>makeLineVert()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_slic3r_1_1_polyline.html">Polyline</a> Slic3r::FillGyroid::makeLineVert </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>xPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>yPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>currentXBegin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>segmentSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespace_slic3r.html#ab6d77625bc973b0c03e577944f90f297">coord_t</a>&#160;</td>
-          <td class="paramname"><em>scaleFactor</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>zCs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>zSn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>flip</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>decal</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>create a curved vertival line (for each y, compute x) </p>
-
-</div>
-</div>
 <a id="a2bfacc92840ffdb911ac5e710b9ead2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2bfacc92840ffdb911ac5e710b9ead2f">&#9670;&nbsp;</a></span>use_bridge_flow()</h2>
 
@@ -623,31 +328,6 @@ Additional Inherited Members</h2></td></tr>
 <p>require bridge flow since most of this pattern hangs in air </p>
 
 <p>Reimplemented from <a class="el" href="class_slic3r_1_1_fill.html#aaf8e9814b2950810f845f02a8547c224">Slic3r::Fill</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1d00d19c63c548414fd499b0ff22f018"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d00d19c63c548414fd499b0ff22f018">&#9670;&nbsp;</a></span>scaling</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Slic3r::FillGyroid::scaling</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>mult of density, to have a good of weight for each density parameter </p>
 
 </div>
 </div>

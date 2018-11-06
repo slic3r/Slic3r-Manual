@@ -99,6 +99,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0d9dff33a377f39c96f10e661d622363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afffc3b7f9e168fcaecc944e03e39c1ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_print_region.html">PrintRegion</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#afffc3b7f9e168fcaecc944e03e39c1ab">add_region</a> ()</td></tr>
 <tr class="separator:afffc3b7f9e168fcaecc944e03e39c1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682e1d57c4cd2863ebe7d7e8252c915f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a682e1d57c4cd2863ebe7d7e8252c915f">process</a> ()</td></tr>
+<tr class="memdesc:a682e1d57c4cd2863ebe7d7e8252c915f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers the rest of the print process.  <a href="#a682e1d57c4cd2863ebe7d7e8252c915f">More...</a><br /></td></tr>
+<tr class="separator:a682e1d57c4cd2863ebe7d7e8252c915f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631ecbf4f342cda3867a264fdb755fb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a631ecbf4f342cda3867a264fdb755fb9">export_gcode</a> (std::ostream &amp;output, bool quiet=false)</td></tr>
+<tr class="memdesc:a631ecbf4f342cda3867a264fdb755fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a gcode export.  <a href="#a631ecbf4f342cda3867a264fdb755fb9">More...</a><br /></td></tr>
+<tr class="separator:a631ecbf4f342cda3867a264fdb755fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa7dcfbb558be1e26be5bb6e4bf5a8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a6fa7dcfbb558be1e26be5bb6e4bf5a8f">export_gcode</a> (const std::string &amp;filename, bool quiet=false)</td></tr>
+<tr class="memdesc:a6fa7dcfbb558be1e26be5bb6e4bf5a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a gcode export and then runs post-processing scripts (if any)  <a href="#a6fa7dcfbb558be1e26be5bb6e4bf5a8f">More...</a><br /></td></tr>
+<tr class="separator:a6fa7dcfbb558be1e26be5bb6e4bf5a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae59d581ecd6531e2180413b8aaea45e0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#ae59d581ecd6531e2180413b8aaea45e0">export_gcode</a> (bool quiet=false)</td></tr>
+<tr class="memdesc:ae59d581ecd6531e2180413b8aaea45e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">commands a gcode export to a temporary file and return its name  <a href="#ae59d581ecd6531e2180413b8aaea45e0">More...</a><br /></td></tr>
+<tr class="separator:ae59d581ecd6531e2180413b8aaea45e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983ef96bbd57dc09632e72526e718a9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a983ef96bbd57dc09632e72526e718a9e">invalidate_state_by_config</a> (const <a class="el" href="class_slic3r_1_1_print_config_base.html">PrintConfigBase</a> &amp;<a class="el" href="class_slic3r_1_1_print.html#a773de9f61630bc214f27816491a884c7">config</a>)</td></tr>
 <tr class="separator:a983ef96bbd57dc09632e72526e718a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77fe13a17cf05ed6ae2209b70ee5f2fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a77fe13a17cf05ed6ae2209b70ee5f2fc">invalidate_step</a> (<a class="el" href="namespace_slic3r.html#a64467311ef101236e18bc66eb62db4aa">PrintStep</a> step)</td></tr>
@@ -109,6 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a80529a496b35067a864f0c3256a8d372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fc05ef657a1ba01405c1f01cace26da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a2fc05ef657a1ba01405c1f01cace26da">add_model_object</a> (<a class="el" href="class_slic3r_1_1_model_object.html">ModelObject</a> *model_object, int idx=-1)</td></tr>
 <tr class="separator:a2fc05ef657a1ba01405c1f01cace26da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059a59ccff3afea517fb8ef492b87486"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a059a59ccff3afea517fb8ef492b87486">apply_config</a> (<a class="el" href="namespace_slic3r.html#a3ee129f32778859e520fb5eb7493a967">config_ptr</a> <a class="el" href="class_slic3r_1_1_print.html#a773de9f61630bc214f27816491a884c7">config</a>)</td></tr>
+<tr class="memdesc:a059a59ccff3afea517fb8ef492b87486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a provided configuration to the internal copy.  <a href="#a059a59ccff3afea517fb8ef492b87486">More...</a><br /></td></tr>
+<tr class="separator:a059a59ccff3afea517fb8ef492b87486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa77d15c95c452a25882cf355d2e9869d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#aa77d15c95c452a25882cf355d2e9869d">apply_config</a> (<a class="el" href="class_slic3r_1_1_dynamic_print_config.html">DynamicPrintConfig</a> <a class="el" href="class_slic3r_1_1_print.html#a773de9f61630bc214f27816491a884c7">config</a>)</td></tr>
 <tr class="separator:aa77d15c95c452a25882cf355d2e9869d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ac212376c0ceec26dd6c980993ae0d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a3ac212376c0ceec26dd6c980993ae0d2">has_infinite_skirt</a> () const</td></tr>
@@ -129,6 +144,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a07ac4560476cd9acf10c859516145c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92ac1199c001c59d0178f4586e89b02c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a92ac1199c001c59d0178f4586e89b02c">_make_brim</a> ()</td></tr>
 <tr class="separator:a92ac1199c001c59d0178f4586e89b02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca6085f8d06d46932b97dcee4756cc3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#aca6085f8d06d46932b97dcee4756cc3d">make_skirt</a> ()</td></tr>
+<tr class="separator:aca6085f8d06d46932b97dcee4756cc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435054595b51a8a8a200f30bb3872e7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a435054595b51a8a8a200f30bb3872e7c">make_brim</a> ()</td></tr>
+<tr class="memdesc:a435054595b51a8a8a200f30bb3872e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a brim around all of the objects in the print.  <a href="#a435054595b51a8a8a200f30bb3872e7c">More...</a><br /></td></tr>
+<tr class="separator:a435054595b51a8a8a200f30bb3872e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3562b7c0ef8ba5628ff3f92f033d8834"><td class="memItemLeft" align="right" valign="top">std::set&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a3562b7c0ef8ba5628ff3f92f033d8834">object_extruders</a> () const</td></tr>
 <tr class="separator:a3562b7c0ef8ba5628ff3f92f033d8834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04807b3710fb0d1587bbff932514c7aa"><td class="memItemLeft" align="right" valign="top">std::set&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a04807b3710fb0d1587bbff932514c7aa">support_material_extruders</a> () const</td></tr>
@@ -164,6 +184,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a26d18f8596a8c9a8b67c28a78b48af1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00f6da161daa1fbda166185a6720dbb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_slic3r_1_1_placeholder_parser.html">PlaceholderParser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a00f6da161daa1fbda166185a6720dbb0">placeholder_parser</a></td></tr>
 <tr class="separator:a00f6da161daa1fbda166185a6720dbb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab307a350f31475d5fa66c7a31d1661f3"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(int, const std::string &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#ab307a350f31475d5fa66c7a31d1661f3">status_cb</a> {nullptr}</td></tr>
+<tr class="separator:ab307a350f31475d5fa66c7a31d1661f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad304506269b3ef756f3495263e6665d6"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(std::vector&lt; std::string &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#ad304506269b3ef756f3495263e6665d6">post_process_cb</a> {nullptr}</td></tr>
+<tr class="separator:ad304506269b3ef756f3495263e6665d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3424a5f4a1964120e45b37bcf20d9302"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a3424a5f4a1964120e45b37bcf20d9302">total_used_filament</a></td></tr>
 <tr class="separator:a3424a5f4a1964120e45b37bcf20d9302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e64b4980cc53dcc37331499987d1785"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print.html#a9e64b4980cc53dcc37331499987d1785">total_extruded_volume</a></td></tr>
@@ -297,8 +321,28 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a059a59ccff3afea517fb8ef492b87486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059a59ccff3afea517fb8ef492b87486">&#9670;&nbsp;</a></span>apply_config() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Slic3r::Print::apply_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_slic3r.html#a3ee129f32778859e520fb5eb7493a967">config_ptr</a>&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply a provided configuration to the internal copy. </p>
+
+</div>
+</div>
 <a id="aa77d15c95c452a25882cf355d2e9869d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa77d15c95c452a25882cf355d2e9869d">&#9670;&nbsp;</a></span>apply_config()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa77d15c95c452a25882cf355d2e9869d">&#9670;&nbsp;</a></span>apply_config() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -416,6 +460,86 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a631ecbf4f342cda3867a264fdb755fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631ecbf4f342cda3867a264fdb755fb9">&#9670;&nbsp;</a></span>export_gcode() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::Print::export_gcode </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>quiet</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a gcode export. </p>
+
+</div>
+</div>
+<a id="a6fa7dcfbb558be1e26be5bb6e4bf5a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa7dcfbb558be1e26be5bb6e4bf5a8f">&#9670;&nbsp;</a></span>export_gcode() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::Print::export_gcode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>quiet</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a gcode export and then runs post-processing scripts (if any) </p>
+
+</div>
+</div>
+<a id="ae59d581ecd6531e2180413b8aaea45e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae59d581ecd6531e2180413b8aaea45e0">&#9670;&nbsp;</a></span>export_gcode() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Slic3r::Print::export_gcode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>quiet</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>commands a gcode export to a temporary file and return its name </p>
 
 </div>
 </div>
@@ -644,6 +768,43 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a435054595b51a8a8a200f30bb3872e7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a435054595b51a8a8a200f30bb3872e7c">&#9670;&nbsp;</a></span>make_brim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::Print::make_brim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates a brim around all of the objects in the print. </p>
+
+</div>
+</div>
+<a id="aca6085f8d06d46932b97dcee4756cc3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6085f8d06d46932b97dcee4756cc3d">&#9670;&nbsp;</a></span>make_skirt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::Print::make_skirt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generates a skirt around the union of all of the objects in the print. </p>
+
+</div>
+</div>
 <a id="a2d1f50f1205b18ee273769867da58c98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d1f50f1205b18ee273769867da58c98">&#9670;&nbsp;</a></span>max_allowed_layer_height()</h2>
 
@@ -710,6 +871,26 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a682e1d57c4cd2863ebe7d7e8252c915f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682e1d57c4cd2863ebe7d7e8252c915f">&#9670;&nbsp;</a></span>process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::Print::process </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Triggers the rest of the print process. </p>
+<p>No need to call this as we call it as part of prepare_infill() until we fix the idempotency issue. </p>
 
 </div>
 </div>
@@ -950,6 +1131,21 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad304506269b3ef756f3495263e6665d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad304506269b3ef756f3495263e6665d6">&#9670;&nbsp;</a></span>post_process_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void(std::vector&lt;std::string&gt;)&gt; Slic3r::Print::post_process_cb {nullptr}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function pointer for the UI side to call post-processing scripts. Vector is assumed to be the executable script and all arguments. </p>
+
+</div>
+</div>
 <a id="a26d18f8596a8c9a8b67c28a78b48af1a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26d18f8596a8c9a8b67c28a78b48af1a">&#9670;&nbsp;</a></span>regions</h2>
 
@@ -986,6 +1182,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_slic3r_1_1_print_state.html">PrintState</a>&lt;<a class="el" href="namespace_slic3r.html#a64467311ef101236e18bc66eb62db4aa">PrintStep</a>&gt; Slic3r::Print::state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab307a350f31475d5fa66c7a31d1661f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab307a350f31475d5fa66c7a31d1661f3">&#9670;&nbsp;</a></span>status_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void(int, const std::string&amp;)&gt; Slic3r::Print::status_cb {nullptr}</td>
         </tr>
       </table>
 </div><div class="memdoc">

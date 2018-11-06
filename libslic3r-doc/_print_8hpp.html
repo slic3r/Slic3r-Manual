@@ -78,21 +78,27 @@ $(function() {
 <code>#include &lt;set&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;boost/thread.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="_bounding_box_8hpp_source.html">BoundingBox.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_flow_8hpp_source.html">Flow.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_print_config_8hpp_source.html">PrintConfig.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_config_8hpp_source.html">Config.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_point_8hpp_source.html">Point.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_layer_8hpp_source.html">Layer.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_model_8hpp_source.html">Model.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_placeholder_parser_8hpp_source.html">PlaceholderParser.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_slicing_adaptive_8hpp_source.html">SlicingAdaptive.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_layer_height_spline_8hpp_source.html">LayerHeightSpline.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_support_material_8hpp_source.html">SupportMaterial.hpp</a>&quot;</code><br />
+<code>#include &lt;exception&gt;</code><br />
 </div>
 <p><a href="_print_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_invalid_object_exception.html">Slic3r::InvalidObjectException</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print_state.html">Slic3r::PrintState&lt; StepType &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_print_region.html">Slic3r::PrintRegion</a></td></tr>
@@ -130,6 +136,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:abadc2e1cb90927922dc900c502d701b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa01c8efa0a5ba195a5a64e236fa0fdfe"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="class_slic3r_1_1_print_region.html">PrintRegion</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#aa01c8efa0a5ba195a5a64e236fa0fdfe">Slic3r::PrintRegionPtrs</a></td></tr>
 <tr class="separator:aa01c8efa0a5ba195a5a64e236fa0fdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e8482612f09ebc6c8ce6d1fc19c2503"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a7e8482612f09ebc6c8ce6d1fc19c2503">Slic3r::shared_Print</a> = std::shared_ptr&lt; <a class="el" href="class_slic3r_1_1_print.html">Print</a> &gt;</td></tr>
+<tr class="separator:a7e8482612f09ebc6c8ce6d1fc19c2503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>

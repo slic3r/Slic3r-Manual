@@ -1,6 +1,7 @@
 var searchData=
 [
   ['medialaxis',['MedialAxis',['../class_slic3r_1_1_geometry_1_1_medial_axis.html',1,'Slic3r::Geometry']]],
+  ['mesh_5fstats',['mesh_stats',['../struct_slic3r_1_1mesh__stats.html',1,'Slic3r']]],
   ['model',['Model',['../class_slic3r_1_1_model.html',1,'Slic3r']]],
   ['modelinstance',['ModelInstance',['../class_slic3r_1_1_model_instance.html',1,'Slic3r']]],
   ['modelmaterial',['ModelMaterial',['../class_slic3r_1_1_model_material.html',1,'Slic3r']]],

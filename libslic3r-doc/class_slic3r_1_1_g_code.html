@@ -87,8 +87,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a105b1e6249c8328f8e12b70d8ac983cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b877f79ab3624962b83514ec57c5e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_g_code.html#a7b877f79ab3624962b83514ec57c5e6d">apply_print_config</a> (const <a class="el" href="class_slic3r_1_1_print_config.html">PrintConfig</a> &amp;print_config)</td></tr>
 <tr class="separator:a7b877f79ab3624962b83514ec57c5e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6320878ee4fff4ad7f30400b2bf8da9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_g_code.html#ac6320878ee4fff4ad7f30400b2bf8da9">set_extruders</a> (const std::vector&lt; unsigned int &gt; &amp;extruder_ids)</td></tr>
-<tr class="separator:ac6320878ee4fff4ad7f30400b2bf8da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1870279161adede6ab573ace221e3bf6"><td class="memTemplParams" colspan="2">template&lt;typename Iter &gt; </td></tr>
+<tr class="memitem:a1870279161adede6ab573ace221e3bf6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_g_code.html#a1870279161adede6ab573ace221e3bf6">set_extruders</a> (Iter begin, Iter end)</td></tr>
+<tr class="memdesc:a1870279161adede6ab573ace221e3bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function.  <a href="#a1870279161adede6ab573ace221e3bf6">More...</a><br /></td></tr>
+<tr class="separator:a1870279161adede6ab573ace221e3bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14cf99e91d45d2237228eb820ba1fbb6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a14cf99e91d45d2237228eb820ba1fbb6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_g_code.html#a14cf99e91d45d2237228eb820ba1fbb6">set_extruders</a> (const std::vector&lt; T &gt; &amp;extruder_ids)</td></tr>
+<tr class="separator:a14cf99e91d45d2237228eb820ba1fbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac98e43b981517d578b84680bfe551e6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aac98e43b981517d578b84680bfe551e6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_g_code.html#aac98e43b981517d578b84680bfe551e6">set_extruders</a> (const std::set&lt; T &gt; &amp;extruder_ids)</td></tr>
+<tr class="separator:aac98e43b981517d578b84680bfe551e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54c7532f9680917488cd57ff561450a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_g_code.html#a54c7532f9680917488cd57ff561450a4">set_origin</a> (const <a class="el" href="class_slic3r_1_1_pointf.html">Pointf</a> &amp;pointf)</td></tr>
 <tr class="separator:a54c7532f9680917488cd57ff561450a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b9cd040ce1ef5fbc7d0ff2676b3fb50"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_g_code.html#a1b9cd040ce1ef5fbc7d0ff2676b3fb50">preamble</a> ()</td></tr>
@@ -462,20 +470,98 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac6320878ee4fff4ad7f30400b2bf8da9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6320878ee4fff4ad7f30400b2bf8da9">&#9670;&nbsp;</a></span>set_extruders()</h2>
+<a id="a1870279161adede6ab573ace221e3bf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1870279161adede6ab573ace221e3bf6">&#9670;&nbsp;</a></span>set_extruders() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Slic3r::GCode::set_extruders </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; unsigned int &gt; &amp;&#160;</td>
+          <td class="paramtype">Iter&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iter&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Template function. </p>
+
+</div>
+</div>
+<a id="a14cf99e91d45d2237228eb820ba1fbb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14cf99e91d45d2237228eb820ba1fbb6">&#9670;&nbsp;</a></span>set_extruders() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::GCode::set_extruders </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>extruder_ids</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac98e43b981517d578b84680bfe551e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac98e43b981517d578b84680bfe551e6">&#9670;&nbsp;</a></span>set_extruders() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::GCode::set_extruders </td>
+          <td>(</td>
+          <td class="paramtype">const std::set&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>extruder_ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
