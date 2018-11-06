@@ -39,7 +39,7 @@
     * [Command Line Usage](/advanced/command-line)
     * [Post-Processing Scripts](/advanced/post-processing)
     * [Conditional G-Code](/advanced/conditional-gcode)
-    * [Custom GCode Placeholderse](/advanced/placeholder-parser)
+    * [Custom GCode Placeholders](/advanced/placeholder-parser)
     * [Flow Math](/advanced/flow-math)
     * [Modifier Meshes](/advanced/modifier-mesh)
     * [Filament Swaps](/advanced/filament-swaps)
