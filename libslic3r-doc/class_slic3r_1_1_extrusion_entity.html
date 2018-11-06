@@ -113,6 +113,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a544c006b473b7583da8dcd97d94c25bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478ff5ba0df225733f52909db2452c33"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_extrusion_entity.html#a478ff5ba0df225733f52909db2452c33">length</a> () const</td></tr>
 <tr class="separator:a478ff5ba0df225733f52909db2452c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb75f387b9569d979322fe31e253753d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_extrusion_entity.html#adb75f387b9569d979322fe31e253753d">is_perimeter</a> () const</td></tr>
+<tr class="separator:adb75f387b9569d979322fe31e253753d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa140debd493adaf178b5bb827b924646"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_extrusion_entity.html#aa140debd493adaf178b5bb827b924646">is_infill</a> () const</td></tr>
+<tr class="separator:aa140debd493adaf178b5bb827b924646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3d995d8d424ad3154b19284bbdb024"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_extrusion_entity.html#a8a3d995d8d424ad3154b19284bbdb024">is_solid_infill</a> () const</td></tr>
+<tr class="separator:a8a3d995d8d424ad3154b19284bbdb024"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aec65c1c4376d02af1a9ce4b2788adbb3"></a>
@@ -305,6 +311,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa140debd493adaf178b5bb827b924646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa140debd493adaf178b5bb827b924646">&#9670;&nbsp;</a></span>is_infill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Slic3r::ExtrusionEntity::is_infill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_slic3r_1_1_extrusion_loop.html#a01cff3a55d440863ee895d45652decb6">Slic3r::ExtrusionLoop</a>, and <a class="el" href="class_slic3r_1_1_extrusion_path.html#a4a52f9dcad109269601d6e3769affe9e">Slic3r::ExtrusionPath</a>.</p>
+
+</div>
+</div>
 <a id="a5fb27216be0e6841ae1e4c30e5de6396"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fb27216be0e6841ae1e4c30e5de6396">&#9670;&nbsp;</a></span>is_loop()</h2>
 
@@ -329,6 +362,60 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_slic3r_1_1_extrusion_loop.html#a270574a111e42cc5aae384609e51ba29">Slic3r::ExtrusionLoop</a>.</p>
+
+</div>
+</div>
+<a id="adb75f387b9569d979322fe31e253753d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb75f387b9569d979322fe31e253753d">&#9670;&nbsp;</a></span>is_perimeter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Slic3r::ExtrusionEntity::is_perimeter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_slic3r_1_1_extrusion_loop.html#a5b08d4aade6a264353b7310dade8f0e5">Slic3r::ExtrusionLoop</a>, and <a class="el" href="class_slic3r_1_1_extrusion_path.html#af013406834db45c3df558c9b75a8d206">Slic3r::ExtrusionPath</a>.</p>
+
+</div>
+</div>
+<a id="a8a3d995d8d424ad3154b19284bbdb024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3d995d8d424ad3154b19284bbdb024">&#9670;&nbsp;</a></span>is_solid_infill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Slic3r::ExtrusionEntity::is_solid_infill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_slic3r_1_1_extrusion_loop.html#aaee8449ba3448127e7dc746ac588c203">Slic3r::ExtrusionLoop</a>, and <a class="el" href="class_slic3r_1_1_extrusion_path.html#a85fc20fa02a1975ae2d5c5777d78faf9">Slic3r::ExtrusionPath</a>.</p>
 
 </div>
 </div>

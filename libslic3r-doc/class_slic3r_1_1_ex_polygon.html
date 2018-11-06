@@ -81,6 +81,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a98e1b4e785e6b82ec1a8eb5efc8a22b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affec3c30f97b24b870c87fd7937d2a56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#affec3c30f97b24b870c87fd7937d2a56">ExPolygon</a> (const <a class="el" href="class_slic3r_1_1_polygon.html">Polygon</a> &amp;_contour)</td></tr>
 <tr class="separator:affec3c30f97b24b870c87fd7937d2a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8232b2645462a407ec4d28dbfc4e62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#aae8232b2645462a407ec4d28dbfc4e62">ExPolygon</a> (const <a class="el" href="namespace_slic3r.html#a47d04f71423ecef9ad36e18046f11c3c">Points</a> &amp;_contour)</td></tr>
+<tr class="separator:aae8232b2645462a407ec4d28dbfc4e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7cd48b2751f077e5b906165d1440e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#a7a7cd48b2751f077e5b906165d1440e1">ExPolygon</a> (const <a class="el" href="namespace_slic3r.html#a47d04f71423ecef9ad36e18046f11c3c">Points</a> &amp;_contour, const <a class="el" href="namespace_slic3r.html#a47d04f71423ecef9ad36e18046f11c3c">Points</a> &amp;_hole)</td></tr>
+<tr class="memdesc:a7a7cd48b2751f077e5b906165d1440e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to build a single holed.  <a href="#a7a7cd48b2751f077e5b906165d1440e1">More...</a><br /></td></tr>
+<tr class="separator:a7a7cd48b2751f077e5b906165d1440e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2e8883b46b4f9af8b569a9ddcb17db6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#aa2e8883b46b4f9af8b569a9ddcb17db6">operator Points</a> () const</td></tr>
 <tr class="separator:aa2e8883b46b4f9af8b569a9ddcb17db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a786f79a0bcfe28828f64194bce31a50a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#a786f79a0bcfe28828f64194bce31a50a">operator Polygons</a> () const</td></tr>
@@ -119,8 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a846965351f696843250b876b5b852f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc57e605bb612df419a2b002b1cb9701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#acc57e605bb612df419a2b002b1cb9701">simplify</a> (double tolerance, <a class="el" href="namespace_slic3r.html#a9306b728b4672f5e56abe05ba7437fe1">ExPolygons</a> *expolygons) const</td></tr>
 <tr class="separator:acc57e605bb612df419a2b002b1cb9701"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e567ef64f594002af28388fd181d2ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#a8e567ef64f594002af28388fd181d2ff">medial_axis</a> (double max_width, double min_width, <a class="el" href="namespace_slic3r.html#ae215fce7feff06e36add3d6f37bfcd27">ThickPolylines</a> *polylines) const</td></tr>
-<tr class="separator:a8e567ef64f594002af28388fd181d2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9078a2b68dda1ef3e84a6605621c82f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#a9078a2b68dda1ef3e84a6605621c82f0">medial_axis</a> (const <a class="el" href="class_slic3r_1_1_ex_polygon.html">ExPolygon</a> &amp;bounds, double max_width, double min_width, <a class="el" href="namespace_slic3r.html#ae215fce7feff06e36add3d6f37bfcd27">ThickPolylines</a> *polylines) const</td></tr>
+<tr class="separator:a9078a2b68dda1ef3e84a6605621c82f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5ae53cab5641f2216d970b27fd9ba2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#ac5ae53cab5641f2216d970b27fd9ba2b">medial_axis</a> (double max_width, double min_width, <a class="el" href="namespace_slic3r.html#a498065f79ccb865fc410d4afeacffc9c">Polylines</a> *polylines) const</td></tr>
 <tr class="separator:ac5ae53cab5641f2216d970b27fd9ba2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac330216642220f83d3284b40434202be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_ex_polygon.html#ac330216642220f83d3284b40434202be">get_trapezoids</a> (<a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a> *polygons) const</td></tr>
@@ -151,7 +156,7 @@ Public Attributes</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a98e1b4e785e6b82ec1a8eb5efc8a22b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98e1b4e785e6b82ec1a8eb5efc8a22b0">&#9670;&nbsp;</a></span>ExPolygon() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e1b4e785e6b82ec1a8eb5efc8a22b0">&#9670;&nbsp;</a></span>ExPolygon() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +181,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="affec3c30f97b24b870c87fd7937d2a56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affec3c30f97b24b870c87fd7937d2a56">&#9670;&nbsp;</a></span>ExPolygon() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#affec3c30f97b24b870c87fd7937d2a56">&#9670;&nbsp;</a></span>ExPolygon() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,6 +203,70 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae8232b2645462a407ec4d28dbfc4e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8232b2645462a407ec4d28dbfc4e62">&#9670;&nbsp;</a></span>ExPolygon() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Slic3r::ExPolygon::ExPolygon </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_slic3r.html#a47d04f71423ecef9ad36e18046f11c3c">Points</a> &amp;&#160;</td>
+          <td class="paramname"><em>_contour</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a7cd48b2751f077e5b906165d1440e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7cd48b2751f077e5b906165d1440e1">&#9670;&nbsp;</a></span>ExPolygon() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Slic3r::ExPolygon::ExPolygon </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_slic3r.html#a47d04f71423ecef9ad36e18046f11c3c">Points</a> &amp;&#160;</td>
+          <td class="paramname"><em>_contour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace_slic3r.html#a47d04f71423ecef9ad36e18046f11c3c">Points</a> &amp;&#160;</td>
+          <td class="paramname"><em>_hole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor to build a single holed. </p>
 
 </div>
 </div>
@@ -477,8 +546,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8e567ef64f594002af28388fd181d2ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e567ef64f594002af28388fd181d2ff">&#9670;&nbsp;</a></span>medial_axis() <span class="overload">[1/2]</span></h2>
+<a id="a9078a2b68dda1ef3e84a6605621c82f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9078a2b68dda1ef3e84a6605621c82f0">&#9670;&nbsp;</a></span>medial_axis() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -486,6 +555,12 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Slic3r::ExPolygon::medial_axis </td>
           <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_slic3r_1_1_ex_polygon.html">ExPolygon</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>max_width</em>, </td>
         </tr>

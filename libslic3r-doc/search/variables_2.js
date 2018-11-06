@@ -3,6 +3,7 @@ var searchData=
   ['b',['b',['../class_slic3r_1_1_line.html#a8ed125162ca54cb677868a59b014747a',1,'Slic3r::Line::b()'],['../class_slic3r_1_1_linef.html#a2a88e1bafe086c06add9073c2234973e',1,'Slic3r::Linef::b()'],['../class_slic3r_1_1_linef3.html#a783137d974857504f5e0444bfa8f7cb5',1,'Slic3r::Linef3::b()']]],
   ['b_5fid',['b_id',['../class_slic3r_1_1_intersection_line.html#abe30a2d05a6e7728f54784de581b7c1d',1,'Slic3r::IntersectionLine']]],
   ['b_5fwidth',['b_width',['../class_slic3r_1_1_thick_line.html#a5471393b02f4759d19ff5a3ef9cc6bec',1,'Slic3r::ThickLine']]],
+  ['backwards_5fedges',['backwards_edges',['../struct_slic3r_1_1mesh__stats.html#a69d5b20c3c2c563987e1842566263b7f',1,'Slic3r::mesh_stats']]],
   ['bed_5fshape',['bed_shape',['../class_slic3r_1_1_print_config.html#a3bb2d2afe46bfb917ea3b5ad95197d78',1,'Slic3r::PrintConfig']]],
   ['bed_5ftemperature',['bed_temperature',['../class_slic3r_1_1_print_config.html#a8c4fc46892aca227435bdfc39213ecfd',1,'Slic3r::PrintConfig']]],
   ['before_5flayer_5fgcode',['before_layer_gcode',['../class_slic3r_1_1_g_code_config.html#abcbd07bd3ec65e92d6b7e405ac721ed2',1,'Slic3r::GCodeConfig']]],

@@ -101,14 +101,14 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:abe9699b26eb18f6636b045c930d167d8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">Slic3r::SurfaceType</a> { <br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8aa3e83e2525b93a5c51ec229e162a2ccd">Slic3r::stTop</a>, 
-<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8ab3debd493fa32670a648bf75c9851fa2">Slic3r::stBottom</a>, 
-<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8aab7b75c6465c93d9f8a8d76ab5494037">Slic3r::stBottomBridge</a>, 
-<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8a8f516f8e4fc6924f168bc89064630424">Slic3r::stInternal</a>, 
+&#160;&#160;<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8aa3e83e2525b93a5c51ec229e162a2ccd">Slic3r::stTop</a> = 0b1, 
+<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8ab3debd493fa32670a648bf75c9851fa2">Slic3r::stBottom</a> = 0b10, 
+<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8aab7b75c6465c93d9f8a8d76ab5494037">Slic3r::stBottomBridge</a> = 0b100, 
+<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8a8f516f8e4fc6924f168bc89064630424">Slic3r::stInternal</a> = 0b1000, 
 <br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8a269095bfecb443da8bf409bcb45aae6b">Slic3r::stInternalSolid</a>, 
-<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8aa59dd787a96d953b18df9af4da18f17d">Slic3r::stInternalBridge</a>, 
-<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8ad4eb4c291134fe939028330730d70677">Slic3r::stInternalVoid</a>
+&#160;&#160;<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8a269095bfecb443da8bf409bcb45aae6b">Slic3r::stInternalSolid</a> = 0b10000, 
+<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8aa59dd787a96d953b18df9af4da18f17d">Slic3r::stInternalBridge</a> = 0b100000, 
+<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8ad4eb4c291134fe939028330730d70677">Slic3r::stInternalVoid</a> = 0b1000000
 <br />
  }</td></tr>
 <tr class="separator:abe9699b26eb18f6636b045c930d167d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,6 +139,8 @@ Functions</h2></td></tr>
 <tr class="separator:a500908ad97c4bdeb7d592ab1f0b3f781"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7eee0816207b6ba3e468b9167ea0a69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ab7eee0816207b6ba3e468b9167ea0a69">Slic3r::polygons_append</a> (<a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a> &amp;dst, <a class="el" href="namespace_slic3r.html#a07ec75e65c5a526deed75bc28a762789">SurfacesPtr</a> &amp;&amp;src)</td></tr>
 <tr class="separator:ab7eee0816207b6ba3e468b9167ea0a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0d8c1393d0c490154bb820af663774"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#aac0d8c1393d0c490154bb820af663774">Slic3r::surfaces_could_merge</a> (const <a class="el" href="class_slic3r_1_1_surface.html">Surface</a> &amp;s1, const <a class="el" href="class_slic3r_1_1_surface.html">Surface</a> &amp;s2)</td></tr>
+<tr class="separator:aac0d8c1393d0c490154bb820af663774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

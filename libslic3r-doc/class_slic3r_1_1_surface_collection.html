@@ -97,8 +97,33 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6daf12422fc45946245d732d92e9ec5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d13757e573034df68621080df703540"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a07ec75e65c5a526deed75bc28a762789">SurfacesPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a0d13757e573034df68621080df703540">filter_by_type</a> (<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> type)</td></tr>
 <tr class="separator:a0d13757e573034df68621080df703540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435587d8b1975df0dd5c6d14525ccf9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_slic3r.html#a07ec75e65c5a526deed75bc28a762789">SurfacesPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a435587d8b1975df0dd5c6d14525ccf9c">filter_by_type</a> (std::initializer_list&lt; <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> &gt; types)</td></tr>
+<tr class="separator:a435587d8b1975df0dd5c6d14525ccf9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3012bada97ef081510b494ff259b6299"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a3012bada97ef081510b494ff259b6299">filter_by_type</a> (<a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> type, <a class="el" href="namespace_slic3r.html#ac070ff2d90c6488a48adf1814cdae06c">Polygons</a> *polygons)</td></tr>
 <tr class="separator:a3012bada97ef081510b494ff259b6299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a334dd3cbe6371a2aeab14aeb5741f85d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a334dd3cbe6371a2aeab14aeb5741f85d">remove_type</a> (const <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> type)</td></tr>
+<tr class="memdesc:a334dd3cbe6371a2aeab14aeb5741f85d"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes all surfaces that match the supplied type.  <a href="#a334dd3cbe6371a2aeab14aeb5741f85d">More...</a><br /></td></tr>
+<tr class="separator:a334dd3cbe6371a2aeab14aeb5741f85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f9bba70e4cfccc3650c9e00dab588e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a24f9bba70e4cfccc3650c9e00dab588e">remove_types</a> (std::initializer_list&lt; <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> &gt; types)</td></tr>
+<tr class="separator:a24f9bba70e4cfccc3650c9e00dab588e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864affa638ddfc1c1465f1cc64943502"><td class="memTemplParams" colspan="2">template&lt;int N&gt; </td></tr>
+<tr class="memitem:a864affa638ddfc1c1465f1cc64943502"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a864affa638ddfc1c1465f1cc64943502">remove_types</a> (std::array&lt; <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a>, N &gt; types)</td></tr>
+<tr class="separator:a864affa638ddfc1c1465f1cc64943502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce37d2439bd4af1edcf69e48edaf490"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#acce37d2439bd4af1edcf69e48edaf490">group</a> (std::vector&lt; <a class="el" href="namespace_slic3r.html#a07ec75e65c5a526deed75bc28a762789">SurfacesPtr</a> &gt; *retval)</td></tr>
+<tr class="memdesc:acce37d2439bd4af1edcf69e48edaf490"><td class="mdescLeft">&#160;</td><td class="mdescRight">group surfaces by common properties  <a href="#acce37d2439bd4af1edcf69e48edaf490">More...</a><br /></td></tr>
+<tr class="separator:acce37d2439bd4af1edcf69e48edaf490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a145742dc334177e73d2e1d237e8ae081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a145742dc334177e73d2e1d237e8ae081">keep_type</a> (const <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> type)</td></tr>
+<tr class="memdesc:a145742dc334177e73d2e1d237e8ae081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes every surface other than the ones that match the provided type.  <a href="#a145742dc334177e73d2e1d237e8ae081">More...</a><br /></td></tr>
+<tr class="separator:a145742dc334177e73d2e1d237e8ae081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053161cf8d88080d5f812a7a499b3beb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a053161cf8d88080d5f812a7a499b3beb">keep_types</a> (std::initializer_list&lt; <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> &gt; types)</td></tr>
+<tr class="memdesc:a053161cf8d88080d5f812a7a499b3beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes every surface other than the ones that match the provided types.  <a href="#a053161cf8d88080d5f812a7a499b3beb">More...</a><br /></td></tr>
+<tr class="separator:a053161cf8d88080d5f812a7a499b3beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e4b7d6340e2f497971e9eac351ee683"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a1e4b7d6340e2f497971e9eac351ee683">keep_types</a> (const <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> *types, size_t ntypes)</td></tr>
+<tr class="memdesc:a1e4b7d6340e2f497971e9eac351ee683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes every surface other than the ones that match the provided types.  <a href="#a1e4b7d6340e2f497971e9eac351ee683">More...</a><br /></td></tr>
+<tr class="separator:a1e4b7d6340e2f497971e9eac351ee683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46dbd596c934875ddd668ee10fb4ccb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a46dbd596c934875ddd668ee10fb4ccb6">remove_types</a> (const <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> *types, size_t ntypes)</td></tr>
+<tr class="memdesc:a46dbd596c934875ddd668ee10fb4ccb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes all surfaces that match the supplied aggregate of types.  <a href="#a46dbd596c934875ddd668ee10fb4ccb6">More...</a><br /></td></tr>
+<tr class="separator:a46dbd596c934875ddd668ee10fb4ccb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6521ee132030f9aefa4bf0d24925bb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#ad6521ee132030f9aefa4bf0d24925bb1">set</a> (const <a class="el" href="class_slic3r_1_1_surface_collection.html">SurfaceCollection</a> &amp;coll)</td></tr>
 <tr class="separator:ad6521ee132030f9aefa4bf0d24925bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade545700d220a8dc2d0f986d865df639"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#ade545700d220a8dc2d0f986d865df639">set</a> (<a class="el" href="class_slic3r_1_1_surface_collection.html">SurfaceCollection</a> &amp;&amp;coll)</td></tr>
@@ -133,6 +158,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afe56bda3ab2e7337ef878373cb2288e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bfcf46977dde350cc65829524ed7d47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a5bfcf46977dde350cc65829524ed7d47">erase</a> (size_t i)</td></tr>
 <tr class="separator:a5bfcf46977dde350cc65829524ed7d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a167423bef73db8af6c7a79a348f35c27"><td class="memItemLeft" align="right" valign="top">Surfaces::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a167423bef73db8af6c7a79a348f35c27">begin</a> ()</td></tr>
+<tr class="separator:a167423bef73db8af6c7a79a348f35c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a315d27174e915da26360482204cba0a4"><td class="memItemLeft" align="right" valign="top">Surfaces::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a315d27174e915da26360482204cba0a4">end</a> ()</td></tr>
+<tr class="separator:a315d27174e915da26360482204cba0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2dab1fc9f4a1c686f5fdebd65d6e35"><td class="memItemLeft" align="right" valign="top">Surfaces::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a6f2dab1fc9f4a1c686f5fdebd65d6e35">cbegin</a> () const</td></tr>
+<tr class="separator:a6f2dab1fc9f4a1c686f5fdebd65d6e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a299fabe059872b11ec5cab6f5d4fed"><td class="memItemLeft" align="right" valign="top">Surfaces::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_surface_collection.html#a6a299fabe059872b11ec5cab6f5d4fed">cend</a> () const</td></tr>
+<tr class="separator:a6a299fabe059872b11ec5cab6f5d4fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -324,6 +357,81 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a167423bef73db8af6c7a79a348f35c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a167423bef73db8af6c7a79a348f35c27">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Surfaces::iterator Slic3r::SurfaceCollection::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f2dab1fc9f4a1c686f5fdebd65d6e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2dab1fc9f4a1c686f5fdebd65d6e35">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Surfaces::const_iterator Slic3r::SurfaceCollection::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a299fabe059872b11ec5cab6f5d4fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a299fabe059872b11ec5cab6f5d4fed">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Surfaces::const_iterator Slic3r::SurfaceCollection::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afe56bda3ab2e7337ef878373cb2288e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe56bda3ab2e7337ef878373cb2288e4">&#9670;&nbsp;</a></span>clear()</h2>
 
@@ -374,6 +482,31 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a315d27174e915da26360482204cba0a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a315d27174e915da26360482204cba0a4">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Surfaces::iterator Slic3r::SurfaceCollection::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5bfcf46977dde350cc65829524ed7d47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bfcf46977dde350cc65829524ed7d47">&#9670;&nbsp;</a></span>erase()</h2>
 
@@ -401,7 +534,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <a id="a0d13757e573034df68621080df703540"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d13757e573034df68621080df703540">&#9670;&nbsp;</a></span>filter_by_type() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d13757e573034df68621080df703540">&#9670;&nbsp;</a></span>filter_by_type() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,8 +551,26 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a435587d8b1975df0dd5c6d14525ccf9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a435587d8b1975df0dd5c6d14525ccf9c">&#9670;&nbsp;</a></span>filter_by_type() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_slic3r.html#a07ec75e65c5a526deed75bc28a762789">SurfacesPtr</a> Slic3r::SurfaceCollection::filter_by_type </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> &gt;&#160;</td>
+          <td class="paramname"><em>types</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3012bada97ef081510b494ff259b6299"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3012bada97ef081510b494ff259b6299">&#9670;&nbsp;</a></span>filter_by_type() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3012bada97ef081510b494ff259b6299">&#9670;&nbsp;</a></span>filter_by_type() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,7 +598,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <a id="a628bd35093b78693f1e87bbf6f7d6c10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a628bd35093b78693f1e87bbf6f7d6c10">&#9670;&nbsp;</a></span>group()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a628bd35093b78693f1e87bbf6f7d6c10">&#9670;&nbsp;</a></span>group() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -461,6 +612,96 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="acce37d2439bd4af1edcf69e48edaf490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce37d2439bd4af1edcf69e48edaf490">&#9670;&nbsp;</a></span>group() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::SurfaceCollection::group </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_slic3r.html#a07ec75e65c5a526deed75bc28a762789">SurfacesPtr</a> &gt; *&#160;</td>
+          <td class="paramname"><em>retval</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>group surfaces by common properties </p>
+
+</div>
+</div>
+<a id="a145742dc334177e73d2e1d237e8ae081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a145742dc334177e73d2e1d237e8ae081">&#9670;&nbsp;</a></span>keep_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::SurfaceCollection::keep_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes every surface other than the ones that match the provided type. </p>
+
+</div>
+</div>
+<a id="a053161cf8d88080d5f812a7a499b3beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053161cf8d88080d5f812a7a499b3beb">&#9670;&nbsp;</a></span>keep_types() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::SurfaceCollection::keep_types </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> &gt;&#160;</td>
+          <td class="paramname"><em>types</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes every surface other than the ones that match the provided types. </p>
+
+</div>
+</div>
+<a id="a1e4b7d6340e2f497971e9eac351ee683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4b7d6340e2f497971e9eac351ee683">&#9670;&nbsp;</a></span>keep_types() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::SurfaceCollection::keep_types </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> *&#160;</td>
+          <td class="paramname"><em>types</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>ntypes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes every surface other than the ones that match the provided types. </p>
 
 </div>
 </div>
@@ -512,6 +753,102 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a334dd3cbe6371a2aeab14aeb5741f85d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334dd3cbe6371a2aeab14aeb5741f85d">&#9670;&nbsp;</a></span>remove_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::SurfaceCollection::remove_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deletes all surfaces that match the supplied type. </p>
+
+</div>
+</div>
+<a id="a24f9bba70e4cfccc3650c9e00dab588e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f9bba70e4cfccc3650c9e00dab588e">&#9670;&nbsp;</a></span>remove_types() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::SurfaceCollection::remove_types </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> &gt;&#160;</td>
+          <td class="paramname"><em>types</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a864affa638ddfc1c1465f1cc64943502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864affa638ddfc1c1465f1cc64943502">&#9670;&nbsp;</a></span>remove_types() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::SurfaceCollection::remove_types </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a>, N &gt;&#160;</td>
+          <td class="paramname"><em>types</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46dbd596c934875ddd668ee10fb4ccb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46dbd596c934875ddd668ee10fb4ccb6">&#9670;&nbsp;</a></span>remove_types() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slic3r::SurfaceCollection::remove_types </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_slic3r.html#abe9699b26eb18f6636b045c930d167d8">SurfaceType</a> *&#160;</td>
+          <td class="paramname"><em>types</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>ntypes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deletes all surfaces that match the supplied aggregate of types. </p>
 
 </div>
 </div>

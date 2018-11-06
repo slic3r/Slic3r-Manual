@@ -3,10 +3,12 @@ var searchData=
   ['b',['b',['../class_slic3r_1_1_line.html#a8ed125162ca54cb677868a59b014747a',1,'Slic3r::Line::b()'],['../class_slic3r_1_1_linef.html#a2a88e1bafe086c06add9073c2234973e',1,'Slic3r::Linef::b()'],['../class_slic3r_1_1_linef3.html#a783137d974857504f5e0444bfa8f7cb5',1,'Slic3r::Linef3::b()']]],
   ['b_5fid',['b_id',['../class_slic3r_1_1_intersection_line.html#abe30a2d05a6e7728f54784de581b7c1d',1,'Slic3r::IntersectionLine']]],
   ['b_5fwidth',['b_width',['../class_slic3r_1_1_thick_line.html#a5471393b02f4759d19ff5a3ef9cc6bec',1,'Slic3r::ThickLine']]],
+  ['backwards_5fedges',['backwards_edges',['../struct_slic3r_1_1mesh__stats.html#a69d5b20c3c2c563987e1842566263b7f',1,'Slic3r::mesh_stats']]],
+  ['bb3',['bb3',['../class_slic3r_1_1_triangle_mesh.html#af50d1e1b7299532b32dbe9269305cb3d',1,'Slic3r::TriangleMesh']]],
   ['bed_5fshape',['bed_shape',['../class_slic3r_1_1_print_config.html#a3bb2d2afe46bfb917ea3b5ad95197d78',1,'Slic3r::PrintConfig']]],
   ['bed_5ftemperature',['bed_temperature',['../class_slic3r_1_1_print_config.html#a8c4fc46892aca227435bdfc39213ecfd',1,'Slic3r::PrintConfig']]],
   ['before_5flayer_5fgcode',['before_layer_gcode',['../class_slic3r_1_1_g_code_config.html#abcbd07bd3ec65e92d6b7e405ac721ed2',1,'Slic3r::GCodeConfig']]],
-  ['begin',['begin',['../structboost_1_1polygon_1_1polygon__set__traits_3_01_ex_polygons_01_4.html#ac19dbf9bc88362c83fc4798023f4ba49',1,'boost::polygon::polygon_set_traits&lt; ExPolygons &gt;::begin()'],['../structboost_1_1polygon_1_1polygon__set__traits_3_01_polygons_01_4.html#a2bd6d4b31e9be97b462d8d6dc08ed6f9',1,'boost::polygon::polygon_set_traits&lt; Polygons &gt;::begin()']]],
+  ['begin',['begin',['../structboost_1_1polygon_1_1polygon__set__traits_3_01_ex_polygons_01_4.html#ac19dbf9bc88362c83fc4798023f4ba49',1,'boost::polygon::polygon_set_traits&lt; ExPolygons &gt;::begin()'],['../class_slic3r_1_1_ex_polygon_collection.html#afcbf35850d5f87f56d2fb2f1bf6f8b91',1,'Slic3r::ExPolygonCollection::begin()'],['../class_slic3r_1_1_extrusion_entity_collection.html#a61e5dd2baa250ced5c1a2019b48d9f40',1,'Slic3r::ExtrusionEntityCollection::begin()'],['../structboost_1_1polygon_1_1polygon__set__traits_3_01_polygons_01_4.html#a2bd6d4b31e9be97b462d8d6dc08ed6f9',1,'boost::polygon::polygon_set_traits&lt; Polygons &gt;::begin()'],['../class_slic3r_1_1_surface_collection.html#a167423bef73db8af6c7a79a348f35c27',1,'Slic3r::SurfaceCollection::begin()']]],
   ['begin_5fholes',['begin_holes',['../structboost_1_1polygon_1_1polygon__with__holes__traits_3_01_ex_polygon_01_4.html#a5c08ba5d832c31632928b055f4588925',1,'boost::polygon::polygon_with_holes_traits&lt; ExPolygon &gt;']]],
   ['begin_5fpoints',['begin_points',['../structboost_1_1polygon_1_1polygon__traits_3_01_ex_polygon_01_4.html#a89ae6ba6cbdb52b507e9e21b0a1ec5f9',1,'boost::polygon::polygon_traits&lt; ExPolygon &gt;::begin_points()'],['../structboost_1_1polygon_1_1polygon__traits_3_01_polygon_01_4.html#a77653592ee287df7fcd22d4f3817bbcc',1,'boost::polygon::polygon_traits&lt; Polygon &gt;::begin_points()']]],
   ['between_5fobjects_5fgcode',['between_objects_gcode',['../class_slic3r_1_1_g_code_config.html#afa8a3b5af7d4d71297e455738ca83081',1,'Slic3r::GCodeConfig']]],
@@ -44,5 +46,6 @@ var searchData=
   ['brim_5fflow',['brim_flow',['../class_slic3r_1_1_print.html#a5b587e73fcc946136a3222e74dec5c83',1,'Slic3r::Print']]],
   ['brim_5fwidth',['brim_width',['../class_slic3r_1_1_print_config.html#a755df43a202038cbf9664d62ee9b9c4d',1,'Slic3r::PrintConfig']]],
   ['build',['build',['../class_slic3r_1_1_geometry_1_1_medial_axis.html#ae042d19758495bcd9281ac9ef6fd00be',1,'Slic3r::Geometry::MedialAxis::build(ThickPolylines *polylines)'],['../class_slic3r_1_1_geometry_1_1_medial_axis.html#a48bf3cdbb053b7c9544464f478b96fdf',1,'Slic3r::Geometry::MedialAxis::build(Polylines *polylines)']]],
+  ['build_5fcommit',['BUILD_COMMIT',['../libslic3r_8h.html#a2be777349b6ab8cde5947a40aeec0226',1,'libslic3r.h']]],
   ['polygon',['polygon',['../namespaceboost_1_1polygon.html',1,'boost']]]
 ];

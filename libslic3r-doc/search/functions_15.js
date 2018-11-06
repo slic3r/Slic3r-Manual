@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['warn',['warn',['../class_slic3r_1_1_log.html#a41f12d1ac6b48e3e662b3ea32d533246',1,'Slic3r::Log::warn(std::string topic, std::wstring message)'],['../class_slic3r_1_1_log.html#ab9724b59802b1cbbfb8c41ec48aac258',1,'Slic3r::Log::warn(std::string topic, std::string message)'],['../class_slic3r_1_1_log.html#ac8e6a97f76dd9d5c7086a0cd7df8b6b3',1,'Slic3r::Log::warn(std::string topic)']]],
   ['will_5fmove_5fz',['will_move_z',['../class_slic3r_1_1_g_code_writer.html#a3de2d3b2dd0b6c75aff17f81558f844a',1,'Slic3r::GCodeWriter']]],
   ['winding',['winding',['../structboost_1_1polygon_1_1polygon__traits_3_01_ex_polygon_01_4.html#a1d41bd9128513eadd0e8f6f693da189d',1,'boost::polygon::polygon_traits&lt; ExPolygon &gt;::winding()'],['../structboost_1_1polygon_1_1polygon__traits_3_01_polygon_01_4.html#ad6c7fd0f9f4de4be8b1b069dc123040a',1,'boost::polygon::polygon_traits&lt; Polygon &gt;::winding()']]],
   ['wipe',['Wipe',['../class_slic3r_1_1_wipe.html#ad57e8a23d91be0206b769dbc6dbcd0c3',1,'Slic3r::Wipe::Wipe()'],['../class_slic3r_1_1_wipe.html#acdaf60fce7be3246da78d42ca1f79c1b',1,'Slic3r::Wipe::wipe(GCode &amp;gcodegen, bool toolchange=false)']]],
@@ -7,6 +8,7 @@ var searchData=
   ['write',['write',['../class_slic3r_1_1_i_o_1_1_s_t_l.html#ae371d334230ee0ba01ad0a754961f4e1',1,'Slic3r::IO::STL::write(Model &amp;model, std::string output_file, bool binary=true)'],['../class_slic3r_1_1_i_o_1_1_s_t_l.html#a4c8ddc9c7d9adde8b0986d5840840009',1,'Slic3r::IO::STL::write(TriangleMesh &amp;mesh, std::string output_file, bool binary=true)'],['../class_slic3r_1_1_i_o_1_1_o_b_j.html#a12e26d7922b73df120b99e36a97645a1',1,'Slic3r::IO::OBJ::write(Model &amp;model, std::string output_file)'],['../class_slic3r_1_1_i_o_1_1_o_b_j.html#a8eaa6023a2b127ad85be3acbe7761562',1,'Slic3r::IO::OBJ::write(TriangleMesh &amp;mesh, std::string output_file)'],['../class_slic3r_1_1_i_o_1_1_a_m_f.html#a21547db6d3cfd8206329af9dffb95dca',1,'Slic3r::IO::AMF::write()'],['../class_slic3r_1_1_i_o_1_1_p_o_v.html#ad32abb0ac8bb3872340eca446bd8e5f6',1,'Slic3r::IO::POV::write()'],['../class_slic3r_1_1_i_o_1_1_t_m_f.html#af034300e641abca5720606d7d3aa670c',1,'Slic3r::IO::TMF::write()']]],
   ['write_5fascii',['write_ascii',['../class_slic3r_1_1_triangle_mesh.html#a2ef5e81ea5384d64086270ef382863f3',1,'Slic3r::TriangleMesh']]],
   ['write_5fbinary',['write_binary',['../class_slic3r_1_1_triangle_mesh.html#aa11877f13a283c2308e72656825eb0bc',1,'Slic3r::TriangleMesh']]],
+  ['write_5fini',['write_ini',['../class_slic3r_1_1_config.html#ac85ad89f37aa4ad1b559f0c53d2a3381',1,'Slic3r::Config']]],
   ['write_5fsvg',['write_svg',['../class_slic3r_1_1_s_l_a_print.html#ad2431adb39a26b7754cc8ceac5147ac1',1,'Slic3r::SLAPrint']]],
   ['writeobjfile',['WriteOBJFile',['../class_slic3r_1_1_triangle_mesh.html#a659046d9de88eb66f77181b3551d742f',1,'Slic3r::TriangleMesh']]]
 ];

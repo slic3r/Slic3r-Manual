@@ -9,6 +9,7 @@ var searchData=
   ['staticprintconfig',['StaticPrintConfig',['../class_slic3r_1_1_static_print_config.html',1,'Slic3r']]],
   ['stl',['STL',['../class_slic3r_1_1_i_o_1_1_s_t_l.html',1,'Slic3r::IO']]],
   ['supportlayer',['SupportLayer',['../class_slic3r_1_1_support_layer.html',1,'Slic3r']]],
+  ['supportmaterial',['SupportMaterial',['../class_slic3r_1_1_support_material.html',1,'Slic3r']]],
   ['supportpillar',['SupportPillar',['../class_slic3r_1_1_s_l_a_print_1_1_support_pillar.html',1,'Slic3r::SLAPrint']]],
   ['surface',['Surface',['../class_slic3r_1_1_surface.html',1,'Slic3r']]],
   ['surfacecollection',['SurfaceCollection',['../class_slic3r_1_1_surface_collection.html',1,'Slic3r']]],

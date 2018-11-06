@@ -66,31 +66,15 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Config.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_config_8hpp_source.html">Config.hpp</a>&quot;</code><br />
-<code>#include &lt;assert.h&gt;</code><br />
-<code>#include &lt;ctime&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;exception&gt;</code><br />
-<code>#include &lt;boost/algorithm/string.hpp&gt;</code><br />
-<code>#include &lt;boost/algorithm/string/classification.hpp&gt;</code><br />
-<code>#include &lt;boost/algorithm/string/erase.hpp&gt;</code><br />
-<code>#include &lt;boost/algorithm/string/predicate.hpp&gt;</code><br />
-<code>#include &lt;boost/algorithm/string/replace.hpp&gt;</code><br />
-<code>#include &lt;boost/algorithm/string/split.hpp&gt;</code><br />
-<code>#include &lt;boost/config.hpp&gt;</code><br />
-<code>#include &lt;boost/foreach.hpp&gt;</code><br />
-<code>#include &lt;boost/lexical_cast.hpp&gt;</code><br />
-<code>#include &lt;boost/nowide/cenv.hpp&gt;</code><br />
-<code>#include &lt;boost/nowide/fstream.hpp&gt;</code><br />
-<code>#include &lt;boost/property_tree/ini_parser.hpp&gt;</code><br />
-<code>#include &lt;boost/property_tree/ptree.hpp&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_log_8hpp_source.html">Log.hpp</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -99,18 +83,17 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2e87a52c2cac1469b96a2765775bb7c0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a2e87a52c2cac1469b96a2765775bb7c0">Slic3r::escape_string_cstyle</a> (const std::string &amp;str)</td></tr>
-<tr class="separator:a2e87a52c2cac1469b96a2765775bb7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0ba93eb38e1604641b4f38c82994b20"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#af0ba93eb38e1604641b4f38c82994b20">Slic3r::escape_strings_cstyle</a> (const std::vector&lt; std::string &gt; &amp;strs)</td></tr>
-<tr class="separator:af0ba93eb38e1604641b4f38c82994b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc08139e1bb59d39e8faa5ef4754c5e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#adc08139e1bb59d39e8faa5ef4754c5e5">Slic3r::unescape_string_cstyle</a> (const std::string &amp;str, std::string &amp;str_out)</td></tr>
-<tr class="separator:adc08139e1bb59d39e8faa5ef4754c5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1adc7c939ed5b67e5d02173e31667818"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a1adc7c939ed5b67e5d02173e31667818">Slic3r::unescape_strings_cstyle</a> (const std::string &amp;str, std::vector&lt; std::string &gt; &amp;out)</td></tr>
-<tr class="separator:a1adc7c939ed5b67e5d02173e31667818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3a56f8a3811c90f8348de03b965fe5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ad3a56f8a3811c90f8348de03b965fe5e">Slic3r::operator==</a> (const <a class="el" href="class_slic3r_1_1_config_option.html">ConfigOption</a> &amp;a, const <a class="el" href="class_slic3r_1_1_config_option.html">ConfigOption</a> &amp;b)</td></tr>
-<tr class="separator:ad3a56f8a3811c90f8348de03b965fe5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63a48c3291daed2a09213c288b881741"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a63a48c3291daed2a09213c288b881741">Slic3r::operator!=</a> (const <a class="el" href="class_slic3r_1_1_config_option.html">ConfigOption</a> &amp;a, const <a class="el" href="class_slic3r_1_1_config_option.html">ConfigOption</a> &amp;b)</td></tr>
-<tr class="separator:a63a48c3291daed2a09213c288b881741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0bc85bd005b1c7ebb70e1b92b26368"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_slic3r_1_1_config.html">Config</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a4a0bc85bd005b1c7ebb70e1b92b26368">Slic3r::new_from_cli</a> (const int &amp;argc, const char *argv[])</td></tr>
+<tr class="separator:a4a0bc85bd005b1c7ebb70e1b92b26368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc459a74ce1e696dd1c24fd8624393bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#adc459a74ce1e696dd1c24fd8624393bd">Slic3r::is_valid_int</a> (const std::string &amp;type, const <a class="el" href="class_slic3r_1_1_config_option_def.html">ConfigOptionDef</a> &amp;opt, const std::string &amp;ser_value)</td></tr>
+<tr class="separator:adc459a74ce1e696dd1c24fd8624393bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada072cb0ee80d3f80795ef913baf55f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ada072cb0ee80d3f80795ef913baf55f8">Slic3r::is_valid_float</a> (const std::string &amp;type, const <a class="el" href="class_slic3r_1_1_config_option_def.html">ConfigOptionDef</a> &amp;opt, const std::string &amp;ser_value)</td></tr>
+<tr class="separator:ada072cb0ee80d3f80795ef913baf55f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a856a62a1c70a0b6e84d9cd36344ba131"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_slic3r_1_1_print_config_def.html">PrintConfigDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a856a62a1c70a0b6e84d9cd36344ba131">Slic3r::print_config_def</a></td></tr>
+<tr class="separator:a856a62a1c70a0b6e84d9cd36344ba131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

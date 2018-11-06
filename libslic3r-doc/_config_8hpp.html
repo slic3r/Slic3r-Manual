@@ -68,92 +68,30 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Config.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;map&gt;</code><br />
-<code>#include &lt;climits&gt;</code><br />
-<code>#include &lt;cstdio&gt;</code><br />
-<code>#include &lt;cstdlib&gt;</code><br />
-<code>#include &lt;exception&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;stdexcept&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="libslic3r_8h_source.html">libslic3r.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_point_8hpp_source.html">Point.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;initializer_list&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;regex&gt;</code><br />
+<code>#include &quot;<a class="el" href="_print_config_8hpp_source.html">PrintConfig.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_config_base_8hpp_source.html">ConfigBase.hpp</a>&quot;</code><br />
 </div>
 <p><a href="_config_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option.html">Slic3r::ConfigOption</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public interface for configuration options.  <a href="class_slic3r_1_1_config_option.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_invalid_option_value.html">Slic3r::InvalidOptionValue</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_single.html">Slic3r::ConfigOptionSingle&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of a single valued option (bool, int, float, string, point, enum)  <a href="class_slic3r_1_1_config_option_single.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_invalid_config_option.html">Slic3r::InvalidConfigOption</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception class to handle config options that don't exist.  <a href="class_slic3r_1_1_invalid_config_option.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_vector_base.html">Slic3r::ConfigOptionVectorBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual base class, represents value of a vector valued option (bools, ints, floats, strings, points)  <a href="class_slic3r_1_1_config_option_vector_base.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_invalid_option_type.html">Slic3r::InvalidOptionType</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception class for type mismatches.  <a href="class_slic3r_1_1_invalid_option_type.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_vector.html">Slic3r::ConfigOptionVector&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of a vector valued option (bools, ints, floats, strings, points), template.  <a href="class_slic3r_1_1_config_option_vector.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_float.html">Slic3r::ConfigOptionFloat</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_floats.html">Slic3r::ConfigOptionFloats</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector form of template specialization for floating point numbers.  <a href="class_slic3r_1_1_config_option_floats.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_int.html">Slic3r::ConfigOptionInt</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_ints.html">Slic3r::ConfigOptionInts</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_string.html">Slic3r::ConfigOptionString</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_strings.html">Slic3r::ConfigOptionStrings</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">semicolon-separated strings  <a href="class_slic3r_1_1_config_option_strings.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_percent.html">Slic3r::ConfigOptionPercent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized floating point class to represent some percentage value of another numeric configuration option.  <a href="class_slic3r_1_1_config_option_percent.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_float_or_percent.html">Slic3r::ConfigOptionFloatOrPercent</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_point.html">Slic3r::ConfigOptionPoint</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration option to store a 2D (x,y) tuple.  <a href="class_slic3r_1_1_config_option_point.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_point3.html">Slic3r::ConfigOptionPoint3</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration option to store a 3D (x,y,z) tuple.  <a href="class_slic3r_1_1_config_option_point3.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_points.html">Slic3r::ConfigOptionPoints</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_bool.html">Slic3r::ConfigOptionBool</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a boolean flag.  <a href="class_slic3r_1_1_config_option_bool.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_bools.html">Slic3r::ConfigOptionBools</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_enum.html">Slic3r::ConfigOptionEnum&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templated enumeration representation.  <a href="class_slic3r_1_1_config_option_enum.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_enum_generic.html">Slic3r::ConfigOptionEnumGeneric</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic enum configuration value.  <a href="class_slic3r_1_1_config_option_enum_generic.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_option_def.html">Slic3r::ConfigOptionDef</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a configuration value for the purpose of GUI presentation, editing, value mapping and config file handling.  <a href="class_slic3r_1_1_config_option_def.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_def.html">Slic3r::ConfigDef</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config_base.html">Slic3r::ConfigBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An abstract configuration store.  <a href="class_slic3r_1_1_config_base.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_dynamic_config.html">Slic3r::DynamicConfig</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_static_config.html">Slic3r::StaticConfig</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_unknown_option_exception.html">Slic3r::UnknownOptionException</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of std::exception to indicate that an unknown config option has been encountered.  <a href="class_slic3r_1_1_unknown_option_exception.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_slic3r_1_1_config.html">Slic3r::Config</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -163,54 +101,15 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a5ebe1a416fa23898dceb3ba7906508b9"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a5ebe1a416fa23898dceb3ba7906508b9">Slic3r::t_config_option_key</a></td></tr>
-<tr class="memdesc:a5ebe1a416fa23898dceb3ba7906508b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the configuration option.  <a href="namespace_slic3r.html#a5ebe1a416fa23898dceb3ba7906508b9">More...</a><br /></td></tr>
-<tr class="separator:a5ebe1a416fa23898dceb3ba7906508b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4503660b414418a65c1d0ed75a8ff06"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ad4503660b414418a65c1d0ed75a8ff06">Slic3r::t_config_option_keys</a></td></tr>
-<tr class="separator:ad4503660b414418a65c1d0ed75a8ff06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac75002536c668dbfd08a4a03960e9a0e"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ac75002536c668dbfd08a4a03960e9a0e">Slic3r::t_config_enum_values</a></td></tr>
-<tr class="memdesc:ac75002536c668dbfd08a4a03960e9a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from an enum name to an enum integer value.  <a href="namespace_slic3r.html#ac75002536c668dbfd08a4a03960e9a0e">More...</a><br /></td></tr>
-<tr class="separator:ac75002536c668dbfd08a4a03960e9a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e9324b7324aee899d933419e6aed34"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="namespace_slic3r.html#a5ebe1a416fa23898dceb3ba7906508b9">t_config_option_key</a>, <a class="el" href="class_slic3r_1_1_config_option_def.html">ConfigOptionDef</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a53e9324b7324aee899d933419e6aed34">Slic3r::t_optiondef_map</a></td></tr>
-<tr class="memdesc:a53e9324b7324aee899d933419e6aed34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from a config option name to its definition.  <a href="namespace_slic3r.html#a53e9324b7324aee899d933419e6aed34">More...</a><br /></td></tr>
-<tr class="separator:a53e9324b7324aee899d933419e6aed34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ad050dac2473d8202fb36cf563717a05d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05d">Slic3r::ConfigOptionType</a> { <br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da63ce37b455fe0f8ca9ce4807ba34a0db">Slic3r::coNone</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da6fc8e2b47c21774d7b1b2177c9330a68">Slic3r::coFloat</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05dade03a632a71a60d75e7fa4ae91850611">Slic3r::coFloats</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da6208ed2b3dd884c139f42c396058c26c">Slic3r::coInt</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da3fda88472dbd7030ce02672dd6ae44b8">Slic3r::coInts</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da1cf926fa9e3c16e3cd6f6e001370eff5">Slic3r::coString</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05dac242c19dded7e7375fcaa72ecc7e6ec5">Slic3r::coStrings</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05daeb9429c75ace7416a3b90d0f7237e34a">Slic3r::coPercent</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da79487730eddc1a2e9588d1e8e9d0aea6">Slic3r::coFloatOrPercent</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da23cf8f3171a6801ea05db7ad10c7d6a6">Slic3r::coPoint</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da52ce3d8c4bb3bab4d9c50af38c93c46f">Slic3r::coPoints</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da2a441920d525d34fa862fdf28922a75f">Slic3r::coPoint3</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da66fc7a8b8079de988563c15f7b62105f">Slic3r::coBool</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da28c9c9e6fd96bf9cbd651c2ed7f41078">Slic3r::coBools</a>, 
-<a class="el" href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05da297634c409a151f6ea730ac380ea1897">Slic3r::coEnum</a>
-<br />
- }<tr class="memdesc:ad050dac2473d8202fb36cf563717a05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of a configuration value.  <a href="namespace_slic3r.html#ad050dac2473d8202fb36cf563717a05d">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:ad050dac2473d8202fb36cf563717a05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee129f32778859e520fb5eb7493a967"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a3ee129f32778859e520fb5eb7493a967">Slic3r::config_ptr</a> = std::shared_ptr&lt; <a class="el" href="class_slic3r_1_1_config.html">Config</a> &gt;</td></tr>
+<tr class="separator:a3ee129f32778859e520fb5eb7493a967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2e87a52c2cac1469b96a2765775bb7c0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a2e87a52c2cac1469b96a2765775bb7c0">Slic3r::escape_string_cstyle</a> (const std::string &amp;str)</td></tr>
-<tr class="separator:a2e87a52c2cac1469b96a2765775bb7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0ba93eb38e1604641b4f38c82994b20"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#af0ba93eb38e1604641b4f38c82994b20">Slic3r::escape_strings_cstyle</a> (const std::vector&lt; std::string &gt; &amp;strs)</td></tr>
-<tr class="separator:af0ba93eb38e1604641b4f38c82994b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc08139e1bb59d39e8faa5ef4754c5e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#adc08139e1bb59d39e8faa5ef4754c5e5">Slic3r::unescape_string_cstyle</a> (const std::string &amp;str, std::string &amp;str_out)</td></tr>
-<tr class="separator:adc08139e1bb59d39e8faa5ef4754c5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1adc7c939ed5b67e5d02173e31667818"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#a1adc7c939ed5b67e5d02173e31667818">Slic3r::unescape_strings_cstyle</a> (const std::string &amp;str, std::vector&lt; std::string &gt; &amp;out)</td></tr>
-<tr class="separator:a1adc7c939ed5b67e5d02173e31667818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc459a74ce1e696dd1c24fd8624393bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#adc459a74ce1e696dd1c24fd8624393bd">Slic3r::is_valid_int</a> (const std::string &amp;type, const <a class="el" href="class_slic3r_1_1_config_option_def.html">ConfigOptionDef</a> &amp;opt, const std::string &amp;ser_value)</td></tr>
+<tr class="separator:adc459a74ce1e696dd1c24fd8624393bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada072cb0ee80d3f80795ef913baf55f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_slic3r.html#ada072cb0ee80d3f80795ef913baf55f8">Slic3r::is_valid_float</a> (const std::string &amp;type, const <a class="el" href="class_slic3r_1_1_config_option_def.html">ConfigOptionDef</a> &amp;opt, const std::string &amp;ser_value)</td></tr>
+<tr class="separator:ada072cb0ee80d3f80795ef913baf55f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

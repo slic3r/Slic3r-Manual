@@ -9,6 +9,7 @@ var searchData=
   ['adaptive_5fslicing_5fquality',['adaptive_slicing_quality',['../class_slic3r_1_1_print_object_config.html#a9c23e907fb71278fe44bf450b9f39686',1,'Slic3r::PrintObjectConfig']]],
   ['aliases',['aliases',['../class_slic3r_1_1_config_option_def.html#aed9082f82f293a715fc42d01420da465',1,'Slic3r::ConfigOptionDef']]],
   ['angle',['angle',['../class_slic3r_1_1_bridge_detector.html#acfae4e052886fd1f0e25eeb4441a531a',1,'Slic3r::BridgeDetector::angle()'],['../class_slic3r_1_1_fill.html#aad52233b49247e94b2823c23490a28e2',1,'Slic3r::Fill::angle()']]],
+  ['angles',['angles',['../struct_slic3r_1_1toolpaths__params.html#a55b22e959f032038819b76769b7b1fd5',1,'Slic3r::toolpaths_params']]],
   ['args',['args',['../class_slic3r_1_1_g_code_reader_1_1_g_code_line.html#a23b6db9fca60a0bd384309b3c50a6fab',1,'Slic3r::GCodeReader::GCodeLine']]],
   ['arrows',['arrows',['../class_slic3r_1_1_s_v_g.html#af3ec2eb54bdc7dff2381f15c5771d364',1,'Slic3r::SVG']]],
   ['attributes',['attributes',['../class_slic3r_1_1_model_material.html#ae70e92f39c5a8c96a2a32ad108531740',1,'Slic3r::ModelMaterial']]],

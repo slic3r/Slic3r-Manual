@@ -6,5 +6,7 @@ var searchData=
   ['use_5fexternal_5fmp_5fonce',['use_external_mp_once',['../class_slic3r_1_1_avoid_crossing_perimeters.html#a32df5a3f8a02746d20502b4a0c2af7e4',1,'Slic3r::AvoidCrossingPerimeters']]],
   ['use_5ffirmware_5fretraction',['use_firmware_retraction',['../class_slic3r_1_1_g_code_config.html#aa728aafeb2ec5da45fa1049c288e3180',1,'Slic3r::GCodeConfig']]],
   ['use_5frelative_5fe_5fdistances',['use_relative_e_distances',['../class_slic3r_1_1_g_code_config.html#a4210962bea328992aa63479873bb3e78',1,'Slic3r::GCodeConfig']]],
+  ['use_5fset_5fand_5fwait_5fbed',['use_set_and_wait_bed',['../class_slic3r_1_1_g_code_config.html#a5a85b81230f37f63e9f06b9d246fa18c',1,'Slic3r::GCodeConfig']]],
+  ['use_5fset_5fand_5fwait_5fextruder',['use_set_and_wait_extruder',['../class_slic3r_1_1_g_code_config.html#a8164918e9a8b8dd659019e712f3ee678',1,'Slic3r::GCodeConfig']]],
   ['use_5fvolumetric_5fe',['use_volumetric_e',['../class_slic3r_1_1_g_code_config.html#aaa185ad7694257a982d448cf01324abd',1,'Slic3r::GCodeConfig']]]
 ];
