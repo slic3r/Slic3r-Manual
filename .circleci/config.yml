@@ -21,7 +21,7 @@ jobs:
           name: Install pandoc
           command: apt-get update && apt-get install -y pandoc
 
-      - run: perl make-html.pl
+      - run: perl make-html.pl && cp html-inc/CNAME /tmp/manual
       
       - persist_to_workspace:
           root: /tmp/manual
