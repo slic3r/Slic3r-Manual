@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Slic3r Manual – Downloading</title>
+  <title>Slic3r Manual – Custom GCode Placeholder Reference</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="/style.css" type="text/css" />
 </head>
@@ -89,45 +89,80 @@
 </div>
 <div id="manual-body">
 <div id="header">
-<h1 class="title">Downloading</h1>
+<h1 class="title">Custom GCode Placeholder Reference</h1>
 </div>
-<p>Slic3r can be downloaded directly from: <a href="https://slic3r.org/download" class="uri">https://slic3r.org/download</a> or <a href="https://github.com/slic3r/Slic3r/releases" class="uri">https://github.com/slic3r/Slic3r/releases</a>.</p>
-<p>Pre-compiled packages are available for Windows, Mac OS X and Linux. Windows users can choose between 32 and 64 bit versions to match their system.</p>
-<p>Development (pre-release) builds are available at <a href="https://dl.slic3r.org/dev" class="uri">https://dl.slic3r.org/dev</a></p>
-<h2 id="source">Source</h2>
-<p>The source code is available via GitHub: <a href="https://github.com/slic3r/Slic3r" class="uri">https://github.com/slic3r/Slic3r</a>. For more details on building from source see § below.</p>
-<h1 id="installing">Installing</h1>
-<h2 id="windows">Windows</h2>
-<p>Unzip the downloaded zip file to a folder of your choosing, there is no installer script. The resulting folder contains three executables:</p>
+<h1 id="overview">Overview</h1>
+<p>Slic3r supports a variety of placeholders from settings and some internal values for use in Custom GCode.</p>
+<h1 id="all-situations">All situations</h1>
 <ul>
-<li><p><code>Slic3r.exe</code> - starts the GUI version.</p></li>
-<li><p><code>Slic3r-console.exe</code> - can be used from the command line.</p></li>
-<li><p><code>Slic3r-debug-console.exe</code> - starts the GUI version and provides a debugging output console.</p></li>
-</ul>
-<p>The folder also contains a <code>libexec</code> directory, which contains the rest of the important support files for Slic3r. Do not remove this folder or move it away from the exe files or Slic3r will not work!</p>
-<p>The zip file may then be deleted.</p>
-<h2 id="mac-os-x">Mac OS X</h2>
-<p>Double-click the downloaded dmg file, an instance of Finder should open together with an icon of the Slic3r program. Navigate to the Applications directory and drag and drop the Slic3r icon into it. The dmg file may then be deleted.</p>
-<h2 id="linux">Linux</h2>
-<p>Extract the archive to a folder of your choosing. Start Slic3r directly by running the Slic3r shell script, found in the root directory.</p>
-<p>The archive file may then be deleted.</p>
-<h1 id="building-from-source">Building from source</h1>
-<p>For those wishing to live on the cutting edge, Slic3r can be compiled from the latest source files found on GitHub<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
-<p>Up-to-date instructions for compiling and running from source can be found on the Slic3r wiki.</p>
+<li>Any configuration setting.
 <ul>
-<li><p><strong>GNU Linux</strong></p>
-<p><a href="https://github.com/slic3r/Slic3r/wiki/Running-Slic3r-from-git-on-GNU-Linux" class="uri">https://github.com/slic3r/Slic3r/wiki/Running-Slic3r-from-git-on-GNU-Linux</a></p></li>
-<li><p><strong>OS X</strong></p>
-<p><a href="https://github.com/slic3r/Slic3r/wiki/Running-Slic3r-from-git-on-OS-X" class="uri">https://github.com/slic3r/Slic3r/wiki/Running-Slic3r-from-git-on-OS-X</a></p></li>
-<li><p><strong>Windows</strong></p>
-<p><a href="https://github.com/slic3r/Slic3r/wiki/Running-Slic3r-from-git-on-Windows" class="uri">https://github.com/slic3r/Slic3r/wiki/Running-Slic3r-from-git-on-Windows</a></p></li>
+<li>For easy reference, export your current print configuration to an .ini file and open it with a text editor.</li>
+</ul></li>
+<li><code>[input_filename]</code> - Input filename</li>
+<li><code>[input_filename_base]</code> - Input filename with extension stripped
+<ul>
+<li>object.stl -&gt; object</li>
+</ul></li>
+<li><code>[timestamp]</code> - Current date/time
+<ul>
+<li>Each component from the timestamp is available: [year], [month], [day], [hour], [minute], [second]</li>
+</ul></li>
+<li><code>[scale]</code></li>
+<li><code>[scale_0]</code>, <code>[scale_1]</code>, ... for specific scales</li>
+<li><code>[print_preset]</code> - name of the current print preset. Only available when using plater GUI.</li>
+<li><code>[filament_preset]</code> - name of the current filament preset. Only available when using plater GUI.</li>
+<li><code>[printer_preset]</code> - name of the current printer preset. Only available when using plater GUI.</li>
+<li><code>[layer_z]</code> - Z height of the active layer.
+<ul>
+<li>Automatically set by Slic3r.</li>
+</ul></li>
+<li><code>[layer_num]</code> - Integer number of the active layer.
+<ul>
+<li>Automatically set by Slic3r.</li>
+</ul></li>
+<li><code>[current_extruder]</code> - Currently selected extruder.
+<ul>
+<li>Automatically set by Slic3r.</li>
+</ul></li>
 </ul>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p><a href="https://github.com/slic3r/Slic3r" class="uri">https://github.com/slic3r/Slic3r</a><a href="#fnref1">↩</a></p></li>
-</ol>
-</div>
+<p>Note: Multi-value options can be called with indices, like <code>[nozzle_diameter_1]</code>.</p>
+<h1 id="filament-startend-gcode">Filament Start/End GCode</h1>
+<p>The following items are available only for Filament Start/End GCode.</p>
+<ul>
+<li><code>[filament_extruder_id]</code>
+<ul>
+<li>Value of this setting is the current extruder this filament profile is loaded.</li>
+<li>Automatically set by Slic3r.</li>
+</ul></li>
+</ul>
+<h1 id="beforeafter-layer-change-gcode">Before/After Layer Change GCode</h1>
+<ul>
+<li><code>[current_retraction]</code> - Amount retracted for the current extruder.
+<ul>
+<li>Automatically set by Slic3r.</li>
+</ul></li>
+</ul>
+<h1 id="toolchange-gcode">Toolchange GCode</h1>
+<p>The following items are available only during Toolchange Custom GCode.</p>
+<ul>
+<li><code>[next_extruder]</code>
+<ul>
+<li>Automatically set by Slic3r.</li>
+</ul></li>
+<li><code>[prev_extruder]</code>
+<ul>
+<li>Automatically set by Slic3r.</li>
+</ul></li>
+<li><code>[next_retraction]</code>
+<ul>
+<li>Automatically set by Slic3r.</li>
+</ul></li>
+<li><code>[previous_retraction]</code>
+<ul>
+<li>Automatically set by Slic3r.</li>
+</ul></li>
+</ul>
 </div>
 <div id="manual-footer">
     Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
