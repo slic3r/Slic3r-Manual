@@ -18,7 +18,7 @@ where ACTION can be one of the following:
 * `--export-obj`: exports the given model(s) as OBJ
 * `--export-pov`: exports the given model(s) as a POV-Ray definition
 * `--export-svg`: slices the given model(s) and exports solid slices as SVG files
-* `--export-sla-svg`: slices the given model(s) and exports slices for SLA printers as SVG files (with infill patterns, raft support...)
+* `--export-sla-svg` (shortcut: `--sla`): slices the given model(s) and exports slices for SLA printers as SVG files (with infill patterns, raft support...)
 * `--info`: outputs information about the model(s)
 * `--save FILE`: saves configuration to the given file
 
