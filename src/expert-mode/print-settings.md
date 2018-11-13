@@ -196,7 +196,7 @@ better extrusions.
     by the infill, and this is usually the preferable as the perimeter
     acts as a wall containing the infill.
 
-#### Support material.
+#### Support material
 ![Print Settings: Support Material](images/print_settings_4.png "fig:")
 
  Printing a model from the bottom up, as
