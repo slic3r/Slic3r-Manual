@@ -47,6 +47,7 @@ jobs:
             git checkout gh-pages || git checkout --orphan gh-pages
             git rm -rf .
             cp -a /tmp/manual/html/. .
+            echo "manual.slic3r.org" > CNAME
             # copy .circleci as well so that the branch filter is honored
             mkdir -p .circleci && cp -a /tmp/manual/.circleci/. .circleci/.
             git add -A
