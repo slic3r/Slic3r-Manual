@@ -68,7 +68,7 @@ All the `--export-*` actions are affected by the following options:
 * `--output FILENAME` (shortcut: `-o`): write output to the given file instead of the default one
     * if an existing directory is supplied instead of a file, the file will be created inside that directory using the automatically generated file name
 * `--output-filename-format FORMAT`: this is the string pattern used to define the output file if `--output` is not specified. It defaults to `[input_filename_base].EXT` where EXT is the extension of the output format (`gcode`, `stl` etc.). See the documentation about [placeholders](/advanced/placeholder-parser).
-    * when using `--export-svg` or `--export-sla-svg`, the default format is `[input_filename_base]_[padded_layer_num].svg`
+    * when using `--export-svg`, the default format is `[input_filename_base]_[layer_num].svg`
 
 ### Configuration
 
