@@ -91,84 +91,108 @@
 <div id="header">
 <h1 class="title">Command Line Usage</h1>
 </div>
-<p>Almost all Slic3r features can be accessed from the command line. You can thus call Slic3r as part of a script or install it in an embedded system or headless server.</p>
-<p>To get the full listing and reference of available command line switches, just run:</p>
-<pre><code>slic3r --help</code></pre>
-<p><strong>Note:</strong> you might need to replace <code>slic3r</code> with the name and/or path to the Slic3r executable which might be:</p>
+<p>Slic3r can be used as a command line tool. It provides you with great flexibility so that you can perform operations in batch or as part of more complex workflows.</p>
+<h3 id="actions">Actions</h3>
+<p>The general syntax is:</p>
+<pre><code>slic3r [ ACTION ] [ OPTIONS ] [ model1.stl model2.stl ... ]</code></pre>
+<p>where ACTION can be one of the following:</p>
 <ul>
-<li><code>slic3r-console.exe</code> on Windows</li>
-<li><code>slic3r</code> on GNU/Linux</li>
-<li><code>Slic3r.app/Contents/MacOS/slic3r</code> on MacOS X</li>
-<li><code>perl slic3r.pl</code> on all platforms if you're running from git/source code</li>
+<li><code>--help</code>: displays the inline help</li>
+<li><code>--export-gcode</code> (shortcut: <code>--gcode</code> or <code>-g</code>): slices the given model(s) and exports G-code toolpaths</li>
+<li><code>--export-stl</code>: exports the given model(s) as STL</li>
+<li><code>--export-amf</code>: exports the given model(s) as AMF</li>
+<li><code>--export-3mf</code>: exports the given model(s) as 3MF</li>
+<li><code>--export-obj</code>: exports the given model(s) as OBJ</li>
+<li><code>--export-pov</code>: exports the given model(s) as a POV-Ray definition</li>
+<li><code>--export-svg</code>: slices the given model(s) and exports solid slices as SVG files</li>
+<li><code>--export-sla-svg</code> (shortcut: <code>--sla</code>): slices the given model(s) and exports slices for SLA printers as SVG files (with infill patterns, raft support...)</li>
+<li><code>--info</code>: outputs information about the model(s)</li>
+<li><code>--save FILE</code>: saves configuration to the given file</li>
 </ul>
-<h2 id="generating-g-code">Generating G-code</h2>
-<p>In order to slice a model into G-code you just need to supply the STL file along with any config option you'd like to use:</p>
-<pre><code>slic3r my_model.stl --layer-height 0.2</code></pre>
+<p>If called with no ACTION, the graphical interface will be launched and the supplied models (if any) will be loaded in the plater. If multiple actions can be specified, they will be executed in the given order. If multiple models are supplied, the requested action will be performed separately for each one.</p>
+<h3 id="model-transform">Model transform</h3>
+<p>The following options will affect how the model(s) are transformed before performing the requested action:</p>
+<ul>
+<li><code>--merge</code> (shortcut: <code>-m</code>): the given models will be arranged and then merged into a single one, thus the action will be performed once
+<ul>
+<li>if the <code>--dont-arrange</code> option is supplied, models will be merged at their original coordinates</li>
+</ul></li>
+<li><code>--center X,Y</code>: centers the given model(s) around the given point and also aligns them to <em>z = 0</em>
+<ul>
+<li>as an alternative, <code>--align-xy X,Y</code> aligns the model(s) to the given point</li>
+<li>if none of those are specified, <code>--export-gcode</code> will center the model around the centroid point of the configured print bed (unless the <code>--dont-arrange</code> option is supplied: original coordinates will be used in that case)</li>
+<li><code>--export-svg</code> and <code>--export-sla-svg</code> will align to <em>z = 0</em> anyway</li>
+</ul></li>
+<li><code>--scale FACTOR</code>: the given model(s) will be scaled by the given factor or percentage (the % character determines how the number is parsed)</li>
+<li><code>--scale-to-fit X,Y,Z</code>: the given model(s) will be scaled to fit the given volume expressed in millimeters</li>
+<li><code>--rotate ANGLE</code>, <code>--rotate-x ANGLE</code>, <code>--rotate-y ANGLE</code>: rotates the given model around the Z, X, Y axes by the given degrees</li>
+<li><code>--duplicate NUM</code>: multiplies the copies of the given model(s)</li>
+<li><code>--duplicate-grid X,Y</code>: multiplies the copies of the given model(s) by creating a grid (spacing can be customized with <code>--duplicate-distance</code>)</li>
+<li><code>--cut Z</code>: cuts the given model(s) in two halves at the given Z and exports both the resulting models (note that the given coordinate should be relative to the object's bottom and not to its absolute position)</li>
+<li><code>--cut-x X</code>, <code>--cut-y Y</code>: cuts the given model(s) in two halves along the X or Y axis at the given absolute coordinate and exports both resulting models</li>
+<li><code>--cut-grid X,Y</code>: cuts the given model(s) according to a grid having the given pattern and exports ann the resulting models</li>
+<li><code>--split</code>: detects unconnected parts in the given model(s) and splits them into separate objects</li>
+<li><code>--repair</code>: this tries to repair any non-manifold meshes (this option is implicitly added whenever we need to slice the model, i.e. for <code>--cut*</code>, <code>--export-gcode</code>, <code>--export-svg</code>, <code>--export-sla-svg</code>)</li>
+</ul>
+<p>These transform options are applied in the given order.</p>
+<p>For convenience, if any of <code>--cut</code>, <code>--cut-x</code>, <code>--cut-z</code>, <code>--split</code>, <code>--repair</code> is supplied and none of the above actions is specified, <code>--export-stl</code> is implicitly assumed.</p>
+<p>Examples:</p>
+<pre><code>slic3r --export-obj --scale 200% cube.stl
+slic3r --cut 20 cube.stl
+slic3r --cut 20 --export-3mf cube.stl
+slic3r --gcode --merge model1.stl model2.stl
+slic3r --split cubes.stl</code></pre>
+<h3 id="export-options">Export options</h3>
+<p>All the <code>--export-*</code> actions are affected by the following options:</p>
+<ul>
+<li><code>--output FILENAME</code> (shortcut: <code>-o</code>): write output to the given file instead of the default one
+<ul>
+<li>if an existing directory is supplied instead of a file, the file will be created inside that directory using the automatically generated file name</li>
+</ul></li>
+<li><code>--output-filename-format FORMAT</code>: this is the string pattern used to define the output file if <code>--output</code> is not specified. It defaults to <code>[input_filename_base].EXT</code> where EXT is the extension of the output format (<code>gcode</code>, <code>stl</code> etc.). See the documentation about <a href="/advanced/placeholder-parser">placeholders</a>.
+<ul>
+<li>when using <code>--export-svg</code>, the default format is <code>[input_filename_base]_[layer_num].svg</code></li>
+</ul></li>
+</ul>
+<h3 id="configuration">Configuration</h3>
+<p>Configuration options affect toolpath generation (thus <code>--export-gcode</code> and <code>--export-sla-svg</code>). All the options available in the graphical interface of Slic3r can be used from command line as individual switches.</p>
+<p>For example:</p>
+<pre><code>slic3r -g my_model.stl --layer-height 0.2</code></pre>
 <p>This will generate a file named <em>my_model.gcode</em> in the same directory as the input STL file. You may want to specify a custom output path:</p>
-<pre><code>slic3r my_model.stl --layer-height 0.2 --output /path/to/output.gcode</code></pre>
-<p>The argument for <code>--output</code> can also be a directory; in that case the file will follow the automatic naming scheme (which you can override using the <code>--output-filename-format</code> option; see manual chapter about placeholders).</p>
-<h3 id="options">Options</h3>
+<pre><code>slic3r -g my_model.stl --layer-height 0.2 --output /path/to/output.gcode</code></pre>
 <p>To get the full listing, reference and defaults of available command line switches, just run:</p>
-<pre><code>slic3r --help</code></pre>
+<pre><code>slic3r --help-options</code></pre>
 <p>Most of the options accept an argument, like <code>--layer-height 0.2</code> or <code>--perimeters 3</code>. Howevere there are some boolean options that work as simple flags, like <code>--wipe</code> or <code>--avoid-crossing-perimeters</code>. To negate those options you just need to prepend <code>--no-</code> to them (as in <code>--no-wipe</code> or <code>--no-avoid-crossing-perimeters</code>).</p>
 <p>Some options, including the ones related to multiple extruders, accept multiple values. You can just append them multiple times:</p>
 <pre><code>slic3r --infill-extruder 2 --nozzle-diameter 0.35 --nozzle-diameter 0.5</code></pre>
-<h3 id="configuration">Configuration</h3>
 <p><strong>Note:</strong> the print/filament/printer presets defined in the graphical interface are completely ignored when running in command line mode. Slic3r will always default to its factory default settings.</p>
-<p>You'll need to export your desired configuration with the <em>Export Config...</em> command, which is located in the <em>File</em> menu. It will prompt you to save a <code>.ini</code> file that you can load from command line this way:</p>
-<pre><code>slic3r my_model.stl --load my_config.ini</code></pre>
+<p>In order to use your presets you'll need to export them with the <em>Export Config...</em> command, which is located in the <em>File</em> menu. It will prompt you to save a <code>.ini</code> file that you can load from command line this way:</p>
+<pre><code>slic3r -g my_model.stl --load my_config.ini</code></pre>
 <p>You can override single options by appending them as command line switches:</p>
-<pre><code>slic3r my_model.stl --load my_config.ini --fill-pattern concentric</code></pre>
+<pre><code>slic3r -g my_model.stl --load my_config.ini --fill-pattern concentric</code></pre>
 <p>You can also create a config file from command line:</p>
 <pre><code>slic3r --nozzle-diameter 0.35 --filament-diameter 2.85 \
     --temperature 185 --first-layer-temperature 195 --layer-height 0.2 \
     --save my_config.ini</code></pre>
 <p>If you're an advanced user you can split your configuration into multiple <em>.ini</em> files and load them by appending multiple <code>--load</code> switches.</p>
+<p>The <code>--ignore-nonexistent-config</code> will prevent Slic3r from throwing an error in case a non-existent file is supplied to <code>--load</code>.</p>
 <p>One more way to use the print/filament/printer presets on command line is launching Slic3r with the <code>--autosave</code> option:</p>
 <pre><code>slic3r --autosave my_config.ini</code></pre>
-<p>The above command will launch the graphical interface of Slic3r but will automatically export the current configuration to the specified file. Thus, the last used presets will be remembered whenever you <code>--load</code> that file.</p>
-<h3 id="processing-multiple-input-files">Processing multiple input files</h3>
-<p>If you supply multiple input files Slic3r will process them separately, by generating a distinct G-code file for each one:</p>
-<pre><code>slic3r model1.stl model2.stl model3.stl</code></pre>
-<p>The command above will generate <em>model1.gcode</em>, <em>model2.gcode</em>, <em>model3.gcode</em>.</p>
-<p>If you want to process multiple files as a single print job, you can use the <code>--merge</code> (or <code>-m</code>) option:</p>
-<pre><code>slic3r -m model1.stl model2.stl model3.stl</code></pre>
-<p>This will only generate a file named <em>model1.gcode</em> (but you can use the <code>--output</code> option described above to set a custom name) containing all three objects. Note that auto-arranging currently works best when all objects have similar sizes.</p>
+<p>This will launch the graphical interface of Slic3r but will automatically export the current configuration to the specified file. Thus, the last used presets will be remembered whenever you <code>--load</code> that file.</p>
 <h3 id="positioning-objects-in-the-g-code-coordinates">Positioning objects in the G-code coordinates</h3>
 <p>While in the graphical interface you can freely position your objects in the bed, command line provides two ways for telling position(s) to Slic3r:</p>
 <ol style="list-style-type: decimal">
-<li><p>Use the <code>--print-center X,Y</code> option for defining a point in G-code coordinates and Slic3r will center the print around that point:</p>
-<p>slic3r my_model.stl --print-center 40,40</p></li>
+<li><p>Use the <code>--center X,Y</code> option for defining a point in G-code coordinates and Slic3r will center the print around that point:</p>
+<p>slic3r -g my_model.stl --center 40,40</p></li>
 </ol>
-<p>(By default, the center point is set to 100,100.)</p>
+<p>(By default, the center point is automatically calculated as the centroid of the configured print bed.)</p>
 <ol start="2" style="list-style-type: decimal">
-<li><p>If you trust the coordinates of your STL file(s) and they coincide with your machine's print bed, you can use <code>--dont-arrange</code>: Slic3r will leave the input locations untouched.</p>
-<p>slic3r my_model.stl --dont-arrange</p></li>
+<li><p>If you trust the coordinates of your STL file(s) and they are compatible with your machine's print bed, you can use <code>--dont-arrange</code>: Slic3r will leave the input locations untouched.</p>
+<p>slic3r -g my_model.stl --dont-arrange</p></li>
 </ol>
-<p>Note that the bed shape configured in the graphical interface is ignored when performing command line slicing, as it only serves as a visual guidance.</p>
-<h2 id="repairing-models">Repairing models</h2>
-<p>Slic3r can be used to repair files from command line:</p>
-<pre><code>slic3r --repair my_model.stl</code></pre>
-<p>This will generate a file named <em>my_model_fixed.obj</em> in the same directory as the original one. This output filename is not customizable at the moment, as well as the OBJ output format which is preferred over STL because it will keep the model manifold by avoiding numerical issues frequently happening with STL. Note that Slic3r and most 3D applications are able to read OBJ files.</p>
-<p>The <code>--info</code> switch can be used to get information about a file:</p>
-<pre><code>slic3r --info cube.stl
-Info about cube.stl:
-  size:              x=20.000 y=20.000 z=20.000
-  number of facets:  12
-  number of shells:  1
-  volume:            8000
-  needed repair:     no</code></pre>
-<h2 id="cutting-models">Cutting models</h2>
-<p>Slic3r can be used to repair models from command line:</p>
-<pre><code>slic3r --cut 10.2 my_model.stl</code></pre>
-<p>This will generate two files named <em>my_model_lower.stl</em> and <em>my_model_upper.stl</em> in the same directory as the original model.</p>
-<p><strong>Note:</strong> the object will be automatically placed on the <em>z = 0</em> plane before cutting, so the argument for the <code>--cut</code> option is relative to the object's bottom, and not to the original coordinate system.</p>
-<h2 id="embedding-slic3r">Embedding Slic3r</h2>
-<p>The following options can be useful for embedding Slic3r into host applications:</p>
+<h3 id="graphical-interface-options">Graphical interface options</h3>
 <ul>
-<li><code>--no-plater</code> will launch Slic3r in a configuration-only mode, thus avoiding confusion if the host application provides its own model loading dialog;</li>
 <li><code>--autosave</code> will automatically export the last selected config to a specified file (see the above paragraph about <a href="#configuration">Configuration</a> for its usage);</li>
-<li><code>--gui-mode</code> can take the <code>simple</code> or <code>expert</code> arguments, and will force Slic3r to launch in the specified mode regardless of the Preferences setting.</li>
 <li><code>--datadir</code> followed by the path to a directory will tell Slic3r to use that directory for storing and reading its configuration instead of the default system preferences directory. (See the page about <a href="/configuration-organization/configuration-organization">configuration organization</a> for more details.)</li>
 </ul>
 </div>
