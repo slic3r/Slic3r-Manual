@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Slic3r Manual – Filament Settings</title>
+  <title>Slic3r Manual – </title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="/style.css" type="text/css" />
 </head>
@@ -92,29 +92,20 @@
 </ul>
 </div>
 <div id="manual-body">
-<div id="header">
-<h1 class="title">Filament Settings</h1>
-</div>
-<h2 id="filament-settings">Filament Settings</h2>
-<p>The <code>Filament Settings</code> will normally be used infrequently, for example on receipt of a new roll of filament.</p>
-<div class="figure">
-<img src="images/filament_settings_1.png" title="fig:" alt="Simple Mode: Filament Settings." />
-<p class="caption">Simple Mode: Filament Settings.</p>
-</div>
-<h4 id="filament.">Filament.</h4>
-<p>The <code>Diameter</code> setting will already have been filled from the value given during the wizard (see p.), but can be updated here.</p>
-<p>The <code>Extrusion multiplier</code> setting allows the fine tuning of the extrusion flow rate, and is is given as a factor, e.g. 1 means 100%, 1.5 would mean 150%. Whilst the value should ideally be set in the firmware it can be useful to test slight changes to the rate by altering this value. It varies the amount of plastic proportionally and should be changed in very small steps (e.g. +/- 0.05) as the effects are very visible.</p>
-<h4 id="temperature.">Temperature.</h4>
-<p>These values are also filled from the wizard, but here the opportunity exists to set the temperature for the first layer (see p.).</p>
-<h4 id="optional-information">Optional Information</h4>
-<p>Some optional information for the density and cost of the filament can be added to aid in projected weight and cost calculations.</p>
-<h4 id="custom-g-code">Custom G-code</h4>
-<p>Custom G-code can be added on a per-filament basis, exactly as in Printer Settings. Filament custom start G-code is always executed after the printer start gcode and the end gcode is executed before printer end gcode.</p>
-<h4 id="overrides">Overrides</h4>
+<h2 id="plater-features">Plater Features</h2>
+<p>Slic3r's plater is powerful and contains many useful options.</p>
+<h3 id="view-menu">View Menu</h3>
+<p>The View menu in Slic3r contains a few commands and one configurable preference/option. <img src="images/plater/view-menu.png" title="fig:" alt="View menu" /></p>
 <ul>
-<li><code>Max volumetric speed</code> overrides the value given in Printer Settings. See that topic for more informaition.</li>
-<li><code>Compatible Printers</code> works the same as the option in Printer Settings. Set that topic for more information.</li>
+<li>Top (Ctrl+4): Immediately rotate the plater to a top-down view. <img src="images/plater/view-top.png" title="fig:" alt="View top" /></li>
+<li>Bottom (Ctrl+5): Immediately rotate the plater to a bottom-up view. <img src="images/plater/view-bottom.png" title="fig:" alt="View bottom" /></li>
+<li>Left (Ctrl+6): Immediately rotate the plater to a profile view of the left side of the plater. <img src="images/plater/view-left.png" title="fig:" alt="View left" /></li>
+<li>Right (Ctrl+7): Immediately rotate the plater to a profile view of the right side of the plater. <img src="images/plater/view-right.png" title="fig:" alt="View right" /></li>
+<li>Front (Ctrl+8): Immediately rotate the plater to a profile view of the front side of the plater. <img src="images/plater/view-front.png" title="fig:" alt="View front" /></li>
+<li>Back (Ctrl+9): Immediately rotate the plater to a profile view of the diagonal side of the plater. <img src="images/plater/view-back.png" title="fig:" alt="View back" /></li>
+<li>Diagonal (Ctrl+0): Immediately reset the plater to the initial view. <img src="images/plater/view-diagonal.png" title="fig:" alt="View diagonal" /></li>
 </ul>
+<p>There are two ways to view the coloration in the 3D preview: - Color Toolpaths by Role - This mode uses the regular Slic3r color scheme to pick the colors (default, Solarized, etc). <img src="images/plater/view-color-role.png" title="fig:" alt="View color by role" /> - Color Toolpaths by Filament - This mode uses the specified colors from the selected Material profiles. <img src="images/plater/view-color-filament.png" title="fig:" alt="View color by role" /></p>
 </div>
 <div id="manual-footer">
     Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
