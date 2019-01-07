@@ -99,7 +99,7 @@
 <h3 id="actions">Actions</h3>
 <p>The general syntax is:</p>
 <pre><code>slic3r [ ACTION ] [ OPTIONS ] [ model1.stl model2.stl ... ]</code></pre>
-<p>where ACTION can be one of the following:</p>
+<p>where ACTION can be one (or more) of the following:</p>
 <ul>
 <li><code>--help</code>: displays the inline help</li>
 <li><code>--export-gcode</code> (shortcut: <code>--gcode</code> or <code>-g</code>): slices the given model(s) and exports G-code toolpaths</li>
@@ -113,7 +113,7 @@
 <li><code>--info</code>: outputs information about the model(s)</li>
 <li><code>--save FILE</code>: saves configuration to the given file</li>
 </ul>
-<p>If called with no ACTION, the graphical interface will be launched and the supplied models (if any) will be loaded in the plater. If multiple actions can be specified, they will be executed in the given order. If multiple models are supplied, the requested action will be performed separately for each one.</p>
+<p>If called with no ACTION, the graphical interface will be launched and the supplied models (if any) will be loaded in the plater. If multiple actions are be specified, they will be executed in the given order. If multiple models are supplied, the requested action will be performed separately for each one.</p>
 <h3 id="model-transform">Model transform</h3>
 <p>The following options will affect how the model(s) are transformed before performing the requested action:</p>
 <ul>
