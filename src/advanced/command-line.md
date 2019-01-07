@@ -8,7 +8,7 @@ The general syntax is:
 
     slic3r [ ACTION ] [ OPTIONS ] [ model1.stl model2.stl ... ]
 
-where ACTION can be one of the following:
+where ACTION can be one (or more) of the following:
 
 * `--help`: displays the inline help
 * `--export-gcode` (shortcut: `--gcode` or `-g`): slices the given model(s) and exports G-code toolpaths
@@ -23,7 +23,7 @@ where ACTION can be one of the following:
 * `--save FILE`: saves configuration to the given file
 
 If called with no ACTION, the graphical interface will be launched and the supplied models (if any) will be loaded in the plater.
-If multiple actions can be specified, they will be executed in the given order.
+If multiple actions are be specified, they will be executed in the given order.
 If multiple models are supplied, the requested action will be performed separately for each one.
 
 ### Model transform
