@@ -331,7 +331,14 @@ because slight gaps will not matter as much).
  brim inside of holes in the print.
 
  ![An example of brim.](images/brim.jpg "fig:")
+ 
+ `Brim ears` will print the brim only around sharp corners. The 
+ `Brim ears Maximum Angle` setting allow to choose the sharpness of the angle.
+ An angle below 90° won't draw a grim ear around each corner of a cube, but 
+ an angle of 91° will.
 
+ ![An example of brim ears. (model made by b1sh0p)](images/brim_ears.jpg "fig:")
+ 
 ##### Skirt
 
 The `Skirt` setting adds an extrusion a short distance away from the
