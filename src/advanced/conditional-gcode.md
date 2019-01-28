@@ -1,4 +1,4 @@
-% Conditional GCode
+% Conditional G-code
 
 # Overview
 
