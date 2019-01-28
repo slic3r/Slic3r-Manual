@@ -96,23 +96,42 @@
 <h1 class="title">Conditional GCode</h1>
 </div>
 <h1 id="overview">Overview</h1>
-<p>Conditional GCode is a powerful feature of Slic3r that allows for arbitrary math to be done in Custom GCode fields as well as setting conditions for specific statements to appear in output from Custom GCode.</p>
+<p>Conditional G-code is a powerful feature of Slic3r that allows for arbitrary math to be done in Custom G-code fields as well as setting conditions for specific statements to appear in output from Custom G-code.</p>
 <h1 id="conditional-expressions">Conditional expressions</h1>
-<p>Conditional expressions has the following syntax: * {if <em>expression</em>}</p>
-<p><em>expression</em> may take one of the following forms: * VARIABLE OPERATOR CONSTANT * CONSTANT OPERATOR VARIABLE * {<em>subexpression</em>} OPERATOR {<em>subexpression</em>} * OPERATOR <em>subexpression</em></p>
+<p>Conditional expressions has the following syntax:</p>
+<ul>
+<li><code>{if _expression_}</code></li>
+</ul>
+<p><em>expression</em> may take one of the following forms:</p>
+<ul>
+<li><VARIABLE> <OPERATOR> <CONSTANT></li>
+<li><CONSTANT> <OPERATOR> <VARIABLE></li>
+<li><code>{_subexpression_}</code> <OPERATOR> <code>{_subexpression_}</code></li>
+<li><OPERATOR> <code>_subexpression_</code></li>
+</ul>
 <p><em>subexpression</em> has the same forms as <em>expression</em>.</p>
 <p>If _subexpression_s exist, they are evaluated before any other operators.</p>
-<p>Available operators: * <code>&amp;&amp;</code> or <code>and</code> - logical AND * <code>||</code> or <code>or</code> - logical OR * <code>!</code> or <code>not</code> - logical NOT (inversion) * <code>^</code> or <code>xor</code> - XOR (exclusive-OR) * <code>==</code> or <code>equals</code> - equality comparison. * <code>!=</code> - inequality comparison. To use words, use a subexpression. * <code>&lt;</code> - less than (valid for numbers only) * <code>&lt;=</code> - less than or equal to (valid for numbers only) * <code>&gt;</code> - greater than (valid for numbers only) * <code>&gt;=</code> - greater than or equal to (valid for numbers only) * Anything supported by exprtk <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> * Generic variables and file I/O are not supported. * Any exprtk expressions that involve <code>{}</code>s are not supported.</p>
-<p>Available keywords: * 'false' * 'true'</p>
-<p>To apply a single condition to multiple lines, repeat it once for each line.</p>
+<p>Available operators:</p>
+<ul>
+<li><code>&amp;&amp;</code> or <code>and</code>: logical AND</li>
+<li><code>||</code> or <code>or</code>: logical OR</li>
+<li><code>!</code> or <code>not</code>: logical NOT (inversion)</li>
+<li><code>^</code> or <code>xor</code>: XOR (exclusive-OR)</li>
+<li><code>==</code> or <code>equals</code>: equality comparison</li>
+<li><code>!=</code>: inequality comparison. To use words, use a subexpression.</li>
+<li><code>&lt;</code>: less than (valid for numbers only)</li>
+<li><code>&lt;=</code>: less than or equal to (valid for numbers only)</li>
+<li><code>&gt;</code>: greater than (valid for numbers only)</li>
+<li><code>&gt;=</code>: greater than or equal to (valid for numbers only)</li>
+<li>Anything supported by <a href="http://www.partow.net/programming/exprtk/index.html">exprtk</a> (except for generic variables, file I/O and expressions that involve <code>{}</code>)</li>
+</ul>
+<p>The <code>true</code> and <code>false</code> keywords are available.</p>
+<p>To apply a single condition to multiple lines, repeat it once for each line:</p>
 <pre><code>{if [layer_num] == 10}M104 S210
 {if [layer_num] == 10}M600</code></pre>
-<ul>
-<li>If a conditional expression evaluates to false, all the characters until the end of the line are removed.</li>
-<li>If a conditional expression fails to parse, it's silently left untouched.</li>
-<li><p>Expressions may be chained for an implicit AND.</p>
-<pre><code>{if [layer_num] == 10}{if [temperature_1] != 210}M104 S210</code></pre></li>
-</ul>
+<p>If a conditional expression evaluates to false, all the characters until the end of the line are removed. If a conditional expression fails to parse, it's silently left untouched.</p>
+<p>Expressions may be chained for an implicit AND:</p>
+<pre><code>{if [layer_num] == 10}{if [temperature_1] != 210}M104 S210</code></pre>
 <h2 id="conventions">Conventions</h2>
 <ul>
 <li>Numerical value of 0 is equivalent to logical <code>false</code>. Any nonzero value is considered to be logical <code>true</code>.
@@ -120,7 +139,7 @@
 <li><code>{if { 1 - 1 } }</code> would result in 0 and thus <code>false</code>.</li>
 </ul></li>
 </ul>
-<h1 id="value-expressions-gcode-math">Value expressions (GCode Math)</h1>
+<h1 id="value-expressions-g-code-math">Value expressions (G-code Math)</h1>
 <p>Any expression enclosed in two curly brackets, but not starting with <code>{if</code> is evaluated as an arithmetic expression: <code>{foo - bar}</code>. If evaluation fails, the expression is silently left untouched. If any float variables are used, return value will have decimals. If string variables are mixed with numeric variables, they are parsed as floats if they have a dot, or integers otherwise.</p>
 <p>Value expressions can be used in conditional expressions by nesting them: <code>{if {foo - bar} &gt; 10}</code>.</p>
 <ul>
@@ -130,19 +149,13 @@
 <ul>
 <li>Every expression in <code>{}</code> must resolve to a number.</li>
 <li>Nested sub-expressions are evaluated before the current expression is evaluated.</li>
-<li>Value Expressions and Conditional GCode are evaluated before any post-processing scripts.</li>
+<li>Value Expressions and Conditional G-code are evaluated before any post-processing scripts.</li>
 </ul>
 <h1 id="troubleshooting">Troubleshooting</h1>
 <ul>
 <li>If the parser can't understand your statements, it will output nothing for that block.</li>
-<li>Remember that Custom GCode placeholders (items in <code>[]</code>) are resolved before Conditional GCode.</li>
+<li>Remember that Custom G-code placeholders (items in <code>[]</code>) are resolved before Conditional G-code.</li>
 </ul>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>http://www.partow.net/programming/exprtk/index.html<a href="#fnref1">↩</a></p></li>
-</ol>
-</div>
 </div>
 <div id="manual-footer">
     Written by <a href="http://garyhodgson.com/">Gary Hodgson</a> with contributions from Alessandro Ranellucci and Jeff Moe<br />
