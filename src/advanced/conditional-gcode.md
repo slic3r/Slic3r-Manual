@@ -13,10 +13,10 @@ Conditional expressions has the following syntax:
 
 _expression_ may take one of the following forms: 
 
-* <VARIABLE> <OPERATOR> <CONSTANT>
-* <CONSTANT> <OPERATOR> <VARIABLE>
-* `{_subexpression_}` <OPERATOR> `{_subexpression_}`
-* <OPERATOR> `_subexpression_`
+* _VARIABLE_ _OPERATOR_ _CONSTANT_
+* _CONSTANT_ _OPERATOR_ _VARIABLE_
+* `{_subexpression_}` _OPERATOR_ `{_subexpression_}`
+* _OPERATOR_ `_subexpression_`
 
 _subexpression_ has the same forms as _expression_.
 
