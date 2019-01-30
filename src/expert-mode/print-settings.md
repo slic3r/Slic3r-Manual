@@ -354,7 +354,7 @@ smoothly from the extruder before it starts on the model proper.
 -   `Skirt height` - The number of layers to lay down a skirt for. For
     ensuring the material is flowing smoothly, one layer is sufficient,
     however the skirt function can also be used to build walls around
-    the object in case it should be protected from draughts.
+    the object to protect it from drafts.
 
 -   `Minimum extrusion length` - Dictates a minimum number of
     millimeters that the skirt should be, should the loop around the
