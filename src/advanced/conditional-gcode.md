@@ -80,3 +80,4 @@ Value expressions can be used in conditional expressions by nesting them: `{if {
 
 * If the parser can't understand your statements, it will output nothing for that block.
 * Remember that Custom G-code placeholders (items in `[]`) are resolved before Conditional G-code.
+* Some Custom G-code placeholders have a floating point value, and the equality comparison will likely not work on these. For example `{if [layer_z] == 10}` will never return true. It is however possible to work around this, es: `{if [layer_z] > 9.999}{if [layer_z] < 10.001}` or `{if abs([layer_z]-10) < 0.001}`.
