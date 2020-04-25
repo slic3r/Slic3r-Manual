@@ -31,7 +31,7 @@ extruder may travel along the X and Y axis. If the dimensions are not
 readily available for the printer then it can be easily measured.
 
 Be sure to measure from the lower left corner where the extruder nozzle
-rests when are the home position to the maximum distance the nozzle can
+rests when at the home position to the maximum distance the nozzle can
 travel in each direction. Take into account that the X carriage may
 touch the frame before the nozzle reaches it’s full distance, this will
 depend on the printer make and model.
