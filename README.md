@@ -1,10 +1,5 @@
-# Slic3r Manual
+# SuplierSlicer Manual
 
-The first release of this manual was sponsored by Lulzbot - Aleph Objects, Inc. and written by Gary Hodgson.
+This documentation is built on a fork of the Slic3r documentation maintained at http://github.com/alexrj/slic3r. Work on this fork started 1st November 2020, and it should be considered a work in progress and incomplete. 
 
-You can read the manual at http://manual.slic3r.org/
-
-Copyright 2013-2014, Aleph Objects, Inc.
-License: CC-BY-SA 3.0
-
-Documentation for libslic3r is generated via Doxygen from commits made to http://github.com/alexrj/Slic3r
+Details on SuperSlicer, its background and licensing can be found at https://github.com/supermerill/SuperSlicer. 
