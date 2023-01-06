@@ -12,7 +12,7 @@ Settings.](images/filament_settings_1.png "fig:")
 
 #### Filament.
 
- The `Diameter` setting will already have been filled from
+The `Diameter` setting will already have been filled from
 the value given during the wizard (see p.), but can be updated here.
 
 The `Extrusion multiplier` setting allows the fine tuning of the
@@ -25,9 +25,9 @@ visible.
 
 #### Temperature.
 
- These values are also filled from the wizard, but here
+These values are also filled from the wizard, but here
 the opportunity exists to set the temperature for the first layer (see
-p.).
+[The Important First Layer](#../first-print/first-layer)).
 
 #### Optional Information
 
@@ -39,9 +39,10 @@ to aid in projected weight and cost calculations.
 
 Custom G-code can be added on a per-filament basis, exactly as in Printer
 Settings.  Filament custom start G-code is always executed after the printer
-start gcode and the end gcode is executed before printer end gcode.
+start gcode and the end G-code is executed before printer end G-code.
 
 #### Overrides
 
 - `Max volumetric speed` overrides the value given in Printer Settings. See that topic for more informaition.
 - `Compatible Printers` works the same as the option in Printer Settings. Set that topic for more information.
+

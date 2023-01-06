@@ -5,11 +5,12 @@ or modified after it has been created. For this reason there exists the
 ability to run arbitrary scripts as part of the final steps in the
 slicing process.
 
-Example scripts can be found in the [GitHub repository](https://github.com/alexrj/Slic3r/tree/master/utils/post-processing)
+Example scripts can be found in the
+[GitHub repository](https://github.com/alexrj/Slic3r/tree/master/utils/post-processing)
 or in the [RepRap forum](http://forums.reprap.org/list.php?263).
 
 **Note:** post-processing scripts can be written in **any language**
-(Perl, Python, Ruby, Bash etc.). They just need to be executable and to 
+(Perl, Python, Ruby, Bash etc.). They just need to be executable and to
 accept the path to the G-code file as the only argument.
 
 In the `Output options` section of the `Print Settings` tab lies the
@@ -30,10 +31,11 @@ the scripts by way of environment variables. These all begin with
 leave the G-code unmodified and just write out all Slic3r options to standard
 output:
 
-    #!/bin/sh
-    echo "Post-processing G-code file: $*"
-    env | grep ^SLIC3R
-
+```
+#!/bin/sh
+echo "Post-processing G-code file: $*"
+env | grep ^SLIC3R
+```
 
 #### Post-Processing Script Parameters
 
@@ -41,15 +43,21 @@ You can use parameters with your script as such:
 
 Examples:
 
-`/path/to/executable` becomes `/path/to/executable` with the arg `outputfilename.gcode`
+- `/path/to/executable` becomes `/path/to/executable` with the arg
+  `outputfilename.gcode`
 
-`/path/to/executable -arg -arg2` becomes `/path/to/executable` with `args -arg, -arg2`, and `outputfilename.gcode`
+- `/path/to/executable -arg -arg2` becomes `/path/to/executable` with
+  `args -arg, -arg2`, and `outputfilename.gcode`
 
-`/path/to/executable! with! spaces -arg -arg2` becomes `/path/to/executable with spaces with args -arg, -arg2`, and `outputfilename.gcode`
+- `/path/to/executable! with! spaces -arg -arg2` becomes
+  `/path/to/executable with spaces with args -arg, -arg2`, and
+  `outputfilename.gcode`
 
-`/path/to/executable!! -arg -arg2` becomes `/path/to/executable!` with `args -arg, -arg2`, and `outputfilename.gcode`
+- `/path/to/executable!! -arg -arg2` becomes `/path/to/executable!` with
+  `args -arg, -arg2`, and `outputfilename.gcode`
 
-`/path/to/executable option! with! spaces` becomes `/path/to/executable` with args `option with spaces` and `outputfilename.gcode`
+- `/path/to/executable option! with! spaces` becomes `/path/to/executable`
+  with args `option with spaces` and `outputfilename.gcode`
 
 
 Perl example
@@ -60,40 +68,50 @@ the G-Code file, without having to copy, edit, then replace the
 original. The following example will simply output the contents to
 standard output:
 
-    #!/usr/bin/perl -i
-    use strict;
-    use warnings;
+```
+#!/usr/bin/perl -i
+use strict;
+use warnings;
 
-    while (<>) {
-         # modify $_ here before printing
-         print;
-    }
+while (<>) {
+     # modify $_ here before printing
+     print;
+}
+```
 
 If you are getting a *can't do inplace edit without backup* error when specifying
-the post-process script, try adding `$^I = '.bak';` before the while loop. This will
-create a backup file of the generated G-Code file. Windows does not like to have two
-scripts creating and/or accessing a single file at once, so a backup is needed.
+the post-process script, try adding `$^I = '.bak';` before the while loop. This
+will create a backup file of the generated G-Code file. Windows does not like to
+have two scripts creating and/or accessing a single file at once, so a backup is
+needed.
 
 
 Python example
 --------------
 
 #### Windows
-To use a Python post-processing script with Windows, you'll need to adjust the paths like this:
+To use a Python post-processing script with Windows, you'll need to adjust the
+paths like this:
 
-    C:\Program! Files! (x86)\Python37-32\python.exe c:\dev\SCPP\Slic3rConfigPrettyPrint.py -o --au "John Doe"
+```
+C:\Program! Files! (x86)\Python37-32\python.exe c:\dev\SCPP\Slic3rConfigPrettyPrint.py -o --au "John Doe"
+```
 
-Note the **!** before all white-spaces! Make sure you adjust the path to your script as well.
-Yes, you can save your G-Code file to somewhere with spaces in it's path.
+Note the **!** before all white-spaces! Make sure you adjust the path to your
+script as well. Yes, you can save your G-Code file to somewhere with spaces in
+it's path.
 
-Your script needs to accept at least one parameter: The filename of your G-Code file.
-`-o` and `--au "John Doe"` are optional parameters. The filename, of your G-Code, will be added to the end of this string.
+Your script needs to accept at least one parameter: The filename of your G-Code
+file. `-o` and `--au "John Doe"` are optional parameters. The filename, of your
+G-Code, will be added to the end of this string.
 
 Python.exe will then run your script with the specified parameters.
 
 This `example.py` will just output the filename submitted by Slic3r:
 
-    import sys
-    print ('This is the name of your G-Code file: {0}'.format(sys.argv[1]))
+```
+import sys
+print ('This is the name of your G-Code file: {0}'.format(sys.argv[1]))
+```
 
-`sys.argv[0]` is the script `example.py`.
+`sys.argv[0]` is the name of the script, `example.py`.

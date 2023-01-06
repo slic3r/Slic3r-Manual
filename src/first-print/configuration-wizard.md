@@ -31,12 +31,12 @@ extruder may travel along the X and Y axis. If the dimensions are not
 readily available for the printer then it can be easily measured.
 
 Be sure to measure from the lower left corner where the extruder nozzle
-rests when are the home position to the maximum distance the nozzle can
+rests when at the home position to the maximum distance the nozzle can
 travel in each direction. Take into account that the X carriage may
 touch the frame before the nozzle reaches it’s full distance, this will
 depend on the printer make and model.
 
-Also remember to check any firmware end-stop settings which may limit
+Also remember to check any firmware end-stop settings that may limit
 X/Y movement.
 
  ![Configuration Wizard: Bed
@@ -46,10 +46,9 @@ Size](images/configuration-wizard/configuration_wizard_bed_size.png "fig:")
 3. Nozzle Diameter
 ------------------
 
- The diameter of the hot-end nozzle is usually
-clearly displayed either in the description of the hot-end, or in the
-associated documentation, when the hot-end is purchased. Common values
-are 0.5mm and 0.35mm.
+The diameter of the hot-end nozzle is usually clearly displayed either in
+the description of the hot-end, or in the associated documentation, when the
+hot-end is purchased. Common values are 0.5mm and 0.35mm.
 
 If the nozzle was home-made, or came from a source without a diameter
 given, then carefully measure the aperture as accurately as possible.
@@ -66,10 +65,9 @@ Diameter](images/configuration-wizard/configuration_wizard_nozzle_diameter.png "
 4. Filament Diameter
 --------------------
 
- For Slic3r to produce accurate results it
-must know as accurately as possible how much material is pushed through
-the extruder. Therefore it is vital to give it as precise a value as
-possible for the filament diameter.
+For Slic3r to produce accurate results it must know as accurately as possible
+how much material is pushed through the extruder. Therefore it is vital to give
+it as precise a value as possible for the filament diameter.
 
 Although the filament used in FDM printers is sold as being either 3mm
 or 1.75mm this is only a general guide. The diameter can vary between
@@ -86,18 +84,17 @@ Diamter](images/configuration-wizard/configuration_wizard_filament_diameter.png 
 5. Extrusion Temperature
 ------------------------
 
- The extrusion temperature will depend on
-the material, and most can operate over a range of temperatures. The
-supplier should provide guidance as to which temperatures are suitable.
-A very general rule of thumb is that PLA lies between 160°C and 230°C,
-and ABS lies between 215°C and 250°C. More exotic materials will have a
-different range.
+The extrusion temperature will depend on the material, and most can operate
+over a range of temperatures. The supplier should provide guidance as to which
+temperatures are suitable. A very general rule of thumb is that PLA lies between
+160°C and 230°C, and ABS lies between 215°C and 250°C. More exotic materials
+will have a different range.
 
-This is one parameter which you will want to fine tune when you start
-producing prints. The optimal temperature can vary even between colours
-of the same material. Another factor which may affect the chosen
+This is one parameter which you will want to fine tune when you start producing
+prints. The optimal temperature can vary even between colours of the same
+material from the same manufacturer. Another factor that may affect the chosen
 temperature is how fast the extrusion is, where generally faster
-extrusion runs hotter.
+extrusion requires a higher temperature.
 
 Note: One may choose to control the extruder temperature manually from
 the printer controller. In this case the temperature can be set to zero.
@@ -109,10 +106,9 @@ Temperature](images/configuration-wizard/configuration_wizard_extrusion_temperat
 6. Bed Temperature
 ------------------
 
- If the printer has a heated bed then this
-parameter may be set. As with the extruder temperature, the value will
-depend on the material used. A rule of thumb is that PLA requires  60°C
-and ABS requires  110°C.
+If the printer has a heated bed then this parameter may be set. As with the
+extruder temperature, the value will depend on the material used. A rule of
+thumb is that PLA requires 60°C and ABS requires 110°C.
 
 Note: One may choose to control the bed temperature manually from the
 printer controller. In this case the temperature can be set to zero.
@@ -121,8 +117,7 @@ printer controller. In this case the temperature can be set to zero.
 Temperature](images/configuration-wizard/configuration_wizard_bed_temperature.png "fig:")
 
 
-At this stage the wizard is complete and the basic configuration is
-defined.
+At this stage the wizard is complete and the basic configuration is defined.
 
  ![Configuration Wizard:
 End](images/configuration-wizard/configuration_wizard_end.png "fig:")

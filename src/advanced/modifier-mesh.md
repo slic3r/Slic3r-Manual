@@ -3,11 +3,12 @@
 # Overview
 
 Modifier meshes are one of the most advanced features of Slic3r. With them, you
-have the ability to apply distinct settings to parts of objectss. Infact Slic3r
+have the ability to apply distinct settings to parts of objects. In fact Slic3r
 allows users to define regions where the print settings should be overridden by
 distinct settings.
 
-For this example, we use this printable [ukulele](http://www.thingiverse.com/thing:199298) design. 
+For this example, we use this printable
+[ukulele](http://www.thingiverse.com/thing:199298) design.
 ![image](images/modifier-mesh/291_ukulele.jpg_large.jpg)
 
 During assembly, it was noted that string tension may break the instrument or
@@ -23,13 +24,14 @@ The joint designed was too flexible for the strains involved:
 ![image](images/modifier-mesh/300_joint.png_large.jpg)
 
 So, at this point there would have been three possible solutions:
-* redesign the parts with a larger joint (not much possible without altering the external shape of the instrument)
+* redesign the parts with a larger joint (not much possible without altering the
+  external shape of the instrument)
 * print the head with 100% solid infill
 * print just the joint area with 100% solid infill
 
 The first option is exceedingly difficult without altering the external shape
 of the instrument. Printing the entire head at 100% solid infill would work,
-but would extend the printing time and generally waste material. 
+but would extend the printing time and generally waste material.
 
 The third option permits is a "just right" solution: only the areas that
 absolutely need to be at 100% infill are printed as such. However, with normal
@@ -49,11 +51,13 @@ main part brought up the object settings menu. From there, clicking "Load
 Modifier" and selecting the previously saved model adds it to the part as a
 modifier.
 
-The green "+" was selected and "FIll Density" was added to modifier list and set to 100%.
+The green "+" was selected and "Fill Density" was added to modifier list and
+set to 100%.
 
 ![image](images/modifier-mesh/303_modifier.png_large.jpg)
 
-This is the comparison between a print with the modifier and without modifier. Note the solid area near the joint:
+This is the comparison between a print with the modifier and without modifier.
+Note the solid area near the joint:
 ![image](images/modifier-mesh/309_with.png_large.jpg)
 ![image](images/modifier-mesh/312_without.png_large.jpg)
 
@@ -73,8 +77,11 @@ To use one of the new meshes, click on the *Create Modifier* button.
 ![image](images/modifier-mesh/slic3r-create-modifier.png)
 
 There are four different volumes available:
-* Slab defines a rectangular prism with the X and Y size fixed to the size of the model being modified, with the height in Z being user-configurable. It is the easiest to work with and position. 
-* Box is another rectangular prism that you have control over all three dimensions. 
+* Slab defines a rectangular prism with the X and Y size fixed to the size of
+  the model being modified, with the height in Z being user-configurable. It is
+  the easiest to work with and position.
+* Box is another rectangular prism that gives you control over all three
+  dimensions.
 * Cylinder gives you control over the radius of a circle and the height.
 * Sphere has one attribute: the radius of the sphere.
 

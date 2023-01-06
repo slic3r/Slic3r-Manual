@@ -16,8 +16,8 @@ Figure shows the strategy adopted by Slic3r.
 Reading from right to left, when the minimum fan threshold (#2) is
 reached the fan is turned on. This increases in intensity as the layer
 time decreases. The print speed remains constant until the estimated
-print time drops below a certain threshold (#1), this is when the print
-speed is reduced until it reaches it’s minimum value.
+print time drops below a certain threshold (#1); this is when the print
+speed is reduced until it reaches its minimum value.
 
 Fans
 ----
@@ -53,35 +53,34 @@ Configuring
 ![Cooling settings.](images/cooling_advanced_settings.png)
 
 
--   `Keep fan always on` - If this is enabled, fan will never be disabled 
+-   `Keep fan always on` &ndash; If this is enabled, fan will never be disabled
      and will be kept running at least at its minimum speed. Useful for PLA,
      harmful for ABS.
 
--   `Enable auto cooling` - This enables/disables the cooling logic. A 
-    descriptive text below this option describes the effects of the 
+-   `Enable auto cooling` &ndash; This enables/disables the cooling logic. A
+    descriptive text below this option describes the effects of the
     current configuration.
 
--   `Fan speed` - Determines the minimum and maximum speeds - useful for
-    fans that run too fast by default.
+-   `Fan speed` &ndash; Determines the minimum and maximum speeds &mdash; useful
+    for fans that run too fast by default.
 
--   `Bridges fan speed` - As the material stretches over wide gaps, it
-    makes sense to try and cool it as much as possible, therefore a full
+-   `Bridges fan speed` &ndash; As the material stretches over wide gaps, it
+    makes sense to try and cool it as much as possible; therefore a full
     fan speed is recommended.
 
--   `Disable fan for first n layers` - Section
-     detailed how important the first
-    layer is, and so it makes sense not to apply the fan until sure the
-    print is securely attached to the bed. Keeping the fan turned off
-    for the first two or three layers is a good idea.
+-   `Disable fan for first n layers` &ndash; Section
+    [The Important First Layer](#../first-print/first-layer) detailed how
+    important the first layer is, and so it makes sense not to apply the fan
+    until sure the print is securely attached to the bed. Keeping the fan
+    turned off for the first two or three layers is a good idea.
 
--   `Enable fan if print time is below t seconds` - Triggers the fan if
+-   `Enable fan if print time is below t seconds` &ndash; Triggers the fan if
     the layer will be completed within the given number of seconds.
 
--   `Slow down if layer print time is below t seconds` - Slows down the
-    print if the layer will be completed within the given number of
-    seconds.
+-   `Slow down if layer print time is below t seconds` &ndash; Slows down the
+    print if the layer will be completed within the given number of seconds.
 
--   `Min print speed` - A lower limit on how slowly a layer can be
+-   `Min print speed` &ndash; A lower limit on how slowly a layer can be
     printed.
 
 
