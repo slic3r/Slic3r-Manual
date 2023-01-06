@@ -14,7 +14,7 @@ Source
 
 The source code is available via GitHub:
 <https://github.com/slic3r/Slic3r>. For more details on building from
-source see § below.
+source see [Building from source](#building-from-source) below.
 
 Installing
 ==========
@@ -22,14 +22,15 @@ Installing
 Windows
 -------
 
-Unzip the downloaded zip file to a folder of your choosing, there is no
+Unzip the downloaded zip file to a folder of your choosing; there is no
 installer script. The resulting folder contains three executables:
 
 -   `Slic3r.exe` - starts the GUI version.
 
 -   `Slic3r-console.exe` - can be used from the command line.
 
--   `Slic3r-debug-console.exe` - starts the GUI version and provides a debugging output console.
+-   `Slic3r-debug-console.exe` - starts the GUI version and provides a debugging
+    output console.
 
 The folder also contains a `libexec` directory, which contains the rest of the
 important support files for Slic3r. Do not remove this folder or move it away
@@ -40,17 +41,16 @@ The zip file may then be deleted.
 Mac OS X
 --------
 
-Double-click the downloaded dmg file, an instance of Finder should open
-together with an icon of the Slic3r program. Navigate to the
-Applications directory and drag and drop the Slic3r icon into it. The
-dmg file may then be deleted.
+Double-click the downloaded dmg file. An instance of Finder should open together
+with an icon of the Slic3r program. Navigate to the Applications directory and
+drag and drop the Slic3r icon into it. The dmg file may then be deleted.
 
 Linux
 -----
 
-Extract the archive to a folder of your choosing.  Start Slic3r directly by
+Extract the archive to a folder of your choosing. Start Slic3r directly by
 running the Slic3r shell script, found in the root directory.
-    
+
 
 The archive file may then be deleted.
 

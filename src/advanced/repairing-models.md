@@ -9,10 +9,10 @@ the ones described here are all free at the time of writing.
 
 #### Netfabb Studio
 
- Netfabb produce a range of 3D modelling
+Netfabb produce a range of 3D modelling
 applications, including a free basic version[^1]. This version includes
 a mesh repair module which can help eliminate the various problems
-faced. Up-to-date instructions can be found on the Netfabb wiki[^2], the
+faced. Up-to-date instructions can be found on the Netfabb wiki[^2]; the
 following is a quick overview of the steps involved.
 
  ![Netfabb Studio: Part
@@ -26,11 +26,11 @@ repair.](images/repair/netfabb_studio_part_repair.png "fig:")
 
 -   To run the repair scripts, select the part and then either click the
     first aid icon in the toolbar (the red cross), or select from the
-    context menu `Extras->Repair Part`. This will open the part repair
+    context menu `Extras` -> `Repair Part`. This will open the part repair
     tab and show the status of the model.
 
 -   The `Actions` and the `Repair scripts` tabs offer several repair
-    scripts which can be applied manually, however for the purposes of
+    scripts, which can be applied manually. However for the purposes of
     this overview selecting the `Automatic repair` script will fix most
     problems.
 
@@ -42,7 +42,7 @@ repair.](images/repair/netfabb_studio_part_repair.png "fig:")
     `Apply repair`, choosing whether to override the existing part or
     not.
 
--   The part may then be exported by selecting `Export part->As STL`
+-   The part may then be exported by selecting `Export part` -> `As STL`
     from the context menu.
 
 -   If Netfabb still detects that the exported part will still contain
@@ -51,11 +51,11 @@ repair.](images/repair/netfabb_studio_part_repair.png "fig:")
 
      ![Netfabb Studio: Part
     export.](images/repair/netfabb_studio_export_part.png "fig:")
-    
+
 
 #### Netfabb Cloud Service
 
- Netfabb also hosts a web service where an
+Netfabb also hosts a web service where an
 STL file may be uploaded for it to be checked and repaired[^3].
 
  ![Netfabb Cloud
@@ -66,22 +66,18 @@ Services.](images/repair/netfabb_cloud_services.png "fig:")
 
 -   Choose the STL file to upload using the button provided.
 
--   An email address must be given to inform you when the service is
-    finished.
+-   An email address must be given to inform you when the service is finished.
 
 -   Choose whether metric or imperial measurements should be used.
 
--   Read and accept the terms of service, and then click
-    `Upload to Cloud`.
+-   Read and accept the terms of service, and then click `Upload to Cloud`.
 
 -   Once the service has analysed and repaired the file an email is sent
     providing the download link to the repaired file.
 
 #### FreeCAD
 
-
-
-Freecad[^4] is a comprehensive, and free, CAD program which comes with a
+Freecad[^4] is a comprehensive, and free, CAD program that comes with a
 mesh module, in which repairs to degenerate models can be made. the
 following steps outline how a problem model file can be analysed and
 repaired.
@@ -90,18 +86,17 @@ repaired.
 repair.](images/repair/freecad_part_repair.png "fig:")
 
 
--   Start FreeCAD and from the start splash page choose
-    `Working with Meshes`.
+-   Start FreeCAD and from the start splash page choose `Working with Meshes`.
 
 -   Load the model by dragging and dropping it onto the workspace or via
     the `File` menu. A small message in the bottom left corner will
     indicate if the model appears to have problems.
 
--   From the menu choose `Meshes->Analyze->Evaluate & Repair mesh` to
+-   From the menu choose `Meshes` -> `Analyze` -> `Evaluate & Repair mesh` to
     bring up the repair options dialog.
 
 -   From the options dialog choose the loaded mesh, then perform each
-    analysis be clicking the `Analyze` button by each problem type, or
+    analysis by clicking the `Analyze` button by each problem type, or
     select `Repetitive Repair` at the bottom to perform all checks. If a
     corresponding problem is detected the `Repair` button becomes
     enabled.
@@ -110,10 +105,9 @@ repair.](images/repair/freecad_part_repair.png "fig:")
 
 -   It is important to review the effect the repair script has made to
     the model. It may be the case that the script damages the file,
-    rather than repair, for example by removing important triangles.
+    rather than repairit, for example by removing important triangles.
 
--   Export the repaired model via the `Export` menu option or context
-    menu.
+-   Export the repaired model via the `Export` menu option or context menu.
 
 [^1]: http://www.netfabb.com/basic.php
 

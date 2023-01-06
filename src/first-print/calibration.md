@@ -5,7 +5,7 @@ correctly calibrated. Skipping or rushing this step will result in
 frustration and failed prints later, so it is important to take the time
 to make sure the machine is correctly set up.
 
-Each machine may have it’s own calibration procedure and this manual
+Each machine may have its own calibration procedure and this manual
 will not attempt to cover all the variations. Instead here is a list of
 key points that should be addressed.
 

@@ -8,9 +8,12 @@ gradients where layering appears more pronounced.
 
 The layer thickness distribution can be influenced by:
 
-- automatic pre-computing of good thicknesses with [Adaptive Slicing](#adaptive-slicing)
-- interactive refinement in the [Adaptive Layers](#interactive-layer-refinement) settings tab
-- setting a fixed layer height for a particular range in the [Layer height table](#static-layer-height-table) setting tab
+- automatic pre-computing of good thicknesses with
+  [Adaptive Slicing](#adaptive-slicing)
+- interactive refinement in the [Adaptive Layers](#interactive-layer-refinement)
+  settings tab
+- setting a fixed layer height for a particular range in the
+  [Layer height table](#static-layer-height-table) setting tab
 
  ![Example model highlighting use case for variable layer
 heights.](images/variable_layer_height/example_model.png)
@@ -27,44 +30,44 @@ Adaptive Slicing {#adaptive-slicing}
 Maintaining a good balance between printing time and quality is a fundamental
 trade-off problem for 3D printing.
 
-If the `Use adaptive slicing` option is enabled, Slic3r automatically
-computes the individual thickness of each layer based on the angle of the surface.
+If the `Use adaptive slicing` option is enabled, Slic3r automatically computes
+the individual thickness of each layer based on the angle of the surface.
 Technical details are provided in a paper [^1].
 
-The `Adaptive quality` option adjusts the overall quality between 0% - thickest
-printable layers over the entire object to 100% - thinnest possible layers.
+The `Adaptive quality` option adjusts the overall quality between 0% &mdash;
+thickest printable layers over the entire object to 100% &mdash; thinnest
+possible layers.
 
 The `Z full steps/mm` parameter is always respected by the adaptive slicing
-process, also the `Combine infill` logic is not affected.
+process; also the `Combine infill` logic is not affected.
 Example: if `Combine infill` is set to 3, Slic3r will combine up to 3 infill
 layers, even if those layers are of different thickness. The number of combined
 layers will vary along the Z axis, depending on the local thickness of layers.
 
 
-
- ![Activate adaptive slicing and set desired quality in the Print settings 
- dialog.](images/variable_layer_height/settings_dialog.png)
+![Activate adaptive slicing and set desired quality in the Print settings
+dialog.](images/variable_layer_height/settings_dialog.png)
 
 Upper and lower limits for the layer thickness are set per extruder in the
 `Printer Settings` tab. Slic3r automatically uses the values for all extruders
-which are used for a particular print. If for example only one extruder is used
+that are used for a particular print. If for example only one extruder is used
 from a dual nozzle printer, the limits of the second extruder won't reduce the
 maximum layer thickness.
 
- ![Set the minimum / maximum possible layer thickness for each extruder
- in the Printer settings.](images/variable_layer_height/min_max_settings_dialog.png)
+![Set the minimum / maximum possible layer thickness for each extruder
+in the Printer settings.](images/variable_layer_height/min_max_settings_dialog.png)
 
 Interactive Layer Refinement {#interactive-layer-refinement}
 ----------------
 
 A tool to interactively refine the layer heights of an object is available by
 double clicking an object in the 3D tab or taking the `Layer heights...`
-short-cut on the Plater. This opens `Adaptive Layers` tab in the Settings
+short-cut on the Plater. This opens the `Adaptive Layers` tab in the Settings
 dialogue, where the layer thickness curve can be modified for each individual
 model on the plater.
 
- ![Variable layer height
- control curve.](images/variable_layer_height/model_adaptive_control.png)
+![Variable layer height
+control curve.](images/variable_layer_height/model_adaptive_control.png)
 
 Use the mouse to drag the layer height curve:
 
@@ -73,14 +76,14 @@ range and horizontally to set the layer height.
 - Left click to trigger quadratic manipulation. Use this to generate smooth
 thickness transitions.
 
-  ![Screenshot of linear
-  manipulation.](images/variable_layer_height/screenshot_linear.png)
-  ![Screenshot of quadratic
-  manipulation.](images/variable_layer_height/screenshot_quadratic.png)
+![Screenshot of linear
+manipulation.](images/variable_layer_height/screenshot_linear.png)
+![Screenshot of quadratic
+manipulation.](images/variable_layer_height/screenshot_quadratic.png)
 
-  ![The same object printed with static thick layers (**left**), static thin
-  layers (**center**) and adaptive layers 
-  (**right**).](images/variable_layer_height/lm8uu_prints.png)
+![The same object printed with static thick layers (**left**), static thin
+layers (**center**) and adaptive layers 
+(**right**).](images/variable_layer_height/lm8uu_prints.png)
 
 
 Static Layer Height Table {#static-layer-height-table}
@@ -88,7 +91,7 @@ Static Layer Height Table {#static-layer-height-table}
 
 The layer height table allows to define a layer height for a particular
 range along the Z axis, given in millimeters.
-The values from this table will override both, the default and adaptively
+The values from this table will override both the default and adaptively
 generated layer heights, but not the interactively modified curve in the
 `Adaptive layers` tab.
 

@@ -1,9 +1,9 @@
 % SVG Output
 
-Slic3r can produce output for other types of 3D printers which require
+Slic3r can produce output for other types of 3D printers that require
 each layer to be represented as image, for example DLP resin or
 powder-bed printers. These expect an image usually consisting of a white
-silhouette on a black background (See fig ).
+silhouette on a black background. (See the figure below.)
 Almost all image formats can be used (bmp, png, etc.), however, because
 the image may have to be scaled, it is usually desirable to use a vector
 format, rather than a bitmap format. For this reason it is common to use
@@ -24,9 +24,8 @@ Attempting to view the SVG file in a browser will result in only the
 first layer being shown, and only the negative islands within the model
 (as the browser background is usually white).
 
- ![SVG in the
+![SVG in the
 browser.](images/svg_output/svg_direct_browser.png "fig:")
-
 
 For this reason a small web application was written to allow each slice
 to be displayed, and for it to be shown on a black background[^1].
@@ -36,11 +35,11 @@ screen to have it load and display.
  ![Slic3r SVG
 Viewer.](images/svg_output/svg_slic3rsvg_viewer.png "fig:")
 
+Other open-source tools, such as [Inkscape](https://inkscape.org/) will also
+allow viewing of SVG files.
 
 SVG Settings
 ------------
-
-
 
 The majority of options in Slic3r are not required when generating SVG,
 however the `Layer height` setting will dictate the number of layers.
@@ -50,8 +49,6 @@ desired.
 
 Printing with SVG
 -----------------
-
-
 
 Whilst SVG output can be used in a range of printers, the following
 example shows how the file can be used with a DLP resin printer. Using a

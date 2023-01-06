@@ -11,7 +11,7 @@ to be used for many printers, for example, in a 3D printer farm.
 
 #### Size and coordinates.
 
- The `Bed size` setting is taken from the
+The `Bed size` setting is taken from the
 wizard (see p.) and is only used for previewing the model in the plater.
 
 The `Print center` is the point around which the print will be centered.
@@ -29,12 +29,11 @@ The optimal Z endstop position is where the nozzle tip barely touches
 the surface of the bed when homed. A sheet of paper makes a good gauge
 for this very small distance. It is not recommended to use this setting
 to try and improve layer adhesion, by "squashing" the bottom layer into
-the bed, instead look at the suggestions in section
-.
+the bed, instead look at the suggestions in the appropriate section.
 
 #### Firmware.
 
- As selected in the wizard (see p.), `G-code flavour`
+As selected in the wizard (see p.), `G-code flavour`
 defines the dialect of G-code generated.
 
 ### Extruder Settings
@@ -42,11 +41,11 @@ defines the dialect of G-code generated.
 
 #### Extruder.
 
- `Nozzle diameter` was defined in the wizard (see p.).
+`Nozzle diameter` was defined in the wizard (see p.).
 
 #### Retraction.
 
- Unless the material being extruded has a very high
+Unless the material being extruded has a very high
 viscosity it may ooze between extrusions due to gravity. This can be
 remedied by actively retracting the filament between extrusions. Setting
 the `Length` parameter to a positive value will cause the filament to be
@@ -65,37 +64,38 @@ speed. A value of 0.1mm is usually sufficient.
 ### Custom G-Code
 #### Start, End and Layer Change G-Codes.
 ![Printer Settings: Custom G-Code (1)](images/printer_settings_custom_gcode1.png "fig:")
+
 ![Printer Settings: Custom G-Code (2)](images/printer_settings_custom_gcode_2.png "fig:")
 
- Custom G-code commands can be run before a print
+Custom G-code commands can be run before a print
 starts and after a print finishes.
 
 Placeholders can be inserted in the G-code commands[^1]. For example
 [next\_extruder] would return the index of the next extruder.
 
-The RepRap wiki is a good resource to learn about the variety of G-codes
-available: `http://reprap.org/wiki/G-code`.
+The [RepRap wiki](http://reprap.org/wiki/G-code) is a good resource to learn
+about the variety of G-codes available.
 
 Note: Be sure to check that a given G-code is valid for your firmware.
 
 The codes specified in `Start G-code` are inserted at the beginning of
-the output file, directly after the temperature control commands for
+the output file, directly after the temperature control commands for the
 extruder and bed. Note that if temperature control commands are
 specified (M104 and M190) then these will replace the temperature
 G-codes introduced by the `Filament` settings.
 
 Some common G-codes to use before the print starts are:
 
--   **G28** - Homes all the axes.
+-   **G28** &ndash; Homes all the axes.
 
 Some common G-codes to use after the print ends are:
 
--   **M104 S0** - Sets the extruder temperature to zero.
+-   **M104 S0** &ndash; Sets the extruder temperature to zero.
 
--   **M140 S0** - Sets the heated bed temperature to zero.
+-   **M140 S0** &ndash; Sets the heated bed temperature to zero.
 
--   **G28 X0** - Home the X axis.
+-   **G28 X0** &ndash; Home the X axis.
 
--   **M84** - Disables the motors.
+-   **M84** &ndash; Disables the motors.
 
 [^1]: https://github.com/alexrj/Slic3r/wiki/FAQ\#what-placeholders-can-i-use-in-custom-g-code
